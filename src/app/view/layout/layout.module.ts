@@ -6,6 +6,7 @@ import { HeaderLayoutComponent } from './header-layout/header-layout.component';
 import { FooterLayoutComponent } from './footer-layout/footer-layout.component';
 import { MasterContainerLayoutComponent } from './master-container-layout/master-container-layout.component';
 import { SideMenuLayoutComponent } from './side-menu-layout/side-menu-layout.component';
+import { PagesModule } from './../pages/pages.module';
 
 
 
@@ -18,8 +19,9 @@ import { SideMenuLayoutComponent } from './side-menu-layout/side-menu-layout.com
     SideMenuLayoutComponent,
   ],
   imports: [
-    CommonModule,
-    ComponentsModule
+  CommonModule,
+    ComponentsModule,
+    PagesModule
   ],
   exports:[
     LayoutComponent,
