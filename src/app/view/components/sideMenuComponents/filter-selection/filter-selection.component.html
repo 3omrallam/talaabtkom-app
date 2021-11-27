@@ -1,0 +1,9 @@
+<app-icon [textContent]='"نوع المطبخ"' [iconName]='"bg-danger"'></app-icon>
+<!-- checkBoxes -->
+<div *ngFor="let option of options">
+    <input type="checkbox" name="" value="{{option.value}}">
+    <!-- divider -->
+    <span class="px-1"></span>
+    <label for="">{{option.label}}</label>
+</div>
+<app-icon [textContent]='"حدد البحث"' [iconName]='"bg-danger"'></app-icon>
