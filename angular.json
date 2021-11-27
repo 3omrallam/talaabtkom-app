@@ -35,6 +35,11 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles/icons.scss",
+              "src/styles/images.scss",
+              "src/styles/colors.scss",
+              "src/styles/utilities.scss",
+              "src/styles/fonts.scss",
               "src/styles.scss"
             ],
             "scripts": [

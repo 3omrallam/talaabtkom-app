@@ -2,24 +2,27 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PagesComponent } from './pages.component';
 import { FilterPageComponent } from './filter-page/filter-page.component';
-import { ComponentsModule } from '../components/components.module';
-import { SharedModule } from '../shared/shared.module';
+import { BlocksModule } from '../blocks/blocks.module';
+import { NavbarPageComponent } from './navbar-page/navbar-page.component';
 
 
 
 @NgModule({
   declarations: [
     PagesComponent,
-    FilterPageComponent
+    FilterPageComponent,
+    NavbarPageComponent
   ],
   imports: [
     CommonModule,
-    ComponentsModule,
-    SharedModule
+    BlocksModule,
+
   ],
   exports: [
     FilterPageComponent,
     PagesComponent,
+    NavbarPageComponent
+
   ]
 })
 export class PagesModule { }

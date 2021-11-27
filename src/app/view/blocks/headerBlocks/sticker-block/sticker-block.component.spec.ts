@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FilterSelectionComponent } from './filter-selection.component';
+import { StickerBlockComponent } from './sticker-block.component';
 
-describe('FilterSelectionComponent', () => {
-  let component: FilterSelectionComponent;
-  let fixture: ComponentFixture<FilterSelectionComponent>;
+describe('StickerBlockComponent', () => {
+  let component: StickerBlockComponent;
+  let fixture: ComponentFixture<StickerBlockComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FilterSelectionComponent ]
+      declarations: [ StickerBlockComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FilterSelectionComponent);
+    fixture = TestBed.createComponent(StickerBlockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

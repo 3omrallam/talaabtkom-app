@@ -1,0 +1,23 @@
+// START === Images
+
+.imCC-LogoEN{
+  background-image: url(../assets/images/Logo.svg)
+}
+.imCC-Userimage{
+  background-image: url(../assets/images/Userimage.svg)
+}
+
+// END === Images
+
+// START === Background Holder
+.uCC-Background-Cover{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+.uCC-Background-Contain{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain
+}
+// END === BackgroundHolder
