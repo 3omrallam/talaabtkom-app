@@ -1,3 +1,4 @@
+import { SearchBlockComponent } from './homeBlocks/search-block/search-block.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarBlockComponent } from './headerBlocks/navbar/navbar-block.component';
@@ -6,6 +7,8 @@ import { StickerBlockComponent } from './headerBlocks/sticker-block/sticker-bloc
 import { NavigatorBlockComponent } from './headerBlocks/navigator-block/navigator-block.component';
 import { UserProfileBlockComponent } from './headerBlocks/user-profile-block/user-profile-block.component';
 import { IconComponent } from './shared/icon/icon.component';
+import { TextBlockComponent } from './homeBlocks/text-block/text-block.component';
+import { AboutBlocksComponent } from './about-block/about-blocks/about-blocks.component';
 
 
 
@@ -16,7 +19,10 @@ import { IconComponent } from './shared/icon/icon.component';
     StickerBlockComponent,
     NavigatorBlockComponent,
     UserProfileBlockComponent,
-    IconComponent
+    IconComponent,
+    SearchBlockComponent,
+    TextBlockComponent,
+    AboutBlocksComponent
 
   ],
   imports: [
@@ -28,8 +34,10 @@ import { IconComponent } from './shared/icon/icon.component';
     StickerBlockComponent,
     NavigatorBlockComponent,
     UserProfileBlockComponent,
-    IconComponent
-
+    IconComponent,
+    SearchBlockComponent,
+    TextBlockComponent,
+    AboutBlocksComponent
   ]
 })
 export class BlocksModule { }

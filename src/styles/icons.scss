@@ -6,7 +6,15 @@
 .iCC-Favourite{
   background-image: url(../assets/icons/Favourite.svg)
 }
-
+.iCC-Location{
+  background-image: url(../assets/icons/Location.svg)
+}
+.iCC-manclock{
+  background-image: url(../assets/icons/man&clock.svg)
+}
+.iCC-hand{
+  background-image: url(../assets/icons/hand.svg)
+}
 // END === Images
 
 // START === Icon Size
@@ -35,9 +43,10 @@
   width: 48px;
   height: 48px;
 }
-.iCC-sF{
-  width: 60px;
-  height: 60px;
+.iCC-sg{
+  width: 152px;
+  height: 174px;
 }
+
 
 // END === Icon Size

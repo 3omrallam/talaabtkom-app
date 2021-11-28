@@ -2,10 +2,31 @@
 .uCC-Border-sA{
   border: 2px solid #f5504c;
 }
+.uCC-Border-sb{
+  border: 1px solid #f5504c;
+}
+.uCC-Border-sB{
+  border: none !important;
+}
 // END === Border
 // START === Border Radius
 .uCC-f-radius-sA{
   border-radius: 10px;
 }
+.uCC-l-radius-sA{
+  border-radius: 10px 0 0 10px;
+}
 // END === Border Radius
+/* START === App Size  */
+.uCC-h-48 {
+  height: 48px !important;
+}
+.uCC-h-42 {
+  height: 42px !important;
+}
+/* END === App Size  */
+.uCC-w-140 {
+  width: 140px !important;
+}
+
 

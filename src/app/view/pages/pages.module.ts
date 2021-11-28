@@ -4,6 +4,8 @@ import { PagesComponent } from './pages.component';
 import { FilterPageComponent } from './filter-page/filter-page.component';
 import { BlocksModule } from '../blocks/blocks.module';
 import { NavbarPageComponent } from './navbar-page/navbar-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 
 
@@ -11,7 +13,9 @@ import { NavbarPageComponent } from './navbar-page/navbar-page.component';
   declarations: [
     PagesComponent,
     FilterPageComponent,
-    NavbarPageComponent
+    NavbarPageComponent,
+    HomePageComponent,
+    AboutPageComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +25,9 @@ import { NavbarPageComponent } from './navbar-page/navbar-page.component';
   exports: [
     FilterPageComponent,
     PagesComponent,
-    NavbarPageComponent
+    NavbarPageComponent,
+    HomePageComponent,
+    AboutPageComponent
 
   ]
 })
