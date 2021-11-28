@@ -1,0 +1,20 @@
+<div class="col-1"></div>
+<div class="col d-flex">
+  <div class="d-flex w-100 p-1 align-items-center uCC-f-radius-sA uCC-Border-sB-Main cCC-bg-white">
+    <!-- location icon inside search bar -->
+    <app-icon iconName="iCC-Location d-flex iCC-sC mx-2"></app-icon>
+    <!-- search bar -->
+    <input type="text" placeholder="ابحث عن مكانك المفضل" name="search" class="p-2 border-0 w-100">
+    <!-- selection box inside search bar -->
+    <select name="country" class="uCC-w-140 h-100 cCC-bg-support1 uCC-l-radius-sA fCC-reg-sC">
+      <ng-container *ngFor="let country of countries">
+        <option value="{{country.value}}">{{country.name}}</option>
+      </ng-container>
+    </select>
+  </div>
+  <!-- divider -->
+  <div class="px-2"></div>
+  <!-- Search Button -->
+  <button class="btn px-5 py-2 cCC-bg-main cCC-text-white uCC-f-radius-sA">ابحث</button>
+</div>
+<div class="col-1"></div>
