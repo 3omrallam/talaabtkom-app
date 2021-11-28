@@ -1,3 +1,4 @@
+import { SearchBlockComponent } from './homeBlocks/search-block/search-block.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarBlockComponent } from './headerBlocks/navbar/navbar-block.component';
@@ -6,7 +7,8 @@ import { StickerBlockComponent } from './headerBlocks/sticker-block/sticker-bloc
 import { NavigatorBlockComponent } from './headerBlocks/navigator-block/navigator-block.component';
 import { UserProfileBlockComponent } from './headerBlocks/user-profile-block/user-profile-block.component';
 import { IconComponent } from './shared/icon/icon.component';
-import { RestaurantGridCardBlockComponent } from './masterContainerBlocks/restaurantCards/restaurant-grid-card-block/restaurant-grid-card-block.component';
+import { TextBlockComponent } from './homeBlocks/text-block/text-block.component';
+import { AboutBlocksComponent } from './about-block/about-blocks/about-blocks.component';
 
 
 
@@ -18,7 +20,9 @@ import { RestaurantGridCardBlockComponent } from './masterContainerBlocks/restau
     NavigatorBlockComponent,
     UserProfileBlockComponent,
     IconComponent,
-    RestaurantGridCardBlockComponent
+    SearchBlockComponent,
+    TextBlockComponent,
+    AboutBlocksComponent
 
   ],
   imports: [
@@ -31,8 +35,9 @@ import { RestaurantGridCardBlockComponent } from './masterContainerBlocks/restau
     NavigatorBlockComponent,
     UserProfileBlockComponent,
     IconComponent,
-    RestaurantGridCardBlockComponent
-
+    SearchBlockComponent,
+    TextBlockComponent,
+    AboutBlocksComponent
   ]
 })
 export class BlocksModule { }

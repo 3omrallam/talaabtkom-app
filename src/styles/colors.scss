@@ -1,14 +1,46 @@
 // Vars Color
 $main : #f5504c ;
+$secondary:#fff;
+$support1:#EDEDF4;
+$support2:#707070;
+$support3:#408DDB;
+$dark:#363537;
 
 // START === Background Color
 .cCC-bg-main{
   background-color:$main;
+}
+.cCC-bg-secondary{
+  background-color:$secondary;
+}
+.cCC-bg-support1{
+  background-color:$support1;
+}
+.cCC-bg-support2{
+  background-color:$support2;
+}
+.cCC-bg-dark{
+  background-color:$dark;
+}
+.cCC-bg-support3{
+  background-color:$support3;
 }
 // END === Background Color
 
 // START === Text Color
 .cCC-text-main{
   color:$main;
+}
+.cCC-text-secondary{
+  color:$secondary;
+}
+.cCC-text-support1{
+  color:$support1;
+}
+.cCC-text-support2{
+  color:$support2;
+}
+.cCC-text-dark{
+  color:$dark;
 }
 // END === Text Color
