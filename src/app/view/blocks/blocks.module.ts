@@ -6,6 +6,7 @@ import { StickerBlockComponent } from './headerBlocks/sticker-block/sticker-bloc
 import { NavigatorBlockComponent } from './headerBlocks/navigator-block/navigator-block.component';
 import { UserProfileBlockComponent } from './headerBlocks/user-profile-block/user-profile-block.component';
 import { IconComponent } from './shared/icon/icon.component';
+import { RestaurantGridCardBlockComponent } from './masterContainerBlocks/restaurantCards/restaurant-grid-card-block/restaurant-grid-card-block.component';
 
 
 
@@ -16,7 +17,8 @@ import { IconComponent } from './shared/icon/icon.component';
     StickerBlockComponent,
     NavigatorBlockComponent,
     UserProfileBlockComponent,
-    IconComponent
+    IconComponent,
+    RestaurantGridCardBlockComponent
 
   ],
   imports: [
@@ -28,7 +30,8 @@ import { IconComponent } from './shared/icon/icon.component';
     StickerBlockComponent,
     NavigatorBlockComponent,
     UserProfileBlockComponent,
-    IconComponent
+    IconComponent,
+    RestaurantGridCardBlockComponent
 
   ]
 })
