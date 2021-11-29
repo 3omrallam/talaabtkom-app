@@ -1,3 +1,4 @@
+import { SectionsModule } from './../sections/sections.module';
 import { SearchBlockComponent } from './masterContainerBlocks/search-block/search-block.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,8 +8,6 @@ import { StickerBlockComponent } from './headerBlocks/sticker-block/sticker-bloc
 import { NavigatorBlockComponent } from './headerBlocks/navigator-block/navigator-block.component';
 import { UserProfileBlockComponent } from './headerBlocks/user-profile-block/user-profile-block.component';
 import { IconComponent } from './shared/icon/icon.component';
-import { TextBlockComponent } from './masterContainerBlocks/text-block/text-block.component';
-import { AboutBlocksComponent } from './about-block/about-blocks/about-blocks.component';
 
 
 
@@ -21,11 +20,11 @@ import { AboutBlocksComponent } from './about-block/about-blocks/about-blocks.co
     UserProfileBlockComponent,
     IconComponent,
     SearchBlockComponent,
-    TextBlockComponent,
-    AboutBlocksComponent
+    
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    
   ],
   exports:[
     NavbarBlockComponent,
@@ -35,8 +34,7 @@ import { AboutBlocksComponent } from './about-block/about-blocks/about-blocks.co
     UserProfileBlockComponent,
     IconComponent,
     SearchBlockComponent,
-    TextBlockComponent,
-    AboutBlocksComponent
+    
   ]
 })
 export class BlocksModule { }

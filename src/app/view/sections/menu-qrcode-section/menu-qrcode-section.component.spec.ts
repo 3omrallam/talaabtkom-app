@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AboutBlocksComponent } from './about-blocks.component';
+import { MenuQrcodeSectionComponent } from './menu-qrcode-section.component';
 
-describe('AboutBlocksComponent', () => {
-  let component: AboutBlocksComponent;
-  let fixture: ComponentFixture<AboutBlocksComponent>;
+describe('MenuQrcodeSectionComponent', () => {
+  let component: MenuQrcodeSectionComponent;
+  let fixture: ComponentFixture<MenuQrcodeSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AboutBlocksComponent ]
+      declarations: [ MenuQrcodeSectionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AboutBlocksComponent);
+    fixture = TestBed.createComponent(MenuQrcodeSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

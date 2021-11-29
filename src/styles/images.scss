@@ -9,6 +9,9 @@
 .imCC-Homecover{
   background-image: url(../assets/images/Homecover.svg)
 }
+.imCC-QRcodemenu{
+  background-image: url(../assets/images/QRCodeMenu.svg)
+}
 // END === Images
 
 // START === Background Holder
@@ -23,3 +26,9 @@
   background-size: contain
 }
 // END === BackgroundHolder
+// START === SIZES
+
+.imCC-sA{
+  height: 563px;
+  width: 563px;
+}

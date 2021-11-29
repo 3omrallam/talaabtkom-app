@@ -4,7 +4,9 @@ $support1:#EDEDF4;
 $support2:#707070;
 $dark:#363537;
 $white:#ffffff;
-
+$blue:rgba(64, 141, 219,0.2);
+$yellow:rgba(215, 194, 24 , 0.2);
+$green:rgba(78, 225, 67 , 0.2);
 // START === Background Color
 .cCC-bg-main{
   background-color:$main;
@@ -20,6 +22,16 @@ $white:#ffffff;
 }
 .cCC-bg-dark{
   background-color:$dark;
+}
+.cCC-bg-blue{
+  background-color:$blue;
+  opacity: 0.2;
+}
+.cCC-bg-yellow{
+  background-color:$yellow;
+}
+.cCC-bg-green{
+  background-color:$green;
 }
 // END === Background Color
 

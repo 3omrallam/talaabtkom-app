@@ -6,7 +6,7 @@
     <!-- search bar -->
     <input type="text" placeholder="ابحث عن مكانك المفضل" name="search" class="p-2 border-0 w-100">
     <!-- selection box inside search bar -->
-    <select name="country" class="uCC-w-140 h-100 cCC-bg-support1 uCC-l-radius-sA fCC-reg-sC">
+    <select name="country" class="uCC-w-140 h-100 cCC-bg-support1 uCC-l-radius-sA fCC-reg-sC border-0">
       <ng-container *ngFor="let country of countries">
         <option value="{{country.value}}">{{country.name}}</option>
       </ng-container>

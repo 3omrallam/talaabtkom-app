@@ -1,8 +1,12 @@
 <div class="d-flex align-items-center">
-    <i class="{{iconName}} d-flex"></i>
+    <div class="{{iconBg}}">
+        <i class="{{iconName}} d-flex"></i>
+    </div>
     <!-- divider -->
     <div class="px-1~"></div>
-    <span>{{textContent}}</span>
-    <p>{{iconParagraph}}</p>
+    <div class="flex-column">
+    <span class="{{textClass}}">{{textContent}}</span>
+    <p class="{{paragraphClass}}">{{iconParagraph}}</p>
+    </div>
 </div>
 
