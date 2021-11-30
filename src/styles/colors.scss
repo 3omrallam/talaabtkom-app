@@ -4,6 +4,7 @@ $support1:#EDEDF4;
 $support2:#707070;
 $dark:#363537;
 $white:#ffffff;
+$grey:#8F8D91;
 $blue:rgba(64, 141, 219,0.2);
 $yellow:rgba(215, 194, 24 , 0.2);
 $green:rgba(78, 225, 67 , 0.2);
@@ -50,5 +51,8 @@ $green:rgba(78, 225, 67 , 0.2);
 }
 .cCC-text-dark{
   color:$dark;
+}
+.cCC-text-grey{
+  color:$grey;
 }
 // END === Text Color

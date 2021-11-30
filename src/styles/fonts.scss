@@ -1,17 +1,64 @@
-// font sizes === Start
-.fCC-reg-sA {
+@font-face{
+    font-family: Cairo-Bold;
+    src: url('../assets/font/Cairo-Bold.ttf')
+}
+@font-face{
+    font-family: Cairo-Regular;
+    src: url('../assets/font/Cairo-Regular.ttf')
+}
+
+// font sizes [Cairo-Bold] === Start
+.fCC-bold-sA {
+    font-size: 12px !important;
+    font-family: Cairo-Bold;
+}
+.fCC-bold-sB {
+    font-size: 16px !important;
+    font-family: Cairo-Bold;
+}
+.fCC-bold-sC {
+    font-size: 20px !important;
+    font-family: Cairo-Bold;
+}
+.fCC-bold-sD {
+    font-size: 22px !important;
+    font-family: Cairo-Bold;
+}
+.fCC-bold-sE {
+    font-size: 32px !important;
+    font-family: Cairo-Bold;
+}
+.fCC-bold-sF {
     font-size: 38px !important;
-    font-weight: Bold;
+    font-family: Cairo-Bold;
+}
+// font sizes === End
+
+// font sizes [Cairo-Regular] === Start
+.fCC-reg-sA {
+    font-size: 10px !important;
+    font-family: Cairo-Regular;
 }
 .fCC-reg-sB {
-    font-size: 20px !important;
-    font-weight: Bold;
+    font-size: 12px !important;
+    font-family: Cairo-Regular;
 }
 .fCC-reg-sC {
-    font-size: 16px !important;
+    font-size: 14px !important;
+    font-family: Cairo-Regular;
 }
 .fCC-reg-sD {
-    font-size: 22px !important;
-    font-weight: Bold;
+    font-size: 16px !important;
+    font-family: Cairo-Regular;
 }
-// font sizes === END
+.fCC-reg-sF {
+    font-size: 18px !important;
+    font-family: Cairo-Regular;
+}
+// font sizes === End
+
+
+
+
+
+
