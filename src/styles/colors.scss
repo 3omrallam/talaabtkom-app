@@ -5,9 +5,10 @@ $support2:#707070;
 $dark:#363537;
 $white:#ffffff;
 $grey:#8F8D91;
-$blue:rgba(64, 141, 219,0.2);
-$yellow:rgba(215, 194, 24 , 0.2);
-$green:rgba(78, 225, 67 , 0.2);
+$blue:#408ddb;
+$yellow:#d7c218;
+$green:#4ee143;
+$darkgrey: #707070;
 // START === Background Color
 .cCC-bg-main{
   background-color:$main;
@@ -26,13 +27,21 @@ $green:rgba(78, 225, 67 , 0.2);
 }
 .cCC-bg-blue{
   background-color:$blue;
-  opacity: 0.2;
 }
 .cCC-bg-yellow{
   background-color:$yellow;
 }
 .cCC-bg-green{
   background-color:$green;
+}
+// END === Background Color
+
+// START === Background With Opacity Color
+.cCC-opacity-gray-10{
+  background-color: rgba(112,112,112,0.1);
+}
+.cCC-opacity-blue-20{
+  background-color: rgba(64, 141, 219,0.2);
 }
 // END === Background Color
 

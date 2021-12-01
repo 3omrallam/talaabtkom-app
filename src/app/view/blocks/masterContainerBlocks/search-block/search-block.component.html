@@ -1,11 +1,11 @@
-<div class="col px-0 d-flex justify-content-center">
+<div class="d-flex justify-content-center">
   <div class="d-flex w-100 p-1 align-items-center uCC-f-radius-sA uCC-Border-sB-Main cCC-bg-white">
     <!-- location icon inside search bar -->
     <app-icon iconName="iCC-Location d-flex iCC-sC mx-2"></app-icon>
     <!-- search bar -->
     <input type="text" placeholder="ابحث عن مكانك المفضل" name="search" class="p-2 border-0 w-100 fCC-reg-sD">
     <!-- selection box inside search bar -->
-    <select name="country" class="uCC-w-140 h-100 cCC-text-support2 py-1 pl-1 uCC-l-radius-sA fCC-reg-sD border-0">
+    <select name="country" class="uCC-w-140 h-100 cCC-text-support2 cCC-opacity-gray-10 py-1 pl-1 uCC-l-radius-sA fCC-reg-sD border-0">
       <ng-container *ngFor="let country of countries">
         <option value="{{country.value}}">{{country.name}}</option>
       </ng-container>
@@ -16,4 +16,3 @@
   <!-- Search Button -->
   <button class="btn px-5 py-2 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA">بحث</button>
 </div>
-<div class="col-1"></div>
