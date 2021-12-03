@@ -6,6 +6,7 @@ import { FilterPageComponent } from './filter-page/filter-page.component';
 import { BlocksModule } from '../blocks/blocks.module';
 import { NavbarPageComponent } from './navbar-page/navbar-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { FooterPageComponent } from './footer-page/footer-page.component';
 
 
 
@@ -15,6 +16,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     FilterPageComponent,
     NavbarPageComponent,
     HomePageComponent,
+    FooterPageComponent,
     
   ],
   imports: [
@@ -27,6 +29,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     PagesComponent,
     NavbarPageComponent,
     HomePageComponent,
+    FooterPageComponent
 
   ]
 })

@@ -10,3 +10,13 @@ a{
     color: black;
     text-decoration: none;
 }
+/* Start === Button HOVER  */
+button:hover
+{
+  color: white !important;
+}
+button:focus
+{
+  box-shadow:none !important;
+}
+/* END === Button HOVER */

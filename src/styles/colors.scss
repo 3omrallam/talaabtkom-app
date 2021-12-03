@@ -9,6 +9,9 @@ $blue:#408ddb;
 $yellow:#d7c218;
 $green:#4ee143;
 $darkgrey: #707070;
+$lightgray:#9A9A9A;
+$orange:#E66B32;
+
 // START === Background Color
 .cCC-bg-main{
   background-color:$main;
@@ -43,8 +46,33 @@ $darkgrey: #707070;
 .cCC-opacity-blue-20{
   background-color: rgba(64, 141, 219,0.2);
 }
-// END === Background Color
+.cCC-opacity-yellow-20{
+  background-color: rgba(251, 194, 24,0.2);
+}
+.cCC-opacity-green-20{
+  background-color: rgba(78, 225, 67,0.2);
+}
+.cCC-opacity-support1-20{
+  background-color: rgba(237, 237, 244, 0.2);
+}
+.cCC-opacity-support1-30{
+  background-color: rgba(237, 237, 244 , 0.3);
+}
+.cCC-opacity-support1-90{
+  background-color: rgba(237, 237, 244 , 0.9);
+}
+// END === Background With Opacity Color
 
+// START ===  Color With Opacity
+.cCC-opacity-dark-70{
+  color: rgba(44, 23, 65, 0.7);
+}
+// END ===  Color With Opacity
+// START ==== Gradient Background
+.cCC-gradient-TtB{
+  background: linear-gradient(to bottom,#fff 40%, rgba(237, 237, 244, 0.2)0%);
+}
+// END ==== Gradient Background
 // START === Text Color
 .cCC-text-main{
   color:$main;
@@ -63,5 +91,11 @@ $darkgrey: #707070;
 }
 .cCC-text-grey{
   color:$grey;
+}
+.cCC-text-orange{
+  color:$orange;
+}
+.cCC-text-lightgray{
+  color:$lightgray;
 }
 // END === Text Color

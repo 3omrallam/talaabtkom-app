@@ -3,6 +3,9 @@
 .imCC-LogoEN{
   background-image: url(../assets/images/Logo.svg)
 }
+.imCC-LogoAR{
+  background-image: url(../assets/images/Logoar.svg)
+}
 .imCC-Userimage{
   background-image: url(../assets/images/Userimage.svg)
 }
@@ -12,18 +15,70 @@
 .imCC-QRcodemenu{
   background-image: url(../assets/images/QRCodeMenu.svg)
 }
+.imCC-Resturant1{
+  background-image: url(../assets/images/Resturant1.svg)
+}
+.imCC-Resturant2{
+  background-image: url(../assets/images/Resturant2.svg)
+}
+.imCC-Resturant3{
+  background-image: url(../assets/images/Resturant3.svg)
+}
+.imCC-Resturantlogo1{
+  background-image: url(../assets/images/Resturantlogo1.svg)
+}
+.imCC-Resturantlogo2{
+  background-image: url(../assets/images/Resturantlogo2.svg)
+}
+.imCC-Resturantlogo3{
+  background-image: url(../assets/images/Resturantlogo3.svg)
+}
+.imCC-Userfeedbackimg1{
+  background-image: url(../assets/images/Userimgfeedback1.svg)
+}
+.imCC-Userfeedbackimg2{
+  background-image: url(../assets/images/Userimgfeedback2.svg)
+}
+.imCC-Userfeedbackimg3{
+  background-image: url(../assets/images/Userimgfeedback3.svg)
+}
+.imCC-Mobile{
+  background-image: url(../assets/images/Mobileimg.png)
+}
+.imCC-Logoappstore{
+  background-image: url(../assets/images/Logoappstore.png)
+}
+.imCC-Logoplaystore{
+  background-image: url(../assets/images/Logoplaystore.png)
+}
+.imCC-Scancode{
+  background-image: url(../assets/images/Scancode.png)
+}
+.imCC-Contactlogo{
+  background-image: url(../assets/images/Contactlogo.png)
+}
 // END === Images
 
 // START === Background Holder
-.uCC-Background-Cover{
+.imCC-Background-Cover{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover
 }
-.uCC-Background-Contain{
+.imCC-Background-Contain{
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain
 }
 // END === BackgroundHolder
+// START === Image Sizes
+.imCC-sA{
+  height: 39px;
+  width: 130px;
+}
+.imCC-sB{
+  height: 88px;
+  width: 88px;
+}
+// END === Image Sizes
 

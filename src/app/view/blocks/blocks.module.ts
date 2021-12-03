@@ -8,6 +8,9 @@ import { StickerBlockComponent } from './headerBlocks/sticker-block/sticker-bloc
 import { NavigatorBlockComponent } from './headerBlocks/navigator-block/navigator-block.component';
 import { UserProfileBlockComponent } from './headerBlocks/user-profile-block/user-profile-block.component';
 import { IconComponent } from './shared/icon/icon.component';
+import { FooterNavigatorBlockComponent } from './footer-blocks/footer-navigator-block/footer-navigator-block.component';
+import { CardBlockComponent } from './masterContainerBlocks/card-block/card-block.component';
+import { FeedbackCardBlockComponent } from './masterContainerBlocks/feedback-card-block/feedback-card-block.component';
 
 
 
@@ -20,6 +23,9 @@ import { IconComponent } from './shared/icon/icon.component';
     UserProfileBlockComponent,
     IconComponent,
     SearchBlockComponent,
+    FooterNavigatorBlockComponent,
+    CardBlockComponent,
+    FeedbackCardBlockComponent,
     
   ],
   imports: [
@@ -34,6 +40,9 @@ import { IconComponent } from './shared/icon/icon.component';
     UserProfileBlockComponent,
     IconComponent,
     SearchBlockComponent,
+    FooterNavigatorBlockComponent,
+    CardBlockComponent,
+    FeedbackCardBlockComponent
     
   ]
 })
