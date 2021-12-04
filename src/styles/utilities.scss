@@ -1,3 +1,9 @@
+// START === General
+.uCC-Click{
+  cursor: pointer;
+}
+// END === General
+
 // START === Border
 .uCC-Border-sA-Main{
   border: 2px solid #f5504c;
@@ -49,6 +55,19 @@
   line-height: 2;
 }
 /* END === Line Height  */
+/* START === Gaps  */
+
+.uCC-gap-8{
+  gap: 8px;
+}
+.uCC-gap-16{
+  gap: 16px;
+}
+.uCC-gap-24{
+  gap: 24px;
+}
+
+/* END === Gaps  */
 
 
 

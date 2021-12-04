@@ -9,8 +9,10 @@ import { NavigatorBlockComponent } from './headerBlocks/navigator-block/navigato
 import { UserProfileBlockComponent } from './headerBlocks/user-profile-block/user-profile-block.component';
 import { IconComponent } from './shared/icon/icon.component';
 import { FooterNavigatorBlockComponent } from './footer-blocks/footer-navigator-block/footer-navigator-block.component';
-import { CardBlockComponent } from './masterContainerBlocks/card-block/card-block.component';
 import { FeedbackCardBlockComponent } from './masterContainerBlocks/feedback-card-block/feedback-card-block.component';
+import { RouterModule } from '@angular/router';
+import { ResturantGridCardBlockComponent } from './masterContainerBlocks/resturant-grid-card-block/resturant-grid-card-block.component';
+import { ResturantListCardBlockComponent } from './masterContainerBlocks/resturant-list-card-block/resturant-list-card-block.component';
 
 
 
@@ -24,12 +26,14 @@ import { FeedbackCardBlockComponent } from './masterContainerBlocks/feedback-car
     IconComponent,
     SearchBlockComponent,
     FooterNavigatorBlockComponent,
-    CardBlockComponent,
     FeedbackCardBlockComponent,
+    ResturantGridCardBlockComponent,
+    ResturantListCardBlockComponent,
     
   ],
   imports: [
     CommonModule,
+    RouterModule
     
   ],
   exports:[
@@ -41,8 +45,9 @@ import { FeedbackCardBlockComponent } from './masterContainerBlocks/feedback-car
     IconComponent,
     SearchBlockComponent,
     FooterNavigatorBlockComponent,
-    CardBlockComponent,
-    FeedbackCardBlockComponent
+    FeedbackCardBlockComponent,
+    ResturantGridCardBlockComponent,
+    ResturantListCardBlockComponent
     
   ]
 })

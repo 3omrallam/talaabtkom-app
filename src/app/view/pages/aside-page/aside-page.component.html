@@ -1,0 +1,9 @@
+<!-- FIRST FILTER -->
+<div class="form-group bg-light p-4 rounded">
+    <!-- FILTERS HEADER & ICON -->
+    <app-icon [textContent]='"نوع المطبخ"' [iconName]='"bg-danger"'></app-icon>
+    <!-- FILTERS NAME-->
+    <div *ngFor='let filter of _FilterService.options' class="mb-2">
+      <app-filter-selection-block [items]='filter'></app-filter-selection-block>
+    </div>
+</div>

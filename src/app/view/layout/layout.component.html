@@ -2,15 +2,15 @@
   <header class="container px-0">
     <app-header-layout></app-header-layout>
   </header>
-  <section class="row m-0">
-    <!-- <aside class="bg-warning col-3">
+  <section class="row m-0 uCC-gap-24">
+    <aside *ngIf='this.activeRouter.url !== "/"' class="bg-warning col-3">
       <app-side-menu-layout></app-side-menu-layout>
-    </aside> -->
-    <main class="container-fluid p-0">
-      <app-master-container-layout></app-master-container-layout>
+    </aside>
+    <main class="container-fluid col p-0">
+      <router-outlet></router-outlet>
     </main>
   </section>
-  <footer class="row cCC-bg-support1 m-0 pt-5 h-100~ mt-auto">
+  <footer class="row cCC-bg-support1 m-0 pt-5 mt-auto">
     <app-footer-layout></app-footer-layout>
   </footer>
 </section>

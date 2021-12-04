@@ -7,8 +7,7 @@ import { FooterLayoutComponent } from './footer-layout/footer-layout.component';
 import { MasterContainerLayoutComponent } from './master-container-layout/master-container-layout.component';
 import { SideMenuLayoutComponent } from './side-menu-layout/side-menu-layout.component';
 import { PagesModule } from '../pages/pages.module';
-
-
+import { RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,9 +18,11 @@ import { PagesModule } from '../pages/pages.module';
     SideMenuLayoutComponent,
   ],
   imports: [
-  CommonModule,
+    CommonModule,
     BlocksModule,
-    PagesModule
+    PagesModule,
+    RouterModule,
+    
   ],
   exports:[
     LayoutComponent,

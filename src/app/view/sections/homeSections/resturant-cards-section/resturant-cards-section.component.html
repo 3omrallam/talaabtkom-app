@@ -5,18 +5,9 @@
     <p class="m-0 fCC-reg-sD cCC-text-grey">صناعات المطابع ودور النشر. كان </p>
 </div>
 <!-- Resturant Cards -->
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center uCC-gap-16">
     <!-- Resturant 1 -->
-    <app-card-block resturantImage="imCC-Resturant1" resturantLogo="imCC-Resturantlogo1" resturantName="مطعم بافلو برجر"
-        resturantDesc='"المشويات - أكل سريع"'></app-card-block>
-    <!-- divider -->
-    <div class="mx-2"></div>
-    <!-- Resturant 2 -->
-    <app-card-block resturantImage="imCC-Resturant2" resturantLogo="imCC-Resturantlogo2" resturantName="مطعم طاية"
-        resturantDesc='"المشويات - أكل صحي"'></app-card-block>
-    <!-- divider -->
-    <div class="mx-2"></div>
-    <!-- Resturant 3 -->
-    <app-card-block resturantImage="imCC-Resturant3" resturantLogo="imCC-Resturantlogo3"
-        resturantName="مطعم السمك الذهبي" resturantDesc='"المشويات - أسماك"'></app-card-block>
+    <ng-container *ngFor='let resturantCardstate of resturantCardstates' class="col-4">
+        <app-resturant-grid-card-block [blockState]="resturantCardstate"></app-resturant-grid-card-block>
+    </ng-container>
 </div>
