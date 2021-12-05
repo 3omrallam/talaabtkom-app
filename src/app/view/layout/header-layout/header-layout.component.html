@@ -1,1 +1,6 @@
+<div class="container">
   <app-navbar-page></app-navbar-page>
+</div>
+<div *ngIf='this.activeRouter.url !== "/resturant" && this.activeRouter.url !== "/"'>
+  <app-cover-header-block></app-cover-header-block>
+</div>

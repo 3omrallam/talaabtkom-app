@@ -13,6 +13,11 @@ import { FeedbackCardBlockComponent } from './masterContainerBlocks/feedback-car
 import { RouterModule } from '@angular/router';
 import { ResturantGridCardBlockComponent } from './masterContainerBlocks/resturant-grid-card-block/resturant-grid-card-block.component';
 import { ResturantListCardBlockComponent } from './masterContainerBlocks/resturant-list-card-block/resturant-list-card-block.component';
+import { CoverHeaderBlockComponent } from './headerBlocks/cover-header-block/cover-header-block.component';
+import { ResturantStickerBlockComponent } from './sideMenuBlocks/resturant-sticker-block/resturant-sticker-block.component';
+import { QrcodeBlockComponent } from './masterContainerBlocks/qrcode-block/qrcode-block.component';
+import { MenuListBlockComponent } from './masterContainerBlocks/menu-list-block/menu-list-block.component';
+import { SideMenuNavigatorsComponent } from './sideMenuBlocks/side-menu-navigators/side-menu-navigators.component';
 
 
 
@@ -29,6 +34,11 @@ import { ResturantListCardBlockComponent } from './masterContainerBlocks/restura
     FeedbackCardBlockComponent,
     ResturantGridCardBlockComponent,
     ResturantListCardBlockComponent,
+    CoverHeaderBlockComponent,
+    ResturantStickerBlockComponent,
+    QrcodeBlockComponent,
+    MenuListBlockComponent,
+    SideMenuNavigatorsComponent,
     
   ],
   imports: [
@@ -47,7 +57,11 @@ import { ResturantListCardBlockComponent } from './masterContainerBlocks/restura
     FooterNavigatorBlockComponent,
     FeedbackCardBlockComponent,
     ResturantGridCardBlockComponent,
-    ResturantListCardBlockComponent
+    ResturantListCardBlockComponent,
+    CoverHeaderBlockComponent,
+    ResturantStickerBlockComponent,
+    QrcodeBlockComponent,
+    MenuListBlockComponent
     
   ]
 })

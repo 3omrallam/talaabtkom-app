@@ -2,13 +2,13 @@
     <div class="d-flex align-items-center">
         <!-- Resturant Image -->
         <div class="uCC-f-radius-sD uCC-Border-grey">
-            <i class="{{listState.image}} d-flex imCC-Background-Cover CC-resturantsimgs-Holder"></i>
+            <i class="{{listState.image}} d-flex imCC-Background-Cover CC-resturantsimgs-Holder uCC-Click"></i>
         </div>
         <div class="me-4">
             <!-- Resturant-title -->
-            <p class="fCC-bold-sD cCC-text-dark m-0">{{listState.title}}</p>
+            <a routerLink="resturantMainPage"><p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{listState.title}}</p></a>
             <!-- Resturant Description -->
-            <p class="fCC-reg-sC cCC-text-support2 mb-2">{{listState.description}}</p>
+            <p class="fCC-reg-sC cCC-text-support2 mb-2 uCC-Click">{{listState.description}}</p>
             <!-- Icons -->
             <div class="d-flex justify-content-between">
                 <app-icon iconName="iCC-Clockblue iCC-sB imCC-Background-Contain d-flex mx-1" textContent="90 دقيقة"
@@ -27,21 +27,8 @@
         <div class="cCC-opacity-support1-30 uCC-f-radius-sD p-2 uCC-Click">
             <i class="d-flex iCC-Heartempty iCC-sB imCC-Background-Contain"></i>
         </div>
+        <!-- QrCode Block -->
         <div class="mx-2"></div>
-        <div
-            class="d-flex flex-column justify-content-center align-items-center uCC-f-radius-sA cCC-opacity-support1-20 CC-resturantsimgs-Holder">
-            <!-- QR code -->
-            <i class="imCC-Qrcode d-flex imCC-Background-Contain CC-Qr-Holder uCC-f-radius-sA mt-3"></i>
-            <!-- ShareMenu Block -->
-            <div class="d-flex justify-content-center align-items-center uCC-l-radius-sE cCC-opacity-support1-50 mt-3 w-100 pt-1">
-                <i class="iCC-Share iCC-sK imCC-Background-Contain d-flex d-flex"></i>
-                <!-- divider -->
-                <div>
-                    <span class="fCC-bold-sH cCC-text-support2 pe-1">مشاركة المنيو</span>
-                </div>
-                <!-- <app-icon iconName="iCC-Share iCC-sK imCC-Background-Contain d-flex" textContent="مشاركة المنيو"
-                    textClass="fCC-bold-sH cCC-text-support2 pe-1"></app-icon> -->
-            </div>
-        </div>
+      <app-qrcode-block></app-qrcode-block>
     </div>
 </div>

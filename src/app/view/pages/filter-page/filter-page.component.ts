@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FilterService } from '../services/filter.service';
 
 @Component({
-  selector: 'app-aside-page',
-  templateUrl: './aside-page.component.html',
-  styleUrls: ['./aside-page.component.scss']
+  selector: 'app-filter-page',
+  templateUrl: './filter-page.component.html',
+  styleUrls: ['./filter-page.component.scss']
 })
-export class AsidePageComponent implements OnInit {
+export class FilterPageComponent implements OnInit {
 
   constructor(public _FilterService: FilterService) { }
 

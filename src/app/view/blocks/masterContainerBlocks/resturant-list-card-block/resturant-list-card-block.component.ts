@@ -1,5 +1,6 @@
 import { ResturantCard } from './../resturant-grid-card-block/model/resturant-card';
 import { Component, OnInit, Input } from '@angular/core';
+import { Router, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-resturant-list-card-block',

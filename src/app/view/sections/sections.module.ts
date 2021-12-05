@@ -5,10 +5,12 @@ import { SectionsComponent } from './sections.component';
 import { CoverSectionComponent } from './homeSections/cover-section/cover-section.component';
 import { AboutSectionComponent } from './homeSections/about-section/about-section.component';
 import { MenuQrcodeSectionComponent } from './homeSections/menu-qrcode-section/menu-qrcode-section.component';
-import { ResturantCardsSectionComponent } from './homeSections/resturant-cards-section/resturant-cards-section.component';
+import { ResturantCardsSectionComponent } from './resturant-cards-section/resturant-cards-section.component';
 import { FeedbackSectionComponent } from './homeSections/feedback-section/feedback-section.component';
 import { ContactSectionComponent } from './homeSections/contact-section/contact-section.component';
 import { MobileAppSectionComponent } from './homeSections/mobile-app-section/mobile-app-section.component';
+import { ResturantInfoSectionComponent } from './resturant-info-section/resturant-info-section.component';
+import { ResturantMenuSectionComponent } from './resturant-menu-section/resturant-menu-section.component';
 
 
 
@@ -22,6 +24,8 @@ import { MobileAppSectionComponent } from './homeSections/mobile-app-section/mob
     FeedbackSectionComponent,
     ContactSectionComponent,
     MobileAppSectionComponent,
+    ResturantInfoSectionComponent,
+    ResturantMenuSectionComponent,
     
   ],
   imports: [
@@ -36,7 +40,9 @@ import { MobileAppSectionComponent } from './homeSections/mobile-app-section/mob
     ResturantCardsSectionComponent,
     FeedbackSectionComponent,
     MobileAppSectionComponent,
-    ContactSectionComponent
+    ContactSectionComponent,
+    ResturantInfoSectionComponent,
+    ResturantMenuSectionComponent
   ]
 })
 export class SectionsModule { }

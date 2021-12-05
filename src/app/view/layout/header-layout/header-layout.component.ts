@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header-layout',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderLayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(public activeRouter: Router) { }
 
   ngOnInit(): void {
+    console.log(this.activeRouter.url);
   }
 
 }

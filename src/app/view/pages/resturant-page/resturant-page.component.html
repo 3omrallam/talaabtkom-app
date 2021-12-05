@@ -1,5 +1,35 @@
-<div class="mb-5">
-    <ng-container *ngFor='let resturantCardstate of resturantCardstates' class="col-4">
-        <app-resturant-list-card-block [listState]="resturantCardstate"></app-resturant-list-card-block>
-    </ng-container>
+<div class="d-flex justify-content-between mt-4">
+    <div>
+        <!-- Location Icon -->
+        <app-resturant-info-section></app-resturant-info-section>
+    </div>
+    <div class="d-flex align-items-start">
+        <!-- Heart Icon -->
+        <div class="d-flex flex-column align-items-center">
+            <div class="cCC-opacity-support1-100 uCC-f-radius-sA p-2 uCC-Click">
+                <i class="d-flex iCC-Heartred iCC-sD imCC-Background-Contain"></i>
+            </div>
+            <div class="my-3"></div>
+            <!-- Phone call Icon -->
+            <div class="cCC-opacity-support1-100 uCC-f-radius-sA p-2 uCC-Click">
+                <i class="d-flex iCC-Phone-green iCC-sC imCC-Background-Contain"></i>
+            </div>
+        </div>
+        <div class="mx-2"></div>
+        <!-- Qr Code Block -->
+      <app-qrcode-block></app-qrcode-block>
+    </div>
 </div>
+<!-- start search section  -->
+<div class="d-flex w-100 align-items-center justify-content-between uCC-f-radius-sB cCC-bg-support1 mt-4 mb-3">
+    <!--  Email Input -->
+    <input type="email" placeholder="أبحث عن أكلتك المفضلة" name="email"
+        class="py-2 border-0 fCC-reg-sD cCC-bg-support1 me-3">
+    <!-- Button Send -->
+    <button class="btn p-2 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA d-flex">
+        <!-- Icon Send and text Inside Button -->
+        <app-icon iconName="iCC-Searchwhite d-flex iCC-sD cCC-text-support1 imCC-Background-Contain"></app-icon>
+    </button>
+</div>
+<!-- Resturant Menu Section -->
+<app-resturant-menu-section></app-resturant-menu-section>

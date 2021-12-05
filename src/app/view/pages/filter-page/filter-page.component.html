@@ -1,14 +1,14 @@
 <!-- FIRST FILTER -->
-<div class="form-group rounded h-100 uCC-Border-grey p-3">
+<div class="form-group rounded uCC-Border-grey p-2 CC-aside-holder">
     <!-- FILTERS HEADER & ICON -->
-    <div class="cCC-bg-main cCC-text-white w-100 uCC-f-radius-sA py-1">
-      <app-icon [textContent]='"نوع المطبخ"' textClass="fCC-bold-sA" [iconName]='"iCC-Heat iCC-sB imCC-Background-Contain mx-3 my-2"'></app-icon>
+    <div class="cCC-bg-main cCC-text-white uCC-f-radius-sA py-1 mt-2">
+      <app-icon [textContent]='"نوع المطبخ"' textClass="fCC-bold-sA" [iconName]='"iCC-Heat iCC-sD imCC-Background-Contain mx-3 my-2"'></app-icon>
     </div>
     <!-- FILTERS NAME-->
-    <div *ngFor='let filter of _FilterService.options' class="py-2 me-2 LT-horizontal-divider">
+    <div *ngFor='let filter of _FilterService.options' class="py-2 LT-horizontal-divider">
       <app-filter-selection-block [items]='filter'></app-filter-selection-block>
     </div>
-    <div class="cCC-bg-main cCC-text-white w-100 uCC-f-radius-sA mt-3 py-1">
+    <div class="cCC-bg-main cCC-text-white uCC-f-radius-sA mt-3 py-1">
       <app-icon [textContent]='"حدد البحث"' textClass="fCC-bold-sA" [iconName]='"iCC-Filter iCC-sB imCC-Background-Contain mx-3 my-2"'></app-icon>
     </div>
     <!-- FILTERS NAME-->

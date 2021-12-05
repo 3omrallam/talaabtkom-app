@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AsidePageComponent } from './aside-page.component';
+import { FilterPageComponent } from './filter-page.component';
 
-describe('AsidePageComponent', () => {
-  let component: AsidePageComponent;
-  let fixture: ComponentFixture<AsidePageComponent>;
+describe('FilterPageComponent', () => {
+  let component: FilterPageComponent;
+  let fixture: ComponentFixture<FilterPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AsidePageComponent ]
+      declarations: [ FilterPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AsidePageComponent);
+    fixture = TestBed.createComponent(FilterPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

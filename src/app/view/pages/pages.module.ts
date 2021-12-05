@@ -7,7 +7,10 @@ import { NavbarPageComponent } from './navbar-page/navbar-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
 import { ResturantPageComponent } from './resturant-page/resturant-page.component';
-import { AsidePageComponent } from './aside-page/aside-page.component';
+import { ResturantsListPageComponent } from './resturants-list-page/resturants-list-page.component';
+import { FilterPageComponent } from './filter-page/filter-page.component';
+import { ResturantAsidePageComponent } from './resturant-aside-page/resturant-aside-page.component';
+import { UserAsidePageComponent } from './user-aside-page/user-aside-page.component';
 
 
 
@@ -18,7 +21,10 @@ import { AsidePageComponent } from './aside-page/aside-page.component';
     HomePageComponent,
     FooterPageComponent,
     ResturantPageComponent,
-    AsidePageComponent,
+    ResturantsListPageComponent,
+    FilterPageComponent,
+    ResturantAsidePageComponent,
+    UserAsidePageComponent,
     
   ],
   imports: [
@@ -32,7 +38,10 @@ import { AsidePageComponent } from './aside-page/aside-page.component';
     HomePageComponent,
     FooterPageComponent,
     ResturantPageComponent,
-    AsidePageComponent
+    ResturantsListPageComponent,
+    FilterPageComponent,
+    ResturantAsidePageComponent,
+    UserAsidePageComponent
 
   ]
 })

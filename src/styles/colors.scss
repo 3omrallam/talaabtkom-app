@@ -52,6 +52,9 @@ $orange:#E66B32;
 .cCC-opacity-green-20{
   background-color: rgba(78, 225, 67,0.2);
 }
+.cCC-opacity-support1-10{
+  background-color: rgba(237, 237, 244, 0.1);
+}
 .cCC-opacity-support1-20{
   background-color: rgba(237, 237, 244, 0.2);
 }
@@ -103,5 +106,8 @@ $orange:#E66B32;
 }
 .cCC-text-lightgray{
   color:$lightgray;
+}
+.cCC-text-darkgray{
+  color:$darkgrey;
 }
 // END === Text Color
