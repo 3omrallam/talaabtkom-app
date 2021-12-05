@@ -20,6 +20,9 @@
 .uCC-Border-green{
   border: 1px solid rgb(219, 249 , 217);
 }
+.uCC-Border-grey{
+  border: 2px solid #EDEDF4;
+}
 // END === Border
 // START === Border Radius
 .uCC-f-radius-sA{
@@ -33,6 +36,12 @@
 }
 .uCC-f-radius-sC{
   border-radius: 50px;
+}
+.uCC-f-radius-sD{
+  border-radius: 10px 20px 10px 20px;
+}
+.uCC-l-radius-sE{
+  border-radius: 0 0 10px 10px;
 }
 
 // END === Border Radius

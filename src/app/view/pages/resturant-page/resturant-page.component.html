@@ -1,3 +1,5 @@
-<div class="container">
-    <app-resturant-list-card-block></app-resturant-list-card-block>
+<div class="mb-5">
+    <ng-container *ngFor='let resturantCardstate of resturantCardstates' class="col-4">
+        <app-resturant-list-card-block [listState]="resturantCardstate"></app-resturant-list-card-block>
+    </ng-container>
 </div>
