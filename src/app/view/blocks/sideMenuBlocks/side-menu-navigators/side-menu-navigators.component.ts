@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-side-menu-navigators',
@@ -7,29 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideMenuNavigatorsComponent implements OnInit {
 
-  list:any = [
-   
-    {
-      header: "قائمه الطعام",
-      icon:"",
-      subList: [{title: "الاكثر مبيعا"},{title: "المشويات"},{title: "المقبلات"},{title: "الحلويات"}]
-    },
-    {
-      header: "تقييم المطعم",
-      icon:"",
-    },
-    {
-      header: "معلومات عن المطعم",
-      icon:"",
-    }
-  ];
-
-
-
+  isShow:boolean = false;
+ 
+  @Input()listElements! : any;
 
   constructor() { }
 
   ngOnInit(): void {
+    
   }
-
+  listDisplay() {
+    this.isShow = !this.isShow;
+  }
+ 
 }

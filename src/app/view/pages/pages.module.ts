@@ -11,6 +11,8 @@ import { ResturantsListPageComponent } from './resturants-list-page/resturants-l
 import { FilterPageComponent } from './filter-page/filter-page.component';
 import { ResturantAsidePageComponent } from './resturant-aside-page/resturant-aside-page.component';
 import { UserAsidePageComponent } from './user-aside-page/user-aside-page.component';
+import { MenuInformationPageComponent } from './menu-information-page/menu-information-page.component';
+import { ResturantInformationPageComponent } from './resturant-information-page/resturant-information-page.component';
 
 
 
@@ -25,6 +27,8 @@ import { UserAsidePageComponent } from './user-aside-page/user-aside-page.compon
     FilterPageComponent,
     ResturantAsidePageComponent,
     UserAsidePageComponent,
+    MenuInformationPageComponent,
+    ResturantInformationPageComponent,
     
   ],
   imports: [
@@ -41,7 +45,9 @@ import { UserAsidePageComponent } from './user-aside-page/user-aside-page.compon
     ResturantsListPageComponent,
     FilterPageComponent,
     ResturantAsidePageComponent,
-    UserAsidePageComponent
+    UserAsidePageComponent,
+    MenuInformationPageComponent,
+    ResturantInformationPageComponent
 
   ]
 })

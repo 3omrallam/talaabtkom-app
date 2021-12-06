@@ -7,5 +7,5 @@ import { ResturantsListPageComponent } from '../pages/resturants-list-page/restu
 export const LayoutRouterModule: Routes = [
   { path: '', component: HomePageComponent},
   { path: 'resturant', component: ResturantsListPageComponent},
-  { path: 'resturant/resturantMainPage', component: ResturantPageComponent},
+  { path: 'resturant/resturantMainPage', component: ResturantPageComponent}
 ]

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_18688" data-name="Rectangle 18688" width="24" height="24" transform="translate(443 898)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_22" data-name="Mask Group 22" transform="translate(-443 -898)" clip-path="url(#clip-path)">
+    <g id="icons8_mastercard_logo" transform="translate(441.909 896.909)">
+      <path id="Path_6448" data-name="Path 6448" d="M17.455,5.455a7.636,7.636,0,1,0,7.636,7.636,7.636,7.636,0,0,0-7.636-7.636Z" fill="#ff9800"/>
+      <path id="Path_6449" data-name="Path 6449" d="M8.727,5.455a7.636,7.636,0,1,0,7.636,7.636A7.636,7.636,0,0,0,8.727,5.455Z" fill="#d50000"/>
+      <path id="Path_6450" data-name="Path 6450" d="M9.818,13.091a7.623,7.623,0,0,0,3.273,6.262,7.627,7.627,0,0,0,0-12.524A7.623,7.623,0,0,0,9.818,13.091Z" fill="#ff3d00"/>
+    </g>
+  </g>
+</svg>

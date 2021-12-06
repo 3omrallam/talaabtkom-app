@@ -1,6 +1,14 @@
 <div class="container">
+  <!-- Navbar Section -->
   <app-navbar-page></app-navbar-page>
 </div>
+<div class="cCC-opacity-support1-50" *ngIf='this.activeRouter.url == "/resturant"'>
+  <div class="container col-7">
+    <app-icon iconName="iCC-Home iCC-sD imCC-Background-Contain d-flex ms-3 my-4" textContent="المطاعم المتاحة بمنطقة الرياض"
+          textClass="fCC-reg-sG cCC-text-support2"></app-icon>
+  </div>
+</div>
+<!-- Cover Section -->
 <div *ngIf='this.activeRouter.url !== "/resturant" && this.activeRouter.url !== "/"'>
   <app-cover-header-block></app-cover-header-block>
 </div>
