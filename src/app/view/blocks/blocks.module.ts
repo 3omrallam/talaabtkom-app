@@ -61,7 +61,8 @@ import { SideMenuNavigatorsComponent } from './sideMenuBlocks/side-menu-navigato
     CoverHeaderBlockComponent,
     ResturantStickerBlockComponent,
     QrcodeBlockComponent,
-    MenuListBlockComponent
+    MenuListBlockComponent,
+    SideMenuNavigatorsComponent
     
   ]
 })

@@ -1,1 +1,8 @@
-<p>side-menu-navigators works!</p>
+<ng-container *ngFor="let ele of list">
+	<app-icon iconName="iCC-Clockblue iCC-sB imCC-Background-Contain d-flex mx-1" textContent="{{ele.header}}"
+	textClass="fCC-reg-sB cCC-text-support2"></app-icon>
+	<ng-container *ngFor="let sub of ele.subList">
+
+		<p>{{ sub.title }} </p>
+	</ng-container>
+</ng-container>
