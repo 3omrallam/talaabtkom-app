@@ -11,7 +11,7 @@ $green:#4ee143;
 $darkgrey: #707070;
 $lightgray:#9A9A9A;
 $orange:#E66B32;
-
+$grey2:#575756;
 // START === Background Color
 .cCC-bg-main{
   background-color:$main;
@@ -42,6 +42,9 @@ $orange:#E66B32;
 // START === Background With Opacity Color
 .cCC-opacity-gray-10{
   background-color: rgba(112,112,112,0.1);
+}
+.cCC-opacity-grey-25{
+  background-color: rgba(112,112,112,0.25);
 }
 .cCC-opacity-blue-20{
   background-color: rgba(64, 141, 219,0.2);
@@ -109,5 +112,8 @@ $orange:#E66B32;
 }
 .cCC-text-darkgray{
   color:$darkgrey;
+}
+.cCC-text-grey2{
+  color:$grey2;
 }
 // END === Text Color

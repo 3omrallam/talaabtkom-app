@@ -1,27 +1,19 @@
-<div>
+<div *ngFor="let element of listElements">
 	<div class="d-flex align-items-center">
 		<!-- Icon and listmenu -->
-		<i class="iCC-Booksquare iCC-sD imCC-Background-Contain d-flex mx-2 me-3 my-2"></i>
-		<div [ngClass]="{'cCC-text-main' : !isShow, 'cCC-text-support2': isShow}">
-			<span class="fCC-bold-sI uCC-Click" (click)="listDisplay()">قائمه الطعام</span>
+		<i class="{{element.icon}} iCC-sD imCC-Background-Contain d-flex mx-2 me-3 my-2"></i>
+		<div>
+			<a routerLink="#" routerLinkActive="cCC-text-main"><span class="fCC-bold-sI~ fCC-reg-sC cCC-text-support2 uCC-Click" (click)="listDisplay()">{{element.header}}</span></a>
 		</div>
 	</div>
 	<!-- line divider -->
 	<div class="LT-horizontal-divider"></div>
 	<!-- list Elements -->
 	<ng-container *ngIf="!isShow">
-		<div *ngFor="let element of listElements">
-			<p class="fCC-reg-sB cCC-text-support2 me-5 my-2">{{element.title}}</p>
+		<div *ngFor="let sublist of element.subList">
+			<p class="fCC-reg-sB cCC-text-support2 me-5 my-2">{{sublist.title}}</p>
 			<!-- line divider -->
 			<div class="LT-horizontal-divider"></div>
 		</div>
 	</ng-container>
-		<!-- Icon and Rate Menu -->
-	<app-icon iconName="iCC-Rateresturant iCC-sD imCC-Background-Contain d-flex mx-2 me-3 my-2"
-		textContent="تقييم المطعم" textClass="fCC-bold-sI uCC-Click cCC-text-support2"></app-icon>
-	<!-- line divider -->
-	<div class="LT-horizontal-divider"></div>
-	<!-- Icon and Resturant Info-->
-	<app-icon iconName="iCC-Information iCC-sD imCC-Background-Contain d-flex mx-2 me-3 my-2"
-		textContent="معلومات عن المطعم" textClass="fCC-bold-sI uCC-Click cCC-text-support2"></app-icon>
 </div>

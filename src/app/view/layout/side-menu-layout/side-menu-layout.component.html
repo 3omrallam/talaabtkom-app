@@ -1,8 +1,11 @@
-<div class="container uCC-Border-gray d-flex flex-column justify-content-start align-item-center w-100  px-2">
+<div class="container uCC-Border-gray d-flex flex-column justify-content-start align-item-center w-100 px-2 me-5~">
     <div *ngIf='this.activeRouter.url == "/resturant"' class="pt-2" >
         <app-filter-page></app-filter-page>
     </div>
-    <div class="py-3" *ngIf='this.activeRouter.url !== "/resturant"'>
+    <div class="py-3" *ngIf='this.activeRouter.url !== "/resturant" && this.activeRouter.url !== "/userProfile"'>
         <app-resturant-aside-page></app-resturant-aside-page>
+    </div>
+    <div class="py-4" *ngIf='this.activeRouter.url == "/userProfile"'>
+        <app-user-aside-page></app-user-aside-page>
     </div>
 </div>

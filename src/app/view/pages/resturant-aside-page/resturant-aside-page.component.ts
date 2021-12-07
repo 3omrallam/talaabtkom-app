@@ -6,34 +6,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resturant-aside-page.component.scss']
 })
 export class ResturantAsidePageComponent implements OnInit {
-  list : any = [
-    {
-      title : "الاكثر مبيعا",
-    },
-    {
-      title: "المشويات",
-    },
-    {
-      title: "المقبلات"
-    },
-    {title: "الحلويات"}
-  ]
-  // list:any = [
+  // list : any = [
+  //   {
+  //     title : "الاكثر مبيعا",
+  //   },
+  //   {
+  //     title: "المشويات",
+  //   },
+  //   {
+  //     title: "المقبلات"
+  //   },
+  //   {title: "الحلويات"}
+  // ]
+  list:any = [
    
-  //   {
-  //     header: "قائمه الطعام",
-  //     icon:"iCC-Booksquare",
-  //     subList: [{title: "الاكثر مبيعا"},{title: "المشويات"},{title: "المقبلات"},{title: "الحلويات"}]
-  //   },
-  //   {
-  //     header: "تقييم المطعم",
-  //     icon:"iCC-Rateresturant",
-  //   },
-  //   {
-  //     header: "معلومات عن المطعم",
-  //     icon:"iCC-Information",
-  //   }
-  // ];
+    {
+      header: "قائمه الطعام",
+      icon:"iCC-Booksquare",
+      subList: [{title: "الاكثر مبيعا"},{title: "المشويات"},{title: "المقبلات"},{title: "الحلويات"}]
+    },
+    {
+      header: "تقييم المطعم",
+      icon:"iCC-Rateresturant",
+    },
+    {
+      header: "معلومات عن المطعم",
+      icon:"iCC-Information",
+    }
+  ];
 
 
   constructor() { }

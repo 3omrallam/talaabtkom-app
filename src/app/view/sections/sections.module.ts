@@ -11,6 +11,7 @@ import { ContactSectionComponent } from './homeSections/contact-section/contact-
 import { MobileAppSectionComponent } from './homeSections/mobile-app-section/mobile-app-section.component';
 import { ResturantInfoSectionComponent } from './resturant-info-section/resturant-info-section.component';
 import { ResturantMenuSectionComponent } from './resturant-menu-section/resturant-menu-section.component';
+import { UserInfoSectionComponent } from './user-info-section/user-info-section.component';
 
 
 
@@ -26,6 +27,7 @@ import { ResturantMenuSectionComponent } from './resturant-menu-section/resturan
     MobileAppSectionComponent,
     ResturantInfoSectionComponent,
     ResturantMenuSectionComponent,
+    UserInfoSectionComponent,
     
   ],
   imports: [
@@ -42,7 +44,8 @@ import { ResturantMenuSectionComponent } from './resturant-menu-section/resturan
     MobileAppSectionComponent,
     ContactSectionComponent,
     ResturantInfoSectionComponent,
-    ResturantMenuSectionComponent
+    ResturantMenuSectionComponent,
+    UserInfoSectionComponent
   ]
 })
 export class SectionsModule { }

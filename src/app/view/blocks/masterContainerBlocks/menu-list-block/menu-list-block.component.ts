@@ -9,6 +9,11 @@ import { ResturantMenu } from './model/menuList';
 export class MenuListBlockComponent implements OnInit {
 
   @Input()blockMenu! : ResturantMenu;
+  extraList:any=[{name:"موتزريلا" , cost:"10 ر.س"}, 
+                 {name:"شرائح شيدر" , cost:"10 ر.س"},
+                 {name:"كاتشب" , cost:"10 ر.س"},
+                 {name:"طماطم" , cost:"10 ر.س"}
+                ]
 
   constructor() { }
 

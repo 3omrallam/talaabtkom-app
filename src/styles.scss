@@ -10,6 +10,9 @@ a{
     color: black;
     text-decoration: none;
 }
+a:hover{
+  color: #363537;
+}
 /* Start === Button HOVER  */
 button:hover
 {
@@ -20,3 +23,17 @@ button:focus
   box-shadow:none !important;
 }
 /* END === Button HOVER */
+input:focus-visible
+{
+    outline: none !important;
+}
+textarea {
+  resize: none;
+}
+.form-control:focus {
+  color: #707070;
+  background-color: #fff;
+  border-color: #707070;
+  outline: 0;
+  box-shadow: none;
+}

@@ -1,13 +1,6 @@
 <div class="mb-5 mt-3">
+    <!-- Resturants List -->
     <ng-container *ngFor='let resturantCardstate of resturantCardstates'>
         <app-resturant-list-card-block [listState]="resturantCardstate"></app-resturant-list-card-block>
     </ng-container>
-</div>
-<div class="d-flex align-items-start">
-    <!-- Heart Icon -->
-    <div class="cCC-opacity-support1-30 uCC-f-radius-sD p-2 uCC-Click">
-        <i class="d-flex iCC-Heartempty iCC-sB imCC-Background-Contain"></i>
-    </div>
-    <div class="mx-2"></div>
-  <app-qrcode-block></app-qrcode-block>
 </div>

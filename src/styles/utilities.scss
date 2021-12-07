@@ -26,6 +26,9 @@
 .uCC-Border-grey{
   border: 2px solid #EDEDF4;
 }
+.uCC-Border-lightgrey{
+  border: 0.5px solid #9A9A9A;
+}
 // END === Border
 // START === Border Radius
 .uCC-f-radius-sA{
@@ -45,6 +48,9 @@
 }
 .uCC-l-radius-sE{
   border-radius: 0 0 10px 10px;
+}
+.uCC-l-radius-sF{
+  border-radius: 0 10px 10px 0px;
 }
 
 // END === Border Radius
@@ -77,6 +83,9 @@
 }
 .uCC-gap-24{
   gap: 24px;
+}
+.uCC-gap-32{
+  gap: 32px;
 }
 
 /* END === Gaps  */
