@@ -13,6 +13,9 @@ $lightgray:#9A9A9A;
 $orange:#E66B32;
 $grey2:#575756;
 // START === Background Color
+.cCC-bg-Inherit{
+  background-color: inherit;
+}
 .cCC-bg-main{
   background-color:$main;
 }

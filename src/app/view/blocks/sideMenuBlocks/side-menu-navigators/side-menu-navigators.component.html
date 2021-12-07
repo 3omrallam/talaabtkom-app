@@ -1,9 +1,11 @@
-<div *ngFor="let element of listElements">
+<!-- <a routerLink="resturant/resturantMainPage/resturant-information" routerLinkActive="cCC-text-main " class="p-5 m-5 bg-danger">Route</a> -->
+<div *ngFor="let element of listElements; let first = first">
 	<div class="d-flex align-items-center">
 		<!-- Icon and listmenu -->
 		<i class="{{element.icon}} iCC-sD imCC-Background-Contain d-flex mx-2 me-3 my-2"></i>
 		<div>
-			<a routerLink="#" routerLinkActive="cCC-text-main"><span class="fCC-bold-sI~ fCC-reg-sC cCC-text-support2 uCC-Click" (click)="listDisplay()">{{element.header}}</span></a>
+			<!-- <a routerLink="resturant/resturantMainPage/{{first ? '' : 'resturant-information'}}" routerLinkActive="cCC-text-main"><span class="fCC-bold-sI~ fCC-reg-sC cCC-text-support2 uCC-Click" (click)="listDisplay()">{{element.header}}</span></a> -->
+			<a routerLink="resturant/resturantMainPage/{{first ? '' : 'resturant-information'}}" routerLinkActive="cCC-text-main"><span class="fCC-bold-sI~ fCC-reg-sC cCC-text-support2 uCC-Click" >{{element.header}}</span></a>
 		</div>
 	</div>
 	<!-- line divider -->

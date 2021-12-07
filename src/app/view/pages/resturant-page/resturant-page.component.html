@@ -1,9 +1,10 @@
-<div class="d-flex justify-content-between mt-4 position-sticky top-0 pb-3">
+<div class="d-flex justify-content-between mt-4 position-sticky~ top-0 pb-3">
     <section>
         <!-- Location Icon -->
         <app-resturant-info-section></app-resturant-info-section>
     </section>
     <section class="d-flex align-items-start">
+      <!-- TODO Change It TO Component => Resturant-information-block -->
         <!-- Heart Icon -->
         <div class="d-flex flex-column align-items-center">
             <div class="cCC-opacity-support1-100 uCC-f-radius-sA p-2 uCC-Click">
@@ -20,11 +21,7 @@
       <app-qrcode-block></app-qrcode-block>
     </section>
 </div>
-<!-- [MENU INFORMATION PAGE] PAGE  -->
+<!-- [resturant Main Page PAGE]  -->
 <section>
-    <app-menu-information-page></app-menu-information-page>
+    <router-outlet></router-outlet>
 </section>
-<!-- [RESTURANT INFORMATION PAGE] PAGE -->
-<!-- <div class="CC-scroll mb-4">
-    <app-resturant-information-page></app-resturant-information-page>
-</div> -->

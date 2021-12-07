@@ -39,12 +39,11 @@ import { SideMenuNavigatorsComponent } from './sideMenuBlocks/side-menu-navigato
     QrcodeBlockComponent,
     MenuListBlockComponent,
     SideMenuNavigatorsComponent,
-    
+
   ],
   imports: [
     CommonModule,
     RouterModule
-    
   ],
   exports:[
     NavbarBlockComponent,
@@ -63,7 +62,7 @@ import { SideMenuNavigatorsComponent } from './sideMenuBlocks/side-menu-navigato
     QrcodeBlockComponent,
     MenuListBlockComponent,
     SideMenuNavigatorsComponent
-    
+
   ]
 })
 export class BlocksModule { }

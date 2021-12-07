@@ -2,8 +2,8 @@
   <header class="container-fluid p-0">
     <app-header-layout></app-header-layout>
   </header>
-  <section class="container px-0 row justify-content-center mx-auto m-0 uCC-gap-24 mt-3~ ">
-    <aside *ngIf='this.activeRouter.url !== "/"' class="container col-3">
+  <section class="{{this.activeRouter.url !== '/' ? 'container' : 'container-fluid'}} px-0 row justify-content-center mx-auto m-0 uCC-gap-24">
+    <aside *ngIf='this.activeRouter.url !== "/"' class="container col-3 position-relative">
       <app-side-menu-layout></app-side-menu-layout>
     </aside>
     <main class="container-fluid col p-0">

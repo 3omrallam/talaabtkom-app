@@ -14,7 +14,7 @@ import { UserAsidePageComponent } from './user-aside-page/user-aside-page.compon
 import { MenuInformationPageComponent } from './menu-information-page/menu-information-page.component';
 import { ResturantInformationPageComponent } from './resturant-information-page/resturant-information-page.component';
 import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
-
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -31,12 +31,13 @@ import { UserProfilePageComponent } from './user-profile-page/user-profile-page.
     MenuInformationPageComponent,
     ResturantInformationPageComponent,
     UserProfilePageComponent,
-    
+
   ],
   imports: [
     CommonModule,
     BlocksModule,
-    SectionsModule
+    SectionsModule,
+    RouterModule
   ],
   exports: [
     PagesComponent,

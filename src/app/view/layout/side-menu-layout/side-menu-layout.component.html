@@ -1,5 +1,5 @@
-<div class="container uCC-Border-gray d-flex flex-column justify-content-start align-item-center w-100 px-2 me-5~">
-    <div *ngIf='this.activeRouter.url == "/resturant"' class="pt-2" >
+<div class="container uCC-Border-gray position-sticky d-flex flex-column justify-content-start align-item-center w-100 px-2 py-4" style="top: 0;">
+    <div *ngIf='this.activeRouter.url == "/resturant"'>
         <app-filter-page></app-filter-page>
     </div>
     <div class="py-3" *ngIf='this.activeRouter.url !== "/resturant" && this.activeRouter.url !== "/userProfile"'>
