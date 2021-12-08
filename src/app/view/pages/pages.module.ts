@@ -6,15 +6,14 @@ import { BlocksModule } from '../blocks/blocks.module';
 import { NavbarPageComponent } from './navbar-page/navbar-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
-import { ResturantPageComponent } from './resturant-page/resturant-page.component';
 import { ResturantsListPageComponent } from './resturants-list-page/resturants-list-page.component';
 import { FilterPageComponent } from './filter-page/filter-page.component';
 import { ResturantAsidePageComponent } from './resturant-aside-page/resturant-aside-page.component';
 import { UserAsidePageComponent } from './user-aside-page/user-aside-page.component';
-import { MenuInformationPageComponent } from './menu-information-page/menu-information-page.component';
-import { ResturantInformationPageComponent } from './resturant-information-page/resturant-information-page.component';
 import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
 import { RouterModule } from '@angular/router';
+import { ResturantProfilePageComponent } from './resturant-profile-page/resturant-profile-page.component';
+import { CoreModule } from 'src/app/core/core.module';
 
 
 @NgModule({
@@ -23,35 +22,32 @@ import { RouterModule } from '@angular/router';
     NavbarPageComponent,
     HomePageComponent,
     FooterPageComponent,
-    ResturantPageComponent,
     ResturantsListPageComponent,
     FilterPageComponent,
     ResturantAsidePageComponent,
     UserAsidePageComponent,
-    MenuInformationPageComponent,
-    ResturantInformationPageComponent,
     UserProfilePageComponent,
+    ResturantProfilePageComponent
 
   ],
   imports: [
     CommonModule,
     BlocksModule,
     SectionsModule,
-    RouterModule
+    RouterModule,
+    CoreModule
   ],
   exports: [
     PagesComponent,
     NavbarPageComponent,
     HomePageComponent,
     FooterPageComponent,
-    ResturantPageComponent,
     ResturantsListPageComponent,
     FilterPageComponent,
     ResturantAsidePageComponent,
     UserAsidePageComponent,
-    MenuInformationPageComponent,
-    ResturantInformationPageComponent,
-    UserProfilePageComponent
+    UserProfilePageComponent,
+    ResturantProfilePageComponent
 
   ]
 })

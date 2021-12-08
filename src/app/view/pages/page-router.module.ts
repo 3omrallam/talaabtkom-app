@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { ResturantMenuSectionComponent } from './../sections/resturant-menu-section/resturant-menu-section.component';
-import { ResturantInformationPageComponent } from './resturant-information-page/resturant-information-page.component';
+import { ResturantCategorySectionComponent } from '../sections/resturant-category-section/resturant-category-section.component';
+import { ResturantInformationSectionComponent } from '../sections/resturant-information-section/resturant-information-section.component';
 
 
 export const PageRouterModule: Routes = [
-    { path: '', component: ResturantMenuSectionComponent},
-    { path: 'resturant-information', component: ResturantInformationPageComponent},
+    { path: '', component: ResturantCategorySectionComponent},
+    { path: 'info', component: ResturantInformationSectionComponent},
 ]

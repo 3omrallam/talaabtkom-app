@@ -8,6 +8,7 @@ import { MasterContainerLayoutComponent } from './master-container-layout/master
 import { SideMenuLayoutComponent } from './side-menu-layout/side-menu-layout.component';
 import { PagesModule } from '../pages/pages.module';
 import { RouterModule} from '@angular/router';
+import { NavbarLayoutComponent } from './navbar-layout/navbar-layout.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RouterModule} from '@angular/router';
     FooterLayoutComponent,
     MasterContainerLayoutComponent,
     SideMenuLayoutComponent,
+    NavbarLayoutComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { RouterModule} from '@angular/router';
     HeaderLayoutComponent,
     FooterLayoutComponent,
     MasterContainerLayoutComponent,
-    SideMenuLayoutComponent
+    SideMenuLayoutComponent,
+    NavbarLayoutComponent
   ]
 })
 export class LayoutModule { }

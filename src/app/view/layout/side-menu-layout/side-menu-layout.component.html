@@ -1,10 +1,13 @@
-<div class="container uCC-Border-gray position-sticky d-flex flex-column justify-content-start align-item-center w-100 px-2 py-4" style="top: 0;">
-    <div *ngIf='this.activeRouter.url == "/resturant"'>
+<div class="container~ uCC-Border-gray position-sticky d-flex flex-column justify-content-start px-2" style="top: 200px;">
+    <!-- Filteration SideMenu -->
+    <div *ngIf='this.activeRouter.url == "/resturants"'>
         <app-filter-page></app-filter-page>
     </div>
-    <div class="py-3" *ngIf='this.activeRouter.url !== "/resturant" && this.activeRouter.url !== "/userProfile"'>
+    <!-- Resturant Page Aside -->
+    <div *ngIf='this.activeRouter.url !== "/resturants" && this.activeRouter.url !== "/userProfile"'>
         <app-resturant-aside-page></app-resturant-aside-page>
     </div>
+    <!-- User Profile Aside -->
     <div class="py-4" *ngIf='this.activeRouter.url == "/userProfile"'>
         <app-user-aside-page></app-user-aside-page>
     </div>

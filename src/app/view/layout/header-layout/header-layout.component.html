@@ -1,22 +1,15 @@
-<div class="container">
-  <!-- Navbar Section -->
-  <app-navbar-page></app-navbar-page>
-</div>
 <!-- Resturants Available In Your Zone -->
-<div class="cCC-opacity-support1-50" *ngIf='this.activeRouter.url == "/resturant"'>
-  <div class="container col-7">
-    <app-icon iconName="iCC-Home iCC-sD imCC-Background-Contain d-flex ms-3 my-4" textContent="المطاعم المتاحة بمنطقة الرياض"
-          textClass="fCC-reg-sG cCC-text-support2"></app-icon>
+<div class="cCC-opacity-support1-50" *ngIf='this.activeRouter.url == "/resturants"'>
+  <div class="container col-7 p-0">
+    <app-page-title-block title="المطاعم المتاحة بمنطقة الرياض" iconTitle="iCC-Home"></app-page-title-block>
   </div>
 </div>
 <!-- Personal Information -->
-<div class="cCC-opacity-support1-20" *ngIf='this.activeRouter.url == "/userProfile"'>
-  <div class="container col-7">
-    <app-icon iconName="iCC-Usertag iCC-sD imCC-Background-Contain d-flex ms-2 my-4" textContent="المعلومات الشخصية"
-          textClass="fCC-reg-sG cCC-text-support2"></app-icon>
-  </div>
+<div class=" container p-0 col-7 cCC-opacity-support1-20" *ngIf='this.activeRouter.url == "/userProfile"'>
+  <app-page-title-block title="المعلومات الشخصية" iconTitle="iCC-Usertag"></app-page-title-block>
 </div>
 <!-- Cover Section -->
-<div *ngIf='this.activeRouter.url !== "/resturant" && this.activeRouter.url !== "/" && this.activeRouter.url !== "/userProfile"'>
+<div
+  *ngIf='this.activeRouter.url !== "/resturants" && this.activeRouter.url !== "/" && this.activeRouter.url !== "/userProfile"'>
   <app-cover-header-block></app-cover-header-block>
 </div>

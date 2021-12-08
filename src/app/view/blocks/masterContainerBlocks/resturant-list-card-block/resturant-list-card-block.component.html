@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-between LT-horizontal-divider py-3 ">
+<div class="d-flex justify-content-between ">
     <div class="d-flex align-items-center">
         <!-- Resturant Image -->
         <div>
@@ -6,7 +6,7 @@
         </div>
         <div class="me-4">
             <!-- Resturant-title -->
-            <a routerLink="resturantMainPage"><p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{listState.title}}</p></a>
+            <a routerLink="/resturant-profile/{{listState.id}}"><p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{listState.title}}</p></a>
             <!-- Resturant Description -->
             <p class="fCC-reg-sC cCC-text-support2 mb-2 uCC-Click">{{listState.description}}</p>
             <!-- Icons -->
@@ -29,3 +29,4 @@
       <app-qrcode-block></app-qrcode-block>
     </div>
 </div>
+<div class="LT-horizontal-divider my-3"></div>

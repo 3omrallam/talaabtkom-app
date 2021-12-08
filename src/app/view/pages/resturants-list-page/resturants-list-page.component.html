@@ -1,6 +1,6 @@
 <div class="mb-5 mt-3">
     <!-- Resturants List -->
-    <ng-container *ngFor='let resturantCardstate of resturantCardstates'>
+    <ng-container *ngFor='let resturantCardstate of _ResturantCardService.resturantCardstates'>
         <app-resturant-list-card-block [listState]="resturantCardstate"></app-resturant-list-card-block>
     </ng-container>
 </div>

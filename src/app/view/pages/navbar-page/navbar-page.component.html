@@ -5,8 +5,8 @@
     <!-- vertical divider -->
     <div class="mx-4"></div>
     <!-- App Favorate Icon Block Section-->
-    <div class="iCC-sF rounded-circle cCC-bg-main d-flex align-items-center justify-content-center uCC-Click">
-      <app-icon [iconName]='"iCC-Searchwhite imCC-Background-Contain iCC-sC"' (click)="searchDisplay()"></app-icon>
+    <div class="iCC-sF rounded-circle cCC-bg-main d-flex align-items-center justify-content-center uCC-Click" (click)="searchDisplay()">
+      <app-icon [iconName]='"iCC-Searchwhite imCC-Background-Contain iCC-sC"' ></app-icon>
     </div>
     <!-- vertical divider -->
     <div class="LT-vertical-divider mx-5"></div>
@@ -26,9 +26,9 @@
       <app-user-profile-block></app-user-profile-block>
   </div>
 </div>
-<!-- Search Block -->
+<!---------------------------------- Search Block ------------------------------------------------------>
 <!-- Country Select -->
-<div class="d-flex col-6 py-3 align-items-center justify-content-center uCC-l-radius-sE shadow-lg cCC-bg-white CC-searchHolder" *ngIf="isShow">
+<div class="d-flex col-7 py-3 align-items-center justify-content-center uCC-l-radius-sE shadow-lg cCC-bg-white CC-searchHolder" *ngIf="isShow">
   <!-- Holder -->
   <div class="d-flex cCC-bg-support1 align-items-center uCC-f-radius-sA px-3 py-2 ">
     <!-- Icon Location-->

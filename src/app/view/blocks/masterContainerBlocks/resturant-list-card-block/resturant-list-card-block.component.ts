@@ -9,7 +9,7 @@ import { Router, RouterLinkActive } from '@angular/router';
 })
 export class ResturantListCardBlockComponent implements OnInit {
   
-  @Input()listState! : ResturantCard;
+  @Input()listState! : any;
 
   constructor() { }
 

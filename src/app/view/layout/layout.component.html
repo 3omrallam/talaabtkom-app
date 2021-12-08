@@ -1,12 +1,15 @@
 <section class="container-fluid px-0 d-flex flex-column h-100">
-  <header class="container-fluid p-0">
+  <nav class="container-fluid p-0 position-fixed cCC-bg-white top-0" style="z-index: 1;">
+    <app-navbar-layout></app-navbar-layout>
+  </nav>
+  <header class="container-fluid p-0" style="margin-top: 76px;">
     <app-header-layout></app-header-layout>
   </header>
-  <section class="{{this.activeRouter.url !== '/' ? 'container' : 'container-fluid'}} px-0 row justify-content-center mx-auto m-0 uCC-gap-24">
-    <aside *ngIf='this.activeRouter.url !== "/"' class="container col-3 position-relative">
+  <section class="{{this.activeRouter.url !== '/' ? 'container' : 'container-fluid'}} px-0 py-4~ row justify-content-center align-items-start mx-auto m-0 uCC-gap-24">
+    <aside *ngIf='this.activeRouter.url !== "/"' class="container-fluid col-3 ">
       <app-side-menu-layout></app-side-menu-layout>
     </aside>
-    <main class="container-fluid col p-0">
+    <main class="container-fluid col p-0" >
       <router-outlet></router-outlet>
     </main>
   </section>
