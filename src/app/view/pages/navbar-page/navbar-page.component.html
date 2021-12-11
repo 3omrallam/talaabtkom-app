@@ -1,65 +1,32 @@
-<div class="container px-0">
-  <div class="d-flex align-items-center justify-content-center py-2 position-relative">
-    <!-- App Sticker Block Section -->
-    <app-sticker-block></app-sticker-block>
-    <!-- vertical divider -->
-    <div class="mx-4"></div>
-    <!-- App Favorate Icon Block Section-->
-    <div class="iCC-sF rounded-circle cCC-bg-main d-flex align-items-center justify-content-center uCC-Click" (click)="searchDisplay()">
-      <app-icon [iconName]='"iCC-Searchwhite imCC-Background-Contain iCC-sC"' ></app-icon>
-    </div>
-    <!-- vertical divider -->
-    <div class="LT-vertical-divider mx-5"></div>
-    <!-- App Navigator Block Section -->
-    <app-navigator-block></app-navigator-block>
-    <!-- vertical divider -->
-    <div class="LT-vertical-divider mx-5"></div>
-    <!-- Language  -->
-    <div>English</div>
-    <!-- vertical divider -->
-    <div class="mx-4"></div>
-    <!-- App Favorate Icon Block Section-->
+<div class="container px-0 bg-white d-flex align-items-center justify-content-center py-2 position-relative" style="z-index: '1'">
+  <!-- App Sticker Block Section -->
+  <app-sticker-block></app-sticker-block>
+  <!-- vertical divider -->
+  <div class="mx-4"></div>
+  <!-- App Favorate Icon Block Section-->
+  <div class="iCC-sF uCC-f-radius-sA cCC-bg-main d-flex align-items-center justify-content-center uCC-Click" (click)="animateNavSearch()">
+    <app-icon [iconName]='"iCC-Searchwhite imCC-Background-Contain iCC-sC"'></app-icon>
+  </div>
+  <!-- vertical divider -->
+  <div class="LT-vertical-divider mx-5"></div>
+  <!-- App Navigator Block Section -->
+  <app-navigator-block></app-navigator-block>
+  <!-- vertical divider -->
+  <div class="LT-vertical-divider mx-5"></div>
+  <!-- Language  -->
+  <div>English</div>
+  <!-- vertical divider -->
+  <div class="mx-4"></div>
+  <!-- App Favorate Icon Block Section-->
+  <button class="btn" (click)='animateCart()'>
     <app-icon [iconName]='"iCC-Favourite imCC-Background-Contain iCC-sF"'></app-icon>
-    <!-- vertical divider -->
-    <div class="mx-4"></div>
-    <!-- App User Profile Block Section -->
-      <app-user-profile-block></app-user-profile-block>
-  </div>
+  </button>
+  <!-- vertical divider -->
+  <div class="mx-4"></div>
+  <!-- App User Profile Block Section -->
+    <app-user-profile-block></app-user-profile-block>
 </div>
-<!---------------------------------- Search Block ------------------------------------------------------>
-<!-- Country Select -->
-<div class="d-flex col-7 py-3 align-items-center justify-content-center uCC-l-radius-sE shadow-lg cCC-bg-white CC-searchHolder" *ngIf="isShow">
-  <!-- Holder -->
-  <div class="d-flex cCC-bg-support1 align-items-center uCC-f-radius-sA px-3 py-2 ">
-    <!-- Icon Location-->
-    <i class="d-flex iCC-Location1 iCC-sD imCC-Background-Contain"></i>
-    <!-- SelectBox -->
-    <select name="country"
-      class="uCC-w-140 h-100 cCC-text-support2 cCC-bg-support1 px-1 uCC-l-radius-sA fCC-reg-sC border-0">
-      <ng-container *ngFor="let country of countries">
-        <option value="{{country.value}}">{{country.name}}</option>
-      </ng-container>
-    </select>
-  </div>
-  <!-- Zone Select -->
-  <!-- Holder -->
-  <div class="d-flex cCC-bg-support1 align-items-center uCC-f-radius-sA mx-3 py-2 px-3">
-    <!-- Icon ArrowLeft -->
-    <i class="d-flex iCC-Arrowleft iCC-sD imCC-Background-Contain"></i>
-    <!-- SelectBox -->
-    <select name="country"
-      class="uCC-w-140 h-100 cCC-text-support2 cCC-bg-support1 px-1 uCC-l-radius-sA fCC-reg-sC border-0">
-      <option value="value1">حي الفيصليه</option>
-    </select>
-  </div>
-  <div class="d-flex w-50 align-items-center justify-content-between uCC-f-radius-sA cCC-bg-support1">
-    <!--  Search Input -->
-    <input type="search" placeholder="أبحث باسم المطعم" name="search"
-        class="py-2 border-0 fCC-reg-sD cCC-bg-support1 me-4">
-    <!-- Button Send -->
-    <button class="btn p-2 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA d-flex">
-        <!-- Icon Send and text Inside Button -->
-        <app-icon iconName="iCC-Searchwhite d-flex iCC-sB cCC-text-support1 imCC-Background-Contain"></app-icon>
-    </button>
-</div>
+<!-- SEARCH -->
+<div class="container position-fixed bg-danger~ d-flex~ justify-content-center w-100 uCC-t-4 p-0" [ngStyle]="{'top': _NavbarService.searchMenuToggle ? '-76px' : '76px'}">
+  <app-nav-search-shared></app-nav-search-shared>
 </div>

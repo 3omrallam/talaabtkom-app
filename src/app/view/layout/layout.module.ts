@@ -9,6 +9,8 @@ import { SideMenuLayoutComponent } from './side-menu-layout/side-menu-layout.com
 import { PagesModule } from '../pages/pages.module';
 import { RouterModule} from '@angular/router';
 import { NavbarLayoutComponent } from './navbar-layout/navbar-layout.component';
+import { SharedModule } from '../shared/shared.module';
+import { NavbarService } from './services/navbar.service';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { NavbarLayoutComponent } from './navbar-layout/navbar-layout.component';
     BlocksModule,
     PagesModule,
     RouterModule,
+    SharedModule
     
   ],
   exports:[
@@ -33,6 +36,9 @@ import { NavbarLayoutComponent } from './navbar-layout/navbar-layout.component';
     MasterContainerLayoutComponent,
     SideMenuLayoutComponent,
     NavbarLayoutComponent
+  ],
+  providers: [
+    NavbarService
   ]
 })
 export class LayoutModule { }

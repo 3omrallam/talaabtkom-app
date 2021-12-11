@@ -14,6 +14,7 @@ import { UserProfilePageComponent } from './user-profile-page/user-profile-page.
 import { RouterModule } from '@angular/router';
 import { ResturantProfilePageComponent } from './resturant-profile-page/resturant-profile-page.component';
 import { CoreModule } from 'src/app/core/core.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { CoreModule } from 'src/app/core/core.module';
     BlocksModule,
     SectionsModule,
     RouterModule,
-    CoreModule
+    CoreModule,
+    SharedModule
   ],
   exports: [
     PagesComponent,

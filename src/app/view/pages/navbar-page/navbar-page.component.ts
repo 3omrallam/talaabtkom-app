@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavbarService } from '../../layout/services/navbar.service';
 
 @Component({
   selector: 'app-navbar-page',
@@ -8,22 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarPageComponent implements OnInit {
   isShow:boolean = false;
 
-  countries: any = [
-    { value: 'value1', name: 'الرياض' },
-    { value: 'value2', name: 'جده' },
-    { value: 'value3', name: 'الدمام' },
-    { value: 'value4', name: 'الطائف' },
-    { value: 'value5', name: 'مكه' },
-    { value: 'value6', name: 'تبوك' },
-    { value: 'value7', name: 'الخبر' },
-  ]
-
-  constructor() { }
+  constructor(public _NavbarService: NavbarService) { }
 
   ngOnInit(): void {
   }
-  searchDisplay() {
-    this.isShow = !this.isShow;
+  animateNavSearch() {
+    this._NavbarService.searchMenuToggle = !this._NavbarService.searchMenuToggle
+  }
+
+  animateCart(){
+    this._NavbarService.cartMenuToggle = !this._NavbarService.cartMenuToggle
   }
 
 }
