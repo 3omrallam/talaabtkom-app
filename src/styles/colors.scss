@@ -76,6 +76,10 @@ $grey2:#575756;
 .cCC-opacity-green-20{
   background-color: rgba(80, 223, 51 , 0.2);
 }
+.cCC-opacity-dark-20{
+  background-color: rgba(54, 53, 55 , 0.2);
+}
+
 // END === Background With Opacity Color
 
 // START ===  Color With Opacity
@@ -129,3 +133,8 @@ $grey2:#575756;
   color:$orange;
 }
 // END === Text Color
+// START === Text color Opacity
+.cCC-text-opacity-dark-50{
+  color: rgba(54, 53, 55 , 0.5);
+}
+// END === Text color Opacity

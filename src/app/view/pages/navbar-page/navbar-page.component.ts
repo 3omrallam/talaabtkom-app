@@ -20,5 +20,8 @@ export class NavbarPageComponent implements OnInit {
   animateCart(){
     this._NavbarService.cartMenuToggle = !this._NavbarService.cartMenuToggle
   }
+  animateLogin(){
+    this._NavbarService.loginToggle = !this._NavbarService.loginToggle
+  }
 
 }

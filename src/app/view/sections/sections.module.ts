@@ -15,6 +15,7 @@ import { UserInfoSectionComponent } from './user-info-section/user-info-section.
 import { ResturantInformationSectionComponent } from './resturant-information-section/resturant-information-section.component';
 import { ResturantCategorySectionComponent } from './resturant-category-section/resturant-category-section.component';
 import { UserReservationsSectionComponent } from './user-reservations-section/user-reservations-section.component';
+import { LoginSectionComponent } from './login-section/login-section.component';
 
 
 
@@ -34,6 +35,7 @@ import { UserReservationsSectionComponent } from './user-reservations-section/us
     ResturantInformationSectionComponent,
     ResturantCategorySectionComponent,
     UserReservationsSectionComponent,
+    LoginSectionComponent,
     
   ],
   imports: [
@@ -54,7 +56,8 @@ import { UserReservationsSectionComponent } from './user-reservations-section/us
     UserInfoSectionComponent,
     ResturantInformationSectionComponent,
     ResturantCategorySectionComponent,
-    UserReservationsSectionComponent
+    UserReservationsSectionComponent,
+    LoginSectionComponent
   ]
 })
 export class SectionsModule { }

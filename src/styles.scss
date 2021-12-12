@@ -37,3 +37,6 @@ textarea {
   outline: 0;
   box-shadow: none;
 }
+select:focus-visible {
+  outline: 0;
+}

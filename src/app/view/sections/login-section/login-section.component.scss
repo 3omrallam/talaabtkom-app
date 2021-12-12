@@ -1,0 +1,19 @@
+video {
+    object-fit: cover !important;
+}
+.CC-Logo-Holder{
+  width: 165px;
+  height: 55px
+}
+.xx{
+  display: grid;
+  grid-template-columns: repeat(2,minmax(250px,1fr));
+  grid-template-rows: 1fr;
+  gap: 16px;
+  .one{
+    grid-column: 1/2;
+  }
+  .two{
+    grid-column: 2/3;
+  }
+}

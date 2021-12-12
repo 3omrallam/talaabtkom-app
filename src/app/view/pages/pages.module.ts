@@ -28,7 +28,7 @@ import { SharedModule } from '../shared/shared.module';
     ResturantAsidePageComponent,
     UserAsidePageComponent,
     UserProfilePageComponent,
-    ResturantProfilePageComponent
+    ResturantProfilePageComponent,
 
   ],
   imports: [
@@ -49,7 +49,7 @@ import { SharedModule } from '../shared/shared.module';
     ResturantAsidePageComponent,
     UserAsidePageComponent,
     UserProfilePageComponent,
-    ResturantProfilePageComponent
+    ResturantProfilePageComponent,
 
   ]
 })

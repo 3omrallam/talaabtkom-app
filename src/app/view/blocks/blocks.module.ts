@@ -19,6 +19,8 @@ import { QrcodeBlockComponent } from './masterContainerBlocks/qrcode-block/qrcod
 import { MenuListBlockComponent } from './masterContainerBlocks/menu-list-block/menu-list-block.component';
 import { SideMenuNavigatorsComponent } from './sideMenuBlocks/side-menu-navigators/side-menu-navigators.component';
 import { PageTitleBlockComponent } from './headerBlocks/page-title-block/page-title-block.component';
+import { SigninButtonBlockComponent } from './navbarBlocks/signin-button-block/signin-button-block.component';
+import { LoginBlockComponent } from './login-block/login-block.component';
 
 
 
@@ -41,6 +43,8 @@ import { PageTitleBlockComponent } from './headerBlocks/page-title-block/page-ti
     MenuListBlockComponent,
     SideMenuNavigatorsComponent,
     PageTitleBlockComponent,
+    SigninButtonBlockComponent,
+    LoginBlockComponent,
     
 
   ],
@@ -65,7 +69,9 @@ import { PageTitleBlockComponent } from './headerBlocks/page-title-block/page-ti
     QrcodeBlockComponent,
     MenuListBlockComponent,
     SideMenuNavigatorsComponent,
-    PageTitleBlockComponent
+    PageTitleBlockComponent,
+    SigninButtonBlockComponent,
+    LoginBlockComponent
     
 
   ]

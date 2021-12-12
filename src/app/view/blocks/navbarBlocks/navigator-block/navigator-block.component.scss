@@ -1,0 +1,13 @@
+.CC-underline::after {
+ display: block;
+   content: '';
+  width: 24px;
+  height: 2px;
+  background: #F5504C;
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+}
+.CC-underline {
+position: relative;  
+}

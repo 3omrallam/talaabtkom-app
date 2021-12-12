@@ -1,32 +1,34 @@
 <!-- Country Select -->
-<div class="d-flex col~ py-3 align-items-center justify-content-center uCC-l-radius-sE shadow-lg~ cCC-bg-white  CC-searchHolder~">
+<div class="d-flex p-3 align-items-center justify-content-center~ uCC-l-radius-sE shadow-lg~ cCC-bg-white">
     <!-- Holder -->
-    <div class="d-flex cCC-bg-support1 align-items-center uCC-f-radius-sA px-3 py-2 ">
+    <div class="d-flex cCC-bg-support1 align-items-center uCC-f-radius-sA px-4 py-2">
         <!-- Icon Location-->
         <i class="d-flex iCC-Location1 iCC-sD imCC-Background-Contain"></i>
         <!-- SelectBox -->
         <select name="country"
-            class="uCC-w-140 h-100 cCC-text-support2 cCC-bg-support1 px-1 uCC-l-radius-sA fCC-reg-sC border-0">
+            class="uCC-w-140 cCC-text-support2 cCC-bg-support1 px-2 uCC-l-radius-sA fCC-reg-sC border-0 uCC-Click">
             <ng-container *ngFor="let country of countries">
+                <!-- Countries -->
                 <option value="{{country.value}}">{{country.name}}</option>
             </ng-container>
         </select>
     </div>
     <!-- Zone Select -->
     <!-- Holder -->
-    <div class="d-flex cCC-bg-support1 align-items-center uCC-f-radius-sA mx-3 py-2 px-3">
+    <div class="d-flex cCC-bg-support1 align-items-center uCC-f-radius-sA mx-3 py-2 px-4">
         <!-- Icon ArrowLeft -->
         <i class="d-flex iCC-Arrowleft iCC-sD imCC-Background-Contain"></i>
         <!-- SelectBox -->
         <select name="country"
-            class="uCC-w-140 h-100 cCC-text-support2 cCC-bg-support1 px-1 uCC-l-radius-sA fCC-reg-sC border-0">
+            class="uCC-w-140 cCC-text-support2 cCC-bg-support1 px-2 uCC-l-radius-sA fCC-reg-sC border-0 uCC-Click">
             <option value="value1">حي الفيصليه</option>
         </select>
     </div>
-    <div class="d-flex w-50 align-items-center justify-content-between uCC-f-radius-sA cCC-bg-support1">
+    <!-- Search Bar -->
+    <div class="d-flex w-100 align-items-center justify-content-between uCC-f-radius-sA cCC-bg-support1 p-1">
         <!--  Search Input -->
         <input type="search" placeholder="أبحث باسم المطعم" name="search"
-            class="py-2 border-0 fCC-reg-sD cCC-bg-support1 me-4 w-100">
+            class="py-1 border-0 fCC-reg-sD cCC-bg-support1 w-100 me-4 m-0">
         <!-- Button Send -->
         <button class="btn p-2 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA d-flex">
             <!-- Icon Send and text Inside Button -->
