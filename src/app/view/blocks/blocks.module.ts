@@ -21,6 +21,9 @@ import { SideMenuNavigatorsComponent } from './sideMenuBlocks/side-menu-navigato
 import { PageTitleBlockComponent } from './headerBlocks/page-title-block/page-title-block.component';
 import { SigninButtonBlockComponent } from './navbarBlocks/signin-button-block/signin-button-block.component';
 import { LoginBlockComponent } from './login-block/login-block.component';
+import { ButtonBlockComponent } from './button-block/button-block.component';
+import { PhoneNumberBlockComponent } from './phone-number-block/phone-number-block.component';
+import { VerifyBlockComponent } from './verify-block/verify-block.component';
 
 
 
@@ -45,6 +48,9 @@ import { LoginBlockComponent } from './login-block/login-block.component';
     PageTitleBlockComponent,
     SigninButtonBlockComponent,
     LoginBlockComponent,
+    ButtonBlockComponent,
+    PhoneNumberBlockComponent,
+    VerifyBlockComponent,
     
 
   ],
@@ -71,7 +77,10 @@ import { LoginBlockComponent } from './login-block/login-block.component';
     SideMenuNavigatorsComponent,
     PageTitleBlockComponent,
     SigninButtonBlockComponent,
-    LoginBlockComponent
+    LoginBlockComponent,
+    ButtonBlockComponent,
+    PhoneNumberBlockComponent,
+    VerifyBlockComponent
     
 
   ]

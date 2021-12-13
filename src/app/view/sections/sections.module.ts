@@ -15,7 +15,8 @@ import { UserInfoSectionComponent } from './user-info-section/user-info-section.
 import { ResturantInformationSectionComponent } from './resturant-information-section/resturant-information-section.component';
 import { ResturantCategorySectionComponent } from './resturant-category-section/resturant-category-section.component';
 import { UserReservationsSectionComponent } from './user-reservations-section/user-reservations-section.component';
-import { LoginSectionComponent } from './login-section/login-section.component';
+import { LoginSectionComponent } from './authSections/login-section/login-section.component';
+import { CreateAccountSectionComponent } from './authSections/create-account-section/create-account-section.component';
 
 
 
@@ -36,6 +37,7 @@ import { LoginSectionComponent } from './login-section/login-section.component';
     ResturantCategorySectionComponent,
     UserReservationsSectionComponent,
     LoginSectionComponent,
+    CreateAccountSectionComponent,
     
   ],
   imports: [
@@ -57,7 +59,8 @@ import { LoginSectionComponent } from './login-section/login-section.component';
     ResturantInformationSectionComponent,
     ResturantCategorySectionComponent,
     UserReservationsSectionComponent,
-    LoginSectionComponent
+    LoginSectionComponent,
+    CreateAccountSectionComponent
   ]
 })
 export class SectionsModule { }

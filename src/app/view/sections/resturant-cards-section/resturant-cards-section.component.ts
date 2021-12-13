@@ -10,23 +10,26 @@ export class ResturantCardsSectionComponent implements OnInit {
     {
       id: 1,
       image: 'imCC-Resturant1',
-      title : 'مطعم بافلو برجر',
+      title: '"المشويات - أكل سريع"',
       logo: 'imCC-Resturantlogo1',
-      description: 'المشويات - أكل سريع'
+      description: 'المشويات - أكل سريع',
+      time:'90 دقيقه'
     },
     {
       id: 2,
       image: 'imCC-Resturant2',
-      title : 'مطعم بافلو برجر',
-      logo: 'imCC-Resturantlogo1',
-      description: 'المشويات - أكل سريع'
+      title: 'مطعم طاية ',
+      logo: 'imCC-Resturantlogo2',
+      description: '"المشويات - أكل صحي"',
+      time:'20 دقيقه'  
     },
     {
       id: 3,
       image: 'imCC-Resturant3',
-      title : 'مطعم بافلو برجر',
-      logo: 'imCC-Resturantlogo1',
-      description: 'المشويات - أكل سريع'
+      title: 'مطعم السمك الذهبي',
+      logo: 'imCC-Resturantlogo3',
+      description: '"المشويات - أسماك"',
+      time:'40 دقيقه'  
     },
   ]
 

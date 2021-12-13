@@ -1,11 +1,11 @@
 <div class="d-flex justify-content-center">
-  <div class="d-flex w-100 p-1 align-items-center uCC-f-radius-sA uCC-Border-sB-Main cCC-bg-white">
+  <div class="d-flex w-100 pe-3 ps-1 align-items-center uCC-f-radius-sA uCC-Border-sB-Main cCC-bg-white">
     <!-- location icon inside search bar -->
-    <app-icon iconName="iCC-Location d-flex iCC-sD mx-2"></app-icon>
+    <app-icon iconName="iCC-Location d-flex iCC-sD ms-2"></app-icon>
     <!-- search bar -->
-    <input type="text" placeholder="ابحث عن مكانك المفضل" name="search" class="py-2 border-0 w-100 fCC-reg-sD">
+    <input type="text" placeholder="ابحث عن مكانك المفضل" name="search" class="border-0 w-100 m-0 fCC-reg-sD">
     <!-- selection box inside search bar -->
-    <select name="country" class="uCC-w-140 h-100 cCC-text-support2 cCC-opacity-gray-10 p-1 px-1 uCC-l-radius-sA fCC-reg-sD border-0">
+    <select name="country" class="uCC-w-140~ h-100~ cCC-text-support2 cCC-opacity-gray-10 py-1 my-1 px-4 uCC-l-radius-sA fCC-reg-sD border-0 uCC-Click">
       <ng-container *ngFor="let country of countries">
         <option value="{{country.value}}">{{country.name}}</option>
       </ng-container>
