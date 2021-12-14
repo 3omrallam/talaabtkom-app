@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/core/auth/auth.service';
 
 @Component({
   selector: 'app-login-popup-shared',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPopupSharedComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _AuthService: AuthService) { }
 
   ngOnInit(): void {
   }
+  toggleAuthBTN(route: String) {
+    switch (route) {
+      case 'login':
+        this._AuthService.authToggleBTN = true
+        break;
+      case 'register':
+        this._AuthService.authToggleBTN = false
+        break;
+    }
+  }
+
 
 }

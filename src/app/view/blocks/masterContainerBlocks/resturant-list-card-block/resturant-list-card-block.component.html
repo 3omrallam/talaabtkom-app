@@ -1,21 +1,26 @@
 <div class="d-flex justify-content-between ">
-    <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center" routerLink="/resturant-profile/{{listState.id}}">
         <!-- Resturant Image -->
         <div>
             <i class="{{listState.image}} d-flex imCC-Background-Cover CC-resturantsimgs-Holder uCC-Click"></i>
         </div>
         <div class="me-4">
             <!-- Resturant-title -->
-            <a routerLink="/resturant-profile/{{listState.id}}"><p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{listState.title}}</p></a>
+            <a>
+                <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{listState.title}}</p>
+            </a>
             <!-- Resturant Description -->
             <p class="fCC-reg-sC cCC-text-support2 mb-2 uCC-Click">{{listState.description}}</p>
             <!-- Icons -->
             <div class="d-flex justify-content-between">
-                <app-icon iconName="iCC-Clockblue iCC-sB imCC-Background-Contain d-flex mx-1" textContent="90 دقيقة" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
+                <app-icon iconName="iCC-Clockblue iCC-sB imCC-Background-Contain d-flex mx-1"
+                    textContent="{{listState.time}}دقيقة" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
                 <div class="mx-2"></div>
-                <app-icon iconName="iCC-Table iCC-sB imCC-Background-Contain d-flex mx-1" textContent="30 طاولة" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
+                <app-icon iconName="iCC-Table iCC-sB imCC-Background-Contain d-flex mx-1"
+                    textContent="{{listState.tables}} طاولة" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
                 <div class="mx-2"></div>
-                <app-icon iconName="iCC-Star iCC-sB imCC-Background-Contain d-flex mx-1" textContent="4.8" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
+                <app-icon iconName="iCC-Star iCC-sB imCC-Background-Contain d-flex mx-1"
+                    textContent="{{listState.rate}}" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
             </div>
         </div>
     </div>
@@ -25,8 +30,8 @@
             <i class="d-flex iCC-Heartempty iCC-sB imCC-Background-Contain"></i>
         </div>
         <!-- QrCode Block -->
-        <div class="mx-2"></div>
-      <app-qrcode-block></app-qrcode-block>
+        <div class="mx-1"></div>
+        <app-qrcode-block></app-qrcode-block>
     </div>
 </div>
 <div class="LT-horizontal-divider my-3"></div>

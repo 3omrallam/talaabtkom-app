@@ -4,11 +4,11 @@
         <app-filter-page></app-filter-page>
     </div>
     <!-- Resturant Page Aside -->
-    <div *ngIf='this.activeRouter.url !== "/resturants" && this.activeRouter.url !== "/userProfile"'>
+    <div *ngIf='activeRouter.url !== "/resturants" && !activeRouter.url.includes("/userProfile")'>
         <app-resturant-aside-page></app-resturant-aside-page>
     </div>
     <!-- User Profile Aside -->
-    <div class="py-4" *ngIf='this.activeRouter.url == "/userProfile"'>
+    <div class="py-4" *ngIf='activeRouter.url.includes("/userProfile")'>
         <app-user-aside-page></app-user-aside-page>
     </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-menu-navigators',
@@ -11,9 +12,13 @@ export class SideMenuNavigatorsComponent implements OnInit {
  
   @Input()listElements! : any;
 
-  constructor() { }
+  constructor(public activatedRoute: Router) { }
 
   ngOnInit(): void {
+    // setTimeout(() => {
+    //   console.log(this.activatedRoute.url)
+    // }, 1000);
+    console.log(this.listElements);
     
   }
   listDisplay() {

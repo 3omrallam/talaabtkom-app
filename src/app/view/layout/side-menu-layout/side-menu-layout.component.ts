@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { UserProfileAsidePageService } from '../../pages/services/user-profile-aside-page.service';
 
 @Component({
   selector: 'app-side-menu-layout',
@@ -8,11 +9,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SideMenuLayoutComponent implements OnInit {
 
-  constructor(public activeRouter: Router) { }
+  constructor(public activeRouter: Router, public _UserProfileAsidePageService: UserProfileAsidePageService) { }
 
   ngOnInit(): void {
-    console.log(this.activeRouter.url);
+    console.log(this.activeRouter.url.includes('/resturants'));
     
+    console.log(this._UserProfileAsidePageService.userProfileNavigator);
   }
 
 }

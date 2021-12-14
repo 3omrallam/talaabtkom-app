@@ -12,6 +12,7 @@ $darkgrey: #707070;
 $lightgray:#9A9A9A;
 $orange:#E66B32;
 $grey2:#575756;
+$black:#000;
 // START === Background Color
 .cCC-bg-Inherit{
   background-color: inherit;
@@ -39,6 +40,9 @@ $grey2:#575756;
 }
 .cCC-bg-green{
   background-color:$green;
+}
+.cCC-bg-black{
+  background-color:$black;
 }
 // END === Background Color
 

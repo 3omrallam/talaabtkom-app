@@ -9,7 +9,6 @@
   <app-page-title-block title="المعلومات الشخصية" iconTitle="iCC-Usertag"></app-page-title-block>
 </div>
 <!-- Cover Section -->
-<div
-  *ngIf='this.activeRouter.url !== "/resturants" && this.activeRouter.url !== "/" && this.activeRouter.url !== "/userProfile"'>
+<div *ngIf='this.activeRouter.url !== "/resturants" && this.activeRouter.url !== "/" && !activeRouter.url.includes("/userProfile")'>
   <app-cover-header-block></app-cover-header-block>
 </div>

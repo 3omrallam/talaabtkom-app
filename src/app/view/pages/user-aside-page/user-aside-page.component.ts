@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserProfileAsidePageService } from '../services/user-profile-aside-page.service';
 
 @Component({
   selector: 'app-user-aside-page',
@@ -34,8 +35,8 @@ export class UserAsidePageComponent implements OnInit {
     },
   ];
 
-  constructor() { }
-
+  constructor(public _UserProfileAsidePageService: UserProfileAsidePageService) { }
+  
   ngOnInit(): void {
     
   }

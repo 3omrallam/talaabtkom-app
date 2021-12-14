@@ -13,7 +13,9 @@ export class ResturantCardsSectionComponent implements OnInit {
       title: '"المشويات - أكل سريع"',
       logo: 'imCC-Resturantlogo1',
       description: 'المشويات - أكل سريع',
-      time:'90 دقيقه'
+      time:'90',
+      tables:'10',
+      rate:'3.2'
     },
     {
       id: 2,
@@ -21,7 +23,9 @@ export class ResturantCardsSectionComponent implements OnInit {
       title: 'مطعم طاية ',
       logo: 'imCC-Resturantlogo2',
       description: '"المشويات - أكل صحي"',
-      time:'20 دقيقه'  
+      time:'20',
+      tables: '30',
+      rate: '4.3'
     },
     {
       id: 3,
@@ -29,7 +33,9 @@ export class ResturantCardsSectionComponent implements OnInit {
       title: 'مطعم السمك الذهبي',
       logo: 'imCC-Resturantlogo3',
       description: '"المشويات - أسماك"',
-      time:'40 دقيقه'  
+      time:'40',
+      tables: '7',
+      rate: '4.7'
     },
   ]
 

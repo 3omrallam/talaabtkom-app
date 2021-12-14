@@ -24,6 +24,7 @@ import { LoginBlockComponent } from './login-block/login-block.component';
 import { ButtonBlockComponent } from './button-block/button-block.component';
 import { PhoneNumberBlockComponent } from './phone-number-block/phone-number-block.component';
 import { VerifyBlockComponent } from './verify-block/verify-block.component';
+import { UsernameBlockComponent } from './username-block/username-block.component';
 
 
 
@@ -51,6 +52,7 @@ import { VerifyBlockComponent } from './verify-block/verify-block.component';
     ButtonBlockComponent,
     PhoneNumberBlockComponent,
     VerifyBlockComponent,
+    UsernameBlockComponent,
     
 
   ],
@@ -80,7 +82,8 @@ import { VerifyBlockComponent } from './verify-block/verify-block.component';
     LoginBlockComponent,
     ButtonBlockComponent,
     PhoneNumberBlockComponent,
-    VerifyBlockComponent
+    VerifyBlockComponent,
+    UsernameBlockComponent
     
 
   ]

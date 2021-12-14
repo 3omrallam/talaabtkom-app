@@ -1,10 +1,12 @@
-<div class="container px-0 bg-white d-flex align-items-center justify-content-center py-2 position-relative" style="z-index: '1'">
+<div class="container px-0 bg-white d-flex align-items-center justify-content-center py-2 position-relative"
+  style="z-index: '1'">
   <!-- App Sticker Block Section -->
   <app-sticker-block></app-sticker-block>
   <!-- vertical divider -->
   <div class="mx-4"></div>
   <!-- App Favorate Icon Block Section-->
-  <div class="iCC-sF uCC-f-radius-sA cCC-bg-main d-flex align-items-center justify-content-center uCC-Click" (click)="animateNavSearch()">
+  <div class="iCC-sF uCC-f-radius-sA cCC-bg-main d-flex align-items-center justify-content-center uCC-Click"
+    (click)="animateNavSearch()">
     <app-icon [iconName]='"iCC-Searchwhite imCC-Background-Contain iCC-sC"'></app-icon>
   </div>
   <!-- vertical divider -->
@@ -24,22 +26,26 @@
   <!-- vertical divider -->
   <div class="mx-4"></div>
   <!-- App User Profile Block Section -->
-    <!-- <app-user-profile-block></app-user-profile-block> -->
-    <!-- SignIn Button Block -->
-    <div >
-      <!-- <app-signin-button-block></app-signin-button-block> -->
-      <div class="uCC-Border-sB-Main uCC-f-radius-sA py-2 px-4 uCC-Click" (click)='animateLogin()'>
-        <p class="m-0 fCC-reg-sD cCC-text-dark">تسجيل دخول</p>
-      </div>
+  <!-- <app-user-profile-block></app-user-profile-block> -->
+  <!-- SignIn Button Block -->
+  <div>
+    <!-- <app-signin-button-block></app-signin-button-block> -->
+    <div class="uCC-Border-sB-Main uCC-f-radius-sA py-2 px-4 uCC-Click" (click)='animateLogin()' (click)='loginCard($event)'>
+      <p class="m-0 fCC-reg-sD cCC-text-dark">تسجيل دخول</p>
     </div>
+  </div>
 </div>
 <!-- SEARCH -->
-<div class="col-7 position-fixed uCC-t-4 p-0 me-5" [ngStyle]="{'top': _NavbarService.searchMenuToggle ? '-76px' : '76px'}">
+<div class="col-7 position-fixed uCC-t-4 p-0 me-5"
+  [ngStyle]="{'top': _NavbarService.searchMenuToggle ? '-76px' : '76px'}">
   <app-nav-search-shared></app-nav-search-shared>
 </div>
-<div
-  class="uCC-t-4 container-fluid position-fixed end-0 start-0 bottom-0~ cCC-opacity-dark-20"
-  style="z-index: 999999999999999;" [ngStyle]="{'top': _NavbarService.loginToggle? '-100vh' : '0px'}" (click)='animateLogin()' >
+<!-- Layer -->
+<div class="h-100 w-100 {{displayOverLay}} position-fixed end-0 start-0 uCC-t-4 bg-dark"
+  [ngStyle]="{'opacity': !_NavbarService.loginToggle ? '0.2' : '0'}" style="z-index: 2;" (click)='animateLogin()'>
+</div>
+<!-- Login and create new account popup -->
+<!-- <div class="p-5 bg-danger CC-overlay-holder"></div> -->
+<div  class="uCC-t-4 position-absolute" style="z-index: 9999;" [ngStyle]="{'top': _NavbarService.loginToggle ? '-645px' : '175px'}">
   <app-login-popup-shared></app-login-popup-shared>
 </div>
-<!-- (click)='animateLogin()' -->
