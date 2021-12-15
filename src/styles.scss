@@ -16,11 +16,13 @@ a:hover{
 /* Start === Button HOVER  */
 button:hover
 {
-  color: white !important;
+  color: unset !important;
 }
 button:focus
 {
   box-shadow:none !important;
+  background-color: unset !important;
+  color: unset !important;
 }
 /* END === Button HOVER */
 input:focus-visible

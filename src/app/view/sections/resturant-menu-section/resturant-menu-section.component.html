@@ -1,6 +1,6 @@
 <!-- Resturant Menu List -->
 <div class="mb-5">
-    <ng-container *ngFor='let resturantMenuState of resturantMenuStates'>
+    <ng-container *ngFor='let resturantMenuState of _ResturantMenuService.resturantMenuStates'>
         <app-menu-list-block [blockMenu]="resturantMenuState"></app-menu-list-block>
     </ng-container>
 </div>

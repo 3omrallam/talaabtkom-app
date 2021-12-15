@@ -25,6 +25,9 @@ import { ButtonBlockComponent } from './button-block/button-block.component';
 import { PhoneNumberBlockComponent } from './phone-number-block/phone-number-block.component';
 import { VerifyBlockComponent } from './verify-block/verify-block.component';
 import { UsernameBlockComponent } from './username-block/username-block.component';
+import { SearchBarBlockComponent } from './search-bar-block/search-bar-block.component';
+import { ReservationsListBlockComponent } from './reservations-list-block/reservations-list-block.component';
+import { ModelsModule } from '../models/models/models.module';
 
 
 
@@ -53,12 +56,15 @@ import { UsernameBlockComponent } from './username-block/username-block.componen
     PhoneNumberBlockComponent,
     VerifyBlockComponent,
     UsernameBlockComponent,
+    SearchBarBlockComponent,
+    ReservationsListBlockComponent,
     
 
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ModelsModule
   ],
   exports:[
     NavbarBlockComponent,
@@ -83,9 +89,9 @@ import { UsernameBlockComponent } from './username-block/username-block.componen
     ButtonBlockComponent,
     PhoneNumberBlockComponent,
     VerifyBlockComponent,
-    UsernameBlockComponent
-    
-
+    UsernameBlockComponent,
+    SearchBarBlockComponent,
+    ReservationsListBlockComponent
   ]
 })
 export class BlocksModule { }

@@ -34,7 +34,7 @@ export class UserProfileAsidePageService {
     },
     {
       header: "الشروط والأحكام",
-      routerName : 'userProfile',
+      routerName: 'userProfile/privacyPolicy',
       icon: "iCC-Messagetext",
     },
   ];

@@ -1,7 +1,5 @@
-import { ResturantCard } from './../resturant-grid-card-block/model/resturant-card';
 import { Component, OnInit, Input } from '@angular/core';
-import { Router, RouterLinkActive } from '@angular/router';
-
+import { ResturantCard } from 'src/app/view/models/models/resturantsList';
 @Component({
   selector: 'app-resturant-list-card-block',
   templateUrl: './resturant-list-card-block.component.html',
@@ -9,7 +7,7 @@ import { Router, RouterLinkActive } from '@angular/router';
 })
 export class ResturantListCardBlockComponent implements OnInit {
   
-  @Input()listState! : any;
+  @Input() listState!: ResturantCard;
 
   constructor() { }
 

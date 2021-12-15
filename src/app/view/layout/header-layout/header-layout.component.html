@@ -1,12 +1,20 @@
 <!-- Resturants Available In Your Zone -->
 <div class="cCC-opacity-support1-50" *ngIf='this.activeRouter.url == "/resturants"'>
-  <div class="container col-7 p-0">
+  <div class="container col-8 p-0">
     <app-page-title-block title="المطاعم المتاحة بمنطقة الرياض" iconTitle="iCC-Home"></app-page-title-block>
   </div>
 </div>
 <!-- Personal Information -->
-<div class=" container p-0 col-7 cCC-opacity-support1-20" *ngIf='this.activeRouter.url == "/userProfile"'>
+<div class=" container p-0 col-8 cCC-opacity-support1-20" *ngIf='this.activeRouter.url == "/userProfile"'>
   <app-page-title-block title="المعلومات الشخصية" iconTitle="iCC-Usertag"></app-page-title-block>
+</div>
+<!-- User Reservation -->
+<div class=" container p-0 col-8 cCC-opacity-support1-20" *ngIf='this.activeRouter.url == "/userProfile/reservation"'>
+  <app-page-title-block title="الحجوزات" iconTitle="iCC-Usertag"></app-page-title-block>
+</div>
+<!-- Privacy Policy -->
+<div class=" container p-0 col-8 cCC-opacity-support1-20" *ngIf='this.activeRouter.url == "/userProfile/privacyPolicy"'>
+  <app-page-title-block title="الشروط والأحكام" iconTitle="iCC-Usertag"></app-page-title-block>
 </div>
 <!-- Cover Section -->
 <div *ngIf='this.activeRouter.url !== "/resturants" && this.activeRouter.url !== "/" && !activeRouter.url.includes("/userProfile")'>

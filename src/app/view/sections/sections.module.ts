@@ -17,6 +17,8 @@ import { ResturantCategorySectionComponent } from './resturant-category-section/
 import { UserReservationsSectionComponent } from './user-reservations-section/user-reservations-section.component';
 import { LoginSectionComponent } from './authSections/login-section/login-section.component';
 import { CreateAccountSectionComponent } from './authSections/create-account-section/create-account-section.component';
+import { PrivacyPolicySectionComponent } from './privacy-policy-section/privacy-policy-section.component';
+import { ModelsModule } from '../models/models/models.module';
 
 
 
@@ -38,11 +40,13 @@ import { CreateAccountSectionComponent } from './authSections/create-account-sec
     UserReservationsSectionComponent,
     LoginSectionComponent,
     CreateAccountSectionComponent,
+    PrivacyPolicySectionComponent,
     
   ],
   imports: [
     CommonModule,
-    BlocksModule
+    BlocksModule,
+    ModelsModule
   ],
   exports:[
     SectionsComponent,
@@ -60,7 +64,8 @@ import { CreateAccountSectionComponent } from './authSections/create-account-sec
     ResturantCategorySectionComponent,
     UserReservationsSectionComponent,
     LoginSectionComponent,
-    CreateAccountSectionComponent
+    CreateAccountSectionComponent,
+    PrivacyPolicySectionComponent
   ]
 })
 export class SectionsModule { }

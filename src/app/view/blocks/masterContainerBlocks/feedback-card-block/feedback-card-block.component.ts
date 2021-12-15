@@ -9,6 +9,7 @@ export class FeedbackCardBlockComponent implements OnInit {
 
   @Input()userFeedbackimg:any;
   @Input()userFeedbackName:any;
+  @Input() feedbackDate:any;
 
   constructor() { }
 

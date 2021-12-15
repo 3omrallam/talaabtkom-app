@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ResturantMenu } from './model/menuList';
+import { menuList } from 'src/app/view/models/models/menuListModel';
 
 @Component({
   selector: 'app-menu-list-block',
@@ -8,7 +8,7 @@ import { ResturantMenu } from './model/menuList';
 })
 export class MenuListBlockComponent implements OnInit {
 
-  @Input()blockMenu! : ResturantMenu;
+  @Input() blockMenu!: menuList;
   extraList:any=[{name:"موتزريلا" , cost:"10 ر.س"}, 
                  {name:"شرائح شيدر" , cost:"10 ر.س"},
                  {name:"كاتشب" , cost:"10 ر.س"},

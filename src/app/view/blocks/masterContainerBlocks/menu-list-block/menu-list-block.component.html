@@ -18,13 +18,13 @@
     <div class="d-flex flex-column justify-content-between align-items-center">
         <!-- Like Icon -->
         <div class="uCC-f-radius-sA py-2 px-3 cCC-opacity-support1-20 uCC-Click d-flex">
-            <p class="fCC-reg-sD cCC-text-dark m-0">4587</p>
+            <p class="fCC-reg-sD cCC-text-dark m-0">{{blockMenu.numOfLiked}}</p>
             <div class="mx-1"></div>
-            <i class="d-flex iCC-Heartred iCC-sD imCC-Background-Contain"></i>
+            <i class="d-flex {{blockMenu.liked}} iCC-sD imCC-Background-Contain"></i>
         </div>
         <!-- Plus Icon -->
         <div class="p-1 uCC-Click pe-5">
-            <i class="d-flex iCC-Plus iCC-sE imCC-Background-Contain"></i>
+            <i class="d-flex iCC-Plus iCC-sE imCC-Background-Contain" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
         </div>
 
     </div>

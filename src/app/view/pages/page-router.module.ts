@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { PrivacyPolicySectionComponent } from '../sections/privacy-policy-section/privacy-policy-section.component';
 import { ResturantCategorySectionComponent } from '../sections/resturant-category-section/resturant-category-section.component';
 import { ResturantInformationSectionComponent } from '../sections/resturant-information-section/resturant-information-section.component';
 import { UserInfoSectionComponent } from '../sections/user-info-section/user-info-section.component';
@@ -13,4 +14,5 @@ export const resturantRouter: Routes = [
 export const userProfileRouter: Routes = [
     { path: '', component: UserInfoSectionComponent},
     { path: 'reservation', component: UserReservationsSectionComponent},
+    { path: 'privacyPolicy', component: PrivacyPolicySectionComponent},
 ]
