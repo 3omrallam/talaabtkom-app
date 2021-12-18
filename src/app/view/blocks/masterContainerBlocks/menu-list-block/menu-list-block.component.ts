@@ -9,11 +9,12 @@ import { menuList } from 'src/app/view/models/models/menuListModel';
 export class MenuListBlockComponent implements OnInit {
 
   @Input() blockMenu!: menuList;
-  extraList:any=[{name:"موتزريلا" , cost:"10 ر.س"}, 
-                 {name:"شرائح شيدر" , cost:"10 ر.س"},
-                 {name:"كاتشب" , cost:"10 ر.س"},
-                 {name:"طماطم" , cost:"10 ر.س"}
-                ]
+  extraList: any = [
+  { name: "موتزريلا", cost: "10 ر.س" },
+  { name: "شرائح شيدر", cost: "10 ر.س" },
+  { name: "كاتشب", cost: "10 ر.س" },
+  { name: "طماطم", cost: "10 ر.س" }
+  ]
 
   constructor() { }
 

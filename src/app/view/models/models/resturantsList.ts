@@ -5,5 +5,6 @@ export interface ResturantCard {
     description: String,
     time: number,
     tables: number,
-    rate: number
+    rate: number,
+    liked:string
 }

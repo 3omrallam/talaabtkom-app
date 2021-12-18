@@ -6,11 +6,7 @@ import { MasterContainerLayoutComponent } from './view/layout/master-container-l
 import { ViewComponent } from './view/view.component';
 
 const routes: Routes = [
-  {path: '', component: ViewComponent, children: [
-    {path : '' , component: LayoutComponent, children : [
-      {path : '' , component: MasterContainerLayoutComponent, children : [...LayoutRouterModule]}
-    ]}
-  ]}
+  { path : '' , component: MasterContainerLayoutComponent, children : [...LayoutRouterModule] }
 ];
 
 @NgModule({

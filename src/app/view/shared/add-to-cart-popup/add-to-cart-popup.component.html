@@ -1,35 +1,3 @@
-<div class="d-flex justify-content-between">
-    <div class="d-flex align-items-center" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <!-- Resturant Image -->
-        <div class="uCC-f-radius-sD~ uCC-Border-grey">
-            <i class="{{blockMenu.image}} d-flex imCC-Background-Cover CC-resturantsimgs-Holder uCC-Click"></i>
-        </div>
-        <div class="me-4">
-            <!-- Resturant-title -->
-            <a routerLink="resturant-profile">
-                <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{blockMenu.title}}</p>
-            </a>
-            <!-- Resturant Description -->
-            <p class="fCC-reg-sC cCC-text-support2 mb-2 uCC-Click col-8">{{blockMenu.description}}</p>
-            <!-- Icons -->
-            <p class="cCC-text-main fCC-bold-sB m-0">{{blockMenu.salary}}</p>
-        </div>
-    </div>
-    <div class="d-flex flex-column justify-content-between align-items-center">
-        <!-- Like Icon -->
-        <div class="uCC-f-radius-sA py-2 px-3 cCC-opacity-support1-20 uCC-Click d-flex">
-            <p class="fCC-reg-sD cCC-text-dark m-0">{{blockMenu.numOfLiked}}</p>
-            <div class="mx-1"></div>
-            <i class="d-flex {{blockMenu.liked}} iCC-sD imCC-Background-Contain"></i>
-        </div>
-        <!-- Plus Icon -->
-        <div class="p-1 uCC-Click pe-5">
-            <i class="d-flex iCC-Plus iCC-sE imCC-Background-Contain" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-        </div>
-
-    </div>
-</div>
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

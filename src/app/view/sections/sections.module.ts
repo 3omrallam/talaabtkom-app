@@ -10,7 +10,6 @@ import { FeedbackSectionComponent } from './homeSections/feedback-section/feedba
 import { ContactSectionComponent } from './homeSections/contact-section/contact-section.component';
 import { MobileAppSectionComponent } from './homeSections/mobile-app-section/mobile-app-section.component';
 import { ResturantInfoSectionComponent } from './resturant-info-section/resturant-info-section.component';
-import { ResturantMenuSectionComponent } from './resturant-menu-section/resturant-menu-section.component';
 import { UserInfoSectionComponent } from './user-info-section/user-info-section.component';
 import { ResturantInformationSectionComponent } from './resturant-information-section/resturant-information-section.component';
 import { ResturantCategorySectionComponent } from './resturant-category-section/resturant-category-section.component';
@@ -35,7 +34,6 @@ import { RecoverPhoneSectionComponent } from './recover-phone-section/recover-ph
     ContactSectionComponent,
     MobileAppSectionComponent,
     ResturantInfoSectionComponent,
-    ResturantMenuSectionComponent,
     UserInfoSectionComponent,
     ResturantInformationSectionComponent,
     ResturantCategorySectionComponent,
@@ -62,7 +60,6 @@ import { RecoverPhoneSectionComponent } from './recover-phone-section/recover-ph
     MobileAppSectionComponent,
     ContactSectionComponent,
     ResturantInfoSectionComponent,
-    ResturantMenuSectionComponent,
     UserInfoSectionComponent,
     ResturantInformationSectionComponent,
     ResturantCategorySectionComponent,

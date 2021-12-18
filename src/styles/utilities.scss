@@ -29,6 +29,7 @@
 .uCC-Border-lightgrey{
   border: 0.5px solid #9A9A9A;
 }
+
 // END === Border
 // START === Border Radius
 .uCC-f-radius-sA{
@@ -112,6 +113,12 @@
   transition: ease-in-out 1s;
 }
 /* END === Transition  */
+
+/* START === horizontal  */
+.uCC-horizontal-divider{
+    border-bottom: 1px solid #EDEDF4;
+}
+/* END === horizontal  */
 
 
 

@@ -5,6 +5,7 @@ import { BlocksModule } from '../blocks/blocks.module';
 import { NavSearchSharedComponent } from './nav-search-shared/nav-search-shared.component';
 import { LoginPopupSharedComponent } from './login-popup-shared/login-popup-shared.component';
 import { SectionsModule } from '../sections/sections.module';
+import { AddToCartPopupComponent } from './add-to-cart-popup/add-to-cart-popup.component';
 
 
 
@@ -12,7 +13,8 @@ import { SectionsModule } from '../sections/sections.module';
   declarations: [
     CartPopupSharedComponent,
     NavSearchSharedComponent,
-    LoginPopupSharedComponent
+    LoginPopupSharedComponent,
+    AddToCartPopupComponent
   ],
   imports: [
     CommonModule,

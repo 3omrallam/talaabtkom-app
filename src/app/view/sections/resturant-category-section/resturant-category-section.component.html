@@ -3,5 +3,12 @@
 </div>
 <!-- Resturant Menu Section -->
 <section class="CC-scroll">
-    <app-resturant-menu-section></app-resturant-menu-section>
+    <!-- Resturant Menu List -->
+<div class="mb-5"> 
+    <ng-container *ngFor='let resturantMenuState of _ResturantMenuService.resturantMenuStates ; let last = last'>
+        <app-menu-list-block [blockMenu]="resturantMenuState"></app-menu-list-block>
+        <div class="uCC-horizontal-divider my-4" *ngIf="!last"></div>
+        <!-- <app-add-to-cart-popup></app-add-to-cart-popup> -->
+    </ng-container>
+</div>
 </section>

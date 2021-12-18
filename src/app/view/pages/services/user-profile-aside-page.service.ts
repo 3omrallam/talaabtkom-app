@@ -14,7 +14,7 @@ export class UserProfileAsidePageService {
     },
     {
       header: "إعادة توثيق الجوال",
-      routerName : 'userProfile',
+      routerName: 'userProfile/recoverPhone',
       icon: "iCC-Mobile",
     },
     {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ResturantMenuService } from '../services/resturant-menu.service';
 
 @Component({
   selector: 'app-resturant-category-section',
@@ -8,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ResturantCategorySectionComponent implements OnInit {
 
-  constructor(public activeRouter: Router) { }
+  constructor(public activeRouter: Router, public _ResturantMenuService: ResturantMenuService) { }
 
   ngOnInit(): void {
   }
