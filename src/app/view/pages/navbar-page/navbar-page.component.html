@@ -37,7 +37,7 @@
   [ngStyle]="{'top': _NavbarService.searchMenuToggle ? '-76px' : '76px'}">
   <app-nav-search-shared></app-nav-search-shared>
 </div>
-<!-- Layer -->
+<!-- Layer popup -->
 <div class="h-100 w-100 {{displayOverLay}} position-fixed end-0 start-0 uCC-t-4 bg-dark"
   [ngStyle]="{'opacity': !_NavbarService.loginToggle ? '0.2' : '0'}" style="z-index: 2;" (click)='animateLogin()'>
 </div>

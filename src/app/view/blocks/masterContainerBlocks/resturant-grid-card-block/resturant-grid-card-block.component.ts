@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ResturantCard } from '../resturant-grid-card-block/model/resturant-card';
+import { ResturantGridCard } from 'src/app/view/models/models/resturantGridCardModel';
 Input
 @Component({
   selector: 'app-resturant-grid-card-block',
@@ -8,12 +8,12 @@ Input
 })
 export class ResturantGridCardBlockComponent implements OnInit {
 
-  @Input()blockState! : ResturantCard;
+  @Input() blockState!: ResturantGridCard;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.blockState);
+    
   }
 
 }

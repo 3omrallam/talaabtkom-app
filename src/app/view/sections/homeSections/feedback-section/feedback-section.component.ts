@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FeedbackListService } from '../../services/feedback-list.service';
 
 @Component({
   selector: 'app-feedback-section',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedbackSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _FeedbackListService: FeedbackListService) { }
 
   ngOnInit(): void {
   }

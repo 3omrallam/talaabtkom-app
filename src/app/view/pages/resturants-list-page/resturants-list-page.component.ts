@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ResturantCardService } from 'src/app/core/resturant/resturant-card.service';
 
 @Component({
   selector: 'app-resturants-list-page',
@@ -8,7 +7,7 @@ import { ResturantCardService } from 'src/app/core/resturant/resturant-card.serv
 })
 export class ResturantsListPageComponent implements OnInit {
 
-  constructor(public _ResturantCardService: ResturantCardService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { feedbackList } from 'src/app/view/models/models/feedbackListModel';
 
 @Component({
   selector: 'app-feedback-card-block',
@@ -7,9 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FeedbackCardBlockComponent implements OnInit {
 
-  @Input()userFeedbackimg:any;
-  @Input()userFeedbackName:any;
-  @Input() feedbackDate:any;
+  @Input() userFeedbackList!: feedbackList;
+ 
 
   constructor() { }
 

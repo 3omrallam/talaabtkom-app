@@ -1,3 +1,7 @@
 .CC-cover-size{
     height: calc(100vh - 76px);
 }
+.CC-Blur-Layer{
+    background-color: rgba(237, 237,244, 0.9);
+    filter: blur(30px) opacity(0%) brightness(50%);
+}

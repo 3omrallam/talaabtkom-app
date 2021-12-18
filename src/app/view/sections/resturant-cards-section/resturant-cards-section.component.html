@@ -7,7 +7,7 @@
 <!-- Resturant Cards -->
 <div class="d-flex justify-content-center uCC-gap-16 mt-2">
     <!-- Resturant 1 -->
-    <ng-container *ngFor='let resturantCardstate of resturantCardstates' class="col-4">
+    <ng-container *ngFor='let resturantCardstate of _ResturantGridCardService.resturantGridCardstates' class="col-4">
         <app-resturant-grid-card-block [blockState]="resturantCardstate"></app-resturant-grid-card-block>
     </ng-container>
 </div>

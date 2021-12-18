@@ -28,6 +28,7 @@ import { UsernameBlockComponent } from './username-block/username-block.componen
 import { SearchBarBlockComponent } from './search-bar-block/search-bar-block.component';
 import { ReservationsListBlockComponent } from './reservations-list-block/reservations-list-block.component';
 import { ModelsModule } from '../models/models/models.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 

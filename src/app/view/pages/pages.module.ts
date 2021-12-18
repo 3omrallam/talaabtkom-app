@@ -15,6 +15,7 @@ import { RouterModule } from '@angular/router';
 import { ResturantProfilePageComponent } from './resturant-profile-page/resturant-profile-page.component';
 import { CoreModule } from 'src/app/core/core.module';
 import { SharedModule } from '../shared/shared.module';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { SharedModule } from '../shared/shared.module';
     SectionsModule,
     RouterModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    MatTooltipModule
   ],
   exports: [
     PagesComponent,

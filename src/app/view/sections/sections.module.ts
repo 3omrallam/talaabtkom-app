@@ -19,6 +19,8 @@ import { LoginSectionComponent } from './authSections/login-section/login-sectio
 import { CreateAccountSectionComponent } from './authSections/create-account-section/create-account-section.component';
 import { PrivacyPolicySectionComponent } from './privacy-policy-section/privacy-policy-section.component';
 import { ModelsModule } from '../models/models/models.module';
+import { ResturantsListSectionComponent } from './resturants-list-section/resturants-list-section.component';
+import { RecoverPhoneSectionComponent } from './recover-phone-section/recover-phone-section.component';
 
 
 
@@ -41,6 +43,8 @@ import { ModelsModule } from '../models/models/models.module';
     LoginSectionComponent,
     CreateAccountSectionComponent,
     PrivacyPolicySectionComponent,
+    ResturantsListSectionComponent,
+    RecoverPhoneSectionComponent,
     
   ],
   imports: [
@@ -65,7 +69,9 @@ import { ModelsModule } from '../models/models/models.module';
     UserReservationsSectionComponent,
     LoginSectionComponent,
     CreateAccountSectionComponent,
-    PrivacyPolicySectionComponent
+    PrivacyPolicySectionComponent,
+    ResturantsListSectionComponent,
+    RecoverPhoneSectionComponent
   ]
 })
 export class SectionsModule { }
