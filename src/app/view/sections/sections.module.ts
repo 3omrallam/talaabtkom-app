@@ -20,6 +20,7 @@ import { PrivacyPolicySectionComponent } from './privacy-policy-section/privacy-
 import { ModelsModule } from '../models/models/models.module';
 import { ResturantsListSectionComponent } from './resturants-list-section/resturants-list-section.component';
 import { RecoverPhoneSectionComponent } from './recover-phone-section/recover-phone-section.component';
+import { ChangePasswordSectionComponent } from './change-password-section/change-password-section.component';
 
 
 
@@ -43,6 +44,7 @@ import { RecoverPhoneSectionComponent } from './recover-phone-section/recover-ph
     PrivacyPolicySectionComponent,
     ResturantsListSectionComponent,
     RecoverPhoneSectionComponent,
+    ChangePasswordSectionComponent,
     
   ],
   imports: [
@@ -68,7 +70,8 @@ import { RecoverPhoneSectionComponent } from './recover-phone-section/recover-ph
     CreateAccountSectionComponent,
     PrivacyPolicySectionComponent,
     ResturantsListSectionComponent,
-    RecoverPhoneSectionComponent
+    RecoverPhoneSectionComponent,
+    ChangePasswordSectionComponent
   ]
 })
 export class SectionsModule { }

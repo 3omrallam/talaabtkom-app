@@ -1,10 +1,10 @@
 <div *ngFor="let element of listElements; let first = first">
-	<div class="d-flex align-items-center">
+	<div class="d-flex align-items-center fCC-reg-sC cCC-text-support2">
 		<!-- Icon and listmenu -->
 		<i class="{{element.icon}} iCC-sD imCC-Background-Contain d-flex mx-2 me-3 my-2"></i>
 		<div>
-			<a routerLink="{{element.routerName}}" routerLinkActive="cCC-text-main">
-				<span class="fCC-bold-sI~ fCC-reg-sC cCC-text-support2 uCC-Click">{{element.header}}</span>
+			<a routerLink="{{element.routerName}}" routerLinkActive="fCC-bold-sI cCC-text-main" [routerLinkActiveOptions]="{exact: true}">
+				<span class="uCC-Click">{{element.header}}</span>
 			</a>
 		</div>
 	</div>
@@ -12,8 +12,8 @@
 	<div class="LT-horizontal-divider"></div>
 	<!-- list Elements -->
 	<ng-container *ngIf="!isShow">
-		<div *ngFor="let sublist of element.subList">
-			<p class="fCC-reg-sB cCC-text-support2 me-5 my-2">{{sublist.title}}</p>
+		<div *ngFor="let sublist of element.subList" >
+			<a  class="fCC-reg-sB cCC-text-support2 me-5 my-2 uCC-Click">{{sublist.title}}</a>
 			<!-- line divider -->
 			<div class="LT-horizontal-divider"></div>
 		</div>

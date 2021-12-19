@@ -29,6 +29,7 @@ import { SearchBarBlockComponent } from './search-bar-block/search-bar-block.com
 import { ReservationsListBlockComponent } from './reservations-list-block/reservations-list-block.component';
 import { ModelsModule } from '../models/models/models.module';
 import { CartPopupBlockComponent } from './cart-popup-block/cart-popup-block.component';
+import { MenuListModalComponent } from './shared/menu-list-modal/menu-list-modal.component';
 
 
 
@@ -60,6 +61,7 @@ import { CartPopupBlockComponent } from './cart-popup-block/cart-popup-block.com
     SearchBarBlockComponent,
     ReservationsListBlockComponent,
     CartPopupBlockComponent,
+    MenuListModalComponent,
   ],
   imports: [
     CommonModule,

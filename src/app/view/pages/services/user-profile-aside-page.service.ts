@@ -14,12 +14,12 @@ export class UserProfileAsidePageService {
     },
     {
       header: "إعادة توثيق الجوال",
-      routerName: 'userProfile/recoverPhone',
+      routerName: 'userProfile/recover-phone',
       icon: "iCC-Mobile",
     },
     {
       header: "تغير كلمة المرور",
-      routerName : 'userProfile',
+      routerName: 'userProfile/change-password',
       icon: "iCC-Lock",
     },
     {
@@ -29,12 +29,12 @@ export class UserProfileAsidePageService {
     },
     {
       header: "البطاقات المحفوظة",
-      routerName : 'userProfile',
+      routerName : 'userProfile/n',
       icon: "iCC-Visa",
     },
     {
       header: "الشروط والأحكام",
-      routerName: 'userProfile/privacyPolicy',
+      routerName: 'userProfile/privacy-policy',
       icon: "iCC-Messagetext",
     },
   ];

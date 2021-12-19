@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-between">
-    <div class="d-flex align-items-center" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <div class="d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <!-- Resturant Image -->
-        <div class="uCC-f-radius-sD~ uCC-Border-grey">
+        <div class="uCC-Border-grey">
             <i class="{{blockMenu.image}} d-flex imCC-Background-Cover CC-resturantsimgs-Holder uCC-Click"></i>
         </div>
         <div class="me-4">
@@ -10,7 +10,7 @@
                 <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{blockMenu.title}}</p>
             </a>
             <!-- Resturant Description -->
-            <p class="fCC-reg-sC cCC-text-support2 mb-2 uCC-Click col-8">{{blockMenu.description}}</p>
+            <p class="fCC-reg-sC cCC-text-support2 mb-1 uCC-Click col-8">{{blockMenu.description}}</p>
             <!-- Icons -->
             <p class="cCC-text-main fCC-bold-sB m-0">{{blockMenu.salary}}</p>
         </div>
@@ -24,65 +24,10 @@
         </div>
         <!-- Plus Icon -->
         <div class="p-1 uCC-Click pe-5">
-            <i class="d-flex iCC-Plus iCC-sE imCC-Background-Contain" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+            <i class="d-flex iCC-Plus iCC-sE imCC-Background-Contain" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
         </div>
 
     </div>
 </div>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <i class="imCC-Foodimg bg- w-100 CC-Foodimg-Holder imCC-Background-Cover d-flex"></i>
-            <div class="modal-body">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <p class="m-0 fCC-reg-sH cCC-text-grey2">سندوتش كباب تركي</p>
-                    <P class="fCC-reg-sI cCC-text-main m-0">85 ر.س</P>
-                </div>
-                <div class="d-flex align-items-center">
-                    <p class="fCC-reg-sG cCC-text-grey2 px-1">اضافات</p>
-                    <p class="fCC-reg-sC cCC-text-orange">اختياري</p>
-                </div>
-                <ng-container *ngFor="let item of extraList">
-                    <div class="pe-1 d-flex justify-content-between">
-                        <div>
-                            <!-- checkBoxes -->
-                            <input type="checkbox" class="iCC-sB cCC-text-support2 p-0 checkbox uCC-Click" value="">
-                            <!-- divider -->
-                            <span class="px-2"></span>
-                            <!-- CheckBox Name -->
-                            <label for="" class="fCC-reg-sC cCC-text-support2">{{item.name}}</label>
-                        </div>
-                        <div>
-                            <!-- Cost -->
-                            <P class="fCC-reg-sC cCC-text-main m-0">{{item.cost}}</P>
-                        </div>
-                    </div>
-                    <!-- Divider-Horizontal -->
-                    <div class="LT-horizontal-divider my-3"></div>
-                </ng-container>
-                <div class="d-flex align-items-center">
-                    <p class="fCC-reg-sG cCC-text-grey2 px-1">ملاحظات</p>
-                    <p class="fCC-reg-sC cCC-text-orange">اختياري</p>
-                </div>
-                <textarea name="message" draggable="false"
-                    class="form-control uCC-Border-lightgrey uCC-f-radius-sA fCC-reg-sC cCC-text-support2 mb-4" rows="5"
-                    cols="30">اود ان تكون درجة السواء متوسطة .. شكرا
-            </textarea>
-                <div class="d-flex justify-content-center align-items-center">
-                    <i class="d-flex iCC-Plusblack iCC-sC imCC-Background-Contain p-3 uCC-Click"></i>
-                    <p class="fCC-reg-sF cCC-text-grey2 mx-3 my-0">1</p>
-                    <i class="d-flex iCC-Minusgrey iCC-sC imCC-Background-Contain p-3 uCC-Click"></i>
-                </div>
-            </div>
-            <div class="px-3 mt-1 mb-4">
-                <button type="button" class="form-control cCC-bg-main cCC-text-white fCC-reg-sG uCC-f-radius-sA p-2"
-                    data-bs-dismiss="modal">
-                    <span class="ms-5">اضف الى السلة</span>
-                    <span class="me-5">95 ر.س</span>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+<!-------------------- Modal ---------------------------->
+<app-menu-list-modal></app-menu-list-modal>

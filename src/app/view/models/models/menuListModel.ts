@@ -5,5 +5,5 @@ export interface menuList {
     salary: String,
     description: String,
     liked:string,
-    numOfLiked:string
+    numOfLiked:string,
 }

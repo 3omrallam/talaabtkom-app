@@ -1,4 +1,4 @@
-<div class="my-4">
+<div class="my-4 position-sticky top-0">
     <app-search-bar-block></app-search-bar-block>
 </div>
 <!-- Resturant Menu Section -->
@@ -6,9 +6,8 @@
     <!-- Resturant Menu List -->
 <div class="mb-5"> 
     <ng-container *ngFor='let resturantMenuState of _ResturantMenuService.resturantMenuStates ; let last = last'>
-        <app-menu-list-block [blockMenu]="resturantMenuState"></app-menu-list-block>
+        <app-menu-list-block [blockMenu]="resturantMenuState" ></app-menu-list-block>
         <div class="uCC-horizontal-divider my-4" *ngIf="!last"></div>
-        <!-- <app-add-to-cart-popup></app-add-to-cart-popup> -->
     </ng-container>
 </div>
 </section>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,17 +12,17 @@ export class SideMenuNavigatorsComponent implements OnInit {
  
   @Input()listElements! : any;
 
+  
   constructor(public activatedRoute: Router) { }
 
-  ngOnInit(): void {
-    // setTimeout(() => {
-    //   console.log(this.activatedRoute.url)
-    // }, 1000);
-    console.log(this.listElements);
+  ngOnInit(): void {    
+    
     
   }
+
   listDisplay() {
     this.isShow = !this.isShow;
   }
+  
  
 }
