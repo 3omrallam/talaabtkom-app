@@ -7,7 +7,7 @@
   <header class="container-fluid p-0" style="margin-top: 76px;">
     <app-header-layout></app-header-layout>
   </header>
-  <aside class="py-4 cCC-bg-white CC-aside-cart-holder uCC-t-4" [ngStyle]="{'left': _NavbarService.cartMenuToggle ? '-400px' : '0px' }">
+  <aside class="py-4 cCC-bg-white CC-aside-cart-holder shadow uCC-t-4" [ngStyle]="{'left': _NavbarService.cartMenuToggle ? '-400px' : '0px' }">
     <app-cart-popup-shared></app-cart-popup-shared>
   </aside>
   <section class="{{this.activeRouter.url !== '/' ? 'container' : 'container-fluid'}} px-0 py-4~ row justify-content-center align-items-start mx-auto m-0 uCC-gap-24">
