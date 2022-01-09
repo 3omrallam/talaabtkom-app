@@ -3,5 +3,4 @@ export interface feedbackList {
     image:string,
     name:string,
     date:string,
-    // feedback:string
 }
