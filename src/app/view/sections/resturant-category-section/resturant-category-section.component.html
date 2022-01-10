@@ -4,14 +4,15 @@
 <!-- Resturant Menu Section -->
 <section class="CC-scroll~">
     <!-- Resturant Menu List -->
-<div class="mb-5"> 
-    <ng-container *ngFor='let resturantMenuState of _ResturantMenuService.resturantMenuStates ; let last = last'>
-        <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click mb-2" id="{{resturantMenuState.id}}">{{resturantMenuState.Header}}</p>
-        <ng-container *ngFor="let item of resturantMenuState.subList ; let last = last">
-            <app-menu-list-block [blockMenu]="item" ></app-menu-list-block>
+    <div class="mb-5">
+        <ng-container *ngFor='let resturantMenuState of _ResturantMenuService.resturantMenuStates ; let last = last'>
+            <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click mb-2" id="{{resturantMenuState.id}}">
+                {{resturantMenuState.Header}}</p>
+            <ng-container *ngFor="let item of resturantMenuState.subList ; let last = last">
+                <app-menu-list-block [blockMenu]="item"></app-menu-list-block>
+                <div class="uCC-horizontal-divider my-4" *ngIf="!last"></div>
+            </ng-container>
             <div class="uCC-horizontal-divider my-4" *ngIf="!last"></div>
         </ng-container>
-        <div class="uCC-horizontal-divider my-4" *ngIf="!last"></div>
-    </ng-container>
-</div>
+    </div>
 </section>

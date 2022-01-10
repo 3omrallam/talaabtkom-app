@@ -30,9 +30,7 @@ import { ModelsModule } from '../models/models/models.module';
 import { CartPopupBlockComponent } from './cart-popup-block/cart-popup-block.component';
 import { MenuListModalComponent } from './shared/menu-list-modal/menu-list-modal.component';
 import { AllReservationsBlockComponent } from './reservations-blocks/all-reservations-block/all-reservations-block.component';
-import { CurrentReservationsBlockComponent } from './reservations-blocks/current-reservations-block/current-reservations-block.component';
-import { CompleteReservationsBlockComponent } from './reservations-blocks/complete-reservations-block/complete-reservations-block.component';
-import { CanceledReservationsBlockComponent } from './reservations-blocks/canceled-reservations-block/canceled-reservations-block.component';
+
 
 
 
@@ -65,9 +63,6 @@ import { CanceledReservationsBlockComponent } from './reservations-blocks/cancel
     CartPopupBlockComponent,
     MenuListModalComponent,
     AllReservationsBlockComponent,
-    CurrentReservationsBlockComponent,
-    CompleteReservationsBlockComponent,
-    CanceledReservationsBlockComponent,
   ],
   imports: [
     CommonModule,
@@ -101,9 +96,7 @@ import { CanceledReservationsBlockComponent } from './reservations-blocks/cancel
     SearchBarBlockComponent,
     CartPopupBlockComponent,
     AllReservationsBlockComponent,
-    CurrentReservationsBlockComponent,
-    CompleteReservationsBlockComponent,
-    CanceledReservationsBlockComponent
+ 
   ]
 })
 export class BlocksModule { }
