@@ -11,7 +11,7 @@ export class ResturantAsidePageService {
       routerName: "resturant-profile/1",
       routerActive:"fCC-bold-sI cCC-text-main",
       icon: "iCC-Booksquare",
-      subList: [{ title: "الاكثر مبيعا" }, { title: "المشويات" }, { title: "المقبلات"}, { title: "الحلويات"}]
+      subList: [{ title: "الاكثر مبيعا", href: "item1" }, { title: "المشويات", href: "item2" }, { title: "المقبلات", href: "item3" }, { title: "الحلويات", href: "item4"}]
     },
     {
       header: "تقييم المطعم",

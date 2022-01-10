@@ -8,7 +8,7 @@ import { menuList } from 'src/app/view/models/models/menuListModel';
 })
 export class MenuListBlockComponent implements OnInit {
 
-  @Input() blockMenu!: menuList;
+  @Input() blockMenu!: any;
 
   constructor() { }
 

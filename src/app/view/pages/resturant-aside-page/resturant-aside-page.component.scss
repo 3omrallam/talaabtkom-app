@@ -1,3 +1,14 @@
 .CC-height-holder{
     height: 100vh;
 }
+.CC-scroll {
+    height: 518px;
+    overflow-y: auto; 
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    overflow-y: scroll;   
+}
+
+.CC-scroll::-webkit-scrollbar {
+    display: none;
+}

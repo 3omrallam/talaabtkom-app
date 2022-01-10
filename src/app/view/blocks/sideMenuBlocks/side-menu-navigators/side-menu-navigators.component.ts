@@ -8,20 +8,17 @@ import { Router } from '@angular/router';
 })
 export class SideMenuNavigatorsComponent implements OnInit {
 
-  isShow:boolean = false;
- 
+  isShow:boolean = false; 
   @Input()listElements! : any;
-
-  
   constructor(public activatedRoute: Router) { }
 
   ngOnInit(): void {    
-    
-    
   }
-
   listDisplay() {
     this.isShow = !this.isShow;
+  }
+  scrollTo(section:any) {
+    document.querySelector('#' + section)?.scrollIntoView();
   }
   
  

@@ -1,6 +1,6 @@
-.LT-horizontal-divider{
+.CC-horizontal-divider{
     height: 1px;
-    width: 285px;
+    width: 100%;
     background-color: #EDEDF4;
 }
 .CC-sideNav-holder{
@@ -9,4 +9,7 @@
 .selected {
   color: red !important;
   font-weight: bold;
+}
+.default{
+  background-color: aqua;
 }

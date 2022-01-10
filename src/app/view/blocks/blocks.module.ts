@@ -26,10 +26,13 @@ import { PhoneNumberBlockComponent } from './phone-number-block/phone-number-blo
 import { VerifyBlockComponent } from './verify-block/verify-block.component';
 import { UsernameBlockComponent } from './username-block/username-block.component';
 import { SearchBarBlockComponent } from './search-bar-block/search-bar-block.component';
-import { ReservationsListBlockComponent } from './reservations-list-block/reservations-list-block.component';
 import { ModelsModule } from '../models/models/models.module';
 import { CartPopupBlockComponent } from './cart-popup-block/cart-popup-block.component';
 import { MenuListModalComponent } from './shared/menu-list-modal/menu-list-modal.component';
+import { AllReservationsBlockComponent } from './reservations-blocks/all-reservations-block/all-reservations-block.component';
+import { CurrentReservationsBlockComponent } from './reservations-blocks/current-reservations-block/current-reservations-block.component';
+import { CompleteReservationsBlockComponent } from './reservations-blocks/complete-reservations-block/complete-reservations-block.component';
+import { CanceledReservationsBlockComponent } from './reservations-blocks/canceled-reservations-block/canceled-reservations-block.component';
 
 
 
@@ -59,9 +62,12 @@ import { MenuListModalComponent } from './shared/menu-list-modal/menu-list-modal
     VerifyBlockComponent,
     UsernameBlockComponent,
     SearchBarBlockComponent,
-    ReservationsListBlockComponent,
     CartPopupBlockComponent,
     MenuListModalComponent,
+    AllReservationsBlockComponent,
+    CurrentReservationsBlockComponent,
+    CompleteReservationsBlockComponent,
+    CanceledReservationsBlockComponent,
   ],
   imports: [
     CommonModule,
@@ -93,8 +99,11 @@ import { MenuListModalComponent } from './shared/menu-list-modal/menu-list-modal
     VerifyBlockComponent,
     UsernameBlockComponent,
     SearchBarBlockComponent,
-    ReservationsListBlockComponent,
-    CartPopupBlockComponent
+    CartPopupBlockComponent,
+    AllReservationsBlockComponent,
+    CurrentReservationsBlockComponent,
+    CompleteReservationsBlockComponent,
+    CanceledReservationsBlockComponent
   ]
 })
 export class BlocksModule { }

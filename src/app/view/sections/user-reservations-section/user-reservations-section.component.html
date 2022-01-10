@@ -1,17 +1,18 @@
 <!--Reservation Filter Section -->
 <section class="d-flex me-5 mt-4 mb-5">
-    <p class="fCC-bold-sB cCC-text-dark shadow px-3 py-1 uCC-f-radius-sA m-0">الجميع</p>
+    <a (click)='allFilter()' class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">الجميع</a>
     <!-- divider -->
     <div class="mx-3"></div>
-    <p class="fCC-reg-sD cCC-text-dark px-3 py-1 uCC-f-radius-sA~ m-0">الحالية</p>
+    <a (click)='Filter("تحت التنفيذ")' class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">الحالية</a>
     <!-- divider -->
     <div class="mx-3"></div>
-    <p class="fCC-reg-sD cCC-text-dark px-3 py-1 uCC-f-radius-sA~ m-0">الكاملة</p>
+    <a (click)='Filter("مكتمل")' class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">الكاملة</a>
     <!-- divider -->
     <div class="mx-3"></div>
-    <p class="fCC-reg-sD cCC-text-dark px-3 py-1 uCC-f-radius-sA~ m-0">الملغية</p>
+    <a (click)='Filter("ملغي")' class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click" routerLinkActive="shadow fCC-bold-sB uCC-f-radius-sA">الملغية</a>
 </section>
-<!-- Last Reservations section -->
+<!-- Reservation Filters section -->
 <section>
-    <app-reservations-list-block [reservationList]=' _ReservationsListService.reservationsList'></app-reservations-list-block>
+    <app-all-reservations-block [reservationList]='reservationsList'></app-all-reservations-block>
+    <!-- <router-outlet></router-outlet> -->
 </section>

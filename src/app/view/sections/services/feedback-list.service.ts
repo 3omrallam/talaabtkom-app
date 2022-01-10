@@ -23,7 +23,7 @@ export class FeedbackListService {
     {
       id: 3,
       image:'imCC-Userfeedbackimg3',
-      name: 'محمد ابراهيم',
+      name: 'محمد عمر',
       date: '8/5/2019الأربعاء',
     },
   ]

@@ -21,6 +21,7 @@ import { ModelsModule } from '../models/models/models.module';
 import { ResturantsListSectionComponent } from './resturants-list-section/resturants-list-section.component';
 import { RecoverPhoneSectionComponent } from './recover-phone-section/recover-phone-section.component';
 import { ChangePasswordSectionComponent } from './change-password-section/change-password-section.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -50,7 +51,8 @@ import { ChangePasswordSectionComponent } from './change-password-section/change
   imports: [
     CommonModule,
     BlocksModule,
-    ModelsModule
+    ModelsModule,
+    RouterModule
   ],
   exports:[
     SectionsComponent,
