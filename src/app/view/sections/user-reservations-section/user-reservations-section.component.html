@@ -1,18 +1,17 @@
 <!--Reservation Filter Section -->
 <section class="d-flex me-5 mt-4 mb-5">
-    <a (click)='allFilter()' class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">الجميع</a>
+    <a (click)='allFilter()' [ngClass]="btn" class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">الجميع</a>
     <!-- divider -->
     <div class="mx-3"></div>
-    <a (click)='Filter("تحت التنفيذ")' class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">الحالية</a>
+    <a (click)='Filter("تحت التنفيذ");div1Function()' [ngClass]="btn1" class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">الحالية</a>
     <!-- divider -->
     <div class="mx-3"></div>
-    <a (click)='Filter("مكتمل")' class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">الكاملة</a>
+    <a (click)='Filter("مكتمل") ;div2Function()' [ngClass]="btn2" class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">الكاملة</a>
     <!-- divider -->
     <div class="mx-3"></div>
-    <a (click)='Filter("ملغي")' class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click" routerLinkActive="shadow fCC-bold-sB uCC-f-radius-sA">الملغية</a>
+    <a (click)='Filter("ملغي");div3Function()' [ngClass]="btn3" class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">الملغية</a>
 </section>
 <!-- Reservation Filters section -->
 <section>
     <app-all-reservations-block [reservationList]='reservationsList'></app-all-reservations-block>
-    <!-- <router-outlet></router-outlet> -->
 </section>
