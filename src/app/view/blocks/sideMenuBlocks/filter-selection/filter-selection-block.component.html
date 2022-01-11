@@ -1,5 +1,11 @@
 <!-- checkBoxes -->
-<input type="checkbox" name="" class="iCC-sB cCC-text-support2 uCC-Click" value="{{items?.value}}">
+<!-- <input type="checkbox" name="" class="iCC-sB cCC-text-support2 uCC-Click" value="{{items?.value}}"> -->
 <!-- divider -->
-<span class="px-2"></span>
-<label for="" class="fCC-reg-sC cCC-text-support2 ">{{items?.label}}</label>
+<!-- <span class="px-2"></span>
+<label for="" class="fCC-reg-sC cCC-text-support2 ">{{items?.label}}</label> -->
+
+
+<label for="{{items?.value}}" class="fCC-reg-sC cCC-text-support2 d-flex gap-2">
+    <input id="{{items?.value}}" type="checkbox" name="" class="iCC-sB cCC-text-support2 uCC-Click" value="{{items?.value}}">
+    <span>{{items?.label}}</span>
+</label>

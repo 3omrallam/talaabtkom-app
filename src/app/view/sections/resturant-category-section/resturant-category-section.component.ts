@@ -13,6 +13,5 @@ export class ResturantCategorySectionComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
 
 }

@@ -20,6 +20,4 @@ export class SideMenuNavigatorsComponent implements OnInit {
   scrollTo(section:any) {
     document.querySelector('#' + section)?.scrollIntoView();
   }
-  
- 
 }

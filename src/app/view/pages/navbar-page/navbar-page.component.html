@@ -20,17 +20,17 @@
   <!-- vertical divider -->
   <div class="mx-4"></div>
   <!-- App Favorate Icon Block Section-->
-  <button class="btn" (click)='animateCart()'>
+  <button class="btn" (click)='animateCart()'  aria-label="Cart">
     <app-icon [iconName]='"iCC-Favourite imCC-Background-Contain iCC-sF"'></app-icon>
   </button>
   <!-- vertical divider -->
   <div class="mx-4"></div>
   <!-- App User Profile Block Section -->
-  <app-user-profile-block></app-user-profile-block>
+  <!-- <app-user-profile-block></app-user-profile-block> -->
   <!-- SignIn Button Block -->
-  <!-- <div class="uCC-Border-sB-Main uCC-f-radius-sA py-2 px-4 uCC-Click" (click)='animateLogin()' (click)='loginCard($event)'>
+  <div class="uCC-Border-sB-Main uCC-f-radius-sA py-2 px-4 uCC-Click" (click)='animateLogin()' (click)='loginCard($event)'>
     <app-signin-button-block></app-signin-button-block>
-  </div> -->
+  </div>
 </div>
 <!-- SEARCH -->
 <div class="position-absolute uCC-t-4 p-0 w-100"

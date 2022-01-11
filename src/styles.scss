@@ -13,7 +13,6 @@ a{
 a:hover{
   color: #f5504c;
 }
-/* Start === Button HOVER  */
 button:hover
 {
   color: unset !important;
@@ -24,7 +23,6 @@ button:focus
   background-color: unset !important;
   color: unset !important;
 }
-/* END === Button HOVER */
 input:focus-visible
 {
     outline: none !important;

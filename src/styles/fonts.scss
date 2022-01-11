@@ -1,10 +1,12 @@
 @font-face{
     font-family: Cairo-Bold;
-    src: url('../assets/font/Cairo-Bold.ttf')
+    src: url('../assets/font/Cairo-Bold.ttf');
+    font-display: swap;
 }
 @font-face{
     font-family: Cairo-Regular;
-    src: url('../assets/font/Cairo-Regular.ttf')
+    src: url('../assets/font/Cairo-Regular.ttf');
+    font-display: swap;
 }
 
 // font sizes [Cairo-Bold] === Start
