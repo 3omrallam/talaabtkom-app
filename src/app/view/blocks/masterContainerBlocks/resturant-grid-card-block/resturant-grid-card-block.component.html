@@ -1,27 +1,36 @@
 <!-- Resturant Image -->
-<i class="{{blockState.image}} m-2 d-flex imCC-Background-Cover CC-resturants-Holder uCC-f-radius-sA"></i>
-<div class="d-flex align-items-center justify-content-between pt-3 pb-3 mb-3 CC-horizontal-divider uCC-Click">
-    <div class="d-flex w-100 align-items-center">
-        <!-- Resturant Logo -->
-        <i class="d-flex me-2 {{blockState.logo}} iCC-sH imCC-Background-Contain"></i>
-        <div class="mx-3">
-            <!-- Resturant Name -->
-            <p class="mb-0 cCC-text-orange mx-2~ fCC-bold-sC">{{blockState.title}}</p>
-            <!-- Resturant Description -->
-            <p class="mb-0 fCC-reg-sB cCC-text-lightgray cCC-text-support2">{{blockState.description}}</p>
+<section class="position-relative">
+    <i class="{{blockState.image}} d-flex imCC-Background-Cover CC-resturants-Holder uCC-f-radius-sA"></i>
+    <div class="d-flex align-items-center justify-content-between pt-3 pb-3 mb-3~ CC-horizontal-divider~ uCC-Click">
+        <div class="d-flex w-100 align-items-center">
+            <!-- Resturant Logo -->
+            <i class="d-flex me-2 {{blockState.logo}} CC-logo-Holder imCC-Background-Contain"></i>
+            <div class="mx-3">
+                <!-- Resturant Name -->
+                <p class="mb-0 cCC-text-dark mx-2~ fCC-bold-sI">{{blockState.title}}</p>
+                <!-- Resturant Description -->
+                <div class="d-flex uCC-gap-8 mt-1">
+                    <!-- <p class="mb-0 fCC-reg-sB cCC-text-lightgray cCC-text-support2">{{blockState.description}}</p> -->
+                    <button class="border-0 fCC-reg-sA cCC-text-dark py-1 px-3 cCC-bg-support1 uCC-f-radius-s5"
+                        aria-label="type1">المشويات</button>
+                    <button class="border-0 fCC-reg-sA cCC-text-dark py-1 px-3 cCC-bg-support1 uCC-f-radius-s5"
+                        aria-label="type2">الشرقي</button>
+                </div>
+            </div>
+        </div>
+        <!-- Icon Like -->
+        <div class="cCC-bg-support1 uCC-f-radius-sA p-2 position-absolute"
+            style="top: 16px; left: 16px;">
+            <i class="d-flex {{blockState.liked}} iCC-sB imCC-Background-Contain"></i>
         </div>
     </div>
-    <!-- Icon Like -->
-    <div class="cCC-opacity-support1-30 uCC-f-radius-sA p-2">
-        <i class="d-flex {{blockState.liked}} iCC-sB imCC-Background-Contain"></i>
+    <!-- Icons -->
+    <div class="d-flex justify-content-between mb-3">
+        <app-icon iconName="iCC-Newclock iCC-sD imCC-Background-Contain d-flex mx-2"
+            textContent="{{blockState.time}} دقيقة" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
+        <app-icon iconName="iCC-Newtables iCC-sD imCC-Background-Contain d-flex ms-2"
+            textContent="{{blockState.tables}} طاولة" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
+        <app-icon iconName="iCC-Newstars iCC-sD imCC-Background-Contain d-flex ms-2" textContent="{{blockState.rate}}"
+            textClass="fCC-reg-sB cCC-text-support2"></app-icon>
     </div>
-</div>
-<!-- Icons -->
-<div class="d-flex justify-content-between">
-    <app-icon iconName="iCC-Clockblue iCC-sB imCC-Background-Contain d-flex mx-1" textContent="{{blockState.time}} دقيقة"
-        textClass="fCC-reg-sB cCC-text-support2"></app-icon>
-    <app-icon iconName="iCC-Table iCC-sB imCC-Background-Contain d-flex mx-1" textContent="{{blockState.tables}} طاولة"
-        textClass="fCC-reg-sB cCC-text-support2"></app-icon>
-    <app-icon iconName="iCC-Star iCC-sB imCC-Background-Contain d-flex mx-1" textContent="{{blockState.rate}}"
-        textClass="fCC-reg-sB cCC-text-support2"></app-icon>
-</div>
+</section>

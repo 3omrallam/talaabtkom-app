@@ -1,16 +1,82 @@
+// List View
 .CC-resturantsimgs-Holder{
     height: 112px;
     width: 112px;
 }
 .CC-Qr-Holder{
-    height: 60px;
-    width: 60px;
+    height: 28px;
+    width: 28px;
 }
-// .CC-horizontal-divider{
-//     border-bottom: 1px solid #EDEDF4;
-// }
 .CC-horizontal-divider{
   width: 100%;
   height: 1px;
   background-color: #EDEDF4;
+}
+// Grid View
+.CC-logo-Holder{
+    width: 56px;
+    height: 56px;
+}
+.CC-resturants-Holder{
+    height: 130px;
+    // width: 260px;
+}
+@media screen and (max-width:475px) {
+    .CC-resturantsimgs-Holder{
+    height: 56px;
+    width: 56px;
+    border-radius: 10px;
+    }
+    .fCC-bold-sD{
+        font-size: 16px !important;
+       font-family: Cairo-Bold;
+    }
+}
+
+
+.CC-resturant-holder-grid{
+    padding: 16px;
+    width: 100%;
+    align-items: center;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: auto 1fr 40px;
+    grid-template-rows: auto auto;
+      @media screen and (max-width: 330px) {
+         gap: 8px;
+        }
+    .CC-resturant-image{
+        @media screen and (min-width: 476px) {
+            grid-column: 1/2;
+            grid-row: 1/3;
+            border-radius: 15px;
+
+        }
+        @media screen and (max-width: 475px) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+    }
+    .CC-resturant-title{
+        @media screen and (min-width: 476px) {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+    }
+    .CC-resturant-tags{
+        @media screen and (min-width: 476px) {
+            grid-column: 2/3;
+            grid-row: 2/2;
+            display: flex;
+            margin-top: auto;
+            gap: 16px;
+        }
+        @media screen and (max-width: 475px) {
+            grid-column: 1/3;
+            grid-row: 2/2;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
 }

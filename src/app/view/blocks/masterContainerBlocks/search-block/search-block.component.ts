@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ResturantCardService } from 'src/app/core/resturant/resturant-card.service';
+import { ResturantCard } from 'src/app/view/models/models/resturantsList';
 
 @Component({
   selector: 'app-search-block',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-block.component.scss']
 })
 export class SearchBlockComponent implements OnInit {
+  displayList:string ='d-none';
+  isShow: boolean = false;
   countries: any = [
     { value: 'value1', name: 'الرياض' },
     { value: 'value2', name: 'جده' },
@@ -16,9 +20,14 @@ export class SearchBlockComponent implements OnInit {
     { value: 'value7', name: 'الخبر' },
   ]
 
-  constructor() { }
+
+  constructor(public _ResturantCardService: ResturantCardService) { }
 
   ngOnInit(): void {
+  }
+  display(){
+    this.isShow = !this.isShow
+   this.displayList='d-block'
   }
 
 }

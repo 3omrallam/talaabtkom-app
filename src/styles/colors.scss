@@ -10,10 +10,11 @@ $yellow:#d7c218;
 $green:#4ee143;
 $lightgreen:#50DF33;
 $darkgrey: #707070;
-$lightgray:#9A9A9A;
+$lightgrey:#9A9A9A;
 $orange:#E66B32;
 $grey2:#575756;
 $black:#000;
+$lightblue:#F2F5F7;
 // START === Background Color
 .cCC-bg-Inherit{
   background-color: inherit;
@@ -44,6 +45,9 @@ $black:#000;
 }
 .cCC-bg-black{
   background-color:$black;
+}
+.cCC-bg-lightblue{
+  background-color:$lightblue;
 }
 // END === Background Color
 
@@ -133,16 +137,13 @@ $black:#000;
   color:$orange;
 }
 .cCC-text-lightgray{
-  color:$lightgray;
+  color:$lightgrey;
 }
 .cCC-text-darkgray{
   color:$darkgrey;
 }
 .cCC-text-grey2{
   color:$grey2;
-}
-.cCC-text-orange{
-  color:$orange;
 }
 .cCC-text-lightgreen{
   color:$lightgreen;
