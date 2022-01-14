@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./username-block.component.scss']
 })
 export class UsernameBlockComponent implements OnInit {
+  // Show Password Fields
+  showPassword: boolean = false;
+  showConfirmPassword:boolean = false;
 
   constructor() { }
 

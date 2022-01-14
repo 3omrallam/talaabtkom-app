@@ -17,7 +17,7 @@ export class ResturantMenuService {
           description: `هناك حقيقة مثبتة منذ زمن طويل وه أن المحتوى المقروء لصفحة ما سيلهية
           القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة`,
           salary: ' ر.س50',
-          liked: 'iCC-Heartempty',
+          liked: 'iCC-Newlike',
           numOfLiked: '3546',
         },
         {
@@ -27,7 +27,7 @@ export class ResturantMenuService {
           description: `هناك حقيقة مثبتة منذ زمن طويل وه أن المحتوى المقروء لصفحة ما سيلهية
           القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة`,
           salary: ' ر.س70',
-          liked: 'iCC-Heartempty',
+          liked: 'iCC-Newlike',
           numOfLiked: '3674',
         }]
     },
@@ -42,7 +42,7 @@ export class ResturantMenuService {
           description: `هناك حقيقة مثبتة منذ زمن طويل وه أن المحتوى المقروء لصفحة ما سيلهية
          القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة`,
           salary: ' ر.س30',
-          liked: 'iCC-Heartred',
+          liked: 'iCC-Newlike',
           numOfLiked: '2674',
         },
         {
@@ -52,7 +52,7 @@ export class ResturantMenuService {
           description: `هناك حقيقة مثبتة منذ زمن طويل وه أن المحتوى المقروء لصفحة ما سيلهية
           القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة`,
           salary: ' ر.س25.5',
-          liked: 'iCC-Heartempty',
+          liked: 'iCC-Newlike',
           numOfLiked: '3548',
         }]
     },
@@ -67,7 +67,7 @@ export class ResturantMenuService {
           description: `هناك حقيقة مثبتة منذ زمن طويل وه أن المحتوى المقروء لصفحة ما سيلهية
           القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة`,
           salary: ' ر.س88',
-          liked: 'iCC-Heartred',
+          liked: 'iCC-Newlike',
           numOfLiked: '3647',
         },
         {
@@ -77,7 +77,7 @@ export class ResturantMenuService {
           description: `هناك حقيقة مثبتة منذ زمن طويل وه أن المحتوى المقروء لصفحة ما سيلهية
          القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة`,
           salary: ' ر.س42',
-          liked: 'iCC-Heartempty',
+          liked: 'iCC-Newlike',
           numOfLiked: '4638',
         },
       ]
@@ -93,7 +93,7 @@ export class ResturantMenuService {
           description: `هناك حقيقة مثبتة منذ زمن طويل وه أن المحتوى المقروء لصفحة ما سيلهية
           القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة`,
           salary: ' ر.س115',
-          liked: 'iCC-Heartempty',
+          liked: 'iCC-Newlike',
           numOfLiked: '1587',
         },
         {
@@ -103,7 +103,7 @@ export class ResturantMenuService {
           description: `هناك حقيقة مثبتة منذ زمن طويل وه أن المحتوى المقروء لصفحة ما سيلهية
            القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة`,
           salary: ' ر.س65',
-          liked: 'iCC-Heartempty',
+          liked: 'iCC-Newlike',
           numOfLiked: '3852',
         }]
     }

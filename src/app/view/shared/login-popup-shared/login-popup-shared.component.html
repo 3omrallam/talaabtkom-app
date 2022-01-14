@@ -8,18 +8,18 @@
         class="cCC-bg-white CC-login-Holder uCC-l-radius-sH position-relative d-flex flex-column align-items-center justify-content-center gap-4 px-4">
         <!-- Logo -->
         <div class="mb-3">
-            <p class="m-0 fCC-reg-sG cCC-text-dark me-5">اهلا بك</p>
+            <p class="m-0 fCC-reg-sFcCC-text-dark me-5">اهلا بك</p>
             <app-sticker-block></app-sticker-block>
         </div>
         <!-- Login Header -->
         <div class="d-flex mb-3">
             <button
-                class="CC-login-Hover fCC-reg-sG {{_AuthService.authToggleBTN === true ? ' cCC-text-dark' : 'cCC-text-opacity-dark-50'}} m-0 uCC-Click btn"
+                class="CC-login-Hover fCC-reg-sF{{_AuthService.authToggleBTN === true ? ' cCC-text-dark' : 'cCC-text-opacity-dark-50'}} m-0 uCC-Click btn"
                 (click)='toggleAuthBTN("login")'>تسجيل الدخول</button>
             <div class="mx-4"></div>
             <!-- Create New Account Header-->
             <button
-                class="CC-login-Hover fCC-reg-sG {{_AuthService.authToggleBTN === false ? ' cCC-text-dark' : 'cCC-text-opacity-dark-50'}} m-0 uCC-Click btn"
+                class="CC-login-Hover fCC-reg-sF{{_AuthService.authToggleBTN === false ? ' cCC-text-dark' : 'cCC-text-opacity-dark-50'}} m-0 uCC-Click btn"
                 (click)='toggleAuthBTN("register")'>حساب جديد</button>
         </div>
         <div class="col-8">
@@ -31,10 +31,6 @@
             <div *ngIf="_AuthService.authToggleBTN === false">
                 <app-create-account-section></app-create-account-section>
             </div>
-        </div>
-        <!-- Close Button -->
-        <div class="position-absolute top-0 start-0 ms-4 mt-4 uCC-Click">
-            <app-icon [iconName]='"iCC-Closebutton imCC-Background-Contain iCC-sB"' ></app-icon>
         </div>
     </div>
 </div>

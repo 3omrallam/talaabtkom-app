@@ -31,12 +31,8 @@ export class NavbarPageComponent implements OnInit {
           this.displayOverLay = 'd-none'
           document.body.style.overflow = 'auto';
         }, 400);
-
         break;
     }
-  }
-  loginCard(event:any) {
-    console.log(event.target.clientHeight);
   }
 
 }
