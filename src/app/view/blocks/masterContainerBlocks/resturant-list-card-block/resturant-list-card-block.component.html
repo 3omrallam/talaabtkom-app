@@ -1,10 +1,10 @@
 <div class="d-flex justify-content-between cCC-bg-white uCC-f-radius-sB p-3~ ">
-    <div class="d-f~lex flex-co~lumn align-items~-center CC-resturant-holder-grid" routerLink="/resturant-profile/{{listState.id}}">
+    <div class="CC-resturant-holder-grid" routerLink="/resturant-profile/{{listState.id}}">
         <!-- Resturant Image -->
         <div class="CC-resturant-image" >
             <i class="{{listState.image}} d-flex imCC-Background-Cover uCC-f-radius-sB CC-resturantsimgs-Holder uCC-Click"></i>
         </div>
-        <div class="me-lg-4~ me-2~ CC-resturant-title">
+        <div class="CC-resturant-title">
             <!-- Resturant-title -->
             <div>
                 <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{listState.title}}</p>
@@ -18,15 +18,14 @@
             </div>
         </div>
         <!-- Icons -->
-        <div class="d-f~lex justify-content-~center CC-resturant-tags">
+        <div class="CC-resturant-tags">
             <app-icon iconName="iCC-Newclock iCC-sD imCC-Background-Contain d-flex gap-3 "
-                textContent="{{listState.time}}دقيقة" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
+                textContent="{{listState.time}}دقيقة" textClass="fCC-reg-sB cCC-text-support2 me-1"></app-icon>
             <app-icon iconName="iCC-Newtables iCC-sD imCC-Background-Contain d-flex gap-3 "
-                textContent="{{listState.tables}} طاولة" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
+                textContent="{{listState.tables}} طاولة" textClass="fCC-reg-sB cCC-text-support2 me-1"></app-icon>
             <app-icon iconName="iCC-Newstars iCC-sD imCC-Background-Contain d-flex gap-3"
-                textContent="{{listState.rate}}" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
+                textContent="{{listState.rate}}" textClass="fCC-reg-sB cCC-text-support2 me-1"></app-icon>
         </div>
-        <!-- <div class="d-f~lex flex-c~olumn justi~fy-content-between m~s-lg-1 ms~-0 CC-resturant-icons"> -->
             <!-- Heart Icon -->
             <div class="CC-like-icon-holder cCC-bg-support1 uCC-f-radius-sA p-lg-2 p-1 uCC-Click">
                 <i class="d-flex {{listState.liked}} w-100 iCC-sD imCC-Background-Contain"></i>
@@ -35,7 +34,6 @@
             <div class="CC-QR-icon-holder cCC-bg-support1 uCC-f-radius-sA p-lg-2 p-1 uCC-Click">
                 <i class="iCC-Newqrcode d-flex w-100 imCC-Background-Contain CC-Qr-Holder uCC-Click"></i>
             </div>
-        <!-- </div> -->
     </div>
 </div>
 <!-- <section class="position-relative cCC-bg-white uCC-f-radius-sB pb-2 mt-2">

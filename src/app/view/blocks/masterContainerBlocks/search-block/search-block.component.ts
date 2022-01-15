@@ -9,7 +9,6 @@ import { ResturantCard } from 'src/app/view/models/models/resturantsList';
 })
 export class SearchBlockComponent implements OnInit {
   displayList:string ='d-none';
-  isShow: boolean = false;
   countries: any = [
     { value: 'value1', name: 'الرياض' },
     { value: 'value2', name: 'جده' },
@@ -24,10 +23,6 @@ export class SearchBlockComponent implements OnInit {
   constructor(public _ResturantCardService: ResturantCardService) { }
 
   ngOnInit(): void {
-  }
-  display(){
-    this.isShow = !this.isShow
-   this.displayList='d-block'
   }
 
 }

@@ -24,12 +24,10 @@ export class NavbarPageComponent implements OnInit {
     switch (this._NavbarService.loginToggle) {
       case false:
         this.displayOverLay = 'd-block'
-        document.body.style.overflow = 'hidden';
         break;
       case true:
         setTimeout(() => {
           this.displayOverLay = 'd-none'
-          document.body.style.overflow = 'auto';
         }, 400);
         break;
     }

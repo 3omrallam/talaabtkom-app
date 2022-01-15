@@ -38,12 +38,12 @@
   <app-nav-search-shared></app-nav-search-shared>
 </div>
 <!-- Layer popup -->
-<div class="h-100 w-100 {{displayOverLay}}  position-fixed end-0 start-0 uCC-t-4 justify-content-center alignitems-center"
+<div class="h-100 w-100 {{displayOverLay}} top-0 position-fixed end-0 start-0 uCC-t-4 justify-content-center align-items-center"
   [ngStyle]="{'opacity': !_NavbarService.loginToggle ? '0.2' : '0'}" style="z-index: 2;" (click)='animateLogin()'>
 </div>
 <!-- Login and create new account popup -->
-<div class="uCC-t-4 CC-Popup-Holder position-absolute" style="z-index: 9999;"
-  [ngStyle]="{'top': _NavbarService.loginToggle ? '-645px' : 'calc(100vh - 675px)'}">
+<div class="uCC-t-4 CC-Popup-Holder position-absolute " style="z-index: 9999;"
+  [ngStyle]="{'top': _NavbarService.loginToggle ? '-645px' : '145px'}">
   <app-login-popup-shared></app-login-popup-shared>
   <!-- Close BTn -->
   <div class="position-absolute top-0 start-0 ms-4 mt-4 uCC-Click" (click)='animateLogin()'>

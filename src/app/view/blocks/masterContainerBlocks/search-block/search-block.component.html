@@ -1,40 +1,31 @@
-<div class="d-flex align-items-start">
+<div class="d-flex align-items-center">
   <div class="d-flex flex-column w-100">
     <div class="d-flex w-100 pe-3 ps-1 align-items-center uCC-f-radius-sA uCC-Border-sB-Main cCC-bg-white">
       <!-- location icon inside search bar -->
       <app-icon iconName="iCC-Location d-flex iCC-sD ms-2"></app-icon>
       <!-- search bar -->
-      <input (click)="display()" type="text" placeholder="ابحث عن مكانك المفضل" name="search" class="border-0 w-100 m-0 fCC-reg-sD">
+      <input type="text" placeholder="ابحث عن مكانك المفضل" name="search" class="border-0 w-100 m-0 fCC-reg-sD">
       <!-- selection box inside search bar -->
-      <select name="country"
-        class="cCC-text-support2 cCC-opacity-gray-10 py-1 my-1 px-4 uCC-l-radius-sA fCC-reg-sD border-0 uCC-Click">
+      <!-- <select name="country"
+        class="classic cCC-text-support2 cCC-opacity-gray-10 py-1 my-1 px-4 uCC-l-radius-sA fCC-reg-sD border-0 uCC-Click">
         <ng-container *ngFor="let country of countries">
-          <option value="{{country.value}}">{{country.name}}</option>
+          <option class="uCC-Click" value="{{country.value}}">{{country.name}}</option>
         </ng-container>
-      </select>
-    </div>
-    <section *ngIf="isShow" class="CC-List-Holder cCC-bg-white uCC-l-radius-sE p-3 {{displayList}}">
-      <ng-container *ngFor="let listState of _ResturantCardService.resturantCardstates ; let last=last">
-      <div class="d-flex align-items-center px-1">
-        <!-- Resturant Image -->
-        <div>
-          <i class="{{listState.image}} d-flex imCC-Background-Cover CC-resturantsimgs-Holder uCC-Click"></i>
-        </div>
-        <div class="me-4">
-          <!-- Resturant-title -->
-          <div>
-            <p class="fCC-bold-sB cCC-text-orange m-0 uCC-Click">{{listState.title}}</p>
-          </div>
-          <!-- Resturant Description -->
-          <p class="fCC-reg-sA cCC-text-support2 mb-2 uCC-Click">{{listState.description}}</p>
-        </div>
+      </select> -->
+      <div class="d-flex cCC-bg-support1 align-items-center uCC-f-radius-sA ps-3 py-2 my-1">
+        <!-- SelectBox -->
+        <select name="country"
+          class="cCC-text-support2 cCC-bg-support1 px-2 uCC-l-radius-sA fCC-reg-sC border-0 uCC-Click">
+          <ng-container *ngFor="let country of countries">
+            <!-- Countries -->
+            <option value="{{country.value}}">{{country.name}}</option>
+          </ng-container>
+        </select>
       </div>
-      <div class="CC-horizontal-divider my-3" *ngIf="!last"></div>
-      </ng-container>
-    </section>
+    </div>
   </div>
   <!-- divider -->
   <div class="px-2"></div>
   <!-- Search Button -->
-  <button class="btn px-5 py-2 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA" aria-label="search">بحث</button>
+  <button class="btn px-5 py-2 h-100 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA" aria-label="search">بحث</button>
 </div>
