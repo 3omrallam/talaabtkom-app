@@ -10,9 +10,9 @@
                 {{resturantMenuState.Header}}</p>
             <ng-container *ngFor="let item of resturantMenuState.subList ; let last = last">
                 <app-menu-list-block [blockMenu]="item"></app-menu-list-block>
-                <div class="uCC-horizontal-divider my-4" *ngIf="!last"></div>
+                <div class="my-4" *ngIf="!last"></div>
             </ng-container>
-            <div class="uCC-horizontal-divider my-4" *ngIf="!last"></div>
+            <div class="my-4" *ngIf="!last"></div>
         </ng-container>
     </div>
 </section>

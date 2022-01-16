@@ -15,7 +15,7 @@ export class ResturantAsidePageService {
     },
     {
       header: "تقييم المطعم",
-      routerName: "resturant-profile/nnjm",
+      routerName: "resturant-profile/1/reviews",
       icon: "iCC-Rateresturant",
     },
     {

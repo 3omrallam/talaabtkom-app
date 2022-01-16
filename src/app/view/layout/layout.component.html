@@ -1,4 +1,4 @@
-<section class="container-fluid px-0 d-flex flex-column h-100~ {{this.activeRouter.url !== '/resturants' ? 'cCC-bg-white' : 'cCC-bg-lightblue'}}">  
+<section class="container-fluid px-0 d-flex flex-column cCC-bg-lightblue">  
   <nav class="container-fluid p-0 position-fixed cCC-bg-white top-0" style="z-index: 1;">
     <div style="z-index: 999;">
       <app-navbar-layout></app-navbar-layout>
@@ -11,7 +11,7 @@
     <app-cart-popup-shared></app-cart-popup-shared>
   </aside>
   <section class="{{this.activeRouter.url !== '/' ? 'container' : 'container-fluid'}} px-0 row justify-content-center align-items-start mx-auto m-0 uCC-gap-24">
-    <aside *ngIf='this.activeRouter.url !== "/"' class="container-fluid col-3 d-lg-block d-none">
+    <aside *ngIf='this.activeRouter.url !== "/"' class="container-fluid col-3 d-lg-block d-none {{this.activeRouter.url !== '/resturants' ? 'position-sticky' : ''}}" style="top: 200px;">
       <app-side-menu-layout></app-side-menu-layout>
     </aside>
     <main class="container-fluid col p-0" >

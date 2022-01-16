@@ -2,7 +2,6 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    // transition: all 1s ease-in-out;
 }
 body{
     direction: rtl;
@@ -21,8 +20,6 @@ button:hover
 button:focus
 {
   box-shadow:none !important;
-  // background-color: unset !important;
-  // color: unset !important;
 }
 input:focus-visible
 {
