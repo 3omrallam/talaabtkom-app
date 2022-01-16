@@ -3,10 +3,20 @@
     height: 40px;
 }
 .CC-Grid-Holder{
+    gap: 16px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     grid-template-rows: 1fr 1fr;
     .CC-image-Holder{
-        
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .CC-text-Holder{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .CC-desc-Holder{
+        grid-column: 1/3;
+        grid-row: 2/3;
     }
 }
