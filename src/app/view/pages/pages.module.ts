@@ -16,6 +16,7 @@ import { ResturantProfilePageComponent } from './resturant-profile-page/resturan
 import { CoreModule } from 'src/app/core/core.module';
 import { SharedModule } from '../shared/shared.module';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { ContactusPageComponent } from './contactus-page/contactus-page.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     UserAsidePageComponent,
     UserProfilePageComponent,
     ResturantProfilePageComponent,
+    ContactusPageComponent
 
   ],
   imports: [
@@ -52,6 +54,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     UserAsidePageComponent,
     UserProfilePageComponent,
     ResturantProfilePageComponent,
+    ContactusPageComponent
 
   ]
 })

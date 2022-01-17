@@ -29,6 +29,9 @@
 .uCC-Border-lightgrey{
   border: 0.5px solid #9A9A9A;
 }
+.uCC-Border-white{
+  border: 2px solid #fff;
+}
 
 // END === Border
 // START === Border Radius
@@ -132,6 +135,9 @@
 }
 .uCC-shadow-f-20{
   box-shadow: 0px 8px 12px 0px rgb(245 80 76 / 20%);
+}
+.uCC-shadow-f-white-10{
+  box-shadow: 0px 8px 10px 0px rgb(54 53 55 / 10%);
 }
 
 /* ENd === shadow  */

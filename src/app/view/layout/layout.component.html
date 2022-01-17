@@ -1,4 +1,4 @@
-<section class="container-fluid px-0 d-flex flex-column cCC-bg-lightblue">  
+<section class="container-fluid px-0 p-0 d-flex flex-column cCC-bg-lightblue">  
   <nav class="container-fluid p-0 position-fixed cCC-bg-white top-0" style="z-index: 1;">
     <div style="z-index: 999;">
       <app-navbar-layout></app-navbar-layout>
@@ -10,11 +10,11 @@
   <aside class="py-4 cCC-bg-white CC-aside-cart-holder uCC-shadow-r-10 uCC-t-4 " [ngStyle]="{'left': _NavbarService.cartMenuToggle ? '-410px' : '0px' }">
     <app-cart-popup-shared></app-cart-popup-shared>
   </aside>
-  <section class="{{this.activeRouter.url !== '/' ? 'container' : 'container-fluid'}} px-0 row justify-content-center align-items-start mx-auto m-0 uCC-gap-24">
-    <aside *ngIf='this.activeRouter.url !== "/"' class="container-fluid col-3 d-lg-block d-none {{this.activeRouter.url !== '/resturants' ? 'position-sticky' : ''}}" style="top: 200px;">
+  <section class="{{this.activeRouter.url !== '/' ? 'container' : 'container-fluid'}} px-0 h-100 row justify-content-center align-items-start mx-auto m-0 uCC-gap-24">
+    <aside *ngIf='this.activeRouter.url !== "/" && this.activeRouter.url !== "/contact-us"' class="container-fluid col-3 d-lg-block d-none {{this.activeRouter.url !== '/resturants' ? 'position-sticky' : ''}}" style="top: 200px;">
       <app-side-menu-layout></app-side-menu-layout>
     </aside>
-    <main class="container-fluid col p-0 p-md-0 p-3" >
+    <main class="container-fluid col p-0 p-md-0 p-3 h-100 cCC-bg-lightblue">
       <app-master-container-layout></app-master-container-layout>
     </main>
   </section>

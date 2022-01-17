@@ -23,6 +23,7 @@ import { RecoverPhoneSectionComponent } from './recover-phone-section/recover-ph
 import { ChangePasswordSectionComponent } from './change-password-section/change-password-section.component';
 import { RouterModule } from '@angular/router';
 import { ResturantReviewsSectionComponent } from './resturant-reviews-section/resturant-reviews-section.component';
+import { ContactusSectionComponent } from './contactus-section/contactus-section.component';
 
 
 
@@ -48,6 +49,7 @@ import { ResturantReviewsSectionComponent } from './resturant-reviews-section/re
     RecoverPhoneSectionComponent,
     ChangePasswordSectionComponent,
     ResturantReviewsSectionComponent,
+    ContactusSectionComponent,
     
   ],
   imports: [
@@ -76,7 +78,8 @@ import { ResturantReviewsSectionComponent } from './resturant-reviews-section/re
     ResturantsListSectionComponent,
     RecoverPhoneSectionComponent,
     ChangePasswordSectionComponent,
-    ResturantReviewsSectionComponent
+    ResturantReviewsSectionComponent,
+    ContactusSectionComponent
   ]
 })
 export class SectionsModule { }

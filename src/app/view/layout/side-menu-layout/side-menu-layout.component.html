@@ -4,7 +4,7 @@
         <app-filter-page></app-filter-page>
     </div>
     <!-- Resturant Page Aside -->
-    <div class="position-sticky" *ngIf='activeRouter.url !== "/resturants" && !activeRouter.url.includes("/userProfile")' style="top: 200px;">
+    <div class="position-sticky" *ngIf='activeRouter.url !== "/resturants" && activeRouter.url !== "/contact-us" && !activeRouter.url.includes("/userProfile")' style="top: 200px;">
         <app-resturant-aside-page></app-resturant-aside-page>
     </div>
     <!-- User Profile Aside -->
