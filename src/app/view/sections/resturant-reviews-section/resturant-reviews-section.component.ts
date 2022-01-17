@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReviewsListService } from '../services/reviews-list.service';
 
 @Component({
   selector: 'app-resturant-reviews-section',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResturantReviewsSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _ReviewsListService: ReviewsListService) { }
 
   ngOnInit(): void {
   }

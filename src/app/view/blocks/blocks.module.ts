@@ -30,6 +30,7 @@ import { ModelsModule } from '../models/models/models.module';
 import { CartPopupBlockComponent } from './cart-popup-block/cart-popup-block.component';
 import { MenuListModalComponent } from './shared/menu-list-modal/menu-list-modal.component';
 import { AllReservationsBlockComponent } from './reservations-blocks/all-reservations-block/all-reservations-block.component';
+import { CardReviewBlockComponent } from './card-review-block/card-review-block.component';
 
 
 
@@ -63,6 +64,7 @@ import { AllReservationsBlockComponent } from './reservations-blocks/all-reserva
     CartPopupBlockComponent,
     MenuListModalComponent,
     AllReservationsBlockComponent,
+    CardReviewBlockComponent,
   ],
   imports: [
     CommonModule,
@@ -96,6 +98,7 @@ import { AllReservationsBlockComponent } from './reservations-blocks/all-reserva
     SearchBarBlockComponent,
     CartPopupBlockComponent,
     AllReservationsBlockComponent,
+    CardReviewBlockComponent,
  
   ]
 })
