@@ -43,12 +43,12 @@
 </div>
 <!-- Login and create new account popup -->
 <!-- <div class="bg-danger h-100 w-100 top-0 position-fixed end-0 start-0 d-flex align-items-center justify-content-center"> -->
-  <div class="uCC-t-4 CC-Popup-Holder position-absolute" style="z-index: 9999;"
-    [ngStyle]="{'top': _NavbarService.loginToggle ? '-645px' : '50%'}">
-    <app-login-popup-shared></app-login-popup-shared>
-    <!-- Close BTn -->
-    <div class="position-absolute top-0 start-0 ms-4 mt-4 uCC-Click" (click)='animateLogin()'>
-      <app-icon [iconName]='"iCC-Closebutton imCC-Background-Contain iCC-sB"'></app-icon>
-    </div>
+<div class="uCC-t-4 CC-Popup-Holder position-absolute" style="z-index: 9999;"
+  [ngStyle]="{'top': _NavbarService.loginToggle ? '-645px' : '140px'}">
+  <app-login-popup-shared></app-login-popup-shared>
+  <!-- Close BTn -->
+  <div class="position-absolute top-0 start-0 ms-4 mt-4 uCC-Click" (click)='animateLogin()'>
+    <app-icon [iconName]='"iCC-Closebutton imCC-Background-Contain iCC-sB"'></app-icon>
   </div>
+</div>
 <!-- </div> -->

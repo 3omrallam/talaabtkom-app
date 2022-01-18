@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     LayoutModule,
-    RouterModule
+    RouterModule,
   ],
   exports:[
     ViewComponent

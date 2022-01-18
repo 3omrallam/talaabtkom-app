@@ -1,6 +1,6 @@
 <!-- Mobile Number Block -->
-<!-- <app-phone-number-block></app-phone-number-block> -->
+<app-phone-number-block *ngIf="!_AccountService.phoneChecked?.success"></app-phone-number-block>
 <!-- Verify Code Block -->
-<!-- <app-verify-block></app-verify-block> -->
+<app-verify-block *ngIf="_AccountService.phoneChecked?.success"></app-verify-block>
 <!-- Username and Password Block -->
-<app-username-block></app-username-block>
+<!-- <app-username-block></app-username-block> -->

@@ -1,17 +1,19 @@
-<!-- Mobile Number -->
-<div class="mb-5 d-flex shadow py-2 px-3 align-items-center uCC-f-radius-sA cCC-bg-white">
-    <!-- Mobile icon -->
-    <app-icon iconName="iCC-Mobilelogin d-flex iCC-sB ms-2"></app-icon>
-    <!-- Mobile Input-->
-    <input type="text" placeholder="رقم الهاتق" class="border-0 fCC-reg-sB cCC-text-support2 m-0">
-</div>
-<div class="mb-5">
-    <p class="fCC-bold-sD cCC-text-dark m-0 mb-2"> رمز التأكيد</p>
-    <p class="m-0 fCC-reg-sC cCC-text-support2 uCC-line-Hight-B col-8">
-        من خلال إنشاء حساب أنت توافق علي سياسة الخصوصية وشروط الإستخدام.
-    </p>
-</div>
-<!-- LOGIN Button -->
-<div class="pt-4">
-    <app-button-block buttonName="إرسال رمز التأكيد"></app-button-block>
-</div>
+<form #phoneForm='ngForm' (ngSubmit)="ngSubmit(phoneForm.value)">
+    <!-- Mobile Number -->
+    <div class="mb-5 d-flex shadow py-2 px-3 align-items-center uCC-f-radius-sA cCC-bg-white">
+        <!-- Mobile icon -->
+        <app-icon iconName="iCC-Mobilelogin d-flex iCC-sB ms-2"></app-icon>
+        <!-- Mobile Input-->
+        <input type="text" placeholder="رقم الهاتق" class="border-0 fCC-reg-sB cCC-text-support2 m-0" name="phone" ngModel required minlength="13" maxlength="13">
+    </div>
+    <div class="mb-5">
+        <p class="fCC-bold-sD cCC-text-dark m-0 mb-2"> رمز التأكيد</p>
+        <p class="m-0 fCC-reg-sC cCC-text-support2 uCC-line-Hight-B col-8">
+            من خلال إنشاء حساب أنت توافق علي سياسة الخصوصية وشروط الإستخدام.
+        </p>
+    </div>
+    <!-- LOGIN Button -->
+    <button [disabled]="phoneForm.invalid" type="submit" class="text-center form-control border-0 cCC-bg-main uCC-f-radius-sA cCC-text-white p-2 ms-4 mt-2">
+        <span class="fCC-bold-sB">إرسال رمز التأكيد</span>
+    </button>
+</form>

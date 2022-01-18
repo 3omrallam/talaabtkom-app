@@ -1,33 +1,45 @@
-<!-- Verify Code -->
-<div class="mb-5 d-flex align-items-center">
-    <!-- Code Input-->
-    <div>
-        <input type="text" placeholder="2" class="border-0 text-center fCC-reg-sGcCC-text-dark m-0 uCC-f-radius-sA cCC-bg-white shadow" style="height: 76px; width: 76px;">
+<form #verificationNumber='ngForm' (ngSubmit)="ngSubmit(verificationNumber.value)">
+    <!-- Verify Code -->
+    <div class="mb-5 d-flex align-items-center">
+        <!-- Code Input-->
+        <div>
+            <input type="text" placeholder="2"
+                name
+                class="border-0 text-center fCC-reg-sGcCC-text-dark m-0 uCC-f-radius-sA cCC-bg-white shadow"
+                style="height: 76px; width: 76px;">
+        </div>
+        <!-- Divider -->
+        <div class="mx-2"></div>
+        <div>
+            <input type="text" placeholder="5"
+                class="border-0 text-center fCC-reg-sGcCC-text-dark m-0 uCC-f-radius-sA cCC-bg-white shadow"
+                style="height: 76px; width: 76px;">
+        </div>
+        <!-- Divider -->
+        <div class="mx-2"></div>
+        <div>
+            <input type="text" placeholder="3"
+                class="border-0 text-center fCC-reg-sGcCC-text-dark m-0 uCC-f-radius-sA cCC-bg-white shadow"
+                style="height: 76px; width: 76px;">
+        </div>
+        <!-- Divider -->
+        <div class="mx-2"></div>
+        <div>
+            <input type="text" placeholder="9"
+                class="border-0 text-center fCC-reg-sGcCC-text-dark m-0 uCC-f-radius-sA cCC-bg-white shadow"
+                style="height: 76px; width: 76px;">
+        </div>
+    
     </div>
-    <!-- Divider -->
-    <div class="mx-2"></div>
-    <div>
-        <input type="text" placeholder="5" class="border-0 text-center fCC-reg-sGcCC-text-dark m-0 uCC-f-radius-sA cCC-bg-white shadow" style="height: 76px; width: 76px;">
+    <div class="mb-5">
+        <p class="fCC-bold-sD cCC-text-dark m-0 mb-2"> رمز التأكيد</p>
+        <p class="m-0 fCC-reg-sC cCC-text-support2 uCC-line-Hight-B col-8">
+            من خلال إنشاء حساب أنت توافق علي سياسة الخصوصية وشروط الإستخدام.
+        </p>
     </div>
-    <!-- Divider -->
-    <div class="mx-2"></div>
-    <div>
-        <input type="text" placeholder="3" class="border-0 text-center fCC-reg-sGcCC-text-dark m-0 uCC-f-radius-sA cCC-bg-white shadow" style="height: 76px; width: 76px;">
-    </div>
-    <!-- Divider -->
-    <div class="mx-2"></div>
-    <div>
-        <input type="text" placeholder="9" class="border-0 text-center fCC-reg-sGcCC-text-dark m-0 uCC-f-radius-sA cCC-bg-white shadow" style="height: 76px; width: 76px;">
-    </div>
-   
-</div>
-<div class="mb-5">
-    <p class="fCC-bold-sD cCC-text-dark m-0 mb-2"> رمز التأكيد</p>
-    <p class="m-0 fCC-reg-sC cCC-text-support2 uCC-line-Hight-B col-8">
-        من خلال إنشاء حساب أنت توافق علي سياسة الخصوصية وشروط الإستخدام.
-    </p>
-</div>
-<!-- LOGIN Button -->
-<div>
-    <app-button-block buttonName="تأكيد الكود"></app-button-block>
-</div>
+    <!-- LOGIN Button -->
+    <button [disabled]="verificationNumber.invalid" type="submit"
+        class="text-center form-control border-0 cCC-bg-main uCC-f-radius-sA cCC-text-white p-2 ms-4 mt-2">
+        <span class="fCC-bold-sB">تأكيد الكود</span>
+    </button>
+</form>

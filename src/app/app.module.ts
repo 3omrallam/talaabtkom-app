@@ -1,6 +1,7 @@
 import { ViewModule } from './view/view.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +17,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     AppRoutingModule,
     ViewModule,
     BrowserAnimationsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

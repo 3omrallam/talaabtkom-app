@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { SectionsModule } from './../sections/sections.module';
 import { SearchBlockComponent } from './masterContainerBlocks/search-block/search-block.component';
 import { NgModule } from '@angular/core';
@@ -70,6 +71,7 @@ import { CardReviewBlockComponent } from './card-review-block/card-review-block.
     CommonModule,
     RouterModule,
     ModelsModule,
+    FormsModule
   ],
   exports:[
     NavbarBlockComponent,

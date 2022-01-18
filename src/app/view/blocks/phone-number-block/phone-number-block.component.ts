@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from 'src/app/core/services/account.service';
 
 @Component({
   selector: 'app-phone-number-block',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhoneNumberBlockComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _AccountService:AccountService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  
+  ngSubmit(formValue : FormData){
+    this._AccountService.checkPhoneNumber(formValue).subscribe((res) => {
+      this._AccountService.phoneChecked = res 
+    })    
   }
 
 }
