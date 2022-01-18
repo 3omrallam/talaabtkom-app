@@ -8,12 +8,26 @@ import { NavbarService } from './services/navbar.service';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
+  displayOverLay: String = 'd-none'
 
   constructor(public activeRouter: Router, public _NavbarService: NavbarService) { }
 
   ngOnInit(): void {
     console.log(this.activeRouter.url);
     
+  }
+  animateLogin() {
+    this._NavbarService.loginToggle = !this._NavbarService.loginToggle;
+    switch (this._NavbarService.loginToggle) {
+      case false:
+        this.displayOverLay = 'd-flex'
+        break;
+      case true:
+        setTimeout(() => {
+          this.displayOverLay = 'd-none'
+        }, 400);
+        break;
+    }
   }
 
 }
