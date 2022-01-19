@@ -2,3 +2,20 @@
     height: 56px;
     width: 56px;
 }
+input {
+    accent-color: #F5504C;
+}
+.CC-horizontal-divider{
+    width: 85%;
+    height: 1px;
+}
+.CC-Half-circle {
+    width:24px;
+    height: 24px;
+    border-radius: 50%;
+    top: 37px;
+}
+.CC-dashed-line {
+    height:1px;
+    background:repeating-linear-gradient(to right, rgba(54, 53, 55, 0.2) 0, rgba(54, 53, 55, 0.2) 10px, transparent 10px, transparent 16px)
+}

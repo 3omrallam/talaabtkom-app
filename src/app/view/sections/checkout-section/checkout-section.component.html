@@ -26,11 +26,11 @@
         <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">عنوان التوصيل</p>
         <div class="d-flex justify-content-between align-items-center cCC-bg-white p-3" style="border-radius: 20px;">
             <div class="d-flex align-items-center">
-                <i class="iCC-Redlocation iCC-sD d-flex imCC-Background-Cover ms-4"></i>
+                <i class="iCC-Redlocation iCC-sD d-flex imCC-Background-Cover ms-3"></i>
                 <!-- Resturant Description -->
                 <div>
                     <!-- Resturant Name -->
-                    <p class="mb-0 cCC-text-dark fCC-bold-sB">مدينة نصر عباس العقاد</p>
+                    <p class="mb-0 cCC-text-dark fCC-bold-sB me-1">مدينة نصر عباس العقاد</p>
                     <p class="mb-0 fCC-reg-sC cCC-text-opacity-dark-50"> 10 مصطفي النحاس عمارة الجوهرة</p>
                 </div>
             </div>
@@ -41,6 +41,104 @@
                     </app-icon>
                 </button>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Mobile Number -->
+        <div class="col-6">
+            <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">رقم الهاتف</p>
+            <div class="cCC-bg-white uCC-f-radius-sA p-3">
+                <app-icon iconName="iCC-Mobile1 iCC-sD imCC-Background-Contain d-flex ms-3" textContent="(966)01013616481"
+                    textClass="fCC-reg-sD cCC-text-dark">
+                </app-icon>
+            </div>
+        </div>
+        <div class="col-6">
+            <!-- Receive ways -->
+            <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">إستلام عبر</p>
+            <div class="d-flex justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2 mb-3">
+                <!-- By Resturant -->
+                <app-icon iconName="iCC-Fromresturant iCC-sD imCC-Background-Contain d-flex ms-3" textContent="استلام عبر المطعم"
+                    textClass="fCC-reg-sD cCC-text-dark">
+                </app-icon>
+                <!-- CheckBox -->
+                <input type="checkbox" name="way1" value="way1" class="uCC-Click" style="border-color: red;">
+            </div>
+            <div class="d-flex justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2">
+                <!-- By Delivery -->
+                <app-icon iconName="iCC-Fromdelivery iCC-sD imCC-Background-Contain d-flex ms-3" textContent="استلام في  المنزل"
+                    textClass="fCC-reg-sD cCC-text-dark">
+                </app-icon>
+                <!-- CheckBox -->
+                <input type="checkbox" name="way2" value="way2" class="uCC-Click" style="border-color: red;">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Payment Method -->
+        <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">تفاصيل الدفع</p>
+        <div class="col-6">
+            <div class="d-flex justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2 mb-3">
+                <!-- By Visa -->
+                <app-icon iconName="iCC-Pay1 iCC-sD imCC-Background-Contain d-flex ms-3" textContent="بطاقة فيزا"
+                    textClass="fCC-reg-sD cCC-text-dark">
+                </app-icon>
+                <!-- CheckBox -->
+                <input type="checkbox" name="way1" value="way1" class="uCC-Click">
+            </div>
+            <div class="d-flex justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2 mb-3">
+                <!-- By Mastercard -->
+                <app-icon iconName="iCC-Payvisa iCC-sD imCC-Background-Contain d-flex ms-3" textContent="بطاقة ماستر كارد"
+                    textClass="fCC-reg-sD cCC-text-dark">
+                </app-icon>
+                <!-- CheckBox -->
+                <input type="checkbox" name="way2" value="way2" class="uCC-Click">
+            </div>
+            <div class="d-flex justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2 mb-3">
+                <!-- By Cash -->
+                <app-icon iconName="iCC-Paycash iCC-sD imCC-Background-Contain d-flex ms-3" textContent="كاش"
+                    textClass="fCC-reg-sD cCC-text-dark">
+                </app-icon>
+                <!-- CheckBox -->
+                <input type="checkbox" name="way3" value="way3" class="uCC-Click">
+            </div>
+            <p class="m-0 fCC-reg-sD cCC-text-support2">
+                بمجر موافقتك علي الطلب أنت توافق علي
+            </p>
+            <p class="m-0 fCC-reg-sD cCC-text-main">
+                سياسة الخصوصية وشروط الاستخدام
+            </p>
+        </div>
+        <div class="col-6 position-relative">
+            <div class="cCC-bg-white uCC-f-radius-sA pt-2 pb-3 px-4~">
+                <div class="CC-Header-Holder d-flex justify-content-center">
+                    <app-icon iconName="iCC-Sheet iCC-sD imCC-Background-Contain d-flex ms-2" textContent="ملخص الدفع"
+                        textClass="fCC-bold-sB cCC-text-dark">
+                    </app-icon>
+                </div>
+                <div class="CC-dashed-line my-3"></div>
+                <div class="CC-Half-circle cCC-bg-lightblue position-absolute end-0"></div>
+                <div class="CC-Half-circle cCC-bg-lightblue position-absolute start-0"></div>
+                <div class="d-flex justify-content-between mx-4">
+                    <div class="d-flex flex-column uCC-gap-8 me-2">
+                        <p class="m-0 fCC-reg-sC cCC-text-dark">إجمالي الطلبات</p>
+                        <p class="m-0 fCC-reg-sC cCC-text-dark">الضريبة المضافة</p>
+                        <p class="m-0 fCC-reg-sC cCC-text-dark">رسوم التوصيل</p>
+                    </div>
+                    <div class="d-flex flex-column uCC-gap-8 ms-2">
+                        <p class="m-0 fCC-reg-sC cCC-text-dark">78.00 RS</p>
+                        <p class="m-0 fCC-reg-sC cCC-text-dark">14.00 RS</p>
+                        <p class="m-0 fCC-reg-sC cCC-text-dark">10 RS</p>
+                    </div>
+                </div>
+                <!-- Total -->
+                <div class="CC-horizontal-divider cCC-bg-dark mx-auto my-2"></div>
+                <div class="d-flex justify-content-between mx-4">
+                    <p class="m-0 fCC-bold-sB cCC-text-dark me-2">الأجمالي</p>
+                    <p class="m-0 fCC-bold-sB cCC-text-dark ms-2">102.00 RS</p>
+                </div>
+            </div>
+            <button aria-label="done"  class="border-0 w-100 py-3 uCC-f-radius-sA mt-5 fCC-reg-sD cCC-bg-main cCC-text-lightblue">تنفيذ الطلب</button>
         </div>
     </div>
 </section>
