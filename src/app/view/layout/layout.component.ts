@@ -20,7 +20,7 @@ export class LayoutComponent implements OnInit {
     this._NavbarService.loginToggle = !this._NavbarService.loginToggle;
     switch (this._NavbarService.loginToggle) {
       case false:
-        this.displayOverLay = 'd-flex'
+        this.displayOverLay = 'd-block'
         break;
       case true:
         setTimeout(() => {

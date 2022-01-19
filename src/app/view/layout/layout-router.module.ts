@@ -1,3 +1,4 @@
+import { CheckoutPageComponent } from './../pages/checkout-page/checkout-page.component';
 import { Routes} from '@angular/router';
 import { ContactusPageComponent } from '../pages/contactus-page/contactus-page.component';
 import { HomePageComponent } from '../pages/home-page/home-page.component';
@@ -11,6 +12,7 @@ export const LayoutRouterModule: Routes = [
   { path: '', component: HomePageComponent},
   { path: 'resturants', component: ResturantsListPageComponent},
   { path: 'contact-us', component: ContactusPageComponent},
+  { path: 'check-out', component: CheckoutPageComponent},
   { path: 'userProfile', component: UserProfilePageComponent, children: [...userProfileRouter]},
   { path: 'resturant-profile/:id',component: ResturantProfilePageComponent, children: [...resturantRouter]},
 ]

@@ -1,3 +1,4 @@
+import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 import { SectionsModule } from './../sections/sections.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -31,7 +32,8 @@ import { ContactusPageComponent } from './contactus-page/contactus-page.componen
     UserAsidePageComponent,
     UserProfilePageComponent,
     ResturantProfilePageComponent,
-    ContactusPageComponent
+    ContactusPageComponent,
+    CheckoutPageComponent
 
   ],
   imports: [
@@ -54,7 +56,8 @@ import { ContactusPageComponent } from './contactus-page/contactus-page.componen
     UserAsidePageComponent,
     UserProfilePageComponent,
     ResturantProfilePageComponent,
-    ContactusPageComponent
+    ContactusPageComponent,
+    CheckoutPageComponent
 
   ]
 })

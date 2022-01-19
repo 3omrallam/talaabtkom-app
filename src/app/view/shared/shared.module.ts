@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CartPopupSharedComponent } from './cart-popup-shared/cart-popup-shared.component';
@@ -19,7 +20,8 @@ import { AddToCartPopupComponent } from './add-to-cart-popup/add-to-cart-popup.c
   imports: [
     CommonModule,
     BlocksModule,
-    SectionsModule
+    SectionsModule,
+    RouterModule
     
   ],
   exports: [

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavbarService } from '../../layout/services/navbar.service';
 
 @Component({
   selector: 'app-cart-popup-shared',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart-popup-shared.component.scss']
 })
 export class CartPopupSharedComponent implements OnInit {
-
-  constructor() { }
+  constructor(public _NavbarService:NavbarService) { }
 
   ngOnInit(): void {
+  }
+  closeCart() {
+    this._NavbarService.cartMenuToggle = !this._NavbarService.cartMenuToggle
   }
 
 }
