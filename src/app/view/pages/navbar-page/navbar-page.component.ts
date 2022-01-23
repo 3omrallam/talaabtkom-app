@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarService } from '../../layout/services/navbar.service';
+import { AddToCartService } from '../../sections/services/add-to-cart.service';
 
 @Component({
   selector: 'app-navbar-page',
@@ -9,9 +10,13 @@ import { NavbarService } from '../../layout/services/navbar.service';
 export class NavbarPageComponent implements OnInit {
   isShow: boolean = false;
   displayOverLay: String = 'd-none'
-  constructor(public _NavbarService: NavbarService) { }
+  totalItems =0;
+  constructor(public _NavbarService: NavbarService , public _AddToCartService:AddToCartService) { }
 
   ngOnInit(): void {
+    // this._AddToCartService.getItem().subscribe((product:any)=>{
+    //   this.totalItems = product.length;
+    // })
   }
   animateNavSearch() {
     this._NavbarService.searchMenuToggle = !this._NavbarService.searchMenuToggle

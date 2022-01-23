@@ -35,6 +35,7 @@ import { CardReviewBlockComponent } from './card-review-block/card-review-block.
 import { TotalReceiptBlockComponent } from './checkout-blocks/total-receipt-block/total-receipt-block.component';
 import { PaymentMethodsBlockComponent } from './checkout-blocks/payment-methods-block/payment-methods-block.component';
 import { AddressInfoBlockComponent } from './checkout-blocks/address-info-block/address-info-block.component';
+import { CartItemsBlockComponent } from './cart-popup-blocks/cart-items-block/cart-items-block.component';
 
 
 
@@ -72,6 +73,7 @@ import { AddressInfoBlockComponent } from './checkout-blocks/address-info-block/
     TotalReceiptBlockComponent,
     PaymentMethodsBlockComponent,
     AddressInfoBlockComponent,
+    CartItemsBlockComponent,
   ],
   imports: [
     CommonModule,
@@ -110,6 +112,7 @@ import { AddressInfoBlockComponent } from './checkout-blocks/address-info-block/
     TotalReceiptBlockComponent,
     PaymentMethodsBlockComponent,
     AddressInfoBlockComponent,
+    CartItemsBlockComponent,
  
   ]
 })

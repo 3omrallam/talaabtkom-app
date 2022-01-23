@@ -1,12 +1,12 @@
-<div class="d-flex justify-content-between cCC-bg-white uCC-f-radius-sB mx-md-0 mx-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<div class="d-flex justify-content-between cCC-bg-white uCC-f-radius-sB mx-md-0 mx-3">
     <div class="CC-resturant-holder-grid">
         <!-- Resturant Image -->
-        <div class="CC-resturant-image">
+        <div class="CC-resturant-image"  data-bs-toggle="modal" data-bs-target="#exampleModal">
             <i class="{{blockMenu.image}} CC-resturantimg-Holder d-flex imCC-Background-Contain w-100~ h-100~ uCC-Click"></i>
         </div>
-        <div class="CC-resturant-title">
+        <div class="CC-resturant-title"  data-bs-toggle="modal" data-bs-target="#exampleModal">
             <!-- Resturant-title -->
-            <div>
+            <div >
                 <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{blockMenu.title}}</p>
             </div>
             <!-- Resturant Description -->
@@ -18,9 +18,9 @@
             </div>
         </div>
         <!-- Icons -->
-        <div class="CC-resturant-salary">
+        <div class="CC-resturant-salary"  data-bs-toggle="modal" data-bs-target="#exampleModal">
             <!-- Icons -->
-            <p class="cCC-text-main fCC-bold-sB m-0">{{blockMenu.salary}}</p>
+            <p class="cCC-text-main fCC-bold-sB m-0">{{blockMenu.price}}ر.س</p>
         </div>
         <!-- Heart Icon -->
         <div class="CC-resturant-likeAndPlus ">
@@ -28,7 +28,7 @@
                 <i class="d-flex {{blockMenu.liked}} w-100 iCC-sD imCC-Background-Contain"></i>
             </div>
             <!-- QrCode Block -->
-            <div class="CC-resturant-plus cCC-bg-support1 uCC-f-radius-sA p-2 uCC-Click" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div class="CC-resturant-plus cCC-bg-support1 uCC-f-radius-sA p-2 uCC-Click" (click)="handleAddToCard()">
                 <i class="d-flex w-100 iCC-Newplus iCC-sC imCC-Background-Contain"></i>
             </div>
         </div>
