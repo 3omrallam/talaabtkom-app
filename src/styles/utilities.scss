@@ -32,7 +32,9 @@
 .uCC-Border-white{
   border: 2px solid #fff;
 }
-
+.uCC-Border-dashed-black{
+  border-bottom: 1px dashed rgba(53, 55 ,54 ,0.2);
+}
 // END === Border
 // START === Border Radius
 .uCC-f-radius-sA{
@@ -41,7 +43,7 @@
 .uCC-l-radius-sA{
   border-radius: 10px 0 0 10px;
 }
-.c{
+.uCC-f-radius-sB{
   border-radius: 20px;
 }
 .uCC-f-radius-sC{

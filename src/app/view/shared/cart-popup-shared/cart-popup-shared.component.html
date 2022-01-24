@@ -1,62 +1,62 @@
-<div class="d-flex flex-column h-100">
+<div *ngIf="_AddToCartService.cartItems.length ===0" class="fCC-bold-sD cCC-text-support2 text-center alert">العربه فارغه</div>
+<div *ngIf="_AddToCartService.cartItems.length > 0" class="d-flex flex-column h-100">
     <div>
         <!-- Header -->
         <p class="fCC-bold-sD cCC-text-support2 text-center mb-3 m-0">إستلام الطلب من</p>
         <div class="d-flex">
-        <!-- ResturantInfo And Image -->
-        <div class="me-4">
-            <i class="imCC-Resturant imCC-Background-Contain d-flex CC-resturant-img-holder"></i>
-        </div>
-        <!-- divider -->
-        <div class="mx-2"></div>
-        <div>
-            <p class="fCC-bold-sB cCC-text-orange m-0">مطعم طاية</p>
-            <p class="fCC-reg-sA cCC-text-lightgray">"المشويات - أكل صحي"</p>
-        </div>
-    </div>
-    <div class="cCC-bg-support1 py-4 position-relative w-100 pe-4">
-        <app-icon iconName="iCC-Locationred iCC-sB imCC-Background-Contain d-flex ms-1" textContent="الرياض حي الفيصلية"
-        textClass="fCC-reg-sB cCC-text-support2"></app-icon>
-        <!-- divider -->
-        <div class="my-2"></div>
-        <app-icon iconName="iCC-Clockred iCC-sB imCC-Background-Contain d-flex ms-1" textContent="سيكون جاهز في الساعة 3:54 م يوم 12/12/2021"
-        textClass="fCC-reg-sB cCC-text-support2"></app-icon>
-    </div>
-    <div>
-    </div>
-    <div class="d-flex justify-content-between align-items-center mx-4">
-        <div class="d-flex mt-3">
-            <div>
-                <i class="imCC-Resturantimg3 imCC-Background-Contain d-flex CC-menu-img-holder"></i>
+            <!-- ResturantInfo And Image -->
+            <div class="me-4">
+                <i class="imCC-Resturant imCC-Background-Contain d-flex CC-resturant-img-holder"></i>
             </div>
             <!-- divider -->
             <div class="mx-2"></div>
             <div>
-                <p class="fCC-bold-sC cCC-text-support2 m-0">وجبة كباب مخصوص</p>
-                <p class="fCC-bold-sA cCC-text-main">170 ر-س</p>
+                <p class="fCC-bold-sB cCC-text-orange m-0">مطعم طاية</p>
+                <p class="fCC-reg-sA cCC-text-lightgray">"المشويات - أكل صحي"</p>
             </div>
         </div>
-        <div class="d-flex flex-column align-items-end justify-content-end">
-            <app-icon iconName="iCC-Trash iCC-sB imCC-Background-Contain d-flex uCC-Click" ></app-icon>
-            <div class="d-flex justify-content-center align-items-center mt-3">
-                <i class="d-flex iCC-Plusblack iCC-sB imCC-Background-Contain uCC-Click"></i>
-                <p class="fCC-reg-sD cCC-text-grey2 mx-3 my-0">1</p>
-                <i class="d-flex iCC-Minusgrey iCC-sB imCC-Background-Contain uCC-Click"></i>
-            </div>
+        <div class="cCC-bg-support1 py-4 position-relative w-100 pe-4 mb-3">
+            <app-icon iconName="iCC-Locationred iCC-sB imCC-Background-Contain d-flex ms-1"
+                textContent="الرياض حي الفيصلية" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
+            <!-- divider -->
+            <div class="my-2"></div>
+            <app-icon iconName="iCC-Clockred iCC-sB imCC-Background-Contain d-flex ms-1"
+                textContent="سيكون جاهز في الساعة 3:54 م يوم 12/12/2021" textClass="fCC-reg-sB cCC-text-support2">
+            </app-icon>
         </div>
+        <div>
+        </div>
+        <section style="overflow-y: auto; height: 40%;">
+            <!-- Cart Items Block -->
+            <div *ngFor="let items of _AddToCartService.cartItems ; let last=last">
+                <app-cart-items-block [item]="items"></app-cart-items-block>
+                <div class="CC-horizontal-divider mx-4 my-3"></div>
+            </div>
+            <div class="d-flex justify-content-between mx-4">
+                <div class="d-flex flex-column uCC-gap-24">
+                    <p class="m-0 fCC-reg-sD cCC-text-grey2">المجموع</p>
+                    <p class="m-0 fCC-reg-sD cCC-text-grey2">ضريبة القيمة المضافة</p>
+                </div>
+                <div class="d-flex flex-column uCC-gap-24">
+                    <p class="m-0 fCC-reg-sD cCC-text-grey2">{{itemsTotal}} ر.س</p>
+                    <p class="m-0 fCC-reg-sD cCC-text-grey2">120 ر.س</p>
+                </div>
+            </div>
+            <div class="CC-horizontal-divider m-4"></div>
+            <div class="d-flex justify-content-between mx-4">
+                <p class="m-0 fCC-bold-sB cCC-text-grey2">اجمالي الطلب</p>
+                <p class="m-0 fCC-bold-sB cCC-text-main">470 ر.س</p>
+            </div>
+        </section>
     </div>
-    <p class="fCC-reg-sB cCC-text-support2 col-9 me-4">هناك حقيقة مثبتة منذ زمن طويل وه أن المحتوى المقروء لصفحة
-        ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص
-        و شكل توضع الفقرات في الصفحة</p>
-        <div class="CC-horizontal-divider mx-4"></div>
-    </div>
-    <div class="mt-auto mx-4">
-        <button type="button" routerLink="check-out" (click)='closeCart()' class="uCC-Click d-flex justify-content-center align-items-center form-control cCC-bg-main cCC-text-white uCC-f-radius-sA p-2 ms-4">
+    <div class="mt-auto mx-4 position-fixed cCC-bg-white w-100" style="bottom:23px;">
+        <button type="button" routerLink="check-out" (click)='closeCart()' style="width: 23%;"
+            class="btn1 uCC-Click d-flex justify-content-center align-items-center form-control cCC-bg-main cCC-text-white uCC-f-radius-sA p-2 ms-4">
             <i class="iCC-Trickcircle iCC-sD d-flex ms-2"></i>
             <span class="fCC-bold-sB">تأكيد الطلب</span>
         </button>
-        <button type="button" class="text-center form-control border-0 cCC-bg-white cCC-text-support2 p-2 ms-4">
-            <span class="fCC-bold-sB">أمسح جميع الأصناف</span>
+        <button type="button" class="btn2 text-center form-control border-0 cCC-bg-white cCC-text-support2 p-2 ms-4" style="width: 23%;">
+            <span class="fCC-bold-sB" (click)="deleteAllItems()" >أمسح جميع الأصناف</span>
         </button>
     </div>
 </div>

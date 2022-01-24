@@ -1,6 +1,6 @@
 <section class="d-flex flex-column uCC-gap-24">
     <!-- Resturant Info Card -->
-    <div class="d-flex justify-content-between align-items-center cCC-bg-white px-2 py-3" style="border-radius: 20px;">
+    <div class="cCC-bg-white px-2 py-3" style="border-radius: 20px;">
         <div class="d-flex align-items-center">
             <i class="imCC-Newlogo-1 d-flex imCC-Background-Cover CC-resturants-Holder uCC-f-radius-sA ms-2"></i>
             <!-- Resturant Description -->
@@ -18,29 +18,61 @@
                 </div>
             </div>
         </div>
-        <div>
-            <p class="mb-0 cCC-text-main ms-5 fCC-bold-sB">تعديل الطلب</p>
-        </div>
     </div>
     <div>
+        <!-- Address Information Block -->
         <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">عنوان التوصيل</p>
-        <div class="d-flex justify-content-between align-items-center cCC-bg-white p-3" style="border-radius: 20px;">
-            <div class="d-flex align-items-center">
-                <i class="iCC-Redlocation iCC-sD d-flex imCC-Background-Cover ms-4"></i>
-                <!-- Resturant Description -->
-                <div>
-                    <!-- Resturant Name -->
-                    <p class="mb-0 cCC-text-dark fCC-bold-sB">مدينة نصر عباس العقاد</p>
-                    <p class="mb-0 fCC-reg-sC cCC-text-opacity-dark-50"> 10 مصطفي النحاس عمارة الجوهرة</p>
-                </div>
+        <app-address-info-block></app-address-info-block>
+    </div>
+    <div class="row">
+        <!-- Mobile Number -->
+        <div class="col-6">
+            <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">رقم الهاتف</p>
+            <div class="cCC-bg-white uCC-f-radius-sA p-3">
+                <app-icon iconName="iCC-Mobile1 iCC-sD imCC-Background-Contain d-flex ms-3" textContent="(966)01013616481"
+                    textClass="fCC-reg-sD cCC-text-dark">
+                </app-icon>
             </div>
-            <div>
-                <button class="border-0 cCC-bg-main uCC-f-radius-sA py-1 px-4 ms-2">
-                  <app-icon iconName="iCC-Greylocation iCC-sD imCC-Background-Contain d-flex ms-2" textContent="تغيير العنوان"
-                      textClass="fCC-bold-sB cCC-text-lightblue">
-                    </app-icon>
-                </button>
+        </div>
+        <div class="col-6">
+            <!-- Receive ways -->
+            <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">إستلام عبر</p>
+            <div class="d-flex justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2 mb-3">
+                <!-- By Resturant -->
+                <app-icon iconName="iCC-Fromresturant iCC-sD imCC-Background-Contain d-flex ms-3" textContent="استلام عبر المطعم"
+                    textClass="fCC-reg-sD cCC-text-dark">
+                </app-icon>
+                <!-- CheckBox -->
+                <input type="checkbox" name="way1" value="way1" class="uCC-Click" style="border-color: red;">
             </div>
+            <div class="d-flex justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2">
+                <!-- By Delivery -->
+                <app-icon iconName="iCC-Fromdelivery iCC-sD imCC-Background-Contain d-flex ms-3" textContent="استلام في  المنزل"
+                    textClass="fCC-reg-sD cCC-text-dark">
+                </app-icon>
+                <!-- CheckBox -->
+                <input type="checkbox" name="way2" value="way2" class="uCC-Click" style="border-color: red;">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Payment Method -->
+        <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">تفاصيل الدفع</p>
+        <div class="col-6">
+            <!-- Payment Methods Block -->
+            <app-payment-methods-block></app-payment-methods-block>
+            <p class="m-0 fCC-reg-sD cCC-text-support2">
+                بمجر موافقتك علي الطلب أنت توافق علي
+            </p>
+            <p class="m-0 fCC-reg-sD cCC-text-main">
+                سياسة الخصوصية وشروط الاستخدام
+            </p>
+        </div>
+        <div class="col-6 position-relative">
+            <!-- Receipt Block -->
+            <app-total-receipt-block></app-total-receipt-block>
+            <!-- [Confirm Order] Button -->
+            <button aria-label="done"  class="border-0 w-100 py-3 uCC-f-radius-sA mt-5 fCC-reg-sD cCC-bg-main cCC-text-lightblue">تنفيذ الطلب</button>
         </div>
     </div>
 </section>

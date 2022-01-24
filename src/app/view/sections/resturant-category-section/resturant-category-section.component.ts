@@ -12,6 +12,7 @@ export class ResturantCategorySectionComponent implements OnInit {
   constructor(public activeRouter: Router, public _ResturantMenuService: ResturantMenuService) { }
 
   ngOnInit(): void {
+    console.log(this._ResturantMenuService)
   }
 
 }

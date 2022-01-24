@@ -32,6 +32,10 @@ import { CartPopupBlockComponent } from './cart-popup-block/cart-popup-block.com
 import { MenuListModalComponent } from './shared/menu-list-modal/menu-list-modal.component';
 import { AllReservationsBlockComponent } from './reservations-blocks/all-reservations-block/all-reservations-block.component';
 import { CardReviewBlockComponent } from './card-review-block/card-review-block.component';
+import { TotalReceiptBlockComponent } from './checkout-blocks/total-receipt-block/total-receipt-block.component';
+import { PaymentMethodsBlockComponent } from './checkout-blocks/payment-methods-block/payment-methods-block.component';
+import { AddressInfoBlockComponent } from './checkout-blocks/address-info-block/address-info-block.component';
+import { CartItemsBlockComponent } from './cart-popup-blocks/cart-items-block/cart-items-block.component';
 
 
 
@@ -66,6 +70,10 @@ import { CardReviewBlockComponent } from './card-review-block/card-review-block.
     MenuListModalComponent,
     AllReservationsBlockComponent,
     CardReviewBlockComponent,
+    TotalReceiptBlockComponent,
+    PaymentMethodsBlockComponent,
+    AddressInfoBlockComponent,
+    CartItemsBlockComponent,
   ],
   imports: [
     CommonModule,
@@ -101,6 +109,10 @@ import { CardReviewBlockComponent } from './card-review-block/card-review-block.
     CartPopupBlockComponent,
     AllReservationsBlockComponent,
     CardReviewBlockComponent,
+    TotalReceiptBlockComponent,
+    PaymentMethodsBlockComponent,
+    AddressInfoBlockComponent,
+    CartItemsBlockComponent,
  
   ]
 })

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { menuList } from 'src/app/view/models/models/menuListModel';
+import { AddToCartService } from 'src/app/view/sections/services/add-to-cart.service';
 
 @Component({
   selector: 'app-menu-list-block',
@@ -10,9 +10,12 @@ export class MenuListBlockComponent implements OnInit {
 
   @Input() blockMenu!: any;
 
-  constructor() { }
+  constructor(public _AddToCartService:AddToCartService) { }
 
   ngOnInit(): void {
+  }
+  handleAddToCard(){
+    this._AddToCartService.sendItem(this.blockMenu);
   }
   
 

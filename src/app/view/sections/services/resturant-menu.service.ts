@@ -15,7 +15,7 @@ export class ResturantMenuService {
           image: 'imCC-Menuimg1',
           title: 'وجبة كباب مخصوص',
           description: `نصف فرخه - أرز - خضزوات`,
-          salary: ' ر.س50',
+          price: 50,
           liked: 'iCC-Newlike',
           numOfLiked: '3546',
         },
@@ -24,7 +24,7 @@ export class ResturantMenuService {
           image: 'imCC-Menuimg2',
           title: 'وجبة لحمة مخصوص',
           description: `نصف فرخه - أرز - خضزوات `,
-          salary: ' ر.س70',
+          price: 70,
           liked: 'iCC-Newlike',
           numOfLiked: '3674',
         }]
@@ -39,7 +39,7 @@ export class ResturantMenuService {
           title: 'وجبة كباب مخصوص',
           description: `هناك حقيقة مثبتة منذ زمن طويل وه أن المحتوى المقروء لصفحة ما سيلهية
          القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة`,
-          salary: ' ر.س30',
+         price: 30,
           liked: 'iCC-Newlike',
           numOfLiked: '2674',
         },
@@ -48,7 +48,7 @@ export class ResturantMenuService {
           image: 'imCC-Menuimg2',
           title: 'وجبة لحمة مخصوص',
           description: `نصف فرخه - أرز - خضزوات`,
-          salary: ' ر.س25.5',
+          price: 25,
           liked: 'iCC-Newlike',
           numOfLiked: '3548',
         }]
@@ -62,7 +62,7 @@ export class ResturantMenuService {
           image: 'imCC-Menuimg2',
           title: 'وجبة كباب مخصوص',
           description: `نصف فرخه - أرز - خضزوات`,
-          salary: ' ر.س88',
+          price: 88,
           liked: 'iCC-Newlike',
           numOfLiked: '3647',
         },
@@ -72,7 +72,7 @@ export class ResturantMenuService {
           title: 'وجبة لحمة مخصوص',
           description: `هناك حقيقة مثبتة منذ زمن طويل وه أن المحتوى المقروء لصفحة ما سيلهية
          القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة`,
-          salary: ' ر.س42',
+         price: 42,
           liked: 'iCC-Newlike',
           numOfLiked: '4638',
         },
@@ -87,7 +87,7 @@ export class ResturantMenuService {
           image: 'imCC-Menuimg2',
           title: 'وجبة كباب مخصوص',
           description: `نصف فرخه - أرز - خضزوات`,
-          salary: ' ر.س115',
+          price: 115,
           liked: 'iCC-Newlike',
           numOfLiked: '1587',
         },
@@ -97,7 +97,7 @@ export class ResturantMenuService {
           title: 'وجبة لحمة مخصوص',
           description: `هناك حقيقة مثبتة منذ زمن طويل وه أن المحتوى المقروء لصفحة ما سيلهية
            القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة`,
-          salary: ' ر.س65',
+          price: 65,
           liked: 'iCC-Newlike',
           numOfLiked: '3852',
         }]

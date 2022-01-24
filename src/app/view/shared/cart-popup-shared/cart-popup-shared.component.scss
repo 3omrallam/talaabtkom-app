@@ -10,3 +10,27 @@
   height: 2px;
   background-color: #EDEDF4;
 }
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.btn1:hover{
+  color: white !important;
+}
+.btn2:hover{
+  color: #707070 !important;
+}
+.btn1:focus {
+  color: #fff;
+  background-color: #f5504c;
+  border-color: #f5504c;
+  outline: 0;
+  box-shadow: none;
+}
+.btn2:focus {
+  color: #707070;
+  background-color: #fff;
+  border-color: #fff;
+  outline: 0;
+  box-shadow: none;
+}
