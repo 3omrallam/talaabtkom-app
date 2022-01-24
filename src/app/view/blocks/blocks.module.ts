@@ -71,7 +71,7 @@ import { CardReviewBlockComponent } from './card-review-block/card-review-block.
     CommonModule,
     RouterModule,
     ModelsModule,
-    FormsModule
+    FormsModule,
   ],
   exports:[
     NavbarBlockComponent,
