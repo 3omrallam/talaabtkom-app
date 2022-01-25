@@ -28,7 +28,7 @@
       </div> -->
       <!-- Login Popup -->
       <!-- <div class="w-100 uCC-t-4 bottom-0 position-fixed end-0 start-0 d-flex align-items-center justify-content-center" style="top: 71px; z-index: 9;"> -->
-      <div class="uCC-t-4 CC-Popup-Holder position-absolute" style="transform: translateY(-50%);"
+      <div *ngIf="!_AccountService.userValue" class="uCC-t-4 CC-Popup-Holder position-absolute" style="transform: translateY(-50%);"
         [ngStyle]="{'top': _NavbarService.loginToggle ? '-718px' : '50%'}">
         <app-login-popup-shared></app-login-popup-shared>
         <!-- Close BTn -->

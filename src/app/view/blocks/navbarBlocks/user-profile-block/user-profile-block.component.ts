@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from 'src/app/core/services/account.service';
 
 @Component({
   selector: 'app-user-profile-block',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserProfileBlockComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _AccountService : AccountService) { }
 
   ngOnInit(): void {
   }

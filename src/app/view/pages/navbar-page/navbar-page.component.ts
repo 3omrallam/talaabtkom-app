@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from 'src/app/core/services/account.service';
 import { NavbarService } from '../../layout/services/navbar.service';
 import { AddToCartService } from '../../sections/services/add-to-cart.service';
 
@@ -11,7 +12,7 @@ export class NavbarPageComponent implements OnInit {
   isShow: boolean = false;
   displayOverLay: String = 'd-none'
   totalItems =0;
-  constructor(public _NavbarService: NavbarService , public _AddToCartService:AddToCartService) { }
+  constructor(public _NavbarService: NavbarService , public _AddToCartService:AddToCartService, public _AccountService: AccountService) { }
 
   ngOnInit(): void {
     // this._AddToCartService.getItem().subscribe((product:any)=>{

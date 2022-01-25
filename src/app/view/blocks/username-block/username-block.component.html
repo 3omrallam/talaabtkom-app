@@ -1,10 +1,10 @@
-<form>
+<form #registerForm='ngForm' (ngSubmit)="ngSubmit(registerForm.value)">
     <!-- Mobile Number -->
     <div class="mb-4 d-flex shadow py-2 px-3 align-items-center uCC-f-radius-sA cCC-bg-white">
         <!-- Mobile icon -->
         <app-icon iconName="iCC-UserName d-flex iCC-sB ms-2"></app-icon>
         <!-- Mobile Input-->
-        <input type="text" placeholder="الإسم" class="w-100 border-0 fCC-reg-sB cCC-text-support2 m-0">
+        <input type="text" placeholder="الإسم" name='name' ngModel class="w-100 border-0 fCC-reg-sB cCC-text-support2 m-0">
     </div>
 
     <!-- Password -->
@@ -14,6 +14,7 @@
             <app-icon iconName="iCC-Lockpassword d-flex iCC-sB ms-2"></app-icon>
             <!-- Password Input-->
             <input [type]="showPassword ? 'text' : 'password'" placeholder="كلمة المرور"
+                name='password' ngModel
                 class="w-100 border-0 fCC-reg-sB cCC-text-support2 m-0">
         </div>
         <div>
@@ -27,8 +28,8 @@
             <!-- Password icon -->
             <app-icon iconName="iCC-Lockpassword d-flex iCC-sB ms-2"></app-icon>
             <!-- Password Input-->
-            <input [type]="showConfirmPassword ? 'text' : 'password'" placeholder="تأكيد كلمة المرور "
-                class="w-100 border-0 fCC-reg-sB cCC-text-support2 m-0">
+            <input [type]="showConfirmPassword ? 'text' : 'password'" placeholder="تأكيد كلمة المرور "  
+            class="w-100 border-0 fCC-reg-sB cCC-text-support2 m-0">
         </div>
         <div>
             <!-- See Password Icon -->

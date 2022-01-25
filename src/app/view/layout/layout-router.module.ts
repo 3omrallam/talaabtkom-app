@@ -6,13 +6,14 @@ import { resturantRouter, userProfileRouter } from '../pages/page-router.module'
 import { ResturantProfilePageComponent } from '../pages/resturant-profile-page/resturant-profile-page.component';
 import { ResturantsListPageComponent } from '../pages/resturants-list-page/resturants-list-page.component';
 import { UserProfilePageComponent } from '../pages/user-profile-page/user-profile-page.component';
+import { AuthGuard } from 'src/app/core/helpers/auth.guard';
 
 
 export const LayoutRouterModule: Routes = [
   { path: '', component: HomePageComponent},
   { path: 'resturants', component: ResturantsListPageComponent},
   { path: 'contact-us', component: ContactusPageComponent},
-  { path: 'check-out', component: CheckoutPageComponent},
-  { path: 'userProfile', component: UserProfilePageComponent, children: [...userProfileRouter]},
+  { path: 'check-out', component: CheckoutPageComponent },
+  { path: 'userProfile', component: UserProfilePageComponent,canActivate: [AuthGuard] , children: [...userProfileRouter]},
   { path: 'resturant-profile/:id',component: ResturantProfilePageComponent, children: [...resturantRouter]},
 ]

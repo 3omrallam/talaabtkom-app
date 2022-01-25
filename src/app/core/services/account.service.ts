@@ -2,8 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { User } from '../models/user';
+import { Response } from '../models/response';
 
 @Injectable({
   providedIn: 'root'
@@ -11,42 +13,45 @@ import { User } from '../models/user';
 export class AccountService {
   private userSubject!: BehaviorSubject<User>;
   public user!: Observable<User>;
-  public phoneChecked : any
+
+  public verificationChecked : any = 0
+  public phoneProccess : any
+  public registerProccess : any
 
   constructor(private router: Router, private http: HttpClient) {
-    // this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')));
-    // this.user = this.userSubject.asObservable();
+    this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')!));
+    this.user = this.userSubject.asObservable();
   }
 
   checkPhoneNumber(data : Object){
-    return this.http.post(`${environment.apiUrl}/api/checkPhone`, data)
+    return this.http.post<Response>(`${environment.apiUrl}/api/checkPhone`, data)
   }
 
-  checkVerificationNumber(data : Number){
-    return this.http.post<User>(`${environment.apiUrl}/api/checkVerification`, data)
+  checkVerificationNumber(data : Object){
+    return this.http.post<Response>(`${environment.apiUrl}/api/checkVerification`, data)
   }
-  // public get userValue(): User {
-  //       return this.userSubject.value;
-  // }
-  // login() {
-  //       return this.http.post<User>(`${environment.apiUrl}/users/authenticate`, { username, password })
-  //           .pipe(map(user => {
-  //               // store user details and jwt token in local storage to keep user logged in between page refreshes
-  //               localStorage.setItem('user', JSON.stringify(user));
-  //               this.userSubject.next(user);
-  //               return user;
-  //           }));
-  //   }
+  sendRegistrationData(data : Object){
+    return this.http.post<Response>(`${environment.apiUrl}/api/register`, data)
+  }
 
-    // logout() {
-    //     // remove user from local storage and set current user to null
-    //     localStorage.removeItem('user');
-    //     this.userSubject.next(null);
-    //     this.router.navigate(['/account/login']);
-    // }
+  public get userValue(): User {
+        return this.userSubject.value;
+  }
 
-    // register(user: User) {
-    //     return this.http.post(`${environment.apiUrl}/users/register`, user);
-    // }
+  login(data : Object) {
+    return this.http.post<User>(`${environment.apiUrl}/api/login`, data)
+        .pipe(map(user => {
+            localStorage.setItem('user', JSON.stringify(user));
+            this.userSubject.next(user);
+            return user;
+        }));
+  }
+
+  logout() {
+      // remove user from local storage and set current user to null
+      localStorage.removeItem('user');
+      this.userSubject.next(null!);
+      this.router.navigate(['/']);
+  }
 
 }

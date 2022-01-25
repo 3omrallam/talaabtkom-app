@@ -29,9 +29,9 @@
   <!-- vertical divider -->
   <div class="mx-4"></div>
   <!-- App User Profile Block Section -->
-  <!-- <app-user-profile-block></app-user-profile-block> -->
+    <app-user-profile-block *ngIf="_AccountService.userValue"></app-user-profile-block>
   <!-- SignIn Button Block -->
-  <div class="uCC-Border-sB-Main uCC-f-radius-sA py-2 px-4 uCC-Click" (click)='animateLogin()'>
+  <div *ngIf="!_AccountService.userValue" class="uCC-Border-sB-Main uCC-f-radius-sA py-2 px-4 uCC-Click" (click)='animateLogin()'>
     <app-signin-button-block></app-signin-button-block>
   </div>
 </div>

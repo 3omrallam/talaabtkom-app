@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/core/auth/auth.service';
+import { AccountService } from 'src/app/core/services/account.service';
 
 @Component({
   selector: 'app-username-block',
@@ -10,9 +12,22 @@ export class UsernameBlockComponent implements OnInit {
   showPassword: boolean = false;
   showConfirmPassword:boolean = false;
 
-  constructor() { }
+  constructor(private _AccountService : AccountService , private _AuthService : AuthService) { }
 
   ngOnInit(): void {
+  }
+  ngSubmit(formValue : any){
+    console.log(formValue);
+    this._AccountService.registerProccess = {
+      ...this._AccountService.registerProccess,
+      ...formValue
+    }
+    this._AccountService.sendRegistrationData(this._AccountService.registerProccess).subscribe(res => {
+      if (res.success) {
+        this._AuthService.authToggleBTN = true
+      }
+    })
+    
   }
 
 }

@@ -36,6 +36,7 @@ import { TotalReceiptBlockComponent } from './checkout-blocks/total-receipt-bloc
 import { PaymentMethodsBlockComponent } from './checkout-blocks/payment-methods-block/payment-methods-block.component';
 import { AddressInfoBlockComponent } from './checkout-blocks/address-info-block/address-info-block.component';
 import { CartItemsBlockComponent } from './cart-popup-blocks/cart-items-block/cart-items-block.component';
+import { NgOtpInputModule } from 'ng-otp-input';
 
 
 
@@ -80,6 +81,7 @@ import { CartItemsBlockComponent } from './cart-popup-blocks/cart-items-block/ca
     RouterModule,
     ModelsModule,
     FormsModule,
+    NgOtpInputModule
   ],
   exports:[
     NavbarBlockComponent,

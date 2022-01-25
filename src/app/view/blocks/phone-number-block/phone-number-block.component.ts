@@ -12,9 +12,20 @@ export class PhoneNumberBlockComponent implements OnInit {
 
   ngOnInit(): void {}
   
-  ngSubmit(formValue : FormData){
+  ngSubmit(formValue : any){
+    console.log(formValue.phone);
+    
     this._AccountService.checkPhoneNumber(formValue).subscribe((res) => {
-      this._AccountService.phoneChecked = res 
+      if (res.success) {
+        this._AccountService.verificationChecked = 1
+        this._AccountService.phoneProccess = {
+          phone : formValue.phone
+        }
+        this._AccountService.registerProccess = {
+          phone : formValue.phone
+        }
+      }
+      console.log(res.success);
     })    
   }
 
