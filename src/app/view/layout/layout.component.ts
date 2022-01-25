@@ -9,12 +9,13 @@ import { NavbarService } from './services/navbar.service';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-  displayOverLay: String = 'd-none'
+  displayOverLay: String = 'd-none';
 
   constructor(public activeRouter: Router, public _NavbarService: NavbarService, public _AccountService : AccountService) { }
 
   ngOnInit(): void {
     console.log(this.activeRouter.url);
+    console.log(this._AccountService.user)
     
   }
   animateLogin() {
@@ -30,5 +31,6 @@ export class LayoutComponent implements OnInit {
         break;
     }
   }
+
 
 }

@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SectionsModule } from './../sections/sections.module';
 import { SearchBlockComponent } from './masterContainerBlocks/search-block/search-block.component';
 import { NgModule } from '@angular/core';
@@ -28,7 +28,6 @@ import { VerifyBlockComponent } from './verify-block/verify-block.component';
 import { UsernameBlockComponent } from './username-block/username-block.component';
 import { SearchBarBlockComponent } from './search-bar-block/search-bar-block.component';
 import { ModelsModule } from '../models/models/models.module';
-import { CartPopupBlockComponent } from './cart-popup-block/cart-popup-block.component';
 import { MenuListModalComponent } from './shared/menu-list-modal/menu-list-modal.component';
 import { AllReservationsBlockComponent } from './reservations-blocks/all-reservations-block/all-reservations-block.component';
 import { CardReviewBlockComponent } from './card-review-block/card-review-block.component';
@@ -67,7 +66,6 @@ import { NgOtpInputModule } from 'ng-otp-input';
     VerifyBlockComponent,
     UsernameBlockComponent,
     SearchBarBlockComponent,
-    CartPopupBlockComponent,
     MenuListModalComponent,
     AllReservationsBlockComponent,
     CardReviewBlockComponent,
@@ -75,11 +73,13 @@ import { NgOtpInputModule } from 'ng-otp-input';
     PaymentMethodsBlockComponent,
     AddressInfoBlockComponent,
     CartItemsBlockComponent,
+    ButtonBlockComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     ModelsModule,
+    ReactiveFormsModule,
     FormsModule,
     NgOtpInputModule
   ],
@@ -108,13 +108,13 @@ import { NgOtpInputModule } from 'ng-otp-input';
     VerifyBlockComponent,
     UsernameBlockComponent,
     SearchBarBlockComponent,
-    CartPopupBlockComponent,
     AllReservationsBlockComponent,
     CardReviewBlockComponent,
     TotalReceiptBlockComponent,
     PaymentMethodsBlockComponent,
     AddressInfoBlockComponent,
     CartItemsBlockComponent,
+    ButtonBlockComponent
  
   ]
 })

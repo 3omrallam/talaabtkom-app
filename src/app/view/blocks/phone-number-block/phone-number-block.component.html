@@ -4,8 +4,9 @@
         <!-- Mobile icon -->
         <app-icon iconName="iCC-Mobilelogin d-flex iCC-sB ms-2"></app-icon>
         <!-- Mobile Input-->
-        <input type="text" placeholder="رقم الهاتق" class="border-0 fCC-reg-sB cCC-text-support2 m-0" name="phone" ngModel required minlength="13" maxlength="13">
+        <input #phone='ngModel' type="text" placeholder="رقم الهاتق" class="border-0 fCC-reg-sB cCC-text-support2 m-0" name="phone" ngModel required minlength="11" maxlength="11">
     </div>
+  
     <div class="mb-5">
         <p class="fCC-bold-sD cCC-text-dark m-0 mb-2"> رمز التأكيد</p>
         <p class="m-0 fCC-reg-sC cCC-text-support2 uCC-line-Hight-B col-8">

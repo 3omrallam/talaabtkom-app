@@ -9,6 +9,7 @@ import { AddToCartService } from 'src/app/view/sections/services/add-to-cart.ser
 export class MenuListBlockComponent implements OnInit {
 
   @Input() blockMenu!: any;
+  statusClass = 'not-active';
 
   constructor(public _AddToCartService:AddToCartService) { }
 
@@ -16,6 +17,9 @@ export class MenuListBlockComponent implements OnInit {
   }
   handleAddToCard(){
     this._AddToCartService.sendItem(this.blockMenu);
+  }
+  setActiveClass(){
+    this.statusClass = 'active';
   }
   
 

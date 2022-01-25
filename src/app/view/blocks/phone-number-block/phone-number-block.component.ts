@@ -1,6 +1,6 @@
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from 'src/app/core/services/account.service';
-
 @Component({
   selector: 'app-phone-number-block',
   templateUrl: './phone-number-block.component.html',
@@ -8,10 +8,13 @@ import { AccountService } from 'src/app/core/services/account.service';
 })
 export class PhoneNumberBlockComponent implements OnInit {
 
+  phoneForm:FormGroup = new FormGroup({
+    phone:new FormControl(null , [Validators.required , Validators.pattern(`[0-9]{11}`)])
+  })
+
   constructor(private _AccountService:AccountService) { }
 
   ngOnInit(): void {}
-  
   ngSubmit(formValue : any){
     console.log(formValue.phone);
     
