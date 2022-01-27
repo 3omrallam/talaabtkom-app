@@ -14,12 +14,12 @@
         <!-- Login Header -->
         <div class="d-flex mb-3">
             <button
-                class="CC-login-Hover fCC-reg-sF{{_AuthService.authToggleBTN === true ? ' cCC-text-dark' : 'cCC-text-opacity-dark-50'}} m-0 uCC-Click btn"
+                class="CC-login-Hover fCC-reg-sF {{_AuthService.authToggleBTN === true ? 'cCC-text-dark CC-underline' : ' cCC-text-opacity-dark-50'}} m-0 uCC-Click btn"
                 (click)='toggleAuthBTN("login")'>تسجيل الدخول</button>
             <div class="mx-4"></div>
             <!-- Create New Account Header-->
             <button
-                class="CC-login-Hover fCC-reg-sF{{_AuthService.authToggleBTN === false ? ' cCC-text-dark' : 'cCC-text-opacity-dark-50'}} m-0 uCC-Click btn"
+                class="CC-login-Hover fCC-reg-sF {{_AuthService.authToggleBTN === false ? 'cCC-text-dark CC-underline' : 'cCC-text-opacity-dark-50'}} m-0 uCC-Click btn"
                 (click)='toggleAuthBTN("register")'>حساب جديد</button>
         </div>
         <div class="col-8">

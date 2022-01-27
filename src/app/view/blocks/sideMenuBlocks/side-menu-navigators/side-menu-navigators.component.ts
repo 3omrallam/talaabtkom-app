@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class SideMenuNavigatorsComponent implements OnInit {
 
   isShow:boolean = false; 
+  statusClass:any='not-active';
   @Input()listElements! : any;
   constructor(public activatedRoute: Router) { }
 
@@ -19,5 +20,9 @@ export class SideMenuNavigatorsComponent implements OnInit {
   }
   scrollTo(section:any) {
     document.querySelector('#' + section)?.scrollIntoView();
+  }
+  setActiveClass(section:any){
+    document.querySelector(section)?.classList.add('bg-danger');
+    document.querySelector(section)?.classList.add('bg-info');
   }
 }

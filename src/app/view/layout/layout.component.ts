@@ -1,3 +1,4 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AccountService } from 'src/app/core/services/account.service';
@@ -9,13 +10,13 @@ import { NavbarService } from './services/navbar.service';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
+  
   displayOverLay: String = 'd-none';
 
   constructor(public activeRouter: Router, public _NavbarService: NavbarService, public _AccountService : AccountService) { }
 
   ngOnInit(): void {
-    console.log(this.activeRouter.url);
-    console.log(this._AccountService.user)
+    
     
   }
   animateLogin() {
@@ -31,6 +32,7 @@ export class LayoutComponent implements OnInit {
         break;
     }
   }
+  
 
 
 }

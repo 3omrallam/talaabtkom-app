@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BlocksModule } from '../blocks/blocks.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -26,7 +27,8 @@ import { NavbarService } from './services/navbar.service';
     BlocksModule,
     PagesModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule
     
   ],
   exports:[
