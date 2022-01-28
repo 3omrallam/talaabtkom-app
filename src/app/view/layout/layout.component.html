@@ -8,7 +8,7 @@
     <app-header-layout></app-header-layout>
   </header>
   <aside *ngIf="!_NavbarService.cartMenuToggle" class="py-4 cCC-bg-white CC-aside-cart-holder uCC-shadow-r-10 uCC-t-4 "
-    [ngStyle]="{'left': _NavbarService.cartMenuToggle ? '-410px' : '0px' }">
+    [ngStyle]="{'left': _NavbarService.cartMenuToggle ? '-410px' : '0px' }" [@animateCart]>
     <app-cart-popup-shared></app-cart-popup-shared>
   </aside>
   <section
@@ -27,8 +27,8 @@
         [ngStyle]="{'opacity': !_NavbarService.loginToggle ? '0.2' : '0'}" style="z-index: 2;" (click)='animateLogin()'>
       </div> -->
       <!-- Login Popup -->
-      <div *ngIf="!_NavbarService.loginToggle && !_AccountService.userValue"  class="w-100 uCC-t-4 bottom-0 position-fixed end-0 start-0 d-flex align-items-center justify-content-center" style="top: 71px; z-index: 9;"> 
-      <div *ngIf="!_AccountService.userValue && !_NavbarService.loginToggle"   class="uCC-t-4 CC-Popup-Holder position-absolute" style="transform: translateY(-50%);"
+      <div class="w-100 uCC-t-4 bottom-0 position-fixed end-0 start-0 d-flex align-items-center justify-content-center" style="top: 71px; z-index: 9;"> 
+      <div *ngIf="!_AccountService.userValue && !_NavbarService.loginToggle" [@animateLogin] class="uCC-t-4 CC-Popup-Holder position-absolute" style="transform: translateY(-50%);"
         [ngStyle]="{'top': _NavbarService.loginToggle ? '-718px' : '50%'}">
         <app-login-popup-shared></app-login-popup-shared>
         <!-- Close BTn -->
