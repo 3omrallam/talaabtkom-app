@@ -15,6 +15,7 @@ export class LayoutComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.activeRouter.url);
+    console.log(this._AccountService.userValue);
     
   }
   animateLogin() {

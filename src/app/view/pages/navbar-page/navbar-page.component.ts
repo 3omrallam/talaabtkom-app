@@ -18,6 +18,8 @@ export class NavbarPageComponent implements OnInit {
     // this._AddToCartService.getItem().subscribe((product:any)=>{
     //   this.totalItems = product.length;
     // })
+    console.log(this._AccountService.userValue);
+    
   }
   animateNavSearch() {
     this._NavbarService.searchMenuToggle = !this._NavbarService.searchMenuToggle

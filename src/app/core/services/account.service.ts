@@ -14,7 +14,7 @@ export class AccountService {
   private userSubject!: BehaviorSubject<User>;
   public user!: Observable<User>;
 
-  public verificationChecked : any = 0
+  public verificationChecked : Number = 0
   public phoneProccess : any
   public registerProccess : any
 
@@ -35,7 +35,7 @@ export class AccountService {
   }
 
   public get userValue(): User {
-        return this.userSubject.value;
+    return this.userSubject.value;
   }
 
   login(data : Object) {

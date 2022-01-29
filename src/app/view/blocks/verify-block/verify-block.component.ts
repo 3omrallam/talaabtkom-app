@@ -39,6 +39,8 @@ export class VerifyBlockComponent {
         if (res.success){
           this._AccountService.verificationChecked = 2
         } 
+        console.log(res.success);
+        
         this.toggleDisable()
       })
     }
