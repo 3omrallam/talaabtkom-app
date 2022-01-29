@@ -1,7 +1,6 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
-import { ThrowStmt } from '@angular/compiler';
-import { Component, Directive, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { animate, style, transition, trigger } from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AccountService } from 'src/app/core/services/account.service';
 import { NavbarService } from './services/navbar.service';
 
@@ -11,43 +10,45 @@ import { NavbarService } from './services/navbar.service';
   styleUrls: ['./layout.component.scss'],
   animations: [
     trigger('animateLogin', [
-      transition(':enter', [   // :enter is alias to 'void => *'
+      transition(':enter', [  
         style({top:-718}),
         animate(400, style({top:''})) 
       ]),
-      transition(':leave', [   // :leave is alias to '* => void'
+      transition(':leave', [   
         animate(400, style({top:-718})) 
       ])
     ]),
+    trigger('animateLayer', [
+      transition(':enter', [
+        style({ opacity: 0.2 }),
+        animate(400, style({ opacity: '0.2' }))
+      ]),
+      transition(':leave', [   
+        animate(400, style({ opacity: 0 }))
+      ])
+    ]),
     trigger('animateCart', [
-      transition(':enter', [   // :enter is alias to 'void => *'
+      transition(':enter', [  
         style({left:-410}),
         animate(400, style({left:''})) 
       ]),
-      transition(':leave', [   // :leave is alias to '* => void'
+      transition(':leave', [   
         animate(400, style({left:-410})) 
       ])
     ])
   ]
-  
 })
 export class LayoutComponent implements OnInit {
   
   displayOverLay: String = 'd-none';
-
   constructor(public activeRouter: Router, public _NavbarService: NavbarService, public _AccountService : AccountService) { }
 
-  ngOnInit(): void {
-    
-   
-  }
-
-  
+  ngOnInit(): void {}
   animateLogin() {
     this._NavbarService.loginToggle = !this._NavbarService.loginToggle;
     switch (this._NavbarService.loginToggle) {
       case false:
-        this.displayOverLay = 'd-flex'
+        this.displayOverLay = 'd-block'
         break;
       case true:
         setTimeout(() => {
@@ -56,7 +57,4 @@ export class LayoutComponent implements OnInit {
         break;
     }
   }
-  
-
-
 }

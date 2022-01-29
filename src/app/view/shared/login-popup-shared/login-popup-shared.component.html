@@ -1,11 +1,12 @@
-<div class="container px-0 d-flex">
-    <!-- Login Video -->
-    <video class="uCC-l-radius-sG" width="536px" height="641px" autoplay loop>
-        <source src="../../../../assets/videos/Loginvideo.mp4" type="video/mp4">
-    </video>
-    <!-- Login [Holder] -->
-    <div
-        class="cCC-bg-white CC-login-Holder uCC-l-radius-sH position-relative d-flex flex-column align-items-center justify-content-center gap-4 px-4">
+<div class="container-fluid cCC-bg-white uCC-f-radius-sB px-0 d-flex align-items-center justify-content-center" style="border-radius: 20px;">
+    <div class="container uCC-f-radius-sB CC-Blur-Layer p-0 d-flex justify-content-center align-items-center">
+        <!-- Login Video -->
+        <video class="uCC-l-radius-sG" width="536px" height="641px" autoplay loop>
+            <source src="../../../../assets/videos/Loginvideo.mp4" type="video/mp4">
+        </video>
+        <!-- Login [Holder] -->
+        <div
+        class="cCC-bg-white~ CC-login-Holder uCC-l-radius-sH position-relative d-flex flex-column align-items-center justify-content-center gap-4 px-4">
         <!-- Logo -->
         <div class="mb-3">
             <p class="m-0 fCC-reg-sFcCC-text-dark me-5">اهلا بك</p>
@@ -14,16 +15,16 @@
         <!-- Login Header -->
         <div class="d-flex mb-3">
             <button
-                class="CC-login-Hover fCC-reg-sF {{_AuthService.authToggleBTN === true ? 'cCC-text-dark CC-underline' : ' cCC-text-opacity-dark-50'}} m-0 uCC-Click btn"
+            class="CC-login-Hover fCC-reg-sF {{_AuthService.authToggleBTN === true ? 'cCC-text-dark CC-underline' : ' cCC-text-opacity-dark-50'}} m-0 uCC-Click btn"
                 (click)='toggleAuthBTN("login")'>تسجيل الدخول</button>
-            <div class="mx-4"></div>
-            <!-- Create New Account Header-->
-            <button
+                <div class="mx-4"></div>
+                <!-- Create New Account Header-->
+                <button
                 class="CC-login-Hover fCC-reg-sF {{_AuthService.authToggleBTN === false ? 'cCC-text-dark CC-underline' : 'cCC-text-opacity-dark-50'}} m-0 uCC-Click btn"
                 (click)='toggleAuthBTN("register")'>حساب جديد</button>
-        </div>
-        <div class="col-8">
-            <!-- Login Section -->
+            </div>
+            <div class="col-8">
+                <!-- Login Section -->
             <div *ngIf="_AuthService.authToggleBTN === true">
                 <app-login-section></app-login-section>
             </div>
@@ -33,4 +34,5 @@
             </div>
         </div>
     </div>
+ </div>
 </div>
