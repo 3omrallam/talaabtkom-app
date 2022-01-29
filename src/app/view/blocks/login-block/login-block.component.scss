@@ -1,3 +1,17 @@
 input {
     accent-color: #4ee143;
 }
+.CC-Btn{
+    transition: 0.2s all;
+}
+.CC-Btn:focus{
+    background-color: #f5504c !important;
+    color:#fff !important;
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24) !important;
+    transform: scale(0.98) !important;
+}
+.CC-Btn:hover{
+    color:#fff !important;
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24) !important;
+    transform: scale(0.98) !important;
+}

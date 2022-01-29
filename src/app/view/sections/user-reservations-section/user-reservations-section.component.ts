@@ -14,10 +14,7 @@ export class UserReservationsSectionComponent implements OnInit {
   btn1 = "CC-default";
   btn2 = "CC-default";
   btn3 = "CC-default";
- 
-
   constructor(public _ReservationsListService: ReservationsListService, public _Router: Router,public activeRouter: Router) { }
-
   ngOnInit(): void {
     this.allFilter();
     this.btn = "CC-active"
@@ -25,8 +22,6 @@ export class UserReservationsSectionComponent implements OnInit {
     this.btn2 = "CC-default";
     this.btn3 = "CC-default";
   }
-
-
   // All Reservations 
   allFilter(){
     this.reservationsList = this._ReservationsListService.reservationsList;

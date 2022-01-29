@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./side-menu-navigators.component.scss']
 })
 export class SideMenuNavigatorsComponent implements OnInit {
-
   isShow:boolean = false; 
   statusClass:any='not-active';
   @Input()listElements! : any;
@@ -22,7 +21,7 @@ export class SideMenuNavigatorsComponent implements OnInit {
     document.querySelector('#' + section)?.scrollIntoView();
   }
   setActiveClass(section:any){
-    document.querySelector(section)?.classList.add('bg-danger');
-    document.querySelector(section)?.classList.add('bg-info');
+    // document.querySelector('.'+section)?.classList.toggle('bg-danger');
+    // document.querySelector('.'+section)?.classList.toggle('bg-info');
   }
 }
