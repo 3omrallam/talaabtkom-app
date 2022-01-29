@@ -1,3 +1,9 @@
 .LT-holder-view{
     height: 100vh;
 }
+@media screen and (min-height:1005px) {
+    .CC-Height-Handler{
+        height: 100%;
+    }
+    
+}

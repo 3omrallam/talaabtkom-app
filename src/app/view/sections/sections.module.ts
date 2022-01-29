@@ -25,7 +25,11 @@ import { RouterModule } from '@angular/router';
 import { ResturantReviewsSectionComponent } from './resturant-reviews-section/resturant-reviews-section.component';
 import { ContactusSectionComponent } from './contactus-section/contactus-section.component';
 import { CheckoutSectionComponent } from './checkout-section/checkout-section.component';
+import { LottieModule } from 'ngx-lottie';
 
+export function playerFactory() {
+  return import(/* webpackChunkName: 'lottie-web' */ 'lottie-web');
+} 
 
 
 @NgModule({
@@ -58,7 +62,8 @@ import { CheckoutSectionComponent } from './checkout-section/checkout-section.co
     CommonModule,
     BlocksModule,
     ModelsModule,
-    RouterModule
+    RouterModule,
+    LottieModule.forRoot({ player: playerFactory })
   ],
   exports:[
     SectionsComponent,

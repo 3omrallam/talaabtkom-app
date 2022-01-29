@@ -3,9 +3,21 @@ video {
 }
 .CC-login-Holder{
     width: 536px;
-    // min-width: 300px;
     height: 641px;
 }
 .CC-login-Hover:hover{
   color: #363537 !important;
 }
+.CC-underline::after {
+  display: block;
+    content: '';
+   width: 34px;
+   height: 2px;
+   background: #F5504C;
+   position: absolute;
+   bottom: -8px;
+   right: 36%;
+ }
+ .CC-underline {
+ position: relative;  
+ }

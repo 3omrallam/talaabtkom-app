@@ -28,9 +28,9 @@
                 <i class="d-flex {{blockMenu.liked}} w-100 iCC-sD imCC-Background-Contain"></i>
             </div>
             <!-- QrCode Block -->
-            <div class="CC-resturant-plus cCC-bg-support1 uCC-f-radius-sA p-2 uCC-Click" (click)="handleAddToCard()">
+            <button [ngClass]="statusClass" class="CC-resturant-plus x border-0 cCC-bg-support1~ uCC-f-radius-sA p-2 uCC-Click" (click)="handleAddToCard(); setActiveClass()">
                 <i class="d-flex w-100 iCC-Newplus iCC-sC imCC-Background-Contain"></i>
-            </div>
+            </button>
         </div>
     </div>
 </div>

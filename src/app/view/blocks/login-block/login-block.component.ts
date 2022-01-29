@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { AccountService } from 'src/app/core/services/account.service';
@@ -10,6 +11,7 @@ import { AccountService } from 'src/app/core/services/account.service';
   styleUrls: ['./login-block.component.scss']
 })
 export class LoginBlockComponent implements OnInit {
+  showPassword: boolean = false;
   constructor(
     private route: ActivatedRoute,
     private router: Router,

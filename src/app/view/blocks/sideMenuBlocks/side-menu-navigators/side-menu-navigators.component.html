@@ -13,7 +13,7 @@
 	<!-- list Elements -->
 	<ng-container *ngIf="!isShow">
 		<div *ngFor="let sublist of element.subList" >
-			<a class="fCC-reg-sB cCC-text-support2 me-5 uCC-Click" (click)="scrollTo(sublist.href)">
+			<a  class="fCC-reg-sB {{statusClass}} me-5 uCC-Click" (click)="scrollTo(sublist.href); setActiveClass(sublist.href)">
 				{{sublist.title}}
 			</a>
 			<!-- line divider -->

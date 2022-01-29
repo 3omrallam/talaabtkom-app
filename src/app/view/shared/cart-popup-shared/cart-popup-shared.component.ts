@@ -16,6 +16,9 @@ export class CartPopupSharedComponent implements OnInit {
     this._AddToCartService.getItem().subscribe((product:any)=>{
       this.addProductToCart(product);
     })
+    this._AddToCartService.cartItems.forEach(item => {
+      this.itemsTotal += (item.quantity * item.price)
+    })
   }
   // Confirm Order Button To Go [CheckOut page]
   closeCart() {

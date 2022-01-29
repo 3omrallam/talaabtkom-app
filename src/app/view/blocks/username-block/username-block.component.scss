@@ -1,0 +1,33 @@
+.has-danger{
+    border: 1px solid red;
+}
+.has-success{
+    border: 1px solid green;
+}
+.CC-alert{
+    color: red;
+}
+.is-invalid{
+    background-position: left calc(0.375em + 0.1875rem) center;
+}
+.is-valid:focus , .is-invalid:focus {
+    border-color: unset;
+    box-shadow: none;
+}
+.is-valid{
+    background-position: left calc(0.375em + 0.1875rem) center;
+}
+.CC-Btn{
+    transition: 0.2s all;
+}
+.CC-Btn:focus{
+    background-color: #f5504c !important;
+    color:#fff !important;
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24) !important;
+    transform: scale(0.98) !important;
+}
+.CC-Btn:hover{
+    color:#fff !important;
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24) !important;
+    transform: scale(0.98) !important;
+}

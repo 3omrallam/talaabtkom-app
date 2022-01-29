@@ -6,10 +6,13 @@
 .CC-sideNav-holder{
     height: 100vh;
 }
-.selected {
-  color: red !important;
-  font-weight: bold;
+.not-active{
+  color: #707070;
 }
-.default{
-  background-color: aqua;
+.not-active:hover{
+  color: #f5504c;
+}
+.active
+{
+ color: #f5504c;
 }
