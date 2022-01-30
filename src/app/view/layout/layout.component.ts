@@ -42,8 +42,8 @@ export class LayoutComponent implements OnInit {
   
   displayOverLay: String = 'd-none';
   constructor(public activeRouter: Router, public _NavbarService: NavbarService, public _AccountService : AccountService) { }
+  ngOnInit(): void {} 
 
-  ngOnInit(): void {}
   animateLogin() {
     this._NavbarService.loginToggle = !this._NavbarService.loginToggle;
     switch (this._NavbarService.loginToggle) {

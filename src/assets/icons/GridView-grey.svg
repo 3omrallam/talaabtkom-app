@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_18842" data-name="Rectangle 18842" width="24" height="24" transform="translate(211 305)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_171" data-name="Mask Group 171" transform="translate(-211 -305)" clip-path="url(#clip-path)">
+    <path id="icons8_grid_view" d="M3,1A2,2,0,0,0,1,3V5A2,2,0,0,0,3,7H5A2,2,0,0,0,7,5V3A2,2,0,0,0,5,1Zm9,0a2,2,0,0,0-2,2V5a2,2,0,0,0,2,2h2a2,2,0,0,0,2-2V3a2,2,0,0,0-2-2Zm9,0a2,2,0,0,0-2,2V5a2,2,0,0,0,2,2h2a2,2,0,0,0,2-2V3a2,2,0,0,0-2-2ZM3,10a2,2,0,0,0-2,2v2a2,2,0,0,0,2,2H5a2,2,0,0,0,2-2V12a2,2,0,0,0-2-2Zm9,0a2,2,0,0,0-2,2v2a2,2,0,0,0,2,2h2a2,2,0,0,0,2-2V12a2,2,0,0,0-2-2Zm9,0a2,2,0,0,0-2,2v2a2,2,0,0,0,2,2h2a2,2,0,0,0,2-2V12a2,2,0,0,0-2-2ZM3,19a2,2,0,0,0-2,2v2a2,2,0,0,0,2,2H5a2,2,0,0,0,2-2V21a2,2,0,0,0-2-2Zm9,0a2,2,0,0,0-2,2v2a2,2,0,0,0,2,2h2a2,2,0,0,0,2-2V21a2,2,0,0,0-2-2Zm9,0a2,2,0,0,0-2,2v2a2,2,0,0,0,2,2h2a2,2,0,0,0,2-2V21a2,2,0,0,0-2-2Z" transform="translate(210 304)" fill="#5b5b5b"/>
+  </g>
+</svg>

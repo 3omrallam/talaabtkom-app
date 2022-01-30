@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cover-header-block',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cover-header-block.component.scss']
 })
 export class CoverHeaderBlockComponent implements OnInit {
+
+  @Input()headerImage!:any;
+  @Input() headerHeight!: any;
 
   constructor() { }
 

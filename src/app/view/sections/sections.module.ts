@@ -26,6 +26,7 @@ import { ResturantReviewsSectionComponent } from './resturant-reviews-section/re
 import { ContactusSectionComponent } from './contactus-section/contactus-section.component';
 import { CheckoutSectionComponent } from './checkout-section/checkout-section.component';
 import { LottieModule } from 'ngx-lottie';
+import { ResturantsGridViewSectionComponent } from './resturants-grid-view-section/resturants-grid-view-section.component';
 
 export function playerFactory() {
   return import(/* webpackChunkName: 'lottie-web' */ 'lottie-web');
@@ -56,6 +57,7 @@ export function playerFactory() {
     ResturantReviewsSectionComponent,
     ContactusSectionComponent,
     CheckoutSectionComponent,
+    ResturantsGridViewSectionComponent,
     
   ],
   imports: [
@@ -87,7 +89,8 @@ export function playerFactory() {
     ChangePasswordSectionComponent,
     ResturantReviewsSectionComponent,
     ContactusSectionComponent,
-    CheckoutSectionComponent
+    CheckoutSectionComponent,
+    ResturantsGridViewSectionComponent
   ]
 })
 export class SectionsModule { }

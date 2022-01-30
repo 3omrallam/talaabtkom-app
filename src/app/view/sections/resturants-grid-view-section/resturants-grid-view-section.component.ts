@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ResturantCardService } from 'src/app/core/resturant/resturant-card.service';
 
 @Component({
-  selector: 'app-resturants-list-section',
-  templateUrl: './resturants-list-section.component.html',
-  styleUrls: ['./resturants-list-section.component.scss']
+  selector: 'app-resturants-grid-view-section',
+  templateUrl: './resturants-grid-view-section.component.html',
+  styleUrls: ['./resturants-grid-view-section.component.scss']
 })
-export class ResturantsListSectionComponent implements OnInit {
+export class ResturantsGridViewSectionComponent implements OnInit {
 
   constructor(public _ResturantCardService: ResturantCardService, public activeRouter: Router) { }
 

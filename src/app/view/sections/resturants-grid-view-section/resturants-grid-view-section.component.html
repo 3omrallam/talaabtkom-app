@@ -1,0 +1,5 @@
+<section class="uCC-gap-16 CC-Grid-Holder">
+    <div *ngFor='let resturantCardstate of _ResturantCardService.resturantCardstates ; let last = last' class="p-0">
+        <app-resturant-grid-card-block [blockState]="resturantCardstate"></app-resturant-grid-card-block>
+    </div>
+</section>

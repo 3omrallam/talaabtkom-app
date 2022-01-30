@@ -1,18 +1,18 @@
 <form #phoneForm='ngForm' (ngSubmit)="ngSubmit(phoneForm.value)">
     <!-- Div Holder-->
-    <div [ngClass]="{'has-danger': phone.invalid &&(phone.dirty || phone.touched),
-        'has-success':phone.valid && (phone.dirty || phone.touched) }"
+    <div [ngClass]="{'has-danger': phone.invalid &&(phone.dirty),
+        'has-success':phone.valid && (phone.dirty) }"
         class=" d-flex shadow py-2 px-3 form-input align-items-center uCC-f-radius-sA cCC-bg-white mb-3">
         <!-- Mobile icon -->
         <app-icon iconName="iCC-Mobilelogin d-flex iCC-sB ms-2"></app-icon>
         <!-- Mobile Input-->
-        <input #phone="ngModel" [ngClass]="{'is-invalid': phone.invalid &&(phone.dirty || phone.touched),
-        'is-valid':phone.valid && (phone.dirty || phone.touched) }" type="text" placeholder="رقم الهاتق"
+        <input #phone="ngModel" [ngClass]="{'is-invalid': phone.invalid &&(phone.dirty),
+        'is-valid':phone.valid && (phone.dirty) }" type="text" placeholder="رقم الهاتق"
             class="form-control border-0 fCC-reg-sB cCC-text-support2 m-0" name="phone" ngModel required minlength="11"
             maxlength="13">
     </div>
     <!-- Errors Div -->
-    <div *ngIf="phone.errors && (phone.dirty || phone.touched)" class="mb-5 me-2">
+    <div *ngIf="phone.errors && (phone.dirty)" class="mb-5 me-2">
         <p *ngIf="phone.errors?.required" class="CC-alert fCC-bold-sA">يجب إدخال رقم الهاتف</p>
         <p *ngIf="phone.errors?.minlength" class="CC-alert fCC-bold-sA">رقم الهاتف غير صحيح</p>
     </div>

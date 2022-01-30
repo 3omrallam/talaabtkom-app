@@ -4,7 +4,7 @@ import { ResturantCard } from 'src/app/view/models/models/resturantsList';
 @Injectable()
 export class ResturantCardService {
 
-  resturantCardstates: ResturantCard[] = [
+  resturantCardstates: any[] = [
     {
       id: 1,
       image: 'iCC-resturant-icon',
@@ -12,6 +12,7 @@ export class ResturantCardService {
       description: '"المشويات - أكل سريع"',
       time:20,
       tables:37,
+      logo: 'imCC-Newlogo-1',
       rate:4.2,
       liked:'iCC-Newlike'
     },
@@ -21,6 +22,7 @@ export class ResturantCardService {
       title: 'مطعم بيت المخابز',
       description: '"المشويات - أكل صحي"',
       time: 10,
+      logo: 'imCC-Newlogo-1',
       tables: 12,
       rate: 3.2,
       liked:'iCC-Newlike'
@@ -32,6 +34,7 @@ export class ResturantCardService {
       description: '"المشويات - أكل سريع"',
       time: 30,
       tables: 5,
+      logo: 'imCC-Newlogo-1',
       rate: 4.1,
       liked:'iCC-Newlike'
     },
@@ -43,6 +46,7 @@ export class ResturantCardService {
       time: 90,
       tables: 50,
       rate: 3.7,
+      logo: 'imCC-Newlogo-1',
       liked:'iCC-Newlike'
     },
     {
@@ -52,6 +56,7 @@ export class ResturantCardService {
       description: '"المشويات - أكل سريع"',
       time: 50,
       tables: 23,
+      logo: 'imCC-Newlogo-1',
       rate: 4.9,
       liked:'iCC-Newlike'
     }

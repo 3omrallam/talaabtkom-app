@@ -1,7 +1,23 @@
 <!-- Resturants Available In Your Zone -->
-<div class="fCC-reg-sF cCC-text-support2 d-lg-block d-none" *ngIf='this.activeRouter.url == "/resturants"'>
-  <div class="container col-8 p-0">
-    <app-page-title-block title="المطاعم المتاحة بمنطقة الرياض" iconTitle="iCC-Home"></app-page-title-block>
+<div class="fCC-reg-sF cCC-text-support2 d-lg-block d-none position-relative"
+  *ngIf='activeRouter.url.includes("/resturants")'>
+  <!-- Header Resturant Image -->
+  <app-cover-header-block headerImage="imCC-Resturantsheader" headerHeight="CC-coverresturants-size">
+  </app-cover-header-block>
+  <!-- Header Location Text and ICON -->
+  <div
+    class="container d-flex align-items-center justify-content-between px-3 cCC-bg-white uCC-f-radius-sB uCC-shadow-f-black-10"
+    style="margin-top: -28px;">
+    <app-icon iconName="iCC-Home iCC-sD imCC-Background-Contain d-flex ms-2 my-3"
+      textContent="المطاعم المتاحة بمنطقة الرياض" textClass="fCC-bold-sD cCC-text-dark m-0"></app-icon>
+    <div class="d-flex align-items-center uCC-gap-32">
+      <div class="uCC-Click" routerLink="/resturants/grid-view" routerLinkActive="cCC-bg-lightblue uCC-f-radius-sA p-2">
+        <i class="{{this.activeRouter.url === '/resturants/grid-view' ?'iCC-GridViewred' :'iCC-GridViewgrey'}} iCC-sD imCC-Background-Contain d-flex"></i>
+      </div>
+      <a class=" uCC-Click" routerLink="/resturants/list-view" routerLinkActive="cCC-bg-lightblue uCC-f-radius-sA p-2 onClick()" [routerLinkActiveOptions]="{exact: true}">
+        <i class="{{this.activeRouter.url === '/resturants/list-view' ?'iCC-Listviewred' :'iCC-Listviewgrey'}}  iCC-sD imCC-Background-Contain d-flex"></i>
+      </a>
+    </div>
   </div>
 </div>
 <!-- Personal Information -->
@@ -12,7 +28,8 @@
 </div>
 <!-- Recover Phone number -->
 <div class="container-fluid p-0 cCC-opacity-support1-20">
-  <div class="fCC-reg-sF cCC-text-support2 container p-0 col-8" *ngIf='this.activeRouter.url == "/userProfile/recover-phone"'>
+  <div class="fCC-reg-sF cCC-text-support2 container p-0 col-8"
+    *ngIf='this.activeRouter.url == "/userProfile/recover-phone"'>
     <app-page-title-block title="اعاده توثيق الجوال" iconTitle="iCC-Usertag"></app-page-title-block>
   </div>
 </div>
@@ -25,7 +42,8 @@
 </div>
 <!-- User Reservation -->
 <div class="container-fluid p-0 cCC-opacity-support1-20">
-  <div class="fCC-reg-sF cCC-text-support2 container p-0 col-8 cCC-opacity-support1-20" *ngIf='activeRouter.url.includes("/userProfile/reservation")'>
+  <div class="fCC-reg-sF cCC-text-support2 container p-0 col-8 cCC-opacity-support1-20"
+    *ngIf='activeRouter.url.includes("/userProfile/reservation")'>
     <app-page-title-block title="الحجوزات" iconTitle="iCC-Usertag"></app-page-title-block>
   </div>
 </div>
@@ -37,6 +55,8 @@
   </div>
 </div>
 <!-- Cover Section -->
-<div *ngIf='this.activeRouter.url !== "/resturants" && this.activeRouter.url !== "/contact-us" && this.activeRouter.url !== "/check-out" && this.activeRouter.url !== "/" && !activeRouter.url.includes("/userProfile")'>
-  <app-cover-header-block></app-cover-header-block>
+<div
+  *ngIf='!activeRouter.url.includes("/resturants") && this.activeRouter.url !== "/contact-us" && this.activeRouter.url !== "/check-out" && this.activeRouter.url !== "/" && !activeRouter.url.includes("/userProfile")'>
+  <app-cover-header-block headerImage="imCC-Coverresturant" headerHeight="CC-coverresturantprofile-size">
+  </app-cover-header-block>
 </div>
