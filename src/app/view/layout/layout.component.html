@@ -1,4 +1,4 @@
-<section class="container-fluid px-0 p-0 d-flex flex-column cCC-bg-lightblue h-100">
+<section class="container-fluid px-0 p-0 d-flex flex-column cCC-bg-lightblue h-100 CC-Height-Handler">
   <nav class="container-fluid p-0 position-fixed cCC-bg-white top-0" style="z-index: 1;">
     <div style="z-index: 999;">
       <app-navbar-layout></app-navbar-layout>
@@ -34,7 +34,7 @@
         [ngStyle]="{'top': _NavbarService.loginToggle ? '-718px' : '50%'}">
         <app-login-popup-shared></app-login-popup-shared>
         <!-- Close BTn -->
-        <div class="position-absolute top-0 start-0 ms-4 mt-4 uCC-Click"
+        <div class=" position-absolute top-0 start-0 ms-4 mt-4 uCC-Click"
           *ngIf="!_AccountService.userValue && !_NavbarService.loginToggle" (click)='animateLogin()'>
           <app-icon [iconName]='"iCC-Closebutton imCC-Background-Contain iCC-sB"'></app-icon>
         </div>

@@ -9,4 +9,11 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'talbaatkom';
   constructor(public activeRouter: Router){}
+
+  classCondition(){
+    return this.activeRouter.url !== '/' && this.activeRouter.url !== '/resturant-profile/1';
+  }
+  contact(){
+    return this.activeRouter.url == '/resturant-profile/1';
+  }
 }

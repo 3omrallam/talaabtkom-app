@@ -3,7 +3,11 @@
 }
 @media screen and (min-height:1005px) {
     .CC-Height-Handler{
-        height: 100%;
-    }
-    
+        height: 100vh;
+    }    
+}
+@media screen and (min-height:1940px) {
+    .CC-contact-Handler{
+        height: 100vh ;
+     }
 }
