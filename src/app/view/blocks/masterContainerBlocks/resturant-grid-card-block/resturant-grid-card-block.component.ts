@@ -8,7 +8,7 @@ Input
 })
 export class ResturantGridCardBlockComponent implements OnInit {
 
-  @Input() blockState!: ResturantGridCard;
+  @Input() blockState!: any;
 
   constructor() { }
 

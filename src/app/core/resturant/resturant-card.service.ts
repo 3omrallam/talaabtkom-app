@@ -14,7 +14,8 @@ export class ResturantCardService {
       tables:37,
       logo: 'imCC-Newlogo-1',
       rate:4.2,
-      liked:'iCC-Newlike'
+      liked:'iCC-Newlike',
+      status:'مشغول'
     },
     {
       id: 2,
@@ -25,7 +26,8 @@ export class ResturantCardService {
       logo: 'imCC-Newlogo-1',
       tables: 12,
       rate: 3.2,
-      liked:'iCC-Newlike'
+      liked:'iCC-Newlike',
+      status: ''
     },
     {
       id: 3,
@@ -36,7 +38,8 @@ export class ResturantCardService {
       tables: 5,
       logo: 'imCC-Newlogo-1',
       rate: 4.1,
-      liked:'iCC-Newlike'
+      liked:'iCC-Newlike',
+      status: 'مشغول'
     },
     {
       id: 4,
@@ -47,7 +50,8 @@ export class ResturantCardService {
       tables: 50,
       rate: 3.7,
       logo: 'imCC-Newlogo-1',
-      liked:'iCC-Newlike'
+      liked:'iCC-Newlike',
+      status: ''
     },
     {
       id: 5,
@@ -58,7 +62,8 @@ export class ResturantCardService {
       tables: 23,
       logo: 'imCC-Newlogo-1',
       rate: 4.9,
-      liked:'iCC-Newlike'
+      liked:'iCC-Newlike',
+      status: ''
     }
   ]
   constructor() { }

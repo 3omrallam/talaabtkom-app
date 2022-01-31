@@ -1,0 +1,11 @@
+<svg id="_01.Add" data-name="01.Add" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30.667" height="32" viewBox="0 0 30.667 32">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.154" y1="0.154" x2="0.91" y2="0.908" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#363537"/>
+      <stop offset="1" stop-color="#707070"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rectangle_156" data-name="Rectangle 156" width="30.667" height="32" rx="5.296" fill="#707070"/>
+  <path id="Path_257" data-name="Path 257" d="M28.748,21.131V22.3a7.345,7.345,0,0,1-7.162,7.465h-.96l-7.9-8.248a1.362,1.362,0,0,1-.482-.5L6.42,14.939a1.455,1.455,0,0,1-.614-1.6,1.379,1.379,0,0,1,1.312-1.049h4.654c.072,0,8.92.43,8.948.465Z" transform="translate(1.919 2.237)" fill="url(#linear-gradient)"/>
+  <path id="_Path_" d="M21.083,13.714a1.4,1.4,0,0,1-1.37,1.429H7.12a1.431,1.431,0,0,1,0-2.859h4.654l3.285.006h4.654a1.4,1.4,0,0,1,1.37,1.423Z" transform="translate(1.917 2.236)" fill="#fff"/>
+</svg>

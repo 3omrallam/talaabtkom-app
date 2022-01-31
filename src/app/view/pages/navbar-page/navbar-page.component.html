@@ -1,38 +1,43 @@
-<div class="container px-0 bg-white d-flex align-items-center justify-content-center py-2 position-relative"
+<div class="container px-0 bg-white d-flex align-items-center justify-content-between py-2 position-relative"
   style="z-index: '1'">
-  <!-- App Sticker Block Section -->
-  <app-sticker-block></app-sticker-block>
-  <!-- vertical divider -->
-  <div class="mx-4"></div>
-  <!-- Search Icon Block Section-->
-  <div class="iCC-sF uCC-shadow-f-20 uCC-f-radius-sA cCC-bg-main d-flex align-items-center justify-content-center uCC-Click"
-    (click)="animateNavSearch()">
-    <app-icon [iconName]='"iCC-Searchwhite imCC-Background-Contain iCC-sC"'></app-icon>
-  </div>
-  <!-- vertical divider -->
-  <div class="LT-vertical-divider mx-5"></div>
-  <!-- App Navigator Block Section -->
-  <app-navigator-block></app-navigator-block>
-  <!-- vertical divider -->
-  <div class="LT-vertical-divider mx-5"></div>
-  <!-- Language  -->
-  <div>English</div>
-  <!-- vertical divider -->
-  <div class="mx-4"></div>
-  <!-- App Favorate Icon Block Section-->
-  <button class="btn position-relative" (click)='animateCart()' aria-label="Cart">
-    <app-icon [iconName]='"iCC-Favourite imCC-Background-Contain iCC-sE"'></app-icon>
-    <div class="cCC-bg-support1 d-flex align-items-center justify-content-center position-absolute top-0 end-0" style="width: 24px; height: 24px; border-radius: 50%;">
-      <span class="fCC-reg-sC cCC-text-main">{{totalItems}}</span>
+  <div class="d-flex align-items-center">
+    <!-- App Sticker Block Section -->
+    <app-sticker-block></app-sticker-block>
+    <!-- vertical divider -->
+    <div class="mx-4"></div>
+    <!-- Search Icon Block Section-->
+    <div class="iCC-sF uCC-shadow-f-20 uCC-f-radius-sA cCC-bg-main d-flex align-items-center justify-content-center uCC-Click"
+      (click)="animateNavSearch()">
+      <app-icon [iconName]='"iCC-Searchwhite imCC-Background-Contain iCC-sC"'></app-icon>
     </div>
-  </button>
-  <!-- vertical divider -->
-  <div class="mx-4"></div>
-  <!-- App User Profile Block Section -->
+    <!-- vertical divider -->
+    <div class="LT-vertical-divider mx-5"></div>
+    <!-- App Navigator Block Section -->
+    <app-navigator-block></app-navigator-block>
+    <!-- vertical divider -->
+    <div class="LT-vertical-divider mx-5"></div>
+  </div>
+  <div class="d-flex align-items-center">
+    <!-- App User Profile Block Section -->
     <app-user-profile-block *ngIf="_AccountService.userValue"></app-user-profile-block>
-  <!-- SignIn Button Block -->
-  <div *ngIf="!_AccountService.userValue" class="uCC-Border-sB-Main uCC-f-radius-sA py-2 px-4 uCC-Click" (click)='animateLogin()'>
-    <app-signin-button-block></app-signin-button-block>
+    <!-- SignIn Button Block -->
+    <div *ngIf="!_AccountService.userValue" class="cCC-bg-main uCC-f-radius-sA py-2 px-4 uCC-Click"
+      (click)='animateLogin()'>
+      <app-signin-button-block></app-signin-button-block>
+    </div>
+    <!-- vertical divider -->
+    <div class="mx-4"></div>
+    <!-- Language  -->
+    <div>English</div>
+    <!-- vertical divider -->
+    <div class="mx-4"></div>
+    <!-- Cart Icon Block Section-->
+    <button class="btn position-relative" (click)='animateCart()' aria-label="Cart">
+      <app-icon [iconName]='"iCC-Cartgrey imCC-Background-Contain iCC-sE"'></app-icon>
+      <!-- <div class="cCC-bg-support1 d-flex align-items-center justify-content-center position-absolute top-0 end-0" style="width: 24px; height: 24px; border-radius: 50%;">
+        <span class="fCC-reg-sC cCC-text-main">{{totalItems}}</span>
+      </div> -->
+    </button>
   </div>
 </div>
 <!-- SEARCH -->

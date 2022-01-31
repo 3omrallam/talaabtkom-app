@@ -13,7 +13,7 @@ export class AppComponent {
   classCondition(){
     return this.activeRouter.url !== '/' && this.activeRouter.url !== '/resturant-profile/1';
   }
-  contact(){
+  resturantProfile(){
     return this.activeRouter.url == '/resturant-profile/1';
   }
 }

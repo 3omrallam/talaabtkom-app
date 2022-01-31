@@ -1,5 +1,4 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SectionsModule } from './../sections/sections.module';
 import { SearchBlockComponent } from './masterContainerBlocks/search-block/search-block.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -36,6 +35,7 @@ import { PaymentMethodsBlockComponent } from './checkout-blocks/payment-methods-
 import { AddressInfoBlockComponent } from './checkout-blocks/address-info-block/address-info-block.component';
 import { CartItemsBlockComponent } from './cart-popup-blocks/cart-items-block/cart-items-block.component';
 import { NgOtpInputModule } from 'ng-otp-input';
+import { ResturantsHeaderBlockComponent } from './header-blocks/resturants-header-block/resturants-header-block.component';
 
 
 
@@ -73,7 +73,8 @@ import { NgOtpInputModule } from 'ng-otp-input';
     PaymentMethodsBlockComponent,
     AddressInfoBlockComponent,
     CartItemsBlockComponent,
-    ButtonBlockComponent
+    ButtonBlockComponent,
+    ResturantsHeaderBlockComponent
   ],
   imports: [
     CommonModule,
@@ -114,7 +115,8 @@ import { NgOtpInputModule } from 'ng-otp-input';
     PaymentMethodsBlockComponent,
     AddressInfoBlockComponent,
     CartItemsBlockComponent,
-    ButtonBlockComponent
+    ButtonBlockComponent,
+    ResturantsHeaderBlockComponent
  
   ]
 })

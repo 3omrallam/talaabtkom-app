@@ -7,7 +7,7 @@ import { ResturantCard } from 'src/app/view/models/models/resturantsList';
 })
 export class ResturantListCardBlockComponent implements OnInit {
   
-  @Input() listState!: ResturantCard;
+  @Input() listState!: any;
 
   constructor() { }
 

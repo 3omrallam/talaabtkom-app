@@ -9,9 +9,14 @@
 input {
     accent-color: #F5504C;
 }
-// .modal{
-//     overflow: hidden;
-// }
-// .modal-dialog{
-//     margin: 1em auto;
-// }
+textarea:focus{
+  box-shadow: 0px 4px 10px 0px rgb(112 112 112 / 50%);
+  border: 0;
+}
+button:hover{
+  color: #fff !important;
+}
+button:focus{
+  background-color: #f5504c !important;
+  border:0 !important; 
+}

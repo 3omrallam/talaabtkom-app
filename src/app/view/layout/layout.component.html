@@ -1,4 +1,4 @@
-<section class="container-fluid px-0 p-0 d-flex flex-column cCC-bg-lightblue  CC-Height-Handler {{this.activeRouter.url !== '/resturant-profile/1/info' ? 'h-100' : ''}}">
+<section class="container-fluid px-0 p-0 d-flex flex-column cCC-bg-lightblue CC-Height-Handler {{this.activeRouter.url !== '/resturant-profile/1/info' ? 'h-100' : ''}}">
   <nav class="container-fluid p-0 position-fixed cCC-bg-white top-0" style="z-index: 1;">
     <div style="z-index: 999;">
       <app-navbar-layout></app-navbar-layout>
@@ -12,7 +12,7 @@
     <app-cart-popup-shared></app-cart-popup-shared>
   </aside>
   <section
-    class="{{this.activeRouter.url !== '/' ? 'container' : 'container-fluid'}} px-0 h-100 row justify-content-center align-items-start mx-auto m-0 uCC-gap-24">
+    class="{{this.activeRouter.url !== '/' ? 'container uCC-gap-24' : 'container-fluid'}} px-0 h-100 row justify-content-center align-items-start mx-auto m-0 ">
     <aside
       *ngIf='this.activeRouter.url !== "/" && this.activeRouter.url !== "/contact-us" && this.activeRouter.url !== "/check-out"'
       class="container-fluid p-0 h-100 col-3 d-lg-block d-none {{this.activeRouter.url !== '/resturants' ? 'position-sticky' : ''}}"
@@ -41,7 +41,7 @@
       </div>
     </section>
   </section>
-  <div class="cCC-bg-support1 m-0 pt-5 mt-auto">
+  <div class="cCC-bg-white m-0 pt-2 pb-3 mt-auto">
     <app-footer-layout></app-footer-layout>
   </div>
 </section>

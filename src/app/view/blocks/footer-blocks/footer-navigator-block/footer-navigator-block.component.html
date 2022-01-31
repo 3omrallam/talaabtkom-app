@@ -1,6 +1,10 @@
 <!-- List Header -->
-<p class="fCC-bold-sC cCC-text-dark m-0 pb-3">{{listHeader}}</p>
-<!-- SubList -->
-<ng-container *ngFor="let list of list1">
-    <p class="fCC-reg-sD cCC-opacity-dark-70 uCC-Click">{{list.element}}</p>
-</ng-container>
+<div class="p-0 m-0 container-fluid d-flex justify-content-between align-items-center">
+    <div *ngFor="let headerList of _FooterPageService.footerNavigatorList">
+        <p class="fCC-bold-sC cCC-text-dark m-0 pb-3">{{headerList.header}}</p>
+        <!-- SubList -->
+        <div *ngFor="let subList of headerList.subList">
+            <p class="fCC-reg-sD cCC-opacity-dark-70 uCC-Click">{{subList.title}}</p>
+        </div>
+    </div>
+</div>
