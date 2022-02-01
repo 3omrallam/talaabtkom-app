@@ -12,7 +12,8 @@ import { UserReservationsSectionComponent } from '../sections/user-reservations-
 
 // [Resturant Aside] Route
 export const resturantRouter: Routes = [
-    { path: '', component: ResturantCategorySectionComponent},
+    { path: '', redirectTo: 'categories', pathMatch: 'full' },
+    { path: 'categories', component: ResturantCategorySectionComponent},
     { path: 'info', component: ResturantInformationSectionComponent},
     { path: 'reviews', component: ResturantReviewsSectionComponent},
 ]

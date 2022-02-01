@@ -14,13 +14,13 @@ export class FilterService {
     { value: 'value7', label: 'القهوة' },
   ]
   optionsTwo: any = [
-    { value: 'value8', label: 'الكل' },
-    { value: 'value9', label: 'صحي ولذيذ' },
+    { value: 'value8', label: 'الأكثر شهرة' },
+    { value: 'value9', label: 'أقل نسبة في الطلب' },
     { value: 'value10', label: 'الأعلي تقيما' },
-    { value: 'value11', label: 'أقل وقت للإنتظار' },
+    { value: 'value11', label: 'اقل وقت للانتظار' },
     { value: 'value12', label: 'بدون حد أدني للطلبات' },
-    { value: 'value13', label: 'متاح الجلسات فقط' },
-    { value: 'value14', label: 'عروض خصومات' },
+    { value: 'value13', label: 'الأسرع في التوصيل' },
+    { value: 'value14', label: 'اجدد المطاعم' },
   ]
 
   constructor() { }

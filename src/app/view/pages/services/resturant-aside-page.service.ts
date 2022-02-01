@@ -8,7 +8,7 @@ export class ResturantAsidePageService {
 
     {
       header: "قائمه الطعام",
-      routerName: "resturant-profile/1",
+      routerName: "resturant-profile/1/categories",
       routerActive:"fCC-bold-sB cCC-text-main",
       icon: "iCC-Booksquare",
       subList: [{ title: "الاكثر مبيعا", href: "item1" }, { title: "المشويات", href: "item2" }, { title: "المقبلات", href: "item3" }, { title: "الحلويات", href: "item4"}]

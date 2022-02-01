@@ -10,24 +10,26 @@
     <!-- Type Of Resturant Section ( 1 ) -->
     <div>
       <!-- FILTERS HEADER & ICON -->
-      <div class="cCC-bg-main cCC-text-white uCC-f-radius-sA py-2">
+      <div class="cCC-bg-main cCC-text-white uCC-f-radius-sA py-2 mb-2">
         <app-icon [textContent]='"نوع المطبخ"' textClass="fCC-bold-sA"
           [iconName]='"iCC-Types iCC-sD imCC-Background-Contain mx-2"'></app-icon>
       </div>
       <!-- FILTERS NAME-->
-      <div *ngFor='let filter of _FilterService.options' class="p-2 CC-horizontal-divider">
+      <div *ngFor='let filter of _FilterService.options'>
         <app-filter-selection-block [items]='filter'></app-filter-selection-block>
+        <div class="cCC-bg-support1 my-2" style="height: 1px;"></div>
       </div>
     </div>
     <!-- Spacific Search Section ( 2 ) -->
     <div>
-      <div class="cCC-bg-main cCC-text-white uCC-f-radius-sA py-2">
+      <div class="cCC-bg-main cCC-text-white uCC-f-radius-sA py-2 mb-2 mt-4">
         <app-icon [textContent]='"حدد البحث"' textClass="fCC-bold-sA"
           [iconName]='"iCC-Filter iCC-sD imCC-Background-Contain mx-2"'></app-icon>
       </div>
       <!-- FILTERS NAME-->
-      <div *ngFor='let filter of _FilterService.optionsTwo' class="p-2 CC-horizontal-divider">
+      <div *ngFor='let filter of _FilterService.optionsTwo'>
         <app-filter-selection-block [items]='filter'></app-filter-selection-block>
+          <div class="cCC-bg-support1 my-2" style="height: 1px;"></div>
       </div>
     </div>
 </div>
