@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavbarBlockComponent } from './navbar-block.component';
+import { TrackOrderSectionComponent } from './track-order-section.component';
 
-describe('NavbarBlockComponent', () => {
-  let component: NavbarBlockComponent;
-  let fixture: ComponentFixture<NavbarBlockComponent>;
+describe('TrackOrderSectionComponent', () => {
+  let component: TrackOrderSectionComponent;
+  let fixture: ComponentFixture<TrackOrderSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavbarBlockComponent ]
+      declarations: [ TrackOrderSectionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavbarBlockComponent);
+    fixture = TestBed.createComponent(TrackOrderSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

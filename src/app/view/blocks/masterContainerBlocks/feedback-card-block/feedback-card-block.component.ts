@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { feedbackList } from 'src/app/view/models/models/feedbackListModel';
+import { feedbackList } from 'src/app/core/models/feedbackListModel';
 
 @Component({
   selector: 'app-feedback-card-block',

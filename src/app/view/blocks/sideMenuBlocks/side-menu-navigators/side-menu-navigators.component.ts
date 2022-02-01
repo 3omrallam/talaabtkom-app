@@ -1,4 +1,4 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, Input, IterableDiffers, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -21,7 +21,9 @@ export class SideMenuNavigatorsComponent implements OnInit {
     document.querySelector('#' + section)?.scrollIntoView();
   }
   setActiveClass(section:any){
+    console.log(section)
     // document.querySelector('.'+section)?.classList.toggle('bg-danger');
     // document.querySelector('.'+section)?.classList.toggle('bg-info');
   }
+ 
 }

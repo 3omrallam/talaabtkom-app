@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./resturants-header-block.component.scss']
 })
 export class ResturantsHeaderBlockComponent implements OnInit {
+
+  @Input()headerTitle!:any;
+  @Input()headerIcon!:any;
 
   constructor(public activeRouter: Router) { }
 

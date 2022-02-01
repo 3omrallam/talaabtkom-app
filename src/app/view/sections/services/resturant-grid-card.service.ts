@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ResturantGridCard } from '../../models/models/resturantGridCardModel';
+import { ResturantGridCard } from '../../../core/models/resturantGridCardModel';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,8 @@ export class ResturantGridCardService {
       time: 90,
       tables: 10,
       rate: 3.2,
-      liked:'iCC-Newlike'
+      liked:'iCC-Newlike',
+      status:''
     },
     {
       id: 2,
@@ -27,7 +28,8 @@ export class ResturantGridCardService {
       time: 20,
       tables: 30,
       rate: 4.3,
-      liked: 'iCC-Newlike'
+      liked: 'iCC-Newlike',
+      status: ''
       
     },
     {
@@ -39,7 +41,8 @@ export class ResturantGridCardService {
       time: 40,
       tables: 7,
       rate: 4.7,
-      liked: 'iCC-Newlike'
+      liked: 'iCC-Newlike',
+      status: ''
     },
     {
       id: 3,
@@ -50,7 +53,8 @@ export class ResturantGridCardService {
       time: 40,
       tables: 7,
       rate: 4.7,
-      liked: 'iCC-Newlike'
+      liked: 'iCC-Newlike',
+      status: ''
     },
   ]
 

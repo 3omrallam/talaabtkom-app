@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ResturantCard } from 'src/app/view/models/models/resturantsList';
+import { ResturantCard } from 'src/app/core/models/resturantsList';
 @Component({
   selector: 'app-resturant-list-card-block',
   templateUrl: './resturant-list-card-block.component.html',
@@ -7,11 +7,10 @@ import { ResturantCard } from 'src/app/view/models/models/resturantsList';
 })
 export class ResturantListCardBlockComponent implements OnInit {
   
-  @Input() listState!: any;
+  @Input() listState!: ResturantCard;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

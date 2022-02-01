@@ -1,10 +1,15 @@
 <!-- Resturants Available In Your Zone -->
 <div class="fCC-reg-sF cCC-text-support2 d-lg-block d-none position-relative"
-  *ngIf='activeRouter.url.includes("/resturants")'>
+  *ngIf='activeRouter.url.includes("/resturants") || this.activeRouter.url == "/track-order"'>
   <!-- Header Resturant Image -->
   <app-cover-header-block headerImage="imCC-Resturantsheader" headerHeight="CC-coverresturants-size"></app-cover-header-block>
   <!-- Header Location Text and ICON -->
-  <app-resturants-header-block></app-resturants-header-block>
+  <div *ngIf='activeRouter.url.includes("/resturants")'>
+    <app-resturants-header-block headerTitle='المطاعم المتاحة بمنطقة الرياض' headerIcon='iCC-Home '></app-resturants-header-block>
+  </div>
+  <div *ngIf='this.activeRouter.url == "/track-order"'>
+    <app-resturants-header-block headerTitle='توصيل دليفيري' headerIcon='iCC-Fromdelivery'></app-resturants-header-block>
+  </div>
 </div>
 <!-- Personal Information -->
 <div class="container-fluid p-0 cCC-opacity-support1-20">
@@ -42,7 +47,7 @@
 </div>
 <!-- Cover Section -->
 <div
-  *ngIf='!activeRouter.url.includes("/resturants") && this.activeRouter.url !== "/contact-us" && this.activeRouter.url !== "/check-out" && this.activeRouter.url !== "/" && !activeRouter.url.includes("/userProfile")'>
+  *ngIf='!activeRouter.url.includes("/resturants") && this.activeRouter.url !== "/contact-us" && this.activeRouter.url !== "/track-order" && this.activeRouter.url !== "/check-out" && this.activeRouter.url !== "/" && !activeRouter.url.includes("/userProfile")'>
   <app-cover-header-block headerImage="imCC-Coverresturant" headerHeight="CC-coverresturantprofile-size">
   </app-cover-header-block>
 </div>

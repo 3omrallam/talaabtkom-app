@@ -12,6 +12,9 @@ export class UserProfileBlockComponent implements OnInit {
   constructor(public _AccountService : AccountService) { }
 
   ngOnInit(): void {
+    this.getUserName()
+  }
+  getUserName(){
     this.userName = JSON.parse(localStorage.getItem('user')!).data.name;
   }
 

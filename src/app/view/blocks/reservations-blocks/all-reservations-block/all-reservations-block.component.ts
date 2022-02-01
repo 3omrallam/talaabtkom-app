@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ReservationList } from 'src/app/view/models/models/reservationListModel';
+import { ReservationList } from 'src/app/core/models/userReservationListModel';
 import { ReservationsListService } from 'src/app/view/sections/services/reservations-list.service';
 
 @Component({
@@ -12,7 +12,6 @@ export class AllReservationsBlockComponent implements OnInit {
   @Input() reservationList!: ReservationList[];
   constructor(public _ReservationsListService: ReservationsListService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

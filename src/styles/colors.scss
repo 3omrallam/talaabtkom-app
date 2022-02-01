@@ -9,6 +9,7 @@ $blue:#408ddb;
 $yellow:#d7c218;
 $green:#4ee143;
 $lightgreen:#50DF33;
+$darkgreen:#31EA5C;
 $darkgrey: #707070;
 $lightgrey:#9A9A9A;
 $orange:#E66B32;
@@ -100,6 +101,9 @@ $lightblue:#F2F5F7;
 .cCC-bg-opacity-white-40{
   background-color: rgba(255, 255, 255 , 0.4);
 }
+.cCC-bg-opacity-green-20{
+  background-color: rgba(49, 243, 92 , 0.20);
+}
 // END === Background With Opacity Color
 // START ===  Color With Opacity
 .cCC-opacity-dark-70{
@@ -153,6 +157,9 @@ $lightblue:#F2F5F7;
 }
 .cCC-text-lightblue{
   color: $lightblue;
+}
+.cCC-text-darkGreen{
+  color: $darkgreen;
 }
 // END === Text Color
 // START === Text color Opacity

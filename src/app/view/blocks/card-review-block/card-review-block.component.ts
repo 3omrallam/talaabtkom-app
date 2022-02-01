@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { reviewsList } from '../../models/reviewsListModal';
+import { reviewsList } from '../../../core/models/reviewsListModal';
 
 @Component({
   selector: 'app-card-review-block',

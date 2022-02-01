@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { menuList } from '../../models/models/menuListModel'
+import { resturantMenuList } from 'src/app/core/models/menuListModels/resturantMenuListModel';
 @Injectable({
   providedIn: 'root'
 })
 export class ResturantMenuService {
-  resturantMenuStates: any[] = [
+  resturantMenuStates: resturantMenuList[] = [
     // List 1
     {
       Header: "الاكثر مبيعا",

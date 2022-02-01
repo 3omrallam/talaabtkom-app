@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { AccountService } from 'src/app/core/services/account.service';
 
@@ -12,12 +11,7 @@ import { AccountService } from 'src/app/core/services/account.service';
 })
 export class LoginBlockComponent implements OnInit {
   showPassword: boolean = false;
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private _AccountService : AccountService
-  ) {
-   }
+  constructor(private router: Router,private _AccountService : AccountService) {}
 
   ngOnInit(): void {
   }
@@ -28,7 +22,7 @@ export class LoginBlockComponent implements OnInit {
       .pipe(first())
       .subscribe({
           next: () => {
-              this.router.navigateByUrl('/resturants');
+            this.router.navigateByUrl('/resturants');
           }
       });
   }

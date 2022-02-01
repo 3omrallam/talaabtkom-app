@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { ResturantCard } from 'src/app/view/models/models/resturantsList';
+import { ResturantCard } from 'src/app/core/models/resturantsList';
 
 @Injectable()
 export class ResturantCardService {
 
-  resturantCardstates: any[] = [
+  resturantCardstates: ResturantCard[] = [
     {
       id: 1,
       image: 'iCC-resturant-icon',

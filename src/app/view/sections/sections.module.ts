@@ -17,7 +17,6 @@ import { UserReservationsSectionComponent } from './user-reservations-section/us
 import { LoginSectionComponent } from './authSections/login-section/login-section.component';
 import { CreateAccountSectionComponent } from './authSections/create-account-section/create-account-section.component';
 import { PrivacyPolicySectionComponent } from './privacy-policy-section/privacy-policy-section.component';
-import { ModelsModule } from '../models/models/models.module';
 import { ResturantsListSectionComponent } from './resturants-list-section/resturants-list-section.component';
 import { RecoverPhoneSectionComponent } from './recover-phone-section/recover-phone-section.component';
 import { ChangePasswordSectionComponent } from './change-password-section/change-password-section.component';
@@ -27,6 +26,7 @@ import { ContactusSectionComponent } from './contactus-section/contactus-section
 import { CheckoutSectionComponent } from './checkout-section/checkout-section.component';
 import { LottieModule } from 'ngx-lottie';
 import { ResturantsGridViewSectionComponent } from './resturants-grid-view-section/resturants-grid-view-section.component';
+import { TrackOrderSectionComponent } from './track-order-section/track-order-section.component';
 
 export function playerFactory() {
   return import(/* webpackChunkName: 'lottie-web' */ 'lottie-web');
@@ -58,12 +58,12 @@ export function playerFactory() {
     ContactusSectionComponent,
     CheckoutSectionComponent,
     ResturantsGridViewSectionComponent,
+    TrackOrderSectionComponent,
     
   ],
   imports: [
     CommonModule,
     BlocksModule,
-    ModelsModule,
     RouterModule,
     LottieModule.forRoot({ player: playerFactory })
   ],
@@ -90,7 +90,8 @@ export function playerFactory() {
     ResturantReviewsSectionComponent,
     ContactusSectionComponent,
     CheckoutSectionComponent,
-    ResturantsGridViewSectionComponent
+    ResturantsGridViewSectionComponent,
+    TrackOrderSectionComponent
   ]
 })
 export class SectionsModule { }

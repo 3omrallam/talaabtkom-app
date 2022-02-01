@@ -2,7 +2,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchBlockComponent } from './masterContainerBlocks/search-block/search-block.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarBlockComponent } from './navbarBlocks/navbar/navbar-block.component';
 import { FilterSelectionBlockComponent } from './sideMenuBlocks/filter-selection/filter-selection-block.component';
 import { StickerBlockComponent } from './navbarBlocks/sticker-block/sticker-block.component';
 import { NavigatorBlockComponent } from './navbarBlocks/navigator-block/navigator-block.component';
@@ -26,7 +25,6 @@ import { PhoneNumberBlockComponent } from './phone-number-block/phone-number-blo
 import { VerifyBlockComponent } from './verify-block/verify-block.component';
 import { UsernameBlockComponent } from './username-block/username-block.component';
 import { SearchBarBlockComponent } from './search-bar-block/search-bar-block.component';
-import { ModelsModule } from '../models/models/models.module';
 import { MenuListModalComponent } from './shared/menu-list-modal/menu-list-modal.component';
 import { AllReservationsBlockComponent } from './reservations-blocks/all-reservations-block/all-reservations-block.component';
 import { CardReviewBlockComponent } from './card-review-block/card-review-block.component';
@@ -38,11 +36,8 @@ import { NgOtpInputModule } from 'ng-otp-input';
 import { ResturantsHeaderBlockComponent } from './header-blocks/resturants-header-block/resturants-header-block.component';
 
 
-
-
 @NgModule({
   declarations: [
-    NavbarBlockComponent,
     FilterSelectionBlockComponent,
     StickerBlockComponent,
     NavigatorBlockComponent,
@@ -79,13 +74,11 @@ import { ResturantsHeaderBlockComponent } from './header-blocks/resturants-heade
   imports: [
     CommonModule,
     RouterModule,
-    ModelsModule,
     ReactiveFormsModule,
     FormsModule,
     NgOtpInputModule
   ],
   exports:[
-    NavbarBlockComponent,
     FilterSelectionBlockComponent,
     StickerBlockComponent,
     NavigatorBlockComponent,

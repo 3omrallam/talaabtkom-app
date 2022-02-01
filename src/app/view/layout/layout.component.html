@@ -14,7 +14,7 @@
   <section
     class="{{this.activeRouter.url !== '/' ? 'container uCC-gap-24' : 'container-fluid'}} px-0 h-100 row justify-content-center align-items-start mx-auto m-0 ">
     <aside
-      *ngIf='this.activeRouter.url !== "/" && this.activeRouter.url !== "/contact-us" && this.activeRouter.url !== "/check-out"'
+      *ngIf='this.activeRouter.url !== "/" && this.activeRouter.url !== "/contact-us" && this.activeRouter.url !== "/check-out" && this.activeRouter.url !== "/track-order"' 
       class="container-fluid p-0 h-100 col-3 d-lg-block d-none {{this.activeRouter.url !== '/resturants' ? 'position-sticky' : ''}}"
       style="top: 200px;">
       <app-side-menu-layout></app-side-menu-layout>

@@ -18,6 +18,7 @@ import { CoreModule } from 'src/app/core/core.module';
 import { SharedModule } from '../shared/shared.module';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ContactusPageComponent } from './contactus-page/contactus-page.component';
+import { TrackOrderPageComponent } from './track-order-page/track-order-page.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ContactusPageComponent } from './contactus-page/contactus-page.componen
     UserProfilePageComponent,
     ResturantProfilePageComponent,
     ContactusPageComponent,
-    CheckoutPageComponent
+    CheckoutPageComponent,
+    TrackOrderPageComponent
 
   ],
   imports: [
@@ -57,7 +59,8 @@ import { ContactusPageComponent } from './contactus-page/contactus-page.componen
     UserProfilePageComponent,
     ResturantProfilePageComponent,
     ContactusPageComponent,
-    CheckoutPageComponent
+    CheckoutPageComponent,
+    TrackOrderPageComponent
 
   ]
 })

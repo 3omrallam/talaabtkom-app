@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ReservationList } from '../../models/models/reservationListModel';
+import { ReservationList } from 'src/app/core/models/userReservationListModel';
 import { ReservationsListService} from '../services/reservations-list.service'
 
 @Component({
@@ -17,11 +17,8 @@ export class UserReservationsSectionComponent implements OnInit {
   constructor(public _ReservationsListService: ReservationsListService, public _Router: Router,public activeRouter: Router) { }
   ngOnInit(): void {
     this.allFilter();
-    this.btn = "CC-active"
-    this.btn1 = "CC-default";
-    this.btn2 = "CC-default";
-    this.btn3 = "CC-default";
-  }
+    this.defaultStyle()
+  } 
   // All Reservations 
   allFilter(){
     this.reservationsList = this._ReservationsListService.reservationsList;
@@ -36,6 +33,12 @@ export class UserReservationsSectionComponent implements OnInit {
     return this.reservationsList;
   }
   // Styling
+  defaultStyle(){
+    this.btn = "CC-active"
+    this.btn1 = "CC-default";
+    this.btn2 = "CC-default";
+    this.btn3 = "CC-default";
+  }
   div1Function() {
     this.btn = "CC-default"
     this.btn1 = "CC-active";

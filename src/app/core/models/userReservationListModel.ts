@@ -4,9 +4,9 @@ export interface ReservationList {
     title: String,
     date: String,
     description: String,
-    process:string,
-    time:string,
-    bgStyle:string
-    textStyle:string,
-    icon:string
+    process: string,
+    time: string,
+    bgStyle: string
+    textStyle: string,
+    icon: string
 }

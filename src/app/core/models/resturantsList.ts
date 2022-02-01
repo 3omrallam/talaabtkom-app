@@ -1,11 +1,12 @@
-export interface ResturantGridCard {
+export interface ResturantCard {
     id: Number,
     image: String,
     title: String,
-    logo:string,
     description: String,
     time: number,
+    logo:string,
     tables: number,
     rate: number,
-    liked:string
+    liked:string,
+    status:string
 }

@@ -7,6 +7,7 @@ import { ResturantProfilePageComponent } from '../pages/resturant-profile-page/r
 import { ResturantsListPageComponent } from '../pages/resturants-list-page/resturants-list-page.component';
 import { UserProfilePageComponent } from '../pages/user-profile-page/user-profile-page.component';
 import { AuthGuard } from 'src/app/core/helpers/auth.guard';
+import { TrackOrderPageComponent } from '../pages/track-order-page/track-order-page.component';
 
 
 export const LayoutRouterModule: Routes = [
@@ -14,6 +15,7 @@ export const LayoutRouterModule: Routes = [
   { path: 'resturants', component: ResturantsListPageComponent, children: [...resturantsView]},
   { path: 'contact-us', component: ContactusPageComponent},
   { path: 'check-out', component: CheckoutPageComponent },
+  { path: 'track-order', component: TrackOrderPageComponent },
   { path: 'userProfile', component: UserProfilePageComponent,canActivate: [AuthGuard] , children: [...userProfileRouter]},
   { path: 'resturant-profile/:id',component: ResturantProfilePageComponent, children: [...resturantRouter]},
 ]

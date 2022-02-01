@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ResturantGridCard } from '../../models/models/resturantGridCardModel';
+import { ResturantGridCard } from '../../../core/models/resturantGridCardModel';
 import { ResturantGridCardService } from '../services/resturant-grid-card.service';
 
 @Component({
