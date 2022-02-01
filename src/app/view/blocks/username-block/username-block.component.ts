@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/core/auth/auth.service';
-import { AccountService } from 'src/app/core/services/account.service';
+import { AccountService } from 'src/app/core/services/user/account.service';
 
 @Component({
   selector: 'app-username-block',

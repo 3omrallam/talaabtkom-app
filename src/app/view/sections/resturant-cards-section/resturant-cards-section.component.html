@@ -7,7 +7,7 @@
 <!-- Resturant Cards -->
 <div class="uCC-gap-16 mt-2 CC-Holder ">
     <!-- Resturant 1 -->
-    <ng-container *ngFor='let resturantCardstate of _ResturantGridCardService.resturantGridCardstates' class="col-4">
+    <ng-container *ngFor='let resturantCardstate of getResturantData$ | async' class="col-4">
         <app-resturant-grid-card-block [blockState]="resturantCardstate"></app-resturant-grid-card-block>
     </ng-container>
 </div>

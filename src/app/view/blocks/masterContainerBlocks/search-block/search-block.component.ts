@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ResturantCardService } from 'src/app/core/resturant/resturant-card.service';
+import { ResturantCardService } from 'src/app/core/services/resturant/resturant-card.service';
 import { ResturantCard } from 'src/app/core/models/resturantsList';
 
 @Component({

@@ -1,6 +1,6 @@
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { AccountService } from 'src/app/core/services/account.service';
+import { AccountService } from 'src/app/core/services/user/account.service';
 @Component({
   selector: 'app-phone-number-block',
   templateUrl: './phone-number-block.component.html',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AccountService } from 'src/app/core/services/account.service';
+import { AccountService } from 'src/app/core/services/user/account.service';
 
 @Component({
   selector: 'app-user-profile-block',

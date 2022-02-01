@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-import { AccountService } from 'src/app/core/services/account.service';
+import { AccountService } from 'src/app/core/services/user/account.service';
 
 
 @Component({

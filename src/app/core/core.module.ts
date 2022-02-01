@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ResturantCardService } from './resturant/resturant-card.service';
+import { ResturantCardService } from './services/resturant/resturant-card.service';
 
 
 
