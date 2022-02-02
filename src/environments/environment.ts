@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiUrl : 'https://restaurant-test.lun.sa'
+  // apiUrl:'https://dev.talabatcom.sa/Admin/public'
 };
 
 /*

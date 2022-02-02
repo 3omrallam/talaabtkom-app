@@ -17,5 +17,6 @@ export class ResturantsListSectionComponent implements OnInit {
 
   ngOnInit(): void {
       this.getResturantData$ = this._ResturantCardService.getResturantData('?popular=true');
+
   }
 }

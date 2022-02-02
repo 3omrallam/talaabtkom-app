@@ -1,41 +1,41 @@
 <!-- Resturant Image -->
 <section class="position-relative cCC-bg-white uCC-f-radius-sB pb-2" routerLink="/resturant-profile/{{blockState?.id}}">
     <div class="position-relative">
-        <i class="{{blockState?.image}} d-flex imCC-Background-Cover CC-resturants-Holder uCC-f-radius-sA"></i>
+        <i class=" d-flex imCC-Background-Cover CC-resturants-Holder uCC-f-radius-sA" style="background-image: url({{blockState.media[0].url}});"></i>
         <!-- Resturant Status -->
         <div
-            class="position-absolute {{blockState?.status === 'مشغول'? 'd-flex': 'd-none'}} top-0 bottom-0 start-0 uCC-f-radius-sA end-0 cCC-opacity-grey-70 justify-content-center align-items-center">
+            class="position-absolute {{blockState.closed === true ? 'd-flex': 'd-none'}} top-0 bottom-0 start-0 uCC-f-radius-sA end-0 cCC-opacity-grey-70 justify-content-center align-items-center">
             <p class="m-0 fCC-reg-sD cCC-text-support1">مشغول</p>
         </div>
     </div>
     <div class="d-flex align-items-center justify-content-between pt-3 pb-3 mb-3~ CC-horizontal-divider~ uCC-Click">
         <div class="d-flex w-100 align-items-center">
             <!-- Resturant Logo -->
-            <i class="d-flex me-2 {{blockState?.logo}} CC-logo-Holder imCC-Background-Contain"></i>
+            <i class="d-flex me-2 CC-logo-Holder imCC-Background-Contain"style="background-image: url({{blockState.media[0].icon}});"></i>
             <div class="mx-3">
                 <!-- Resturant Name -->
-                <p class="mb-0 cCC-text-dark fCC-bold-sB">{{blockState?.title}}</p>
+                <p class="mb-0 cCC-text-dark fCC-bold-sB">{{blockState.name}}</p>
                 <!-- Resturant Tags -->
                 <div class="d-flex uCC-gap-8 mt-1">
                     <button class="border-0 fCC-reg-sA cCC-text-dark py-1 px-3 cCC-bg-support1 uCC-f-radius-s5"
-                        aria-label="type1">المشويات</button>
+                        aria-label="type1">{{blockState.tags[0].name}}</button>
                     <button class="border-0 fCC-reg-sA cCC-text-dark py-1 px-3 cCC-bg-support1 uCC-f-radius-s5"
-                        aria-label="type2">الشرقي</button>
+                        aria-label="type2">{{blockState.tags[1].name}}</button>
                 </div>
             </div>
         </div>
         <!-- Icon Like -->
         <div class="cCC-bg-support1 uCC-f-radius-sA p-2 position-absolute" style="top: 16px; left: 16px;">
-            <i class="d-flex {{blockState?.liked}} iCC-sB imCC-Background-Contain"></i>
+            <i class="d-flex iCC-Newlike iCC-sB imCC-Background-Contain"></i>
         </div>
     </div>
     <!-- Icons -->
     <div class="d-flex justify-content-between mb-3 px-2">
         <app-icon iconName="iCC-Newclock iCC-sD imCC-Background-Contain d-flex ms-2"
-            textContent="{{blockState?.time}} دقيقة" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
+            textContent="30 دقيقة" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
         <app-icon iconName="iCC-Newtables iCC-sD imCC-Background-Contain d-flex ms-2"
-            textContent="{{blockState?.table}} طاولة" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
-        <app-icon iconName="iCC-Newstars iCC-sD imCC-Background-Contain d-flex ms-2" textContent="{{blockState?.rate}}"
+            textContent="{{blockState.num_table}} طاولة" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
+        <app-icon iconName="iCC-Newstars iCC-sD imCC-Background-Contain d-flex ms-2" textContent="0"
             textClass="fCC-reg-sB cCC-text-support2"></app-icon>
     </div>
 </section>

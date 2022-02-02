@@ -12,9 +12,9 @@ import { ResturantCardService } from 'src/app/core/services/resturant/resturant-
 })
 export class ResturantProfilePageComponent implements OnInit, OnDestroy {
   getResturantData$!: Observable<Array<SingleCard>>;
-  getIDFromRoute! : Subscription
-
-  constructor(public activeRouter: ActivatedRoute, private _ResturantCardService : ResturantCardService) { 
+  // getResturantData$!: Observable<any>;
+  getIDFromRoute! : Subscription;
+  constructor(public activeRouter: ActivatedRoute, public _ResturantCardService : ResturantCardService) { 
     
   }
 
@@ -25,8 +25,9 @@ export class ResturantProfilePageComponent implements OnInit, OnDestroy {
   getResturantInfoByID(){
     this.getIDFromRoute = this.activeRouter.params.subscribe(route => {
       this.getResturantData$ = this._ResturantCardService.getResturantData(`/${route.id}`);
-      console.log(route);
-      
+      // this._ResturantCardService.getResturantData(`/${route.id}`).subscribe(res=>{
+      //   console.log('x', res)
+      // });
     })
   }
   ngOnDestroy(): void {

@@ -13,7 +13,7 @@ export class ResturantGridCardBlockComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.blockState);
+    // console.log(this.blockState);
   }
 
 }

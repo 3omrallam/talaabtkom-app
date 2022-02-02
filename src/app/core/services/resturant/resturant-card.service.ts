@@ -8,18 +8,20 @@ import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable()
 export class ResturantCardService {
-  
-  private cacheResturantToCheck$!: Observable<Array<SingleCard>>;
+  cacheResturantToCheck$!: Observable<SingleCard[]>;
 
-  constructor(private _http : HttpClient) { }
+  constructor(private _http: HttpClient) { }
 
   // GET APIS # 
-    private getResturant(query:String){ return this._http.get<ResturantCard>(`${environment.apiUrl}/api/markets${query}`).pipe(map(response => response.data))}
-  
+  getResturant(query: String) { 
+    return this._http.get<ResturantCard>(`${environment.apiUrl}/api/markets${query}`)
+    .pipe(map(response => response.data)) 
+  }
+
   // Controllers #
-    getResturantData(query : String) {
-      if (!this.cacheResturantToCheck$) this.cacheResturantToCheck$ = this.getResturant(query).pipe(shareReplay());
-      return this.cacheResturantToCheck$;
-    }
+  getResturantData(query: String) {
+    if (!this.cacheResturantToCheck$) this.cacheResturantToCheck$ = this.getResturant(query).pipe(shareReplay());
+    return this.cacheResturantToCheck$;
+  }
 
 }

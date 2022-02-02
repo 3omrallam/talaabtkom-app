@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SingleCard } from 'src/app/core/models/resturantCard';
+import { ResturantCard, SingleCard } from 'src/app/core/models/resturantCard';
 @Component({
   selector: 'app-resturant-list-card-block',
   templateUrl: './resturant-list-card-block.component.html',
@@ -11,6 +11,8 @@ export class ResturantListCardBlockComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // console.log(this.listState)
+  }
 
 }
