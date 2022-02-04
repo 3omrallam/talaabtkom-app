@@ -25,11 +25,11 @@
     <section class="container-fluid p-0">
       <!-- Login Layer -->
       <div class="position-fixed top-0 end-0 start-0 bottom-0 cCC-bg-dark" [@animateLayer] style="z-index: 9;"
-        *ngIf="!_AccountService.userValue && !_NavbarService.loginToggle" (click)='animateLogin()'
+        *ngIf="!_AccountService.userValue?.success && !_NavbarService.loginToggle" (click)='animateLogin()'
        [ngStyle]="{'opacity': !_NavbarService.loginToggle ? '0.2' : '0'}">
       </div>
       <!-- Login Popup -->
-      <div *ngIf="!_AccountService.userValue && !_NavbarService.loginToggle" [@animateLogin]
+      <div *ngIf="!_AccountService.userValue?.success && !_NavbarService.loginToggle" [@animateLogin]
         class="uCC-t-4 CC-Popup-Holder position-fixed" style="transform: translate(50% , -50%);right: 50%;z-index: 10;"
         [ngStyle]="{'top': _NavbarService.loginToggle ? '-718px' : '50%'}">
         <app-login-popup-shared></app-login-popup-shared>

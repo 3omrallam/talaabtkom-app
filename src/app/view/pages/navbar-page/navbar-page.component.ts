@@ -18,7 +18,7 @@ export class NavbarPageComponent implements OnInit {
     // this._AddToCartService.getItem().subscribe((product:any)=>{
     //   this.totalItems = product.length;
     // })
-    console.log(this._AccountService.userValue);
+    console.log(this._AccountService.userValue?.success);
     
   }
   animateNavSearch() {
@@ -29,6 +29,8 @@ export class NavbarPageComponent implements OnInit {
   }
   animateLogin() {
     this._NavbarService.loginToggle = !this._NavbarService.loginToggle;
+    console.log(this._NavbarService.loginToggle);
+    
     switch (this._NavbarService.loginToggle) {
       case false:
         this.displayOverLay = 'd-block'

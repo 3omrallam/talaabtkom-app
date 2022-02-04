@@ -5,10 +5,7 @@
             <p class="fCC-reg-sC cCC-text-dark m-0">معلومات</p>
         </div>
         <div class="col-7">
-            <p class="fCC-reg-sC cCC-text-support2 m-0">مطعم السعودي من المطاعم المشهورة في المملكة العربية السعودية
-                ويقدم مجموعة متنوعة من المأكولات العربية والخليجية المعروفة مثل
-                المندي - الكبسة - مكبوس سعودي باللحم
-            </p>
+            <p class="fCC-reg-sC cCC-text-support2 m-0">{{_ResturantCardService.singleResturantInfo?.description}}</p>
         </div>
     </div>
     <!-- Horizontal Divider -->
@@ -19,7 +16,7 @@
             <p class="fCC-reg-sC cCC-text-dark m-0">رقم الهاتف</p>
         </div>
         <div class="col-7">
-            <p class="fCC-reg-sC cCC-text-support2 m-0">(964)126667561 - (964)364463544</p>
+            <p class="fCC-reg-sC cCC-text-support2 m-0">{{_ResturantCardService.singleResturantInfo?.phone + ' - ' + _ResturantCardService.singleResturantInfo?.mobile}}</p>
         </div>
     </div>
     <!-- Horizontal Divider -->
@@ -100,7 +97,7 @@
             <p class="fCC-reg-sC cCC-text-dark m-0">العنوان</p>
         </div>
         <div class="col-5">
-            <p class="fCC-reg-sC cCC-text-support2 me-3">الرياض حي الفيصلية</p>
+            <p class="fCC-reg-sC cCC-text-support2 me-3">{{_ResturantCardService.singleResturantInfo?.address}}</p>
         </div>
         <div class="col-3">
             <p class="fCC-reg-sC cCC-text-main me-3">30 دقيقة من موقعك الحالي</p>

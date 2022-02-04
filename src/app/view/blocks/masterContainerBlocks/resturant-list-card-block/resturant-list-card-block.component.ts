@@ -12,7 +12,7 @@ export class ResturantListCardBlockComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // console.log(this.listState)
+    console.log(this.listState)
   }
 
 }

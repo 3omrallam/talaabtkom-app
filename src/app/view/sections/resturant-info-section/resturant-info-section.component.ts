@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ResturantCardService } from 'src/app/core/services/resturant/resturant-card.service';
 
 @Component({
   selector: 'app-resturant-info-section',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resturant-info-section.component.scss']
 })
 export class ResturantInfoSectionComponent implements OnInit {
-
-  constructor() { }
+  constructor(public activeRouter: ActivatedRoute, public _ResturantCardService : ResturantCardService) { }
 
   ngOnInit(): void {
+  }
+
+
+  ngOnDestroy(): void {
   }
 
 }

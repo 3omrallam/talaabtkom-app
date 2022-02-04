@@ -16,7 +16,12 @@ export class ResturantsListSectionComponent implements OnInit {
   constructor(public _ResturantCardService: ResturantCardService, public activeRouter: Router) { }
 
   ngOnInit(): void {
-      this.getResturantData$ = this._ResturantCardService.getResturantData('?popular=true');
+    this.getAllResturants()
+  }
 
+  getAllResturants(){
+    this._ResturantCardService?.getResturant('?popular=true').subscribe(res => {
+      this._ResturantCardService.resturantCards = res
+    })
   }
 }

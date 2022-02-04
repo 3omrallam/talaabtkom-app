@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-resturant-sticker-block',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resturant-sticker-block.component.scss']
 })
 export class ResturantStickerBlockComponent implements OnInit {
+
+  @Input()resturantInformation! : any
 
   constructor() { }
 

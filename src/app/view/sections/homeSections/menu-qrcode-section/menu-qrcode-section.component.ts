@@ -18,7 +18,7 @@ export class MenuQrcodeSectionComponent implements OnInit {
   ngOnInit(): void {
   }
   animationCreated(animationItem: AnimationItem): void {
-    console.log(animationItem);
+    // console.log(animationItem);
   }
 
 }

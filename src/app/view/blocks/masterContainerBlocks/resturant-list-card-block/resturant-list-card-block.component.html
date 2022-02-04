@@ -1,24 +1,24 @@
 <div class="d-flex justify-content-between cCC-bg-white uCC-f-radius-sB mx-md-0 mx-3">
-    <div class="CC-resturant-holder-grid" routerLink="/resturant-profile/{{listState.id}}">
+    <div class="CC-resturant-holder-grid" routerLink="/resturant-profile/{{listState?.id}}">
         <div class="CC-resturant-image position-relative">
             <!-- Resturant Image -->
-            <i class="d-flex imCC-Background-Cover uCC-f-radius-sB CC-resturantsimgs-Holder uCC-Click" style="background-image: url({{listState.media[0].url}});"></i>
+            <i class="d-flex imCC-Background-Cover uCC-f-radius-sB CC-resturantsimgs-Holder uCC-Click" style="background-image: url({{listState.media[0]?.url}});"></i>
             <!-- Resturant Status -->
-            <div class="position-absolute {{listState.closed === true? 'd-flex': 'd-none'}} top-0 bottom-0 start-0 uCC-f-radius-sB end-0 cCC-opacity-grey-70 justify-content-center align-items-center">
+            <div class="position-absolute {{listState?.closed === true? 'd-flex': 'd-none'}} top-0 bottom-0 start-0 uCC-f-radius-sB end-0 cCC-opacity-grey-70 justify-content-center align-items-center">
                 <p class="m-0 fCC-reg-sD cCC-text-support1">مشغول</p>
             </div>
         </div>
         <div class="CC-resturant-title">
             <!-- Resturant-title -->
             <div>
-                <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{listState.name}}</p>
+                <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{listState?.name}}</p>
             </div>
             <!-- Resturant Description -->
             <div class="d-flex uCC-gap-8 mt-2">
                 <button class="border-0 fCC-reg-sA cCC-text-dark py-1 px-3 cCC-bg-support1 uCC-f-radius-s5"
-                    aria-label="type1">{{listState.tags[0].name}}</button>
+                    aria-label="type1">{{listState.tags[0]?.name}}</button>
                 <button class="border-0 fCC-reg-sA cCC-text-dark py-1 px-3 cCC-bg-support1 uCC-f-radius-s5"
-                    aria-label="type2">{{listState.tags[1].name}}</button>
+                    aria-label="type2">{{listState.tags[1]?.name}}</button>
             </div>
         </div>
         <!-- Icons -->
@@ -26,7 +26,7 @@
             <app-icon iconName="iCC-Newclock iCC-sD imCC-Background-Contain d-flex gap-3 "
                 textContent="30دقيقة" textClass="fCC-reg-sB cCC-text-support2 me-2"></app-icon>
             <app-icon iconName="iCC-Newtables iCC-sD imCC-Background-Contain d-flex gap-3 "
-                textContent="{{listState.num_table}} طاولة" textClass="fCC-reg-sB cCC-text-support2 me-2"></app-icon>
+                textContent="{{listState?.num_table}} طاولة" textClass="fCC-reg-sB cCC-text-support2 me-2"></app-icon>
             <app-icon iconName="iCC-Newstars iCC-sD imCC-Background-Contain d-flex gap-3"
                 textContent="0" textClass="fCC-reg-sB cCC-text-support2 me-2"></app-icon>
         </div>

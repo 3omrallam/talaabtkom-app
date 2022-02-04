@@ -1,7 +1,8 @@
 <div class="CC-resturantsimgs-poition uCC-f-radius-sD cCC-bg-white p-1">
-    <i class="imCC-Resturantimg3 d-flex imCC-Background-Cover CC-resturantsimgs-Holder uCC-Click "></i>
+    <!-- <i class="imCC-Resturantimg3 d-flex imCC-Background-Cover CC-resturantsimgs-Holder uCC-Click "></i> -->
+    <img src="{{resturantInformation?.media[0]?.url}}" class="{{!resturantInformation?.media[0]?.url && 'imCC-Resturantimg3'}} d-flex imCC-Background-Cover CC-resturantsimgs-Holder uCC-" alt="">
 </div>
 <div class="mt-4 text-center">
-    <p class="fCC-bold-sD cCC-text-dark m-0 ">مطعم المخابز</p>
-    <p class="fCC-reg-sC cCC-text-support2 m-0">"المشويات - الشرقي"</p>
+    <p class="fCC-bold-sD cCC-text-dark m-0 ">{{resturantInformation?.name}}</p>
+    <p class="fCC-reg-sC cCC-text-support2 m-0">{{resturantInformation?.tags && resturantInformation?.tags[0]?.name +  ' - ' + resturantInformation?.tags[1]?.name}}</p>
 </div>

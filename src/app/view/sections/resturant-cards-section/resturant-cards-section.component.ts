@@ -14,8 +14,15 @@ export class ResturantCardsSectionComponent implements OnInit, OnDestroy {
   constructor(public _ResturantCardService: ResturantCardService) { }
 
   ngOnInit(): void {
-      this.getResturantData$ = this._ResturantCardService.getResturantData('?popular=true');
+      this.getAllResturants()
   }
+
+getAllResturants(){
+    this._ResturantCardService?.getResturant('?popular=true').subscribe(res => {
+      this._ResturantCardService.resturantCards = res
+    })
+  }
+
   ngOnDestroy(): void {
     
   }

@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { User } from '../../models/user';
 import { Response } from '../../models/response';
+import { NavbarService } from 'src/app/view/layout/services/navbar.service';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class AccountService {
   public phoneProccess : any
   public registerProccess : any
 
-  constructor(private router: Router, private _http: HttpClient) {
+  constructor(private router: Router, private _http: HttpClient, private _NavbarService : NavbarService) {
     this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')!));
     this.user = this.userSubject.asObservable();
   }
@@ -49,6 +50,7 @@ export class AccountService {
 
   logout() {
       // remove user from local storage and set current user to null
+      this._NavbarService.loginToggle = !this._NavbarService.loginToggle
       localStorage.removeItem('user');
       this.userSubject.next(null!);
       this.router.navigate(['/']);

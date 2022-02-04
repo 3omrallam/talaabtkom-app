@@ -17,7 +17,6 @@ export class LoginBlockComponent implements OnInit {
   }
 
   ngSubmit(formValue : FormData){
-    console.log({...formValue});
     this._AccountService.login({...formValue})
       .pipe(first())
       .subscribe({
