@@ -1,1 +1,4 @@
-<div class="container-fluid p-0 imCC-Background-Cover {{headerImage}} {{headerHeight}} d-flex align-items-center justify-content-center"></div>
+<!-- <div class="container-fluid p-0 imCC-Background-Cover {{headerImage}} {{headerHeight}} d-flex align-items-center justify-content-center"></div> -->
+    <img src="{{headerImage?.media[0]?.url}}"
+        class="{{!headerImage?.media[0]?.url && 'imCC-Coverresturant'}} {{headerHeight}} w-100 d-flex align-items-center justify-content-center"
+        alt="">

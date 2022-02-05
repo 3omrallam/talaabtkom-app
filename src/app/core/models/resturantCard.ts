@@ -11,6 +11,7 @@ export interface SingleCard {
     id : Number,
     name : String,
     time : Number,
+    delivery_range:number,
     rate : Number,
     closed:boolean,
     num_table:number,

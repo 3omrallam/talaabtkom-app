@@ -34,7 +34,9 @@
             <!-- divider -->
             <div class="mx-3"></div>
             <!-- Qr Code Image -->
-            <i class="d-flex imCC-Scancode imCC-sB imCC-Background-Contain"></i>
+            <div class="d-flex cCC-bg-white p-2 uCC-f-radius-sA ">
+              <ng-lottie width="72px" [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+            </div>
         </div>
     </div>
 </section>

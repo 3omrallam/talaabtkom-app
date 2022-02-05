@@ -20,5 +20,4 @@ export class ContactusSectionComponent implements OnInit {
     console.log(animationItem);
   }
 
-
 }

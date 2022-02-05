@@ -1,14 +1,15 @@
 <form #phoneForm='ngForm' (ngSubmit)="ngSubmit(phoneForm.value)">
     <!-- Div Holder-->
+    <label for="phone" class="cCC-text-support2 fCC-reg-sB mb-2">رقم الهاتف</label>
     <div [ngClass]="{'has-danger': phone.invalid &&(phone.dirty),
         'has-success':phone.valid && (phone.dirty) }"
-        class=" d-flex shadow py-2 px-3 form-input align-items-center uCC-f-radius-sA cCC-bg-white mb-3">
+        class=" d-flex shadow py-2~ p-3 form-input align-items-center uCC-f-radius-sA cCC-bg-white mb-4">
         <!-- Mobile icon -->
         <app-icon iconName="iCC-Mobilelogin d-flex iCC-sB ms-2"></app-icon>
         <!-- Mobile Input-->
         <input #phone="ngModel" [ngClass]="{'is-invalid': phone.invalid &&(phone.dirty),
-        'is-valid':phone.valid && (phone.dirty) }" type="text" placeholder="رقم الهاتق"
-            class="form-control border-0 fCC-reg-sB cCC-text-support2 m-0" name="phone" ngModel required minlength="11"
+        'is-valid':phone.valid && (phone.dirty) }" type="text" placeholder="+966"
+            class="form-control border-0 fCC-reg-sB cCC-text-support2 m-0 p-0" name="phone" ngModel required minlength="13"
             maxlength="13">
     </div>
     <!-- Errors Div -->
@@ -17,10 +18,10 @@
         <p *ngIf="phone.errors?.minlength" class="CC-alert fCC-bold-sA">رقم الهاتف غير صحيح</p>
     </div>
     <!-- Text -->
-    <div class="mb-5">
-        <p class="fCC-bold-sD cCC-text-dark m-0 mb-2"> رمز التأكيد</p>
-        <p class="m-0 fCC-reg-sC cCC-text-support2 uCC-line-Hight-B col-8">
-            من خلال إنشاء حساب أنت توافق علي سياسة الخصوصية وشروط الإستخدام.
+    <div class="mb-5 pb-5">
+        <!-- <p class="fCC-bold-sD cCC-text-dark m-0 mb-2"> رمز التأكيد</p> -->
+        <p class="m-0 fCC-reg-sC cCC-text-support2 col-6">
+            يسعدنا لأنك سوف تصبح فردا منا
         </p>
     </div>
     <!-- Send OTP Button -->

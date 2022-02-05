@@ -4,14 +4,17 @@ input {
 .CC-Btn{
     transition: 0.2s all;
 }
-.CC-Btn:focus{
+.CC-Btn1:focus{
     background-color: #f5504c !important;
     color:#fff !important;
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24) !important;
     transform: scale(0.98) !important;
 }
-.CC-Btn:hover{
+.CC-Btn1:hover{
     color:#fff !important;
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24) !important;
     transform: scale(0.98) !important;
+}
+.CC-Btn2:hover{
+    color:#f5504c !important;
 }

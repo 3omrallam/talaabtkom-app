@@ -2,9 +2,11 @@
     <div class="CC-resturant-holder-grid" routerLink="/resturant-profile/{{listState?.id}}">
         <div class="CC-resturant-image position-relative">
             <!-- Resturant Image -->
-            <i class="d-flex imCC-Background-Cover uCC-f-radius-sB CC-resturantsimgs-Holder uCC-Click" style="background-image: url({{listState.media[0]?.url}});"></i>
+            <i class="d-flex imCC-Background-Cover uCC-f-radius-sB CC-resturantsimgs-Holder uCC-Click"
+                style="background-image: url({{listState.media[0]?.url}});"></i>
             <!-- Resturant Status -->
-            <div class="position-absolute {{listState?.closed === true? 'd-flex': 'd-none'}} top-0 bottom-0 start-0 uCC-f-radius-sB end-0 cCC-opacity-grey-70 justify-content-center align-items-center">
+            <div
+                class="position-absolute {{listState?.closed === true? 'd-flex': 'd-none'}} top-0 bottom-0 start-0 uCC-f-radius-sB end-0 cCC-opacity-grey-70 justify-content-center align-items-center">
                 <p class="m-0 fCC-reg-sD cCC-text-support1">مشغول</p>
             </div>
         </div>
@@ -24,19 +26,20 @@
         <!-- Icons -->
         <div class="CC-resturant-tags">
             <app-icon iconName="iCC-Newclock iCC-sD imCC-Background-Contain d-flex gap-3 "
-                textContent="30دقيقة" textClass="fCC-reg-sB cCC-text-support2 me-2"></app-icon>
+                textContent="{{listState?.delivery_range}} دقيقة" textClass="fCC-reg-sB cCC-text-support2 me-2">
+            </app-icon>
             <app-icon iconName="iCC-Newtables iCC-sD imCC-Background-Contain d-flex gap-3 "
                 textContent="{{listState?.num_table}} طاولة" textClass="fCC-reg-sB cCC-text-support2 me-2"></app-icon>
-            <app-icon iconName="iCC-Newstars iCC-sD imCC-Background-Contain d-flex gap-3"
-                textContent="0" textClass="fCC-reg-sB cCC-text-support2 me-2"></app-icon>
+            <app-icon iconName="iCC-Newstars iCC-sD imCC-Background-Contain d-flex gap-3" textContent="0"
+                textClass="fCC-reg-sB cCC-text-support2 me-2"></app-icon>
         </div>
-            <!-- Heart Icon -->
-            <div class="CC-like-icon-holder cCC-bg-support1 uCC-f-radius-sA p-lg-2 p-1 uCC-Click">
-                <i class="d-flex iCC-Newlike w-100 iCC-sD imCC-Background-Contain"></i>
-            </div>
-            <!-- QrCode Block -->
-            <div class="CC-QR-icon-holder cCC-bg-support1 uCC-f-radius-sA p-lg-2 p-1 uCC-Click">
-                <i class="iCC-Newqrcode d-flex w-100 imCC-Background-Contain CC-Qr-Holder uCC-Click"></i>
-            </div>
+        <!-- Heart Icon -->
+        <div class="CC-like-icon-holder cCC-bg-support1 uCC-f-radius-sA p-lg-2 p-1 uCC-Click">
+            <i class="d-flex iCC-Newlike w-100 iCC-sD imCC-Background-Contain"></i>
+        </div>
+        <!-- QrCode Block -->
+        <div class="CC-QR-icon-holder cCC-bg-support1 uCC-f-radius-sA p-lg-2 p-1 uCC-Click">
+            <i class="iCC-Newqrcode d-flex w-100 imCC-Background-Contain CC-Qr-Holder uCC-Click"></i>
+        </div>
     </div>
 </div>

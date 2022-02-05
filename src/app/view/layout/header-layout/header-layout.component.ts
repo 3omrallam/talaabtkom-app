@@ -12,7 +12,7 @@ import { ResturantCardService } from 'src/app/core/services/resturant/resturant-
 export class HeaderLayoutComponent implements OnInit {
   
   
-  constructor(public activeRouter: Router ,public router:ActivatedRoute, private _ResturantCardService: ResturantCardService) { }
+  constructor(public activeRouter: Router, public router: ActivatedRoute, public _ResturantCardService: ResturantCardService) { }
 
   ngOnInit(): void {  
   

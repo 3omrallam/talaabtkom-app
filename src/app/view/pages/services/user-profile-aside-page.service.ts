@@ -13,6 +13,11 @@ export class UserProfileAsidePageService {
       icon: "iCC-Usertag",
     },
     {
+      header: "المفضلة",
+      routerName: 'userProfile/t',
+      icon: "iCC-Menu",
+    },
+    {
       header: "إعادة توثيق الجوال",
       routerName: 'userProfile/recover-phone',
       icon: "iCC-Mobile",
@@ -23,14 +28,19 @@ export class UserProfileAsidePageService {
       icon: "iCC-Lock",
     },
     {
-      header: "الحجوزات",
+      header: "طلباتي",
       routerName: 'userProfile/reservation',
       icon: "iCC-Menu",
     },
     {
-      header: "البطاقات المحفوظة",
-      routerName : 'userProfile/n',
-      icon: "iCC-Visa",
+      header: "أرائي",
+      routerName: 'userProfile/r',
+      icon: "iCC-Menu",
+    },
+    {
+      header: "الإشعارات",
+      routerName: 'userProfile/b',
+      icon: "iCC-Menu",
     },
     {
       header: "الشروط والأحكام",

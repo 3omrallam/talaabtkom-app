@@ -2,7 +2,10 @@
 <div class="fCC-reg-sF cCC-text-support2 d-lg-block d-none position-relative"
   *ngIf='activeRouter.url.includes("/resturants") || this.activeRouter.url == "/track-order"'>
   <!-- Header Resturant Image -->
-  <app-cover-header-block headerImage="imCC-Resturantsheader" headerHeight="CC-coverresturants-size"></app-cover-header-block>
+  <!-- <app-cover-header-block headerImage="imCC-Resturantsheader" headerHeight="CC-coverresturants-size"></app-cover-header-block> -->
+  <div
+    class="container-fluid p-0 imCC-Background-Cover imCC-Resturantsheader CC-coverresturants-size d-flex align-items-center justify-content-center">
+  </div>
   <!-- Header Location Text and ICON -->
   <div *ngIf='activeRouter.url.includes("/resturants")'>
     <app-resturants-header-block headerTitle='المطاعم المتاحة بمنطقة الرياض' headerIcon='iCC-Home '></app-resturants-header-block>
@@ -48,6 +51,6 @@
 <!-- Cover Section -->
 <div
   *ngIf='!activeRouter.url.includes("/resturants") && this.activeRouter.url !== "/contact-us" && this.activeRouter.url !== "/track-order" && this.activeRouter.url !== "/check-out" && this.activeRouter.url !== "/" && !activeRouter.url.includes("/userProfile")'>
-  <app-cover-header-block headerImage="imCC-Coverresturant" headerHeight="CC-coverresturantprofile-size">
+  <app-cover-header-block [headerImage]='_ResturantCardService?.singleResturantInfo' headerHeight="CC-coverresturantprofile-size">
   </app-cover-header-block>
 </div>

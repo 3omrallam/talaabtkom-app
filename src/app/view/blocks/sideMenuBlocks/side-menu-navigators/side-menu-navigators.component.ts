@@ -21,10 +21,5 @@ export class SideMenuNavigatorsComponent implements OnInit {
   scrollTo(section:any) {
     document.querySelector('#' + section)?.scrollIntoView();
   }
-  setActiveClass(section:any){
-    console.log(section)
-    // document.querySelector('.'+section)?.classList.toggle('bg-danger');
-    // document.querySelector('.'+section)?.classList.toggle('bg-info');
-  }
  
 }

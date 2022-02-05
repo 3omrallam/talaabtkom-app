@@ -5,7 +5,7 @@ textContent="{{_ResturantCardService.singleResturantInfo?.address}}" textClass="
 <!-- Time and Tables and Rate of the Resturant -->
 <div class="d-flex justify-content-between uCC-gap-32">
     <!-- Clock Icon -->
-  <app-icon iconName="iCC-Newclock iCC-sD imCC-Background-Contain d-flex ms-2" textContent="90 دقيقة"
+  <app-icon iconName="iCC-Newclock iCC-sD imCC-Background-Contain d-flex ms-2" textContent="{{_ResturantCardService.singleResturantInfo?.delivery_range}} دقيقة"
       textClass="fCC-reg-sC cCC-text-support2"></app-icon>
       <!-- Tables Icon -->
   <app-icon iconName="iCC-Newtables iCC-sD imCC-Background-Contain d-flex ms-2" textContent="{{_ResturantCardService.singleResturantInfo?.num_table}}"
