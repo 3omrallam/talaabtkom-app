@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from 'src/app/core/services/user/account.service';
 
 @Component({
   selector: 'app-user-info-section',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserInfoSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _AccountService: AccountService) { }
 
   ngOnInit(): void {
   }

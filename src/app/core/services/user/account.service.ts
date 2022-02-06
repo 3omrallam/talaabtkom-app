@@ -14,6 +14,8 @@ import { NavbarService } from 'src/app/view/layout/services/navbar.service';
 export class AccountService {
   private userSubject!: BehaviorSubject<User>;
   public user!: Observable<User>;
+  public userName ='';
+  public lastName ='';
 
   public verificationChecked : Number = 0
   public phoneProccess : any
@@ -54,6 +56,12 @@ export class AccountService {
       localStorage.removeItem('user');
       this.userSubject.next(null!);
       this.router.navigate(['/']);
+  }
+  // Get UserName
+  getUserName() {
+    this.userName = JSON.parse(localStorage.getItem('user')!).data.name;
+    // this.userName = JSON.parse(localStorage.getItem('user')!).data.name.split(' ')[0];
+    // this.lastName = JSON.parse(localStorage.getItem('user')!).data.name.substring(this.userName.length).trim();
   }
 
 }

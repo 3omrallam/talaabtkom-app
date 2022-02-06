@@ -1,18 +1,18 @@
-<div class="row justify-content-center align-items-center pt-5">
+<div class="container col-6 uCC-f-radius-sB uCC-Border-white uCC-shadow-f-white-10">
     <!-- FirstName Information -->
-    <div class="col-5 mt-5">
+    <div class="mt-5">
         <label for="firstname" class="fCC-reg-sC cCC-text-support2 mb-2">الاسم الاول</label>
-        <div class="d-flex w-100 p-1 align-items-center uCC-f-radius-sA uCC-Border-sB-Main cCC-bg-white">
+        <div class="d-flex p-1 align-items-center uCC-f-radius-sA cCC-bg-white">
             <!-- Profile icon -->
             <app-icon iconName="iCC-Profile d-flex iCC-sB me-2 ms-1"></app-icon>
             <!-- FirstName -->
-            <input type="text" placeholder="أدم" class="py-2 border-0 w-100 fCC-reg-sC cCC-text-support2 m-0">
+            <input type="text" placeholder="{{this._AccountService.userName}}" class="py-2 border-0 fCC-reg-sC cCC-text-support2 m-0">
         </div>
     </div>
     <!-- LastName -->
-    <div class="col-5 mt-5">
+    <div class="mt-5">
         <label for="lastName" class="fCC-reg-sC cCC-text-support2 mb-2">أسم العائلة</label>
-        <div class="d-flex w-100 p-1 align-items-center uCC-f-radius-sA uCC-Border-sB-Main cCC-bg-white">
+        <div class="d-flex w-100 p-1 align-items-center uCC-f-radius-sA cCC-bg-white">
             <!-- Profile icon -->
             <app-icon iconName="iCC-Profile d-flex iCC-sB me-2 ms-1"></app-icon>
             <!-- LastName -->
@@ -20,9 +20,9 @@
         </div>
     </div>  
     <!-- Email Adress Information -->
-    <div class="col-5 my-5">
+    <div class="my-5">
         <label for="Email" class="fCC-reg-sC cCC-text-support2 mb-2">البريد الألكتروني</label>
-        <div class="d-flex w-100 p-1 align-items-center uCC-f-radius-sA uCC-Border-sB-Main cCC-bg-white">
+        <div class="d-flex w-100 p-1 align-items-center uCC-f-radius-sA cCC-bg-white">
             <!-- Email icon -->
             <app-icon iconName="iCC-Email d-flex iCC-sB me-2 ms-1"></app-icon>
             <!-- Email-->
@@ -30,22 +30,17 @@
         </div>
     </div>
     <!-- Birthdate Information -->
-    <div class="col-5 my-5">
+    <div class="my-5">
         <label for="firstname" class="fCC-reg-sC cCC-text-support2 mb-2">تاريخ الميلاد</label>
-        <div class="d-flex w-100 p-1 align-items-center uCC-f-radius-sA uCC-Border-sB-Main cCC-bg-white">
+        <div class="d-flex w-100 p-1 align-items-center uCC-f-radius-sA cCC-bg-white">
             <!-- Clender icon-->
             <app-icon iconName="iCC-Calender d-flex iCC-sB me-2 ms-1"></app-icon>
             <!-- Birthdate -->
             <input type="text" placeholder="25/7/1999" class="py-2 border-0 w-100 fCC-reg-sC cCC-text-support2 m-0">
         </div>
     </div>
-    <div class="col-5"></div>
-    <div class="col-5">
-        <div class="d-flex align-items-center">
-            <!-- Update Button-->
-            <button class="btn w-50 py-2 cCC-bg-main cCC-text-white fCC-reg-sD uCC-l-radius-sF">تحديث</button>
-            <!-- Cancel Button -->
-            <button class="btn py-2 w-50 cCC-bg-white cCC-text-dark fCC-reg-sD uCC-Border-sB-Main uCC-l-radius-sA">إلغاء</button>
-        </div>
+    <div>
+        <!-- Update Button-->
+        <button class="btn w-100 py-2 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA">تحديث</button>
     </div>
 </div>

@@ -1,10 +1,10 @@
-<div class="uCC-f-radius-sB cCC-bg-white pb-2">
+<div class="uCC-f-radius-sB cCC-bg-white w-100 p-4">
     <div class=" d-flex flex-column align-items-center">
         <!-- Aside Sticker Block -->
         <app-resturant-sticker-block [resturantInformation]='_ResturantCardService?.singleResturantInfo'></app-resturant-sticker-block>
         <!-- Aside Navigators -->
     </div>
     <div class="my-5">
-        <app-side-menu-navigators [listElements]="_ResturantAsidePageService.resturantNavigator"></app-side-menu-navigators>
+        <app-side-menu-navigators [listElements]="_ResturantAsidePageService.resturantNavigator" [routerLink1]="'resturant-profile/'+ _ResturantCardService?.singleResturantInfo?.id"></app-side-menu-navigators>
     </div>
 </div>

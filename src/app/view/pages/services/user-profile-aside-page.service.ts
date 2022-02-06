@@ -9,42 +9,37 @@ export class UserProfileAsidePageService {
 
     {
       header: "المعلومات الشخصية",
-      routerName : 'userProfile',
+      routerName : '',
       icon: "iCC-Usertag",
     },
     {
       header: "المفضلة",
-      routerName: 'userProfile/t',
+      routerName: '/t',
       icon: "iCC-Menu",
     },
     {
       header: "إعادة توثيق الجوال",
-      routerName: 'userProfile/recover-phone',
+      routerName: '/recover-phone',
       icon: "iCC-Mobile",
     },
     {
       header: "تغير كلمة المرور",
-      routerName: 'userProfile/change-password',
+      routerName: '/change-password',
       icon: "iCC-Lock",
     },
     {
       header: "طلباتي",
-      routerName: 'userProfile/reservation',
+      routerName: '/reservation',
       icon: "iCC-Menu",
     },
     {
       header: "أرائي",
-      routerName: 'userProfile/r',
-      icon: "iCC-Menu",
+      routerName: '/r',
+      icon: "iCC-Myopinions",
     },
     {
       header: "الإشعارات",
-      routerName: 'userProfile/b',
-      icon: "iCC-Menu",
-    },
-    {
-      header: "الشروط والأحكام",
-      routerName: 'userProfile/privacy-policy',
+      routerName: '/b',
       icon: "iCC-Messagetext",
     },
   ];

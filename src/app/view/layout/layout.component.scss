@@ -1,16 +1,16 @@
 .CC-aside-cart-holder{
     position: fixed;
     top: 71px;
-    height: calc(100% - 76px);
+    height: calc(100% - 71px);
     max-width: 400px ;
     min-width: 350px ;
     z-index: 1;
-    @media screen and(max-width:1399.8px) {
-        top: 76px;  
+    @media screen and(max-width:1198px) {
+        top: 80px;  
     }
 }
-@media screen and (min-height:1938px) {
-    .CC-Height-Handler{
-        height: 100%;
-    }    
+
+.xax{
+    height: calc(100vh- 515px);
+    background-color: red;
 }

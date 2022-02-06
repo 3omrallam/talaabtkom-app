@@ -34,14 +34,14 @@
 .CC-resturant-holder-grid{
     padding: 16px;
     width: 100%;
-    align-items: center;
+    align-items: start;
     display: grid;
     gap: 16px;
     grid-template-columns: auto 1fr 40px;
     grid-template-rows: auto auto;
-      @media screen and (max-width: 330px) {
-         gap: 8px;
-        }
+    @media screen and (max-width: 330px) {
+        gap: 8px;
+    }
     .CC-resturant-image{
         @media screen and (min-width: 476px) {
             grid-column: 1/2;

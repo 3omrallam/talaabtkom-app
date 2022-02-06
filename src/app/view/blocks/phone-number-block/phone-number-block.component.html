@@ -3,13 +3,13 @@
     <label for="phone" class="cCC-text-support2 fCC-reg-sB mb-2">رقم الهاتف</label>
     <div [ngClass]="{'has-danger': phone.invalid &&(phone.dirty),
         'has-success':phone.valid && (phone.dirty) }"
-        class=" d-flex shadow py-2~ p-3 form-input align-items-center uCC-f-radius-sA cCC-bg-white mb-4">
+        class=" d-flex uCC-shadow-f-white-10 px-3 form-input align-items-center uCC-f-radius-sA cCC-bg-white mb-2">
         <!-- Mobile icon -->
         <app-icon iconName="iCC-Mobilelogin d-flex iCC-sB ms-2"></app-icon>
         <!-- Mobile Input-->
         <input #phone="ngModel" [ngClass]="{'is-invalid': phone.invalid &&(phone.dirty),
         'is-valid':phone.valid && (phone.dirty) }" type="text" placeholder="+966"
-            class="form-control border-0 fCC-reg-sB cCC-text-support2 m-0 p-0" name="phone" ngModel required minlength="13"
+            class="form-control border-0 fCC-reg-sB py-3 cCC-text-support2 m-0 p-0" name="phone" ngModel required minlength="13"
             maxlength="13">
     </div>
     <!-- Errors Div -->

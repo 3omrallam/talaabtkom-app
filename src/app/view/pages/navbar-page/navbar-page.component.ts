@@ -11,13 +11,9 @@ import { AddToCartService } from '../../sections/services/add-to-cart.service';
 export class NavbarPageComponent implements OnInit {
   isShow: boolean = false;
   displayOverLay: String = 'd-none'
-  totalItems =0;
   constructor(public _NavbarService: NavbarService , public _AddToCartService:AddToCartService, public _AccountService: AccountService) { }
 
   ngOnInit(): void {
-    // this._AddToCartService.getItem().subscribe((product:any)=>{
-    //   this.totalItems = product.length;
-    // })
     console.log(this._AccountService.userValue?.success);
     
   }

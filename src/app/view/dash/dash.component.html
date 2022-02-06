@@ -1,0 +1,46 @@
+<!-- <section class="container-fluid px-0 p-0 d-flex flex-column justify-contnet-between cCC-bg-lightblue">
+    <nav class="container-fluid p-0 position-fixed cCC-bg-white top-0" style="z-index: 1;">
+        <div style="z-index: 999;">
+            <app-navbar-layout></app-navbar-layout>
+        </div>
+    </nav>
+    <header class="container-fluid p-0" style="margin-top: 70px;">
+        <app-header-layout></app-header-layout>
+    </header>
+    <aside *ngIf="!_NavbarService.cartMenuToggle"
+        class="py-4 cCC-bg-white CC-aside-cart-holder uCC-shadow-r-10 uCC-t-4 "
+        [ngStyle]="{'left': _NavbarService.cartMenuToggle ? '-410px' : '0px' }" [@animateCart]>
+        <app-cart-popup-shared></app-cart-popup-shared>
+    </aside>
+    <section
+        class="{{this.activeRouter.url !== '/' ? 'container uCC-gap-24' : 'container-fluid'}} p-0 px-0 h-100 row justify-content-center align-items-start mx-auto m-0 ">
+        <aside
+            *ngIf='this.activeRouter.url !== "/" && this.activeRouter.url !== "/contact-us" && this.activeRouter.url !== "/check-out" && this.activeRouter.url !== "/track-order"'
+            class="container-fluid p-0 h-100 col-3 d-lg-block d-none {{this.activeRouter.url !== '/resturants' ? 'position-sticky' : ''}}"
+            style="top: 200px;">
+            <app-side-menu-layout></app-side-menu-layout>
+        </aside>
+        <main class="container-fluid h-100 col p-0 p-md-0 p-3 cCC-bg-lightblue">
+            <app-master-container-layout></app-master-container-layout>
+        </main>
+        <section class="container-fluid p-0">
+            <div class="position-fixed top-0 end-0 start-0 bottom-0 cCC-bg-dark" [@animateLayer] style="z-index: 9;"
+                *ngIf="!_AccountService.userValue?.success && !_NavbarService.loginToggle" (click)='animateLogin()'
+                [ngStyle]="{'opacity': !_NavbarService.loginToggle ? '0.2' : '0'}">
+            </div>
+            <div *ngIf="!_AccountService.userValue?.success && !_NavbarService.loginToggle" [@animateLogin]
+                class="uCC-t-4 CC-Popup-Holder position-fixed"
+                style="transform: translate(50% , -50%);right: 50%;z-index: 10;"
+                [ngStyle]="{'top': _NavbarService.loginToggle ? '-718px' : '50%'}">
+                <app-login-popup-shared></app-login-popup-shared>
+                <div class=" position-absolute top-0 start-0 ms-4 mt-4 uCC-Click"
+                    *ngIf="!_AccountService.userValue && !_NavbarService.loginToggle" (click)='animateLogin()'>
+                    <app-icon [iconName]='"iCC-Closebutton imCC-Background-Contain iCC-sB"'></app-icon>
+                </div>
+            </div>
+        </section>
+    </section>
+    <div class="cCC-bg-white m-0 pt-2 pb-3 mt-auto">
+        <app-footer-layout></app-footer-layout>
+    </div>
+</section> -->

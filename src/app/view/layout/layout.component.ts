@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountService } from 'src/app/core/services/user/account.service';
 import { NavbarService } from './services/navbar.service';
-
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',

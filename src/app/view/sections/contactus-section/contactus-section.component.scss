@@ -11,3 +11,10 @@
        width: 100%;
    }
 }
+.CC-Image-Holder{
+     @media screen and(max-width:988px){
+         display: flex;
+         justify-content: center;
+
+     }
+}
