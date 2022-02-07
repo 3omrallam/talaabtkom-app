@@ -1,5 +1,5 @@
 <div class="container px-0 bg-white d-flex align-items-center justify-content-between py-2 position-relative"
-  style="z-index: '1'">
+  style="z-index: '3'">
   <div class="d-flex align-items-center">
     <!-- App Sticker Block Section -->
     <app-sticker-block></app-sticker-block>
@@ -32,7 +32,7 @@
     <!-- vertical divider -->
     <div class="mx-4"></div>
     <!-- Cart Icon Block Section-->
-    <button class="btn position-relative" (click)='animateCart()' aria-label="Cart">
+    <button class="btn position-relative" (click)='_NavbarService.animateCart()' aria-label="Cart">
       <app-icon [iconName]='"iCC-Cartgrey imCC-Background-Contain iCC-sE"'></app-icon>
       <div class="cCC-bg-support1 d-flex align-items-center justify-content-center position-absolute top-0 end-0" style="width: 24px; height: 24px; border-radius: 50%;">
         <span class="fCC-reg-sC cCC-text-main">0</span>
@@ -41,7 +41,12 @@
   </div>
 </div>
 <!-- SEARCH -->
+<!-- Search Layer -->
+<div *ngIf="!_NavbarService.searchMenuToggle" class="position-fixed end-0 start-0 bottom-0 bg-transparent" style="z-index: 1;top: 71px;" (click)="animateNavSearch()"
+[ngStyle]="{'opacity': _NavbarService.searchMenuToggle ? '0' : '1'}" >
+</div>
+<!-- Search Block -->
 <div class="position-absolute uCC-t-4 p-0 w-100"
-  [ngStyle]="{'top': _NavbarService.searchMenuToggle ? '-76px' : '76px'}" >
+  [ngStyle]="{'top': _NavbarService.searchMenuToggle ? '-76px' : '76px'}" style="z-index: 2;" >
   <app-nav-search-shared></app-nav-search-shared>
 </div>

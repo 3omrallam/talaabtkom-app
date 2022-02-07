@@ -35,6 +35,7 @@ import { CartItemsBlockComponent } from './cart-popup-blocks/cart-items-block/ca
 import { NgOtpInputModule } from 'ng-otp-input';
 import { ResturantsHeaderBlockComponent } from './header-blocks/resturants-header-block/resturants-header-block.component';
 import { DeliveryInfoBlockComponent } from './track-order-blocks/delivery-info-block/delivery-info-block.component';
+import { NotificationCardBlockComponent } from './notification-card-block/notification-card-block.component';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { DeliveryInfoBlockComponent } from './track-order-blocks/delivery-info-b
     CartItemsBlockComponent,
     ButtonBlockComponent,
     ResturantsHeaderBlockComponent,
-    DeliveryInfoBlockComponent
+    DeliveryInfoBlockComponent,
+    NotificationCardBlockComponent
   ],
   imports: [
     CommonModule,
@@ -112,7 +114,8 @@ import { DeliveryInfoBlockComponent } from './track-order-blocks/delivery-info-b
     CartItemsBlockComponent,
     ButtonBlockComponent,
     ResturantsHeaderBlockComponent,
-    DeliveryInfoBlockComponent
+    DeliveryInfoBlockComponent,
+    NotificationCardBlockComponent
  
   ]
 })

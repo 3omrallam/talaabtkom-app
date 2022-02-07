@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
+import { AuthService } from 'src/app/core/auth/auth.service';
 import { AccountService } from 'src/app/core/services/user/account.service';
 
 
@@ -10,8 +11,7 @@ import { AccountService } from 'src/app/core/services/user/account.service';
   styleUrls: ['./login-block.component.scss']
 })
 export class LoginBlockComponent implements OnInit {
-  showPassword: boolean = false;
-  constructor(private router: Router,private _AccountService : AccountService) {}
+  constructor(private router: Router, private _AccountService: AccountService, public _AuthService: AuthService) {}
 
   ngOnInit(): void {
   }
@@ -25,6 +25,7 @@ export class LoginBlockComponent implements OnInit {
           }
       });
   }
+
     
 
 }

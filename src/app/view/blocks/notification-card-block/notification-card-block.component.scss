@@ -1,0 +1,21 @@
+.CC-resturantimg-Holder{
+    height: 56px;
+    width: 56px;
+}
+.CC-Grid-Holder{
+    gap: 16px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    .CC-image-Holder{
+        grid-column: 1/2;
+    }
+    .CC-text-Holder{
+        grid-column: 2/3;
+    }
+    .CC-menu-Holder {
+        grid-column: 3/4;
+    }
+}
+.CC-hover-Holder:hover{
+  text-decoration: underline;
+}

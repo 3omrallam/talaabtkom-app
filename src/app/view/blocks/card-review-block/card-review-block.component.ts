@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { reviewsList } from '../../../core/models/reviewsListModal';
 
 @Component({
@@ -10,7 +11,7 @@ export class CardReviewBlockComponent implements OnInit {
 
   @Input() review!: reviewsList;
 
-  constructor() { }
+  constructor(public activeRouter: Router) { }
 
   ngOnInit(): void {
   }

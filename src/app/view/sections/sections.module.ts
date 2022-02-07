@@ -27,6 +27,9 @@ import { CheckoutSectionComponent } from './checkout-section/checkout-section.co
 import { LottieModule } from 'ngx-lottie';
 import { ResturantsGridViewSectionComponent } from './resturants-grid-view-section/resturants-grid-view-section.component';
 import { TrackOrderSectionComponent } from './track-order-section/track-order-section.component';
+import { UserFavouriteItemsSectionComponent } from './user-favourite-items-section/user-favourite-items-section.component';
+import { MyReviewsSectionComponent } from './my-reviews-section/my-reviews-section.component';
+import { NotificationsSectionComponent } from './notifications-section/notifications-section.component';
 
 export function playerFactory() {
   return import(/* webpackChunkName: 'lottie-web' */ 'lottie-web');
@@ -59,6 +62,9 @@ export function playerFactory() {
     CheckoutSectionComponent,
     ResturantsGridViewSectionComponent,
     TrackOrderSectionComponent,
+    UserFavouriteItemsSectionComponent,
+    MyReviewsSectionComponent,
+    NotificationsSectionComponent,
     
   ],
   imports: [
@@ -91,7 +97,10 @@ export function playerFactory() {
     ContactusSectionComponent,
     CheckoutSectionComponent,
     ResturantsGridViewSectionComponent,
-    TrackOrderSectionComponent
+    TrackOrderSectionComponent,
+    UserFavouriteItemsSectionComponent,
+    MyReviewsSectionComponent,
+    NotificationsSectionComponent
   ]
 })
 export class SectionsModule { }

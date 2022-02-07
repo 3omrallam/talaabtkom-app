@@ -7,8 +7,7 @@
         <!-- Mobile icon -->
         <app-icon iconName="iCC-Mobilelogin d-flex iCC-sB ms-2"></app-icon>
         <!-- Mobile Input-->
-        <input #phone="ngModel" [ngClass]="{'is-invalid': phone.invalid &&(phone.dirty),
-        'is-valid':phone.valid && (phone.dirty) }" type="text" placeholder="+966"
+        <input #phone="ngModel" type="text" placeholder="+966"
             class="form-control border-0 fCC-reg-sB py-3 cCC-text-support2 m-0 p-0" name="phone" ngModel required minlength="13"
             maxlength="13">
     </div>

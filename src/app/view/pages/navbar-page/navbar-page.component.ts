@@ -20,9 +20,6 @@ export class NavbarPageComponent implements OnInit {
   animateNavSearch() {
     this._NavbarService.searchMenuToggle = !this._NavbarService.searchMenuToggle
   }
-  animateCart() {
-    this._NavbarService.cartMenuToggle = !this._NavbarService.cartMenuToggle
-  }
   animateLogin() {
     this._NavbarService.loginToggle = !this._NavbarService.loginToggle;
     console.log(this._NavbarService.loginToggle);

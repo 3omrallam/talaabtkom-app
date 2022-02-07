@@ -16,6 +16,7 @@ export interface SingleCard {
     closed:boolean,
     num_table:number,
     media: Array<mediaCard>
+    has_media:boolean;
     tags: Array<tagsCard>
 }
 export interface ResturantCard {

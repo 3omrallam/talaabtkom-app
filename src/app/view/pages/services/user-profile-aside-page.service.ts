@@ -14,8 +14,8 @@ export class UserProfileAsidePageService {
     },
     {
       header: "المفضلة",
-      routerName: '/t',
-      icon: "iCC-Menu",
+      routerName: '/favourite',
+      icon: "iCC-Usertag",
     },
     {
       header: "إعادة توثيق الجوال",
@@ -34,12 +34,12 @@ export class UserProfileAsidePageService {
     },
     {
       header: "أرائي",
-      routerName: '/r',
+      routerName: '/my-reviews',
       icon: "iCC-Myopinions",
     },
     {
       header: "الإشعارات",
-      routerName: '/b',
+      routerName: '/notifications',
       icon: "iCC-Messagetext",
     },
   ];

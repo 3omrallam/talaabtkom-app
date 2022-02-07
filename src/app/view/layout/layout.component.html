@@ -10,10 +10,17 @@
       <app-header-layout></app-header-layout>
     </div>
     <!-- Side Cart -->
-    <aside *ngIf="!_NavbarService.cartMenuToggle"
-    class="py-4 cCC-bg-white CC-aside-cart-holder uCC-shadow-r-10 uCC-t-4 "
-    [ngStyle]="{'left': _NavbarService.cartMenuToggle ? '-410px' : '0px' }" [@animateCart]>
-    <app-cart-popup-shared></app-cart-popup-shared>
+    <aside>
+      <!-- Search Layer -->
+      <div *ngIf="!_NavbarService.cartMenuToggle" class="position-fixed end-0 start-0 bottom-0 bg-transparent"
+        style="z-index: 1;top: 71px;" 
+        [ngStyle]="{'opacity': _NavbarService.cartMenuToggle ? '0' : '1'}" (click)='_NavbarService.animateCart()'>
+      </div>
+      <div *ngIf="!_NavbarService.cartMenuToggle"
+      class="py-4 cCC-bg-white CC-aside-cart-holder uCC-shadow-r-10 uCC-t-4 "
+      [ngStyle]="{'left': _NavbarService.cartMenuToggle ? '-410px' : '0px' }" [@animateCart] style="z-index: 2;">
+      <app-cart-popup-shared></app-cart-popup-shared>
+    </div>
   </aside>
 </header>
 <!-- main -->

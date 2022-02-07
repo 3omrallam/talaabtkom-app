@@ -15,8 +15,6 @@ export class AccountService {
   private userSubject!: BehaviorSubject<User>;
   public user!: Observable<User>;
   public userName ='';
-  public lastName ='';
-
   public verificationChecked : Number = 0
   public phoneProccess : any
   public registerProccess : any
@@ -60,8 +58,6 @@ export class AccountService {
   // Get UserName
   getUserName() {
     this.userName = JSON.parse(localStorage.getItem('user')!).data.name;
-    // this.userName = JSON.parse(localStorage.getItem('user')!).data.name.split(' ')[0];
-    // this.lastName = JSON.parse(localStorage.getItem('user')!).data.name.substring(this.userName.length).trim();
   }
 
 }

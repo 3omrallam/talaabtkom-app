@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ReviewsListService } from '../services/reviews-list.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ReviewsListService } from '../services/reviews-list.service';
 })
 export class ResturantReviewsSectionComponent implements OnInit {
 
-  constructor(public _ReviewsListService: ReviewsListService) { }
+  constructor(public _ReviewsListService: ReviewsListService, public activeRouter: Router) { }
 
   ngOnInit(): void {
   }

@@ -16,6 +16,7 @@ $orange:#E66B32;
 $grey2:#575756;
 $black:#000;
 $lightblue:#F2F5F7;
+$lightyellow :#CACA14;
 // START === Background Color
 .cCC-bg-Inherit{
   background-color: inherit;
@@ -50,11 +51,17 @@ $lightblue:#F2F5F7;
 .cCC-bg-lightblue{
   background-color:$lightblue;
 }
+.cCC-bg-lightyellow{
+  background-color:$lightyellow;
+}
 // END === Background Color
 
 // START === Background With Opacity Color
 .cCC-opacity-gray-10{
   background-color: rgba(112,112,112,0.1);
+}
+.cCC-opacity-main-10{
+  background-color: rgba(245,80,76,0.1);
 }
 .cCC-opacity-grey-25{
   background-color: rgba(112,112,112,0.25);
@@ -103,6 +110,9 @@ $lightblue:#F2F5F7;
 }
 .cCC-bg-opacity-green-20{
   background-color: rgba(49, 243, 92 , 0.20);
+}
+.cCC-text-opacity-lightblue-20{
+  background-color: rgba(202, 202, 20 , 0.2);
 }
 // END === Background With Opacity Color
 // START ===  Color With Opacity
@@ -161,6 +171,9 @@ $lightblue:#F2F5F7;
 .cCC-text-darkGreen{
   color: $darkgreen;
 }
+.cCC-text-lightyellow{
+  color: $lightyellow;
+}
 // END === Text Color
 // START === Text color Opacity
 .cCC-text-opacity-dark-50{
@@ -169,5 +182,6 @@ $lightblue:#F2F5F7;
 .cCC-text-opacity-dark-20{
   color: rgba(54, 53, 55 , 0.2);
 }
+
 
 // END === Text color Opacity

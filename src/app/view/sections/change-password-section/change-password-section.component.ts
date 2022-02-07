@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/core/auth/auth.service';
 
 @Component({
   selector: 'app-change-password-section',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChangePasswordSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _AuthService: AuthService) { }
 
   ngOnInit(): void {
   }
