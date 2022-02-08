@@ -7,20 +7,20 @@
         <div class="CC-resturant-title" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <!-- Resturant-title -->
             <div >
-                <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{blockMenu.title}}</p>
+                <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{blockMenu.name}}</p>
             </div>
             <!-- Resturant Description -->
             <p class="fCC-reg-sC cCC-text-support2 m-0 uCC-Click col-lg-8 col-0">{{blockMenu.description}}</p>
             <div class="d-flex align-items-center uCC-gap-8 mt-2">
                 <!-- Icon -->
                 <i class="d-flex iCC-Calories iCC-sD"></i>
-                <p class="m-0 cCC-text-dark fCC-reg-sC">30<span class="fCC-reg-sC cCC-text-support2 me-1">سعره حرارية</span></p>
+                <p class="m-0 cCC-text-dark fCC-reg-sC">{{+blockMenu.products[0]?.Calories}}<span class="fCC-reg-sC cCC-text-support2 me-1">سعره حرارية</span></p>
             </div>
         </div>
         <!-- Icons -->
         <div class="CC-resturant-salary"  data-bs-toggle="modal" data-bs-target="#exampleModal">
             <!-- Icons -->
-            <p class="cCC-text-main fCC-bold-sB m-0">{{blockMenu.price}}ر.س</p>
+            <p class="cCC-text-main fCC-bold-sB m-0">{{blockMenu.products[0]?.price}} ر.س</p>
         </div>
         <!-- Heart Icon -->
         <div class="CC-resturant-likeAndPlus ">

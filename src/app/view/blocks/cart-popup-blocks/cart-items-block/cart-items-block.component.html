@@ -1,13 +1,13 @@
 <div class="d-flex justify-content-between align-items-center mx-4">
     <div class="d-flex">
         <div>
-            <i class="{{item.image}} imCC-Background-Contain d-flex CC-menu-img-holder"></i>
+            <i class="{{item?.product?.media[0]?.url}} imCC-Background-Contain d-flex CC-menu-img-holder" [ngStyle]="{'background-image': 'url(' + item?.product?.media[0]?.url + ')'}"></i>
         </div>
         <!-- divider -->
         <div class="mx-2"></div>
         <div>
-            <p class="fCC-bold-sC cCC-text-support2 m-0">{{item.title}}</p>
-            <p class="fCC-bold-sA cCC-text-main">{{(item.quantity * item.price)}} ر.س</p>
+            <p class="fCC-bold-sC cCC-text-support2 m-0">{{item?.product?.name}}</p>
+            <p class="fCC-bold-sA cCC-text-main">{{item?.product?.price}} ر.س</p>
         </div>
     </div>
     <div class="d-flex flex-column align-items-end justify-content-end">
@@ -19,4 +19,4 @@
         </div>
     </div>
 </div>
-<p class="fCC-reg-sB cCC-text-support2 col-9 me-4">{{item.description}}</p>
+<p class="fCC-reg-sB cCC-text-support2 col-9 me-4">{{item?.product?.description}}</p>

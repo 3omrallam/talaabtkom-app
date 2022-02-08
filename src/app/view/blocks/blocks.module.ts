@@ -36,6 +36,8 @@ import { NgOtpInputModule } from 'ng-otp-input';
 import { ResturantsHeaderBlockComponent } from './header-blocks/resturants-header-block/resturants-header-block.component';
 import { DeliveryInfoBlockComponent } from './track-order-blocks/delivery-info-block/delivery-info-block.component';
 import { NotificationCardBlockComponent } from './notification-card-block/notification-card-block.component';
+import { MapViewBlockComponent } from './shared/map-view-block/map-view-block.component';
+import { AddressMapPopupSharedComponent } from './shared/address-map-popup-shared/address-map-popup-shared.component';
 
 
 @NgModule({
@@ -73,7 +75,9 @@ import { NotificationCardBlockComponent } from './notification-card-block/notifi
     ButtonBlockComponent,
     ResturantsHeaderBlockComponent,
     DeliveryInfoBlockComponent,
-    NotificationCardBlockComponent
+    NotificationCardBlockComponent,
+    MapViewBlockComponent,
+    AddressMapPopupSharedComponent
   ],
   imports: [
     CommonModule,
@@ -115,7 +119,9 @@ import { NotificationCardBlockComponent } from './notification-card-block/notifi
     ButtonBlockComponent,
     ResturantsHeaderBlockComponent,
     DeliveryInfoBlockComponent,
-    NotificationCardBlockComponent
+    NotificationCardBlockComponent,
+    MapViewBlockComponent,
+    AddressMapPopupSharedComponent
  
   ]
 })

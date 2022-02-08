@@ -1,5 +1,5 @@
-<div *ngIf="_AddToCartService.cartItems.length ===0" class="fCC-bold-sD cCC-text-support2 text-center alert">العربه فارغه</div>
-<div *ngIf="_AddToCartService.cartItems.length > 0" class="d-flex flex-column h-100">
+<div *ngIf="_OrderProccessService.allProductsInCart?.data?.cart.length === 0" class="fCC-bold-sD cCC-text-support2 text-center alert">العربه فارغه</div>
+<div *ngIf="_OrderProccessService.allProductsInCart?.data?.cart.length > 0"  class="d-flex flex-column h-100">
     <div>
         <!-- Header -->
         <p class="fCC-bold-sD cCC-text-support2 text-center mb-3 m-0">إستلام الطلب من</p>
@@ -28,11 +28,11 @@
         </div>
         <section style="overflow-y: auto; height: 40%;">
             <!-- Cart Items Block -->
-            <div *ngFor="let items of _AddToCartService.cartItems ; let last=last">
+            <div *ngFor="let items of _OrderProccessService.allProductsInCart?.data?.cart ; let last=last">
                 <app-cart-items-block [item]="items"></app-cart-items-block>
                 <div class="CC-horizontal-divider mx-4 my-3"></div>
             </div>
-            <div class="d-flex justify-content-between mx-4">
+            <!-- <div class="d-flex justify-content-between mx-4">
                 <div class="d-flex flex-column uCC-gap-24">
                     <p class="m-0 fCC-reg-sD cCC-text-grey2">المجموع</p>
                     <p class="m-0 fCC-reg-sD cCC-text-grey2">ضريبة القيمة المضافة</p>
@@ -42,10 +42,10 @@
                     <p class="m-0 fCC-reg-sD cCC-text-grey2">120 ر.س</p>
                 </div>
             </div>
-            <div class="CC-horizontal-divider m-4"></div>
+            <div class="CC-horizontal-divider m-4"></div> -->
             <div class="d-flex justify-content-between mx-4">
                 <p class="m-0 fCC-bold-sB cCC-text-grey2">اجمالي الطلب</p>
-                <p class="m-0 fCC-bold-sB cCC-text-main">470 ر.س</p>
+                <p class="m-0 fCC-bold-sB cCC-text-main">{{_OrderProccessService.allProductsInCart?.data?.total}} ر.س</p>
             </div>
         </section>
     </div>

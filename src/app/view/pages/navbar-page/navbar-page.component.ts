@@ -19,7 +19,16 @@ export class NavbarPageComponent implements OnInit {
     window.onresize = () => {
       this.isMobile = this.getIsMobile();
     };
+
+    this._AccountService?.userValue?.data?.token && this.getUserOrdersCount()
   }
+
+  getUserOrdersCount(){
+    this._NavbarService.getCartCount(this._AccountService?.userValue?.data?.token).subscribe(res => {
+      this._NavbarService.getUserCartCount = res
+    })
+  }
+
   animateNavSearch() {
     this._NavbarService.searchMenuToggle = !this._NavbarService.searchMenuToggle
   }

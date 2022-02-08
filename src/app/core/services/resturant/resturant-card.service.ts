@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 export class ResturantCardService {
   resturantCards! : ResturantCard
   singleResturantInfo : any
+  singleResturantCategories! : any
 
   constructor(private _http: HttpClient) { }
 
@@ -15,4 +16,9 @@ export class ResturantCardService {
   getResturant(query: String) { 
     return this._http.get<ResturantCard>(`${environment.apiUrl}/api/markets${query}`)
   }
+
+  getResturantProducts(productID: Number, apiToken : String) { 
+    return this._http.get<ResturantCard>(`${environment.apiUrl}/api/category/products?market_id=${productID}&api_token=${apiToken}`)
+  }
+
 }

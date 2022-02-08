@@ -15,7 +15,7 @@ import { AddToCartPopupComponent } from './add-to-cart-popup/add-to-cart-popup.c
     CartPopupSharedComponent,
     NavSearchSharedComponent,
     LoginPopupSharedComponent,
-    AddToCartPopupComponent
+    AddToCartPopupComponent,
   ],
   imports: [
     CommonModule,
@@ -27,7 +27,7 @@ import { AddToCartPopupComponent } from './add-to-cart-popup/add-to-cart-popup.c
   exports: [
     CartPopupSharedComponent,
     NavSearchSharedComponent,
-    LoginPopupSharedComponent
+    LoginPopupSharedComponent,
   ]
 })
 export class SharedModule { }

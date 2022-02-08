@@ -18,6 +18,7 @@ export class AccountService {
   public verificationChecked : Number = 0
   public phoneProccess : any
   public registerProccess : any
+  public getUserAddress!: any;
 
   constructor(private router: Router, private _http: HttpClient, private _NavbarService : NavbarService) {
     this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')!));
@@ -34,6 +35,11 @@ export class AccountService {
   sendRegistrationData(data : Object){
     return this._http.post<Response>(`${environment.apiUrl}/api/register`, data)
   }
+
+  getUserDeliveryAddress(apiToken : String){
+    return this._http.get(`${environment.apiUrl}/api/delivery_addresses?api_token=${apiToken}`)
+  }
+
 
   public get userValue(): User {
     return this.userSubject.value;

@@ -41,7 +41,10 @@ export class LayoutComponent implements OnInit {
   
   displayOverLay: String = 'd-none';
   constructor(public activeRouter: Router, public _NavbarService: NavbarService, public _AccountService : AccountService) { }
-  ngOnInit(): void {} 
+  ngOnInit(): void {
+
+    this._AccountService?.userValue?.data?.token && this.getUserAddress()
+  } 
 
   animateLogin() {
     this._NavbarService.loginToggle = !this._NavbarService.loginToggle;
@@ -55,5 +58,12 @@ export class LayoutComponent implements OnInit {
         }, 400);
         break;
     }
+  }
+
+  getUserAddress(){
+    this._AccountService.getUserDeliveryAddress(this._AccountService?.userValue?.data?.token).subscribe(res => {
+      this._AccountService.getUserAddress = res
+      console.log(this._AccountService.getUserAddress);
+    })
   }
 }
