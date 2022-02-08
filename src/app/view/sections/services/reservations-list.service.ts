@@ -12,10 +12,10 @@ export class ReservationsListService {
       description: `2x وجبة شاورمة 2x وجبة حوواشي`,
       date: '10/08/2021',
       process: 'تحت التنفيذ',
-      time: '60:00:00',
-      bgStyle: 'cCC-opacity-green-20',
-      textStyle: 'cCC-text-blue',
-      icon: 'iCC-Clockblue'
+      bgStyle: 'cCC-text-opacity-lightblue-20',
+      textStyle: 'cCC-text-lightyellow',
+      icon: 'iCC-Clockblue',
+      border:'uCC-Border-lightyellow'
     },
     {
       id: '#T25025489',
@@ -24,10 +24,10 @@ export class ReservationsListService {
       description: `2x وجبة فراخ 4x وجيه كومبو`,
       date: '8/07/2021',
       process: 'مكتمل',
-      time: '',
       bgStyle: 'cCC-opacity-green-20',
       textStyle: 'cCC-text-lightgreen',
-      icon: ''
+      icon: '',
+      border: 'uCC-Border-green'
 
     },
     {
@@ -37,10 +37,10 @@ export class ReservationsListService {
       description: `1x برجر دجاج 2x برجر لحم 5x وجبه`,
       date: '22/2/2021',
       process: 'ملغي',
-      time: '',
       bgStyle: 'cCC-opacity-grey-20',
       textStyle: 'cCC-text-support2',
-      icon: ''
+      icon: '',
+      border: 'uCC-Border-supprt2'
 
     },
 

@@ -24,3 +24,12 @@
   right: 50%;
   transform: translate(50%);
 }
+
+.LT-navbar-small{
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 991px) {
+    justify-content: space-between;
+    width: 100%;
+  }
+}

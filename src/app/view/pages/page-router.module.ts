@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import { ChangePasswordSectionComponent } from '../sections/change-password-section/change-password-section.component';
+import { MyReviewsSectionComponent } from '../sections/my-reviews-section/my-reviews-section.component';
+import { NotificationsSectionComponent } from '../sections/notifications-section/notifications-section.component';
 import { PrivacyPolicySectionComponent } from '../sections/privacy-policy-section/privacy-policy-section.component';
 import { RecoverPhoneSectionComponent } from '../sections/recover-phone-section/recover-phone-section.component';
 import { ResturantCategorySectionComponent } from '../sections/resturant-category-section/resturant-category-section.component';
@@ -7,6 +9,7 @@ import { ResturantInformationSectionComponent } from '../sections/resturant-info
 import { ResturantReviewsSectionComponent } from '../sections/resturant-reviews-section/resturant-reviews-section.component';
 import { ResturantsGridViewSectionComponent } from '../sections/resturants-grid-view-section/resturants-grid-view-section.component';
 import { ResturantsListSectionComponent } from '../sections/resturants-list-section/resturants-list-section.component';
+import { UserFavouriteItemsSectionComponent } from '../sections/user-favourite-items-section/user-favourite-items-section.component';
 import { UserInfoSectionComponent } from '../sections/user-info-section/user-info-section.component';
 import { UserReservationsSectionComponent } from '../sections/user-reservations-section/user-reservations-section.component';
 
@@ -21,10 +24,13 @@ export const resturantRouter: Routes = [
 // [Userprofile Aside] Route
 export const userProfileRouter: Routes = [
     { path: '', component: UserInfoSectionComponent},
+    { path: 'favourite', component: UserFavouriteItemsSectionComponent},
     { path: 'reservation', component: UserReservationsSectionComponent},
     { path: 'privacy-policy', component: PrivacyPolicySectionComponent},
     { path: 'recover-phone', component: RecoverPhoneSectionComponent},
     { path: 'change-password', component: ChangePasswordSectionComponent},
+    { path: 'my-reviews', component: MyReviewsSectionComponent},
+    { path: 'notifications', component: NotificationsSectionComponent},
 ]
 // [Userprofile Aside] Route
 export const resturantsView: Routes = [

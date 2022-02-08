@@ -1,21 +1,27 @@
-<div class="CC-Grid-Holder cCC-bg-white uCC-f-radius-sB mt-3 p-3">
+<div class="CC-Grid-Holder cCC-bg-white uCC-f-radius-sB mt-3 p-3 uCC-shadow-f-white-10">
     <!-- Image Holder -->
     <div class="CC-image-Holder">
         <i class="{{review.image}} CC-Userprofile-Holder uCC-f-radius-s50 d-flex imCC-Background-Cover uCC-f-radius-sB CC-resturantsimgs-Holder uCC-Click"></i>
     </div>
     <!-- Text Holder -->
-    <div class="CC-text-Holder">
-        <p class="m-0 fCC-bold-sB cCC-text-dark">{{review.name}}</p>
-        <div class="d-flex align-items-center uCC-gap-8">
-            <i class="iCC-Staryellow iCC-sK imCC-Background-Contain d-flex"></i>
-            <i class="iCC-Staryellow iCC-sK imCC-Background-Contain d-flex"></i>
-            <i class="iCC-Staryellow iCC-sK imCC-Background-Contain d-flex"></i>
-            <i class="iCC-Staryellow iCC-sK imCC-Background-Contain d-flex"></i>
-            <i class="iCC-Staryellow iCC-sK imCC-Background-Contain d-flex"></i>
-            <p class="cCC-text-opacity-dark-50 fCC-reg-sB m-0">{{review.date}}</p>
+    <div class="d-flex justify-content-between">
+        <div class="CC-text-Holder">
+            <p class="m-0 fCC-bold-sB cCC-text-dark">{{review.name}}</p>
+            <div class="d-flex align-items-center uCC-gap-8">
+                <i class="iCC-Staryellow iCC-sK imCC-Background-Contain d-flex"></i>
+                <i class="iCC-Staryellow iCC-sK imCC-Background-Contain d-flex"></i>
+                <i class="iCC-Staryellow iCC-sK imCC-Background-Contain d-flex"></i>
+                <i class="iCC-Staryellow iCC-sK imCC-Background-Contain d-flex"></i>
+                <i class="iCC-Staryellow iCC-sK imCC-Background-Contain d-flex"></i>
+                <p class="cCC-text-opacity-dark-50 fCC-reg-sB m-0">{{review.date}}</p>
+            </div>
         </div>
+        <div *ngIf="this.activeRouter.url == '/userProfile/my-reviews'" class="d-flex align-items-center uCC-gap-8">
+            <p class="m-0 fCC-bold-sB cCC-text-dark">مطعم خيال</p>
+            <i class="imCC-Resturantimg2 iCC-sF imCC-Background-Contain d-flex"></i>
+        </div>
+        <!-- Review Holder -->
     </div>
-    <!-- Review Holder -->
     <div class="CC-desc-Holder">
         <p class="m-0 fCC-reg-sC cCC-text-support2 pe-md-3 pe-0">
            {{review.description}}

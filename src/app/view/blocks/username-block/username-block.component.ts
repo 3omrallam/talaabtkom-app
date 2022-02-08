@@ -8,11 +8,8 @@ import { AccountService } from 'src/app/core/services/user/account.service';
   styleUrls: ['./username-block.component.scss']
 })
 export class UsernameBlockComponent implements OnInit {
-  // Show Password Fields
-  showPassword: boolean = false;
-  showConfirmPassword:boolean = false;
 
-  constructor(private _AccountService : AccountService , private _AuthService : AuthService) { }
+  constructor(private _AccountService : AccountService , public _AuthService : AuthService) { }
 
   ngOnInit(): void {
   }

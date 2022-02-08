@@ -11,7 +11,6 @@ import { ResturantCardService } from 'src/app/core/services/resturant/resturant-
   styleUrls: ['./resturants-grid-view-section.component.scss']
 })
 export class ResturantsGridViewSectionComponent implements OnInit, OnDestroy {
-  // getResturantData$!: Observable<Array<SingleCard>>;
 
   constructor(public _ResturantCardService: ResturantCardService, public activeRouter: ActivatedRoute) { }
 

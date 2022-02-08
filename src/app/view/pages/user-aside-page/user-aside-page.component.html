@@ -1,11 +1,16 @@
-<div class="uCC-Border-sA-Support1 mt-5 pb-2">
+<div class="cCC-bg-white uCC-f-radius-sB mt-5 pb-5">
     <div class="d-flex flex-column align-items-center">
-        <i class="imCC-Userimage CC-Userprofile-Holder uCC-Border-sA-Main uCC-f-radius-sA 
+        <!-- Image Holder -->
+        <div class="imCC-Userimage CC-Userprofile-Holder uCC-Border-lightBlue uCC-shadow-f-black-16 uCC-f-radius-sA 
+            uCC-Click CC-Userimgs-Poition imCC-Background-Contain position-relative">
+            <i class="imCC-Userimage CC-Userprofile-Holder uCC-f-radius-sA 
             uCC-Click CC-Userimgs-Poition imCC-Background-Contain">
-        </i>
+           </i>
+        </div>
+        <!-- Camera Holder -->
         <div class="cCC-bg-support1 uCC-Border-sB-Main uCC-f-radius-sC p-1 CC-Camera-Holder mb-5">
             <i class="iCC-Photocamera d-flex imCC-Background-Contain uCC-Click iCC-sB"></i>
         </div>
     </div>
-    <app-side-menu-navigators [listElements]="_UserProfileAsidePageService.userProfileNavigator"></app-side-menu-navigators>
+    <app-side-menu-navigators [listElements]="_UserProfileAsidePageService.userProfileNavigator" [routerLink1]="'userProfile/'"></app-side-menu-navigators>
 </div>

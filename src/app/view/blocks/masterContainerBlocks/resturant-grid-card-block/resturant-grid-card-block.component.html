@@ -2,7 +2,7 @@
 <section class="position-relative cCC-bg-white uCC-f-radius-sB pb-2" routerLink="/resturant-profile/{{blockState?.id}}">
     <div class="position-relative">
         <i class=" d-flex imCC-Background-Cover CC-resturants-Holder uCC-f-radius-sA"
-            style="background-image: url({{blockState.media[0].url}});"></i>
+            style="background-image: url({{imageUrl}});"></i>
         <!-- Resturant Status -->
         <div
             class="position-absolute {{blockState.closed === true ? 'd-flex': 'd-none'}} top-0 bottom-0 start-0 uCC-f-radius-sA end-0 cCC-opacity-grey-70 justify-content-center align-items-center">
@@ -13,17 +13,19 @@
         <div class="d-flex w-100 align-items-center">
             <!-- Resturant Logo -->
             <i class="d-flex me-2 CC-logo-Holder imCC-Background-Contain"
-                style="background-image: url({{blockState.media[0].icon}});"></i>
+                style="background-image: url({{iconUrl}});"></i>
             <div class="mx-3">
                 <!-- Resturant Name -->
                 <p class="mb-0 cCC-text-dark fCC-bold-sB">{{blockState.name}}</p>
                 <!-- Resturant Tags -->
-                <div class="d-flex uCC-gap-8 mt-1">
+                <!-- ! Wait Name From API -->
+                <!-- <div class="d-flex uCC-gap-8 mt-1">
                     <button class="border-0 fCC-reg-sA cCC-text-dark py-1 px-3 cCC-bg-support1 uCC-f-radius-s5"
-                        aria-label="type1">{{blockState.tags[0].name}}</button>
+                    aria-label="type1">{{blockState.tags[0].name}}</button>
                     <button class="border-0 fCC-reg-sA cCC-text-dark py-1 px-3 cCC-bg-support1 uCC-f-radius-s5"
-                        aria-label="type2">{{blockState.tags[1].name}}</button>
-                </div>
+                    aria-label="type2">{{blockState.tags[1].name}}</button>
+                </div> -->
+                <!-- ! Wait Name From API -->
             </div>
         </div>
         <!-- Icon Like -->

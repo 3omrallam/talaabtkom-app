@@ -7,4 +7,7 @@ export class NavbarService {
   loginToggle:boolean = true;
 
   constructor() { }
+  animateCart() {
+    this.cartMenuToggle = !this.cartMenuToggle
+  }
 }

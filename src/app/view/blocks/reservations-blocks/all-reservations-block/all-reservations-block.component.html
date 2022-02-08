@@ -1,19 +1,12 @@
-<div *ngFor="let element of reservationList ; let last= last">
-    <div class="d-flex justify-content-between">
-        <div class="d-flex align-items-center justify-content-center">
+<div *ngFor="let element of reservationList">
+    <div class="CC-resturant-holder-grid cCC-bg-white uCC-f-radius-sB mb-4">
             <!-- Resturant Image -->
-            <div class="position-relative">
-                <i class="{{element.image}} d-flex imCC-Background-Cover CC-resturantsimgs-Holder uCC-Click"></i>
-                <!-- Phone call Icon -->
-                <div class="cCC-opacity-support1-80 uCC-l-radius-sI p-2 uCC-Click position-absolute bottom-0 end-0">
-                    <i class="d-flex iCC-Phone-green iCC-sD imCC-Background-Contain"></i>
-                </div>
+            <div class="CC-resturant-image">
+                <i class="{{element.image}} d-flex imCC-Background-Cover uCC-f-radius-sB CC-resturantsimgs-Holder uCC-Click"></i>
             </div>
-            <div class="me-4">
+            <div class="CC-resturant-title">
                 <!-- Resturant-title -->
-                <a>
-                    <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click mb-2">{{element.title}}</p>
-                </a>
+                <a><p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click mb-2">{{element.title}}</p></a>
                 <!-- Resturant Description -->
                 <div class="d-flex">
                     <p class="fCC-reg-sC cCC-text-support2 mb-2 uCC-Click">{{element.description}}</p>
@@ -21,6 +14,8 @@
                     <div class="mx-1"></div>
                     <p class="cCC-text-main fCC-reg-sC m-0 uCC-Click">عرض المزيد</p>
                 </div>
+                <!-- price -->
+                <p class="cCC-text-main fCC-bold-sB m-0 mb-2">185.00 RS</p>
                 <!-- Icons -->
                 <div class="d-flex">
                     <p class="cCC-text-lightgray fCC-reg-sC m-0">{{element.date}}</p>
@@ -29,25 +24,23 @@
                     <p class="cCC-text-lightgray fCC-reg-sC m-0">{{element.id}}</p>
                 </div>
             </div>
-        </div>
-        <div class="d-flex col-4 flex-column justify-content-center align-items-end">
-            <app-icon iconName="{{element.icon}} iCC-sB imCC-Background-Contain d-flex ms-1"
-                textContent="{{element.time}}" textClass="fCC-reg-sC cCC-text-support2"></app-icon>
-            <p class="fCC-reg-sA {{element.textStyle}} {{element.bgStyle}} px-3 py-1 uCC-f-radius-sA mb-0 mt-1">
+        <div class="CC-resturant-likeAndPlus d-flex flex-column">
+            <!-- Status -->
+            <p class="fCC-reg-sA {{element.textStyle}} {{element.bgStyle}} {{element.border}} px-3 py-1 uCC-f-radius-sA mb-0 mt-1">
                 {{element.process}}</p>
-        </div>
-        <div class="d-flex flex-column justify-content-between align-items-center">
-            <!-- Like Icon -->
-            <div class="uCC-f-radius-sA p-2 cCC-opacity-support1-50 uCC-Click d-flex">
-                <i class="d-flex iCC-Newlike iCC-sD imCC-Background-Contain"></i>
-            </div>
             <!-- Plus Icon -->
-            <div class="p-2 uCC-f-radius-sA cCC-opacity-support1-50 uCC-Click">
-                <i class="d-flex iCC-Reload iCC-sD imCC-Background-Contain"></i>
+            <div class="d-flex uCC-gap-16">
+                <!-- Track Order -->
+                <div *ngIf="element.process == 'تحت التنفيذ'" class="cCC-bg-main px-3 py-2 uCC-f-radius-sA">
+                    <app-icon iconName="iCC-TrackingIcon iCC-sD imCC-Background-Contain d-flex ms-1" textContent="تتبع الأوردر"
+                    textClass="fCC-reg-sC cCC-text-lightblue">
+                </app-icon>
+                </div>
+                <!-- Reorder -->
+                <div class="p-2 uCC-f-radius-sA cCC-opacity-support1-50 uCC-Click">
+                    <i class="d-flex iCC-Reload iCC-sD imCC-Background-Contain"></i>
+                </div>
             </div>
-
         </div>
-
     </div>
-    <div class="CC-horizontal-divider my-3" *ngIf="!last"></div>
 </div>

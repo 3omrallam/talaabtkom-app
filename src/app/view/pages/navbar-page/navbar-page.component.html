@@ -1,47 +1,62 @@
-<div class="container px-0 bg-white d-flex align-items-center justify-content-between py-2 position-relative"
-  style="z-index: '1'">
-  <div class="d-flex align-items-center">
+<div class="container-lg px-3 px-sm-4 px-lg-0 bg-white d-flex align-items-center justify-content-start py-2 position-relative"
+  style="z-index: '3'">
+  <div class="LT-navbar-small">
+  <button *ngIf="isMobile === true" class="btn uCC-Border-sA-Support1 uCC-f-radius-sA p-2 p-sm-3  d-flex align-items-center">
+    <i class="iCC-NavbarIcon iCC-sD d-inline-block"></i>
+  </button>
     <!-- App Sticker Block Section -->
-    <app-sticker-block></app-sticker-block>
-    <!-- vertical divider -->
-    <div class="mx-4"></div>
+    <div class="">
+      <app-sticker-block></app-sticker-block>
+    </div>
     <!-- Search Icon Block Section-->
-    <div class="iCC-sF uCC-shadow-f-20 uCC-f-radius-sA cCC-bg-main d-flex align-items-center justify-content-center uCC-Click"
+    <div
+      class="iCC-sF uCC-shadow-f-20  uCC-f-radius-sA cCC-bg-main d-flex align-items-center justify-content-center uCC-Click"
       (click)="animateNavSearch()">
       <app-icon [iconName]='"iCC-Searchwhite imCC-Background-Contain iCC-sC"'></app-icon>
     </div>
-    <!-- vertical divider -->
-    <div class="LT-vertical-divider mx-5"></div>
-    <!-- App Navigator Block Section -->
-    <app-navigator-block></app-navigator-block>
-    <!-- vertical divider -->
-    <div class="LT-vertical-divider mx-5"></div>
   </div>
-  <div class="d-flex align-items-center">
+  <div class="d-flex align-items-center justify-content-between w-100" *ngIf="isMobile === false">
+      <div class="d-flex align-items-center">
+          <!-- vertical divider -->
+          <div class="LT-vertical-divider mx-5"></div>
+          <!-- App Navigator Block Section -->
+          <div class="">
+            <app-navigator-block></app-navigator-block>
+          </div>
+          <!-- vertical divider -->
+          <div class="LT-vertical-divider " style="margin: 0px 48px 0px 100px;"></div>
+      </div>
     <!-- App User Profile Block Section -->
-    <app-user-profile-block *ngIf="_AccountService.userValue?.success"></app-user-profile-block>
-    <!-- SignIn Button Block -->
-    <div *ngIf="!_AccountService.userValue?.success" class="cCC-bg-main uCC-f-radius-sA py-2 px-4 uCC-Click"
+    <div class="d-flex  align-items-center gap-4">
+      <div class="d-flex align-items-center">
+        <app-user-profile-block *ngIf="_AccountService.userValue?.success"></app-user-profile-block>
+      </div>
+      <!-- SignIn Button Block -->
+      <div *ngIf="!_AccountService.userValue?.success" class="cCC-bg-main uCC-f-radius-sA py-2 px-4 uCC-Click"
       (click)='animateLogin()'>
       <app-signin-button-block></app-signin-button-block>
     </div>
-    <!-- vertical divider -->
-    <div class="mx-4"></div>
     <!-- Language  -->
     <div>English</div>
-    <!-- vertical divider -->
-    <div class="mx-4"></div>
     <!-- Cart Icon Block Section-->
-    <button class="btn position-relative" (click)='animateCart()' aria-label="Cart">
+    <button class="btn position-relative" (click)='_NavbarService.animateCart()' aria-label="Cart">
       <app-icon [iconName]='"iCC-Cartgrey imCC-Background-Contain iCC-sE"'></app-icon>
-      <!-- <div class="cCC-bg-support1 d-flex align-items-center justify-content-center position-absolute top-0 end-0" style="width: 24px; height: 24px; border-radius: 50%;">
-        <span class="fCC-reg-sC cCC-text-main">{{totalItems}}</span>
-      </div> -->
-    </button>
+      <div class="cCC-bg-support1 d-flex align-items-center justify-content-center position-absolute top-0 end-0"
+      style="width: 24px; height: 24px; border-radius: 50%;">
+      <span class="fCC-reg-sC cCC-text-main">0</span>
+    </div>
+  </button>
+</div>
   </div>
 </div>
 <!-- SEARCH -->
-<div class="position-absolute uCC-t-4 p-0 w-100"
-  [ngStyle]="{'top': _NavbarService.searchMenuToggle ? '-76px' : '76px'}">
+<!-- Search Layer -->
+<div *ngIf="!_NavbarService.searchMenuToggle" class="position-fixed end-0 start-0 bottom-0 bg-transparent"
+  style="z-index: 1;top: 71px;" (click)="animateNavSearch()"
+  [ngStyle]="{'opacity': _NavbarService.searchMenuToggle ? '0' : '1'}">
+</div>
+<!-- Search Block -->
+<div class="position-absolute uCC-t-4 p-0 w-100" [ngStyle]="{'top': _NavbarService.searchMenuToggle ? '-76px' : '76px'}"
+  style="z-index: 2;">
   <app-nav-search-shared></app-nav-search-shared>
 </div>

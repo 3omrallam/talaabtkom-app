@@ -1,33 +1,33 @@
 <form #loginForm='ngForm' (ngSubmit)="ngSubmit(loginForm.value)">
     <!-- Mobile Number -->
     <label for="phone" class="cCC-text-support2 fCC-reg-sB mb-2">رقم الهاتف</label>
-    <div class="mb-4 d-flex shadow py-2~ p-3 align-items-center uCC-f-radius-sA cCC-bg-white">
+    <div class="mb-4 d-flex uCC-shadow-f-white-10 px-3 align-items-center uCC-f-radius-sA cCC-bg-white">
         <!-- Mobile icon -->
         <app-icon iconName="iCC-Mobilelogin d-flex iCC-sB ms-2"></app-icon>
         <!-- Mobile Input-->
-        <input type="text" placeholder="رقم الهاتق" name="phone" ngModel class="w-100 border-0 fCC-reg-sB cCC-text-support2 m-0">
+        <input type="text" placeholder="رقم الهاتق" name="phone" ngModel
+            class="w-100 border-0 py-3 fCC-reg-sB cCC-text-support2 m-0">
     </div>
-
-       <!-- Password -->
-       <label for="phone" class="cCC-text-support2 fCC-reg-sB mb-2">كلمة المرور</label>
-       <div class="mb-4 d-flex justify-content-between shadow py-2~ p-3 align-items-center uCC-f-radius-sA cCC-bg-white">
-        <div class="d-flex">
+    <!-- Password -->
+    <label for="phone" class="cCC-text-support2 fCC-reg-sB mb-2">كلمة المرور</label>
+    <div
+        class="mb-4 d-flex justify-content-between uCC-shadow-f-white-10 px-3 align-items-center uCC-f-radius-sA cCC-bg-white">
+        <div class="d-flex align-items-center w-100">
             <!-- Password icon -->
-            <app-icon iconName="iCC-Lockpassword d-flex iCC-sB ms-2"></app-icon>
+            <app-icon iconName="iCC-Lockpassword d-flex align-items-center iCC-sB ms-2"></app-icon>
             <!-- Password Input-->
-            <input [type]="showPassword ? 'text' : 'password'" placeholder="كلمة المرور"
-                name='password' ngModel
-                class="w-100 border-0 fCC-reg-sB cCC-text-support2 m-0">
+            <input [type]="this._AuthService.showPassword ? 'text' : 'password'" placeholder="كلمة المرور"
+                name='password' ngModel class="w-100 py-3 border-0 fCC-reg-sB cCC-text-support2 m-0">
         </div>
         <div>
             <!-- See Password Icon -->
-            <app-icon iconName="iCC-Seepassword d-flex iCC-sB ms-2 uCC-Click" (click)="showPassword = !showPassword"
-                [class.hide]="showPassword"></app-icon>
+            <app-icon iconName="{{this._AuthService.passwordIcon}} imCC-Background-Contain d-flex iCC-sB ms-2 uCC-Click"
+                (click)="this._AuthService.hidePassword()" [class.hide]="this._AuthService.showPassword"></app-icon>
         </div>
     </div>
     <!-- checkBoxes -->
     <div class="d-flex align-items-center mt-4">
-        <input id="remember" type="checkbox" name="" class="iCC-sB cCC-text-support2 uCC-Click" value="value1">      
+        <input id="remember" type="checkbox" name="" class="iCC-sB cCC-text-support2 uCC-Click" value="value1">
         <label for="remember" class="fCC-reg-sB cCC-text-support2 d-flex me-2"><span>تذكرني</span></label>
     </div>
     <!-- Buttons-->

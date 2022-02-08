@@ -2,7 +2,34 @@
   width: 29px;
   height: 42px;
 }
-.CC-Logobg-Holder{
-  width: 199px;
-  height: 277px;
+// .CC-Logobg-Holder{
+//   width: 199px;
+//   height: 277px;
+// }
+.CC-footer-grid{
+  display: grid;
+  gap: 24px;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  .CC-logo-footer{
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .CC-navigator{
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .CC-social{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+  }
+  .CC-copyRight{
+     grid-column: 1/4;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
