@@ -10,12 +10,15 @@ import { AddToCartService } from '../../sections/services/add-to-cart.service';
 })
 export class NavbarPageComponent implements OnInit {
   isShow: boolean = false;
+
   displayOverLay: String = 'd-none'
   constructor(public _NavbarService: NavbarService , public _AddToCartService:AddToCartService, public _AccountService: AccountService) { }
-
   ngOnInit(): void {
     console.log(this._AccountService.userValue?.success);
-    
+    this.isMobile = this.getIsMobile();
+    window.onresize = () => {
+      this.isMobile = this.getIsMobile();
+    };
   }
   animateNavSearch() {
     this._NavbarService.searchMenuToggle = !this._NavbarService.searchMenuToggle
@@ -33,6 +36,16 @@ export class NavbarPageComponent implements OnInit {
           this.displayOverLay = 'd-none'
         }, 400);
         break;
+    }
+  }
+  isMobile = false;
+  getIsMobile(): boolean {
+    const w = window.innerWidth;
+    const breakpoint = 992;
+    if (w < breakpoint) {
+      return true;
+    } else {
+      return false;
     }
   }
 

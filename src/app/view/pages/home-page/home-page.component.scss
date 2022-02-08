@@ -1,5 +1,8 @@
 .CC-cover-size{
     height: calc(100vh - 76px);
+    @media screen and(max-width:429px) {
+        height: 312px;
+    }
 }
 .CC-Blur-Layer{
     background-color: rgba(237, 237,244, 0);

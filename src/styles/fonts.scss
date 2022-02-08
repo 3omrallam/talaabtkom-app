@@ -78,18 +78,41 @@
     font-family: Cairo-Regular;
 }
 // font sizes === End
-
-
-
-
-
-
-// START === TypeGraphe
-
-// 34 => Title
-// 20 => Subtitle
-// 16 => Paragraph
-// 12
-// 10
-
-// END === TypeGraphe
+// media Queries
+@media screen and (max-width:1200px) and (min-width:800px){
+    // Bold
+    // 38 => 20
+    .fCC-bold-sG {
+    font-size: 34px !important;
+    font-family: Cairo-Bold;
+    }
+    // reg
+    // 16 => 14
+    .fCC-reg-sD {
+    font-size: 14px !important;
+    font-family: Cairo-Regular;
+    }
+}
+@media screen and (max-width:800px){
+    // Bold
+    .fCC-bold-sD {
+    font-size: 16px !important;
+    font-family: Cairo-Bold;
+    }   
+    .fCC-bold-sF {
+    font-size: 20px !important;
+    font-family: Cairo-Bold;
+    }
+    // 38 => 20
+    .fCC-bold-sG {
+    font-size: 20px !important;
+    font-family: Cairo-Bold;
+    }
+    // reg
+    // 16 => 12
+    .fCC-reg-sD {
+    font-size: 12px !important;
+    font-family: Cairo-Regular;
+    }
+    
+}

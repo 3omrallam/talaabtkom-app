@@ -1,6 +1,11 @@
-.CC-qrmenu-Holder
-{
+.CC-qrmenu-Holder{
     height: 536px;
     width: 536px;
 }
-
+.CC-QrImage-Holder{
+    width: 600px !important;
+    @media screen and(max-width:776px) {
+        width: 290px !important;
+        
+    }
+}

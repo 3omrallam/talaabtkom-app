@@ -1,4 +1,7 @@
 .CC-Logo-Holder{
   width: 165px;
-  height: 55px
+  height: 55px;
+  @media screen and (max-width: 329px) {
+    width: 100px
+  }
 }
