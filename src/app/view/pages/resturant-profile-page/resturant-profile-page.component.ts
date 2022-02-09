@@ -13,9 +13,7 @@ import { AccountService } from 'src/app/core/services/user/account.service';
 })
 export class ResturantProfilePageComponent implements OnInit, OnDestroy {
   getIDFromRoute! : Subscription;
-  constructor(public activeRouter: ActivatedRoute, public _ResturantCardService : ResturantCardService, public _AccountService: AccountService) { 
-    
-  }
+  constructor(public activeRouter: ActivatedRoute, public _ResturantCardService : ResturantCardService, public _AccountService: AccountService) { }
 
   ngOnInit(): void {
     this.getResturantInfoByID()  
@@ -38,7 +36,7 @@ export class ResturantProfilePageComponent implements OnInit, OnDestroy {
       
       this._ResturantCardService.getResturantProducts(route.id, this._AccountService.userValue?.data?.token).subscribe(res => {
         this._ResturantCardService.singleResturantCategories = res.data
-        console.log(this._ResturantCardService.singleResturantCategories);
+        // console.log(this._ResturantCardService.singleResturantCategories);
         
       })
     })

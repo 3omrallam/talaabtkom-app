@@ -1,15 +1,11 @@
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchBlockComponent } from './masterContainerBlocks/search-block/search-block.component';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FilterSelectionBlockComponent } from './sideMenuBlocks/filter-selection/filter-selection-block.component';
 import { StickerBlockComponent } from './navbarBlocks/sticker-block/sticker-block.component';
 import { NavigatorBlockComponent } from './navbarBlocks/navigator-block/navigator-block.component';
 import { UserProfileBlockComponent } from './navbarBlocks/user-profile-block/user-profile-block.component';
-import { IconComponent } from './shared/icon/icon.component';
 import { FooterNavigatorBlockComponent } from './footer-blocks/footer-navigator-block/footer-navigator-block.component';
 import { FeedbackCardBlockComponent } from './masterContainerBlocks/feedback-card-block/feedback-card-block.component';
-import { RouterModule } from '@angular/router';
 import { ResturantGridCardBlockComponent } from './masterContainerBlocks/resturant-grid-card-block/resturant-grid-card-block.component';
 import { ResturantListCardBlockComponent } from './masterContainerBlocks/resturant-list-card-block/resturant-list-card-block.component';
 import { CoverHeaderBlockComponent } from './headerBlocks/cover-header-block/cover-header-block.component';
@@ -38,8 +34,12 @@ import { DeliveryInfoBlockComponent } from './track-order-blocks/delivery-info-b
 import { NotificationCardBlockComponent } from './notification-card-block/notification-card-block.component';
 import { MapViewBlockComponent } from './shared/map-view-block/map-view-block.component';
 import { AddressMapPopupSharedComponent } from './shared/address-map-popup-shared/address-map-popup-shared.component';
-
 import { GoogleMapsModule } from '@angular/google-maps';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { IconComponent } from './shared/icon/icon.component';
+import { FormAddressPopupBlockComponent } from './form-address-popup-block/form-address-popup-block.component';
 
 
 @NgModule({
@@ -79,11 +79,12 @@ import { GoogleMapsModule } from '@angular/google-maps';
     DeliveryInfoBlockComponent,
     NotificationCardBlockComponent,
     MapViewBlockComponent,
-    AddressMapPopupSharedComponent
+    AddressMapPopupSharedComponent,
+    FormAddressPopupBlockComponent
   ],
   imports: [
-    CommonModule,
     RouterModule,
+    CommonModule,
     ReactiveFormsModule,
     FormsModule,
     NgOtpInputModule,
@@ -124,7 +125,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     DeliveryInfoBlockComponent,
     NotificationCardBlockComponent,
     MapViewBlockComponent,
-    AddressMapPopupSharedComponent
+    AddressMapPopupSharedComponent,
+    FormAddressPopupBlockComponent
  
   ]
 })

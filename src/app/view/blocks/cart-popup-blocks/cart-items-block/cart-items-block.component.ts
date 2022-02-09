@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { OrderProccessService } from 'src/app/core/services/orderProccess/order-proccess.service';
+import { AccountService } from 'src/app/core/services/user/account.service';
 import { AddToCartService } from 'src/app/view/sections/services/add-to-cart.service';
 
 @Component({
@@ -9,9 +11,10 @@ import { AddToCartService } from 'src/app/view/sections/services/add-to-cart.ser
 export class CartItemsBlockComponent implements OnInit {
 
   @Input() item!: any;
-  constructor(public _AddToCartService: AddToCartService) { }
+  constructor(public _AddToCartService: AddToCartService, public _OrderProccessService: OrderProccessService, public _AccountService: AccountService) { }
 
   ngOnInit(): void {
+    console.log(this.deleteItem())
   }
   // Plus Icon In Cart
   Plus(item: any) {
@@ -24,8 +27,11 @@ export class CartItemsBlockComponent implements OnInit {
       item.quantity = 1
     }
   }
-  deleteItem(item:any){
-    this._AddToCartService.deleteItem(item);
+  deleteItem(){
+    this._OrderProccessService.deleteItemInCart(this.item?.id, this._AccountService.userValue?.data?.token).subscribe(res => {
+      console.log(res);
+    })
+    // this._AddToCartService.deleteItem(item);
   }
 
 }

@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
 import { ResturantCardService } from 'src/app/core/services/resturant/resturant-card.service';
 
 @Component({

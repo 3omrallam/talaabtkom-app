@@ -13,7 +13,7 @@ export class ResturantListCardBlockComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.listState)
+    console.log('nada' , this.listState)
     this.mediaCheck()
   }
   // Check Media
@@ -22,7 +22,7 @@ export class ResturantListCardBlockComponent implements OnInit {
       this.imageUrl = '../assets/images/Newresturant-1.png'
     }
     else if (this.listState?.has_media == true){
-      this.imageUrl = 'listState.media[0]?.url'
+      this.imageUrl = '{{listState.media[0]?.thumb}}'
     }
   }
 
