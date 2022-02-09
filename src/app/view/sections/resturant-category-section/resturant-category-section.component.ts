@@ -11,10 +11,15 @@ import { ResturantMenuService } from '../services/resturant-menu.service';
   styleUrls: ['./resturant-category-section.component.scss']
 })
 export class ResturantCategorySectionComponent implements OnInit {
+  getCategories :any;
 
   constructor(public activeRouter: ActivatedRoute, public _ResturantCardService : ResturantCardService) { }
 
   ngOnInit(): void {
+    this.getCategories = this._ResturantCardService.getResturantProducts(11, 'fXLu7VeYgXDu82SkMxlLPG1mCAXc4EBIx6O5isgYVIKFQiHah0xiOHmzNsBv').subscribe(res =>{
+      console.log( 'y',res)
+    })
+
   }
 
 

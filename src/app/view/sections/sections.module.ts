@@ -20,7 +20,6 @@ import { PrivacyPolicySectionComponent } from './privacy-policy-section/privacy-
 import { ResturantsListSectionComponent } from './resturants-list-section/resturants-list-section.component';
 import { RecoverPhoneSectionComponent } from './recover-phone-section/recover-phone-section.component';
 import { ChangePasswordSectionComponent } from './change-password-section/change-password-section.component';
-import { RouterModule } from '@angular/router';
 import { ResturantReviewsSectionComponent } from './resturant-reviews-section/resturant-reviews-section.component';
 import { ContactusSectionComponent } from './contactus-section/contactus-section.component';
 import { CheckoutSectionComponent } from './checkout-section/checkout-section.component';
@@ -30,6 +29,7 @@ import { TrackOrderSectionComponent } from './track-order-section/track-order-se
 import { UserFavouriteItemsSectionComponent } from './user-favourite-items-section/user-favourite-items-section.component';
 import { MyReviewsSectionComponent } from './my-reviews-section/my-reviews-section.component';
 import { NotificationsSectionComponent } from './notifications-section/notifications-section.component';
+import { RouterModule } from '@angular/router';
 
 export function playerFactory() {
   return import(/* webpackChunkName: 'lottie-web' */ 'lottie-web');

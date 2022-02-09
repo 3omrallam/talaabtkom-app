@@ -10,11 +10,15 @@ export class OrderProccessService {
 
   constructor(private _http: HttpClient) { }
 
-  addProductToCart(apiToken : String, productID: Number) { 
-    return this._http.post(`${environment.apiUrl}/api/carts?api_token=${apiToken}&product_id=${productID}`,{apiToken, productID})
+  addProductToCart(apiToken : String, productID: Number , quantity:number) { 
+    return this._http.post(`${environment.apiUrl}/api/carts?api_token=${apiToken}&product_id=${productID}&quantity=${quantity}`,{apiToken, productID})
   }
 
   getAllProductInCart(apiToken : String) { 
     return this._http.get(`${environment.apiUrl}/api/carts?api_token=${apiToken}`)
   }
+  deleteItemInCart(productID: number, apiToken: String) { 
+    return this._http.delete(`${environment.apiUrl}/api/carts/${productID}?api_token=${apiToken}`)
+  }
+
 }

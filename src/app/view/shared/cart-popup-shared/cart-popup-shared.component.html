@@ -11,13 +11,13 @@
             <!-- divider -->
             <div class="mx-2"></div>
             <div>
-                <p class="fCC-bold-sB cCC-text-orange m-0">مطعم طاية</p>
+                <p class="fCC-bold-sB cCC-text-orange m-0">{{_OrderProccessService.allProductsInCart?.data?.market?.name}}</p>
                 <p class="fCC-reg-sA cCC-text-lightgray">"المشويات - أكل صحي"</p>
             </div>
         </div>
         <div class="cCC-bg-support1 py-4 position-relative w-100 pe-4 mb-3">
             <app-icon iconName="iCC-Locationred iCC-sB imCC-Background-Contain d-flex ms-1"
-                textContent="الرياض حي الفيصلية" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
+                textContent="{{_OrderProccessService.allProductsInCart?.data?.market?.address}}" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
             <!-- divider -->
             <div class="my-2"></div>
             <app-icon iconName="iCC-Clockred iCC-sB imCC-Background-Contain d-flex ms-1"
@@ -26,23 +26,23 @@
         </div>
         <div>
         </div>
-        <section style="overflow-y: auto; height: 40%;">
+        <section style="overflow-y: auto; height: 525px;">
             <!-- Cart Items Block -->
             <div *ngFor="let items of _OrderProccessService.allProductsInCart?.data?.cart ; let last=last">
                 <app-cart-items-block [item]="items"></app-cart-items-block>
                 <div class="CC-horizontal-divider mx-4 my-3"></div>
             </div>
-            <!-- <div class="d-flex justify-content-between mx-4">
+            <div class="d-flex justify-content-between mx-4">
                 <div class="d-flex flex-column uCC-gap-24">
                     <p class="m-0 fCC-reg-sD cCC-text-grey2">المجموع</p>
                     <p class="m-0 fCC-reg-sD cCC-text-grey2">ضريبة القيمة المضافة</p>
                 </div>
                 <div class="d-flex flex-column uCC-gap-24">
-                    <p class="m-0 fCC-reg-sD cCC-text-grey2">{{itemsTotal}} ر.س</p>
-                    <p class="m-0 fCC-reg-sD cCC-text-grey2">120 ر.س</p>
+                    <p class="m-0 fCC-reg-sD cCC-text-grey2">{{_OrderProccessService.allProductsInCart?.data?.sub_total}} ر.س</p>
+                    <p class="m-0 fCC-reg-sD cCC-text-grey2">{{_OrderProccessService.allProductsInCart?.data?.delivery_fee}}</p>
                 </div>
             </div>
-            <div class="CC-horizontal-divider m-4"></div> -->
+            <div class="CC-horizontal-divider m-4"></div>
             <div class="d-flex justify-content-between mx-4">
                 <p class="m-0 fCC-bold-sB cCC-text-grey2">اجمالي الطلب</p>
                 <p class="m-0 fCC-bold-sB cCC-text-main">{{_OrderProccessService.allProductsInCart?.data?.total}} ر.س</p>

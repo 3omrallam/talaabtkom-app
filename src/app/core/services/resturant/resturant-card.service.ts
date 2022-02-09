@@ -20,5 +20,8 @@ export class ResturantCardService {
   getResturantProducts(productID: Number, apiToken : String) { 
     return this._http.get<ResturantCard>(`${environment.apiUrl}/api/category/products?market_id=${productID}&api_token=${apiToken}`)
   }
+  getResturantCategories(productID: Number) { 
+    return this._http.get<ResturantCard>(`${environment.apiUrl}/api/categories?market_id=${productID}`)
+  }
 
 }

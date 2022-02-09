@@ -8,10 +8,17 @@ import { ResturantAsidePageService } from '../services/resturant-aside-page.serv
   styleUrls: ['./resturant-aside-page.component.scss']
 })
 export class ResturantAsidePageComponent implements OnInit {
+  getCategories:any;
 
   constructor(public _ResturantAsidePageService: ResturantAsidePageService, public _ResturantCardService : ResturantCardService) { }
 
   ngOnInit(): void {
+    // this.getCategories = this._ResturantCardService.getResturantCategories(11).subscribe(res => {
+    //   console.log('x', res.data)
+    // })
+  }
+  scrollTo(section: any) {
+    document.querySelector('#' + section)?.scrollIntoView();
   }
 
 }

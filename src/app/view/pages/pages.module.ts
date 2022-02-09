@@ -12,13 +12,13 @@ import { FilterPageComponent } from './filter-page/filter-page.component';
 import { ResturantAsidePageComponent } from './resturant-aside-page/resturant-aside-page.component';
 import { UserAsidePageComponent } from './user-aside-page/user-aside-page.component';
 import { UserProfilePageComponent } from './user-profile-page/user-profile-page.component';
-import { RouterModule } from '@angular/router';
 import { ResturantProfilePageComponent } from './resturant-profile-page/resturant-profile-page.component';
 import { CoreModule } from 'src/app/core/core.module';
 import { SharedModule } from '../shared/shared.module';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ContactusPageComponent } from './contactus-page/contactus-page.component';
 import { TrackOrderPageComponent } from './track-order-page/track-order-page.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
