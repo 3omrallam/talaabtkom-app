@@ -39,6 +39,8 @@ import { NotificationCardBlockComponent } from './notification-card-block/notifi
 import { MapViewBlockComponent } from './shared/map-view-block/map-view-block.component';
 import { AddressMapPopupSharedComponent } from './shared/address-map-popup-shared/address-map-popup-shared.component';
 
+import { GoogleMapsModule } from '@angular/google-maps';
+
 
 @NgModule({
   declarations: [
@@ -84,7 +86,8 @@ import { AddressMapPopupSharedComponent } from './shared/address-map-popup-share
     RouterModule,
     ReactiveFormsModule,
     FormsModule,
-    NgOtpInputModule
+    NgOtpInputModule,
+    GoogleMapsModule
   ],
   exports:[
     FilterSelectionBlockComponent,

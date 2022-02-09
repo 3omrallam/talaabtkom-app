@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { User } from '../../models/user';
 import { Response } from '../../models/response';
@@ -20,9 +20,11 @@ export class AccountService {
   public registerProccess : any
   public getUserAddress!: any;
 
+
   constructor(private router: Router, private _http: HttpClient, private _NavbarService : NavbarService) {
     this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')!));
     this.user = this.userSubject.asObservable();
+    
   }
 
   checkPhoneNumber(data : Object){
