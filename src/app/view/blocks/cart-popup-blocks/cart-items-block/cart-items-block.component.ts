@@ -14,7 +14,6 @@ export class CartItemsBlockComponent implements OnInit {
   constructor(public _AddToCartService: AddToCartService, public _OrderProccessService: OrderProccessService, public _AccountService: AccountService) { }
 
   ngOnInit(): void {
-    console.log(this.deleteItem())
   }
   // Plus Icon In Cart
   Plus(item: any) {

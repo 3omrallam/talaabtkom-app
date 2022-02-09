@@ -18,7 +18,7 @@ export class OrderProccessService {
     return this._http.get(`${environment.apiUrl}/api/carts?api_token=${apiToken}`)
   }
   deleteItemInCart(productID: number, apiToken: String) { 
-    return this._http.delete(`${environment.apiUrl}/api/carts/${productID}?api_token=${apiToken}`)
+    return this._http.get(`${environment.apiUrl}/api/carts/${productID}?api_token=${apiToken}`)
   }
 
 }
