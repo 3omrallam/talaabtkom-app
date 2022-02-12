@@ -13,7 +13,6 @@ export class MenuListBlockComponent implements OnInit {
 
   @Input() blockMenu: any;
   statusClass = 'not-active';
-  imageUrl:any;
 
   constructor(public _AccountService:AccountService, public _OrderProccessService : OrderProccessService) { }
 
@@ -36,14 +35,6 @@ export class MenuListBlockComponent implements OnInit {
     this.statusClass = 'active';
   }
 
-  mediaCheck() {
-    if (this.blockMenu?.has_media == false) {      
-      this.imageUrl = '../../../../../assets/images/placeholder.png';
-    }
-    else if (this.blockMenu?.has_media == true) {
-      this.imageUrl = 'blockMenu.media[0].url';
-    }
-  }
   
 
 }

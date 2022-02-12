@@ -9,25 +9,11 @@ Input
 export class ResturantGridCardBlockComponent implements OnInit {
 
   @Input() blockState!: SingleCard;
-  imageUrl = '';
-  iconUrl ='';
 
   constructor() { }
 
   ngOnInit(): void {
-    // console.log(this.blockState);
-    this.mediaCheck();
   }
-  // Check Media
-  mediaCheck() {
-    if (this.blockState?.has_media == false) {
-      this.imageUrl = '../assets/images/Newresturant-1.png';
-      this.iconUrl = '../assets/images/Newresturant-1.png'
-    }
-    else if (this.blockState?.has_media == true) {
-      this.imageUrl = 'blockState?.media[0]?.url';
-      this.iconUrl = 'blockState?.media[0]?.icon'
-    }
-  }
+  
 
 }

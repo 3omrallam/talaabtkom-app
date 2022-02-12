@@ -8,7 +8,7 @@ import { AccountService } from 'src/app/core/services/user/account.service';
 })
 export class UserProfileBlockComponent implements OnInit {
 
-  constructor(public _AccountService : AccountService) { }
+  constructor(public _AccountService: AccountService) { }
 
   ngOnInit(): void {
     this._AccountService.getUserName();

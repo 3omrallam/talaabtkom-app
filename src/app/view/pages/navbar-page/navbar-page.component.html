@@ -8,6 +8,7 @@
     <div class="">
       <app-sticker-block></app-sticker-block>
     </div>
+    <div class="mx-4"></div>
     <!-- Search Icon Block Section-->
     <div
       class="iCC-sF uCC-shadow-f-20  uCC-f-radius-sA cCC-bg-main d-flex align-items-center justify-content-center uCC-Click"
@@ -24,7 +25,7 @@
             <app-navigator-block></app-navigator-block>
           </div>
           <!-- vertical divider -->
-          <div class="LT-vertical-divider " style="margin: 0px 48px 0px 100px;"></div>
+          <div class="LT-vertical-divider" style="margin: 0px 48px 0px 100px;"></div>
       </div>
     <!-- App User Profile Block Section -->
     <div class="d-flex align-items-center gap-4">
@@ -40,7 +41,7 @@
     <div>English</div>
     <!-- Cart Icon Block Section-->
     <button class="btn position-relative" *ngIf="_AccountService.userValue?.success" (click)='_NavbarService.animateCart()' aria-label="Cart">
-      <app-icon [iconName]='"iCC-Cartgrey imCC-Background-Contain iCC-sE"'></app-icon>
+      <app-icon [iconName]='"iCC-Cartred imCC-Background-Contain iCC-sE"'></app-icon>
       <div class="cCC-bg-support1 d-flex align-items-center justify-content-center position-absolute top-0 end-0"
       style="width: 24px; height: 24px; border-radius: 50%;">
       <span class="fCC-reg-sC cCC-text-main">{{_NavbarService?.getUserCartCount?.data ? _NavbarService?.getUserCartCount?.data : 0}}</span>

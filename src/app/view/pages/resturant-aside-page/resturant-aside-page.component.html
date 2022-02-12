@@ -18,17 +18,14 @@
                 </div>
             </div>
             <div class="CC-horizontal-divider my-2"></div>
-            
-            <!-- TODO Set SubTasks ID To Navigate The Section To Solve This Error In Console ( Cannot find a differ supporting object '1' ) START -->
+            <!-- Resturant Categories -->
             <div *ngFor="let sublist of _ResturantCardService?.singleResturantCategories">
-                <a class="fCC-reg-sB me-5 uCC-Click" [ngClass]="sublist?.id">
+                <a class="fCC-reg-sB me-5 uCC-Click"  [ngClass]="'products'+sublist?.id" (click)="scrollTo('products'+sublist.id);">
                     {{sublist?.name}}
                 </a>
                 <!-- line divider -->
                 <div class="CC-horizontal-divider my-2"></div>
             </div>
-            <!-- TODO END -->
-
             <div class="d-flex align-items-center fCC-reg-sC cCC-text-support2">
                 <!-- Icon and listmenu -->
                 <i class="iCC-Rateresturant iCC-sD imCC-Background-Contain d-flex mx-2 me-3"></i>

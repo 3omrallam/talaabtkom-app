@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menu-list-modal',
@@ -12,10 +12,12 @@ export class MenuListModalComponent implements OnInit {
     { name: "كاتشب", cost: "10 ر.س" },
     { name: "طماطم", cost: "10 ر.س" }
   ]
+  @Input() list:any;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.list)
   }
 
 }

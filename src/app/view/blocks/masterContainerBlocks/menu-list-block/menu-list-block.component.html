@@ -2,7 +2,7 @@
     <div class="CC-resturant-holder-grid">
         <!-- Resturant Image -->
         <div class="CC-resturant-image"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <i class="{{blockMenu?.media?.thumb}} CC-resturantimg-Holder d-flex imCC-Background-Contain uCC-Click" style="background-image:url({{imageUrl}});"></i>
+            <img src="{{blockMenu.has_media ? blockMenu.media[0].url : '../../../../../assets/images/placeholder.png'}}" class="CC-resturantimg-Holder d-flex imCC-Background-Contain uCC-Click">
         </div>
         <div class="CC-resturant-title" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <!-- Resturant-title -->

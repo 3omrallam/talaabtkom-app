@@ -6,7 +6,7 @@
         <div class="d-flex">
             <!-- ResturantInfo And Image -->
             <div class="me-4">
-                <i class="imCC-Resturant imCC-Background-Contain d-flex CC-resturant-img-holder"></i>
+                <img src="{{_OrderProccessService.allProductsInCart?.data?.market?.media[0].url}}" class="imCC-Resturant imCC-Background-Contain d-flex CC-resturant-img-holder">
             </div>
             <!-- divider -->
             <div class="mx-2"></div>
@@ -15,14 +15,14 @@
                 <p class="fCC-reg-sA cCC-text-lightgray">"المشويات - أكل صحي"</p>
             </div>
         </div>
-        <div class="cCC-bg-support1 py-4 position-relative w-100 pe-4 mb-3">
+        <div class="cCC-bg-support1 py-4 position-relative w-100 px-4 mb-3">
             <app-icon iconName="iCC-Locationred iCC-sB imCC-Background-Contain d-flex ms-1"
                 textContent="{{_OrderProccessService.allProductsInCart?.data?.market?.address}}" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
             <!-- divider -->
             <div class="my-2"></div>
-            <app-icon iconName="iCC-Clockred iCC-sB imCC-Background-Contain d-flex ms-1"
+            <!-- <app-icon iconName="iCC-Clockred iCC-sB imCC-Background-Contain d-flex ms-1"
                 textContent="سيكون جاهز في الساعة 3:54 م يوم 12/12/2021" textClass="fCC-reg-sB cCC-text-support2">
-            </app-icon>
+            </app-icon> -->
         </div>
         <div>
         </div>

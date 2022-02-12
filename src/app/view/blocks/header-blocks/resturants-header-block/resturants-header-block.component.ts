@@ -10,6 +10,7 @@ export class ResturantsHeaderBlockComponent implements OnInit {
 
   @Input()headerTitle!:any;
   @Input()headerIcon!:any;
+  
 
   constructor(public activeRouter: Router) { }
 

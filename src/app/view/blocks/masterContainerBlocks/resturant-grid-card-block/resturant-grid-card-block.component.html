@@ -1,8 +1,8 @@
 <!-- Resturant Image -->
 <section class="position-relative cCC-bg-white uCC-f-radius-sB pb-2" routerLink="/resturant-profile/{{blockState?.id}}">
     <div class="position-relative">
-        <i class=" d-flex imCC-Background-Cover CC-resturants-Holder uCC-f-radius-sA"
-            style="background-image: url({{imageUrl}});"></i>
+        <img class=" d-flex w-100 imCC-Background-Cover CC-resturants-Holder uCC-f-radius-sA"
+            src="{{blockState.has_media ? blockState.media[0].url : '../assets/images/Newresturant-1.png'}}">
         <!-- Resturant Status -->
         <div
             class="position-absolute {{blockState.closed === true ? 'd-flex': 'd-none'}} top-0 bottom-0 start-0 uCC-f-radius-sA end-0 cCC-opacity-grey-70 justify-content-center align-items-center">
@@ -12,8 +12,8 @@
     <div class="d-flex align-items-center justify-content-between pt-3 pb-3 CC-horizontal-divider~ uCC-Click">
         <div class="d-flex w-100 align-items-center">
             <!-- Resturant Logo -->
-            <i class="d-flex me-2 CC-logo-Holder imCC-Background-Contain"
-                style="background-image: url({{iconUrl}});"></i>
+            <img class="d-flex me-2 CC-logo-Holder imCC-Background-Contain"
+                src="{{blockState.has_media ? blockState.media[0].icon : '../assets/images/Newresturant-1.png'}}">
             <div class="mx-3">
                 <!-- Resturant Name -->
                 <p class="mb-0 cCC-text-dark fCC-bold-sB">{{blockState.name}}</p>

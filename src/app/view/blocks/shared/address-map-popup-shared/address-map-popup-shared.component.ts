@@ -16,14 +16,10 @@ export class AddressMapPopupSharedComponent implements OnInit, AfterViewInit {
   ngOnInit(): void { 
     this.getUserAddress()
   }
-  
   ngAfterViewInit(){
       this.triggerClick()
     
   }
-
-  
-
   getUserAddress(){
     this._MapViewService.getUserLocationOnMap(this._AccountService.userValue?.data?.token).subscribe((res : any) => {
       this._MapViewService.userAddressDetails = res.data[0]
@@ -31,7 +27,6 @@ export class AddressMapPopupSharedComponent implements OnInit, AfterViewInit {
       
     })
   }
-
   ngSubmit(form : FormData){
     this._MapViewService.userLocation = {
       api_token : this._AccountService.userValue?.data?.token,
@@ -42,11 +37,9 @@ export class AddressMapPopupSharedComponent implements OnInit, AfterViewInit {
       console.log(res);
     })
   }
-
   navigateToHome(){
     this.toggleBoolean = true
   }
-
   triggerClick() {
     let el: HTMLElement = this.myButton?.nativeElement as HTMLElement;
     el.click()

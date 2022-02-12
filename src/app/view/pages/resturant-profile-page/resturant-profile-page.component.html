@@ -14,8 +14,9 @@
             </div>
             <div class="my-3"></div>
             <!-- Phone call Icon [ToolTip] -->
-            <button aria-label="call" mat-raised-button matTooltip="095554545" matTooltipPosition="after"
-                class="btn cCC-opacity-support1-100 uCC-f-radius-sA p-2 uCC-Click">
+            <button aria-label="call" mat-raised-button
+                matTooltip="{{_ResturantCardService.singleResturantInfo?.mobile}} - {{_ResturantCardService.singleResturantInfo?.phone}}"
+                matTooltipPosition="after" class="btn cCC-opacity-support1-100 uCC-f-radius-sA p-2 uCC-Click">
                 <i class="d-flex iCC-Phone-green iCC-sC imCC-Background-Contain"></i>
             </button>
         </div>
