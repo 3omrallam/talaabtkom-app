@@ -16,9 +16,9 @@ export class ResturantCategorySectionComponent implements OnInit {
   constructor(public activeRouter: ActivatedRoute, public _ResturantCardService : ResturantCardService) { }
 
   ngOnInit(): void {
-    this.getCategories = this._ResturantCardService.getResturantProducts(11, 'fXLu7VeYgXDu82SkMxlLPG1mCAXc4EBIx6O5isgYVIKFQiHah0xiOHmzNsBv').subscribe(res =>{
-      console.log( 'y',res)
-    })
+    // this.getCategories = this._ResturantCardService.getResturantProducts(11, 'fXLu7VeYgXDu82SkMxlLPG1mCAXc4EBIx6O5isgYVIKFQiHah0xiOHmzNsBv').subscribe(res =>{
+    //   console.log( 'y',res)
+    // })
 
   }
 

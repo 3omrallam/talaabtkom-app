@@ -16,30 +16,28 @@ export class ResturantProfilePageComponent implements OnInit, OnDestroy {
   constructor(public activeRouter: ActivatedRoute, public _ResturantCardService : ResturantCardService, public _AccountService: AccountService) { }
 
   ngOnInit(): void {
-    this.getResturantInfoByID()  
+    this.getResturantID()
     this.getResturantProducts()
+    this.getResturantInfoByID()  
   }
 
   getResturantInfoByID(){
-    this.getIDFromRoute = this.activeRouter.params.subscribe(route => {
-      this._ResturantCardService.getResturant(`/${route.id}`).subscribe(res => {
+      this._ResturantCardService?.getResturant(`/${+this._ResturantCardService.resturantID}`).subscribe(res => {
         this._ResturantCardService.singleResturantInfo = res?.data
         console.log(this._ResturantCardService.singleResturantInfo);
       })
-    })
   }
 
-  getResturantProducts(){
-    this.getIDFromRoute = this.activeRouter?.params.subscribe((route : any) => {
-      console.log(route.id);
-      console.log(this._AccountService.userValue?.data?.token);
-      
-      this._ResturantCardService.getResturantProducts(route.id, this._AccountService.userValue?.data?.token).subscribe(res => {
-        this._ResturantCardService.singleResturantCategories = res.data
-        // console.log(this._ResturantCardService.singleResturantCategories);
-        
-      })
+  getResturantID(){
+    this.getIDFromRoute = this.activeRouter?.params?.subscribe((route : any) => {
+      this._ResturantCardService.resturantID = +route?.id
     })
+  }
+  getResturantProducts(){
+      this._ResturantCardService.getResturantProducts(+this._ResturantCardService.resturantID, this._AccountService.userValue?.data?.token).subscribe((res : any) => {
+        this._ResturantCardService.singleResturantCategories = res?.data
+        console.log(this._ResturantCardService.singleResturantCategories);
+      })
   }
   
   ngOnDestroy(): void {

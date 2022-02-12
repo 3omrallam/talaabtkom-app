@@ -25,8 +25,8 @@ export class ResturantGridCardBlockComponent implements OnInit {
       this.iconUrl = '../assets/images/Newresturant-1.png'
     }
     else if (this.blockState?.has_media == true) {
-      this.imageUrl = 'blockState.media[0]?.url';
-      this.iconUrl = 'blockState.media[0].icon'
+      this.imageUrl = 'blockState?.media[0]?.url';
+      this.iconUrl = 'blockState?.media[0]?.icon'
     }
   }
 

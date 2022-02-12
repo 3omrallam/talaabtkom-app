@@ -18,23 +18,26 @@ export class MenuListBlockComponent implements OnInit {
   constructor(public _AccountService:AccountService, public _OrderProccessService : OrderProccessService) { }
 
   ngOnInit(): void {
-    console.log('z' ,this.blockMenu)
-    this.mediaCheck();
-    console.log(this.blockMenu.media[0].url)
+    // this.mediaCheck();
+    console.log(this.blockMenu?.has_media);
+    console.log(this.blockMenu?.media[0]?.url);
+
   }
+
   handleAddToCard(){
     // this._AddToCartService.sendItem(this.blockMenu);
     this._OrderProccessService.addProductToCart(this._AccountService.userValue?.data?.token, this.blockMenu?.id , 1).subscribe(res => {
-      console.log(this._AccountService.userValue?.data?.token);
       console.log(res);
       
     })
   }
+
   setActiveClass(){
     this.statusClass = 'active';
   }
+
   mediaCheck() {
-    if (this.blockMenu?.has_media == false) {
+    if (this.blockMenu?.has_media == false) {      
       this.imageUrl = '../../../../../assets/images/placeholder.png';
     }
     else if (this.blockMenu?.has_media == true) {

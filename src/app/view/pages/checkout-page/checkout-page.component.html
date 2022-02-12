@@ -1,3 +1,3 @@
 <section class="my-4">
-    <app-checkout-section></app-checkout-section>
+    <app-checkout-section [orderDetails]='_OrderProccessService.orderDetails' [receipt]='_OrderProccessService.allProductsInCart' [userAddress]='_OrderProccessService.userAddress' [userdata]='_AccountService.userData'></app-checkout-section>
 </section>

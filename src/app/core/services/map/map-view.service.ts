@@ -7,7 +7,8 @@ import { environment } from 'src/environments/environment';
 })
 export class MapViewService {
 
-  userLocation : {} = {}
+  userLocation : any
+  userAddressDetails : any
 
   constructor(private _http : HttpClient) { }
 

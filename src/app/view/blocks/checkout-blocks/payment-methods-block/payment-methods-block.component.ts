@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-payment-methods-block',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./payment-methods-block.component.scss']
 })
 export class PaymentMethodsBlockComponent implements OnInit {
+  @Input() paymentMethod : any
 
   constructor() { }
 

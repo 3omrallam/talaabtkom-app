@@ -6,9 +6,9 @@
     <!-- Resturant Menu List -->
     <div class="mb-5">
         <ng-container *ngFor='let resturantMenuState of _ResturantCardService?.singleResturantCategories ; let last = last'>
-            <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click mb-2" id="{{resturantMenuState.id}}">
-                {{resturantMenuState.name}}</p>
-            <ng-container *ngFor="let item of resturantMenuState.products; let last = last">
+            <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click mb-2" id="{{resturantMenuState?.id}}">
+                {{resturantMenuState?.name}}</p>
+            <ng-container *ngFor="let item of resturantMenuState?.products; let last = last">
                 <app-menu-list-block [blockMenu]="item"></app-menu-list-block>
                 <div class="my-4" *ngIf="!last"></div>
             </ng-container>

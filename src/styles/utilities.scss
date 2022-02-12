@@ -2,6 +2,9 @@
 .uCC-Click{
   cursor: pointer;
 }
+.uCC-stopPropagation{
+  pointer-events: none;  
+}
 // END === General
 
 // START === Border

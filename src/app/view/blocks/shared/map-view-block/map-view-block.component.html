@@ -6,7 +6,6 @@
 >
     <!-- <map-marker *ngFor="let markerPosition of markerPositions" [position]="markerPosition" [options]="markerOptions">
     </map-marker> -->
-    <map-marker *ngFor="let markerPosition of markerPositions" [position]="markerPosition" [options]="markerOptions">
+    <map-marker *ngFor="let markerPosition of markers" [position]="markerPosition?.position" [options]="markerOptions">
     </map-marker>
-    <map-info-window>Hello Google Maps</map-info-window>
 </google-map>

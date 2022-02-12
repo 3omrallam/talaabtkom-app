@@ -19,6 +19,7 @@ export class AccountService {
   public phoneProccess : any
   public registerProccess : any
   public getUserAddress!: any;
+  public userData!: any;
 
 
   constructor(private router: Router, private _http: HttpClient, private _NavbarService : NavbarService) {
@@ -40,6 +41,10 @@ export class AccountService {
 
   getUserDeliveryAddress(apiToken : String){
     return this._http.get(`${environment.apiUrl}/api/delivery_addresses?api_token=${apiToken}`)
+  }
+
+  getUserData(apiToken : String){
+    return this._http.get(`${environment.apiUrl}/api/user?api_token=${apiToken}`)
   }
 
 

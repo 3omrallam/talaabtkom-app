@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/internal/Observable';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ResturantCardService } from 'src/app/core/services/resturant/resturant-card.service';
+import { AccountService } from 'src/app/core/services/user/account.service';
 
 @Component({
   selector: 'app-resturants-list-section',
@@ -13,7 +14,7 @@ import { ResturantCardService } from 'src/app/core/services/resturant/resturant-
 export class ResturantsListSectionComponent implements OnInit {
   getResturantData$!: Observable<Array<SingleCard>>;
 
-  constructor(public _ResturantCardService: ResturantCardService, public activeRouter: Router) { }
+  constructor(public _ResturantCardService: ResturantCardService, private _AccountService: AccountService, public activeRouter: Router) { }
 
   ngOnInit(): void {
     this.getAllResturants()
@@ -24,4 +25,5 @@ export class ResturantsListSectionComponent implements OnInit {
       this._ResturantCardService.resturantCards = res
     })
   }
+   
 }

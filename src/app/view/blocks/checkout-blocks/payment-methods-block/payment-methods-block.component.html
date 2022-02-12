@@ -4,7 +4,7 @@
         textClass="fCC-reg-sD cCC-text-dark">
     </app-icon>
     <!-- CheckBox -->
-    <input type="checkbox" name="way1" value="way1" class="uCC-Click">
+    <input type="checkbox" name="way1" value="way1" [checked]='paymentMethod === "visa"' class="uCC-Click">
 </div>
 <div class="d-flex justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2 mb-3">
     <!-- By Mastercard -->
@@ -12,7 +12,7 @@
         textClass="fCC-reg-sD cCC-text-dark">
     </app-icon>
     <!-- CheckBox -->
-    <input type="checkbox" name="way2" value="way2" class="uCC-Click">
+    <input type="checkbox" name="way2" value="way2" [checked]='paymentMethod === "master-card"' class="uCC-Click">
 </div>
 <div class="d-flex justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2 mb-3">
     <!-- By Cash -->
@@ -20,5 +20,5 @@
         textClass="fCC-reg-sD cCC-text-dark">
     </app-icon>
     <!-- CheckBox -->
-    <input type="checkbox" name="way3" value="way3" class="uCC-Click">
+    <input type="checkbox" name="way3" value="way3" [checked]='paymentMethod === "cash"' class="uCC-Click">
 </div>
