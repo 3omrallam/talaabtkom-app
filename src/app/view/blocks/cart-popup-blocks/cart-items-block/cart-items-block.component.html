@@ -13,9 +13,9 @@
     <div class="d-flex flex-column align-items-end justify-content-end">
         <app-icon iconName="iCC-Trash iCC-sB imCC-Background-Contain d-flex uCC-Click" (click)="deleteItem()"></app-icon>
         <div class="d-flex justify-content-center align-items-center mt-3">
-            <i class="d-flex iCC-Plusblack iCC-sB imCC-Background-Contain uCC-Click" (click)="Plus(item)"></i>
-            <p class="fCC-reg-sD cCC-text-grey2 mx-3 my-0">{{item.quantity}}</p>
-            <i class="d-flex iCC-Minusgrey iCC-sB imCC-Background-Contain uCC-Click" (click)="minus(item)"></i>
+            <i class="d-flex iCC-Plusblack iCC-sB imCC-Background-Contain uCC-Click" (click)="Plus()"></i>
+            <p class="fCC-reg-sD cCC-text-grey2 mx-3 my-0">{{this._OrderProccessService.quantityOrder}}</p>
+            <i class="d-flex iCC-Minusgrey iCC-sB imCC-Background-Contain uCC-Click" (click)="minus()"></i>
         </div>
     </div>
 </div>

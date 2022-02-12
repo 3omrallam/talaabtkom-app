@@ -9,6 +9,7 @@ export class OrderProccessService {
   allProductsInCart! : any
   orderDetails! : any
   userAddress! : any
+  quantityOrder :number =1
 
   constructor(private _http: HttpClient) { }
 
@@ -27,5 +28,8 @@ export class OrderProccessService {
   }
   getUserAddress(apiToken : String){
     return this._http.get(`${environment.apiUrl}/api/delivery_addresses?api_token=${apiToken}`)
+  }
+  getItemQuantity(productID: number, apiToken: String, quantity: number){
+    return this._http.patch(`${environment.apiUrl}/api/carts/${productID}`, { apiToken, quantity})
   }
 }

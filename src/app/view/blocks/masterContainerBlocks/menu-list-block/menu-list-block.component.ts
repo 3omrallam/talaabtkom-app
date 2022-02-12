@@ -25,9 +25,8 @@ export class MenuListBlockComponent implements OnInit {
 
   handleAddToCard(){
     // this._AddToCartService.sendItem(this.blockMenu);
-    this._OrderProccessService.addProductToCart(this._AccountService.userValue?.data?.token, this.blockMenu?.id , 1).subscribe(res => {
+    this._OrderProccessService.addProductToCart(this._AccountService.userValue?.data?.token, this.blockMenu?.id , this._OrderProccessService.quantityOrder).subscribe(res => {
       console.log(res);
-      
     })
   }
 

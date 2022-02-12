@@ -14,23 +14,40 @@ export class CartItemsBlockComponent implements OnInit {
   constructor(public _AddToCartService: AddToCartService, public _OrderProccessService: OrderProccessService, public _AccountService: AccountService) { }
 
   ngOnInit(): void {
+    console.log(this._OrderProccessService.quantityOrder);
+    
+    console.log(this.item);
   }
   // Plus Icon In Cart
-  Plus(item: any) {
-    return item.quantity++;
+  Plus() {
+    this._OrderProccessService.quantityOrder++;
+    console.log(this._OrderProccessService.quantityOrder);
+
+    this.setOrderQuantity();
   }
   // Minus Icon In cart
-  minus(item: any) {
-    item.quantity--;
-    if (item.quantity == 0) {
-      item.quantity = 1
+  minus() {
+    this._OrderProccessService.quantityOrder--;
+    if (this._OrderProccessService.quantityOrder == 0) {
+      this._OrderProccessService.quantityOrder = 1;
     }
+    console.log(this._OrderProccessService.quantityOrder);
+
+    this.setOrderQuantity();
   }
   deleteItem(){
     this._OrderProccessService.deleteItemInCart(this.item?.id, this._AccountService.userValue?.data?.token).subscribe(res => {
       console.log(res);
     })
-    // this._AddToCartService.deleteItem(item);
+  }
+  setOrderQuantity(){
+    // let data = {
+    //   api_token : this._AccountService.userValue?.data?.token,
+    //   quantity: this._OrderProccessService.quantityOrder
+    // }
+    this._OrderProccessService.getItemQuantity(this.item?.id, this._AccountService.userValue?.data?.token, 6).subscribe((res:any)=>{
+      this._OrderProccessService.quantityOrder = res;
+    })
   }
 
 }
