@@ -1,13 +1,22 @@
 <!-- Resturant Cards Header -->
 <div class="text-center mb-4 pt-5">
-    <p class="fCC-bold-sF cCC-text-dark m-0 pb-2">طلبك ديماً منتظرك .. مع تطبيق طلباتكم</p>
-    <p class="m-0 fCC-reg-sD cCC-text-grey">نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في </p>
-    <p class="m-0 fCC-reg-sD cCC-text-grey">صناعات المطابع ودور النشر. كان </p>
+    <p class="fCC-bold-sF cCC-text-dark m-0 pb-2">{{'طلبك ديماً منتظرك .. مع تطبيق طلباتكم' | translate}}</p>
+    <p class="m-0 fCC-reg-sD cCC-text-grey">{{'نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في' | translate}}</p>
+    <p class="m-0 fCC-reg-sD cCC-text-grey">{{'هو ببساطة(Lorem Ipsum) وريم إيبسوم' | translate}} </p>
 </div>
 <!-- Resturant Cards -->
-<div class="uCC-gap-16 mt-2 CC-Holder ">
+<div class="uCC-gap-16 mt-2 pb-2 CC-Holder overflow-auto ">
+    <!-- <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click" *ngIf="this._ResturantCardService.placeholder">لا يوجد مطاعم</p> -->
+    <!-- loading spinners -->
+    <div class="d-flex gap-5 justify-content-center" *ngIf="this._ResturantCardService.placeholder">
+        <div class="spinner-grow" role="status"></div>
+        <div class="spinner-grow" role="status"></div>
+        <div class="spinner-grow" role="status"></div>
+        <div class="spinner-grow" role="status"></div>
+    </div>
     <!-- Resturant 1 -->
-    <ng-container *ngFor='let resturantCardstate of _ResturantCardService?.resturantCards?.data' class="col-4">
+    <ng-container
+     *ngFor='let resturantCardstate of _ResturantCardService?.resturantCards?.data' class="col-4">
         <app-resturant-grid-card-block [blockState]="resturantCardstate"></app-resturant-grid-card-block>
     </ng-container>
 </div>

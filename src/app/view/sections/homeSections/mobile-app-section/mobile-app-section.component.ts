@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { AnimationOptions } from 'ngx-lottie';
 import { AnimationItem } from 'ngx-lottie/lib/symbols';
 @Component({
@@ -12,12 +13,11 @@ export class MobileAppSectionComponent implements OnInit {
     path: '../../../../../assets/animations/QR scan code.json',
   };
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit(): void {
   }
   animationCreated(animationItem: AnimationItem): void {
-    // console.log(animationItem);
   }
 
 }

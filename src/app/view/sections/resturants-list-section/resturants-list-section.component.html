@@ -1,8 +1,18 @@
 <section class="mb-3 d-flex flex-column uCC-gap-16">
-    <!-- <div *ngFor='let resturantCardstate of jokes$ ; let last = last' class="p-0">
-        <app-resturant-list-card-block [listState]="resturantCardstate"></app-resturant-list-card-block>
-    </div> -->
-    <div *ngFor='let resturantCardstate of _ResturantCardService?.resturantCards?.data' class="p-0">
-        <app-resturant-list-card-block [listState]="resturantCardstate"></app-resturant-list-card-block>
+    <div class="mx-md-0 mx-4">
+        <app-search-bar-block searchPlaceHolder="{{'ابحث عن مكانك المفضل' | translate}}" (searchInputVal)="getResturantBySearch($event)"></app-search-bar-block>
+    </div>
+    <!-- <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click" *ngIf="this._ResturantCardService.placeholder">لا يوجد مطاعم</p> -->
+    <div class="d-flex gap-5 justify-content-center" *ngIf="this._ResturantCardService.placeholder">
+        <div class="spinner-grow" role="status"></div>
+        <div class="spinner-grow" role="status"></div>
+        <div class="spinner-grow" role="status"></div>
+        <div class="spinner-grow" role="status"></div>
+    </div>
+    <div class="overflow-auto" style="height: 70vh;">
+        <div *ngFor='let resturantCardstate of _ResturantCardService?.resturantCards?.data' class="p-0 my-3  overflow-auto">
+            <app-resturant-list-card-block [listState]="resturantCardstate"></app-resturant-list-card-block>
+        </div>
     </div>
 </section>
+<!-- <button mat-raised-button (click)="open('asdasdasd','success')">OPEN</button> -->

@@ -1,46 +1,49 @@
-<div *ngFor="let element of reservationList">
+<!-- <div *ngFor="let element of reservationList"> -->
     <div class="CC-resturant-holder-grid cCC-bg-white uCC-f-radius-sB mb-4">
             <!-- Resturant Image -->
             <div class="CC-resturant-image">
-                <i class="{{element.image}} d-flex imCC-Background-Cover uCC-f-radius-sB CC-resturantsimgs-Holder uCC-Click"></i>
+                <img class=" d-flex imCC-Background-Cover uCC-f-radius-sB CC-resturantsimgs-Holder uCC-Click" alt=""
+                src="{{this.reservationList.market.media[0] != null ? this.reservationList.market.media[0].url : '../../../../../../../assets//images//placeholder.png'}}">
             </div>
             <div class="CC-resturant-title">
                 <!-- Resturant-title -->
-                <a><p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click mb-2">{{element.title}}</p></a>
+                <a><p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click text-nowrap mb-2">{{this.reservationList.market.name}}</p></a>
                 <!-- Resturant Description -->
                 <div class="d-flex">
-                    <p class="fCC-reg-sC cCC-text-support2 mb-2 uCC-Click">{{element.description}}</p>
+                    <p class="fCC-reg-sC cCC-text-support2 mb-2 uCC-Click"></p>
                     <!-- divider -->
                     <div class="mx-1"></div>
-                    <p class="cCC-text-main fCC-reg-sC m-0 uCC-Click">عرض المزيد</p>
+                    <!-- <p class="cCC-text-main fCC-reg-sC m-0 uCC-Click">عرض المزيد</p> -->
                 </div>
                 <!-- price -->
-                <p class="cCC-text-main fCC-bold-sB m-0 mb-2">185.00 RS</p>
+                <p class="cCC-text-main fCC-bold-sB m-0 mb-2">{{this.reservationList.payment.price}}RS</p>
                 <!-- Icons -->
                 <div class="d-flex">
-                    <p class="cCC-text-lightgray fCC-reg-sC m-0">{{element.date}}</p>
+                    <p class="cCC-text-lightgray fCC-reg-sC m-0"></p>
                     <!-- divider -->
                     <div class="mx-2"></div>
-                    <p class="cCC-text-lightgray fCC-reg-sC m-0">{{element.id}}</p>
+                    <p class="cCC-text-lightgray fCC-reg-sC m-0"></p>
                 </div>
             </div>
         <div class="CC-resturant-likeAndPlus d-flex flex-column">
             <!-- Status -->
-            <p class="fCC-reg-sA {{element.textStyle}} {{element.bgStyle}} {{element.border}} px-3 py-1 uCC-f-radius-sA mb-0 mt-1">
-                {{element.process}}</p>
+            <!-- <p class="fCC-reg-sA {{element.textStyle}} {{element.bgStyle}} {{element.border}} px-3 py-1 uCC-f-radius-sA mb-0 mt-1">
+                {{element.process}}</p> -->
+            <p class="fCC-reg-sA {{this.process}} {{this.bgStyle}} {{this.textStyle}} {{this.border}} px-3 py-1 uCC-f-radius-sA mb-0 mt-1">
+                {{process | translate}}</p>
             <!-- Plus Icon -->
             <div class="d-flex uCC-gap-16">
                 <!-- Track Order -->
-                <div *ngIf="element.process == 'تحت التنفيذ'" class="cCC-bg-main px-3 py-2 uCC-f-radius-sA">
-                    <app-icon iconName="iCC-TrackingIcon iCC-sD imCC-Background-Contain d-flex ms-1" textContent="تتبع الأوردر"
+                <div *ngIf="this.reservationList.order_status_id == 1 && 2 && 3 && 4" class="cCC-bg-main px-3 py-2 uCC-f-radius-sA uCC-Click" (click)="getTrackingOrder()">
+                    <app-icon iconName="iCC-TrackingIcon iCC-sD text-nowrap imCC-Background-Contain d-flex {{'ms-1' | translate}}" textContent="{{'تتبع الأوردر' | translate}}"
                     textClass="fCC-reg-sC cCC-text-lightblue">
                 </app-icon>
                 </div>
                 <!-- Reorder -->
-                <div class="p-2 uCC-f-radius-sA cCC-opacity-support1-50 uCC-Click">
+                <div class="p-2 uCC-f-radius-sA cCC-opacity-support1-50 uCC-Click" (click)="resetCart()">
                     <i class="d-flex iCC-Reload iCC-sD imCC-Background-Contain"></i>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
     </div>
-</div>
+<!-- </div> -->

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-resturants-header-block',
@@ -12,7 +13,7 @@ export class ResturantsHeaderBlockComponent implements OnInit {
   @Input()headerIcon!:any;
   
 
-  constructor(public activeRouter: Router) { }
+  constructor(public activeRouter: Router, public translate: TranslateService) { }
 
   ngOnInit(): void {
   }

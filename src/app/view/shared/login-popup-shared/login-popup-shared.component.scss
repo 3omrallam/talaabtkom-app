@@ -1,9 +1,27 @@
 video {
-    object-fit: cover !important;
+  object-fit: cover !important;
+}
+.CC-video-holder{
+  width: 536px;
+  @media screen and(max-width:1200px) {
+      width: 485px !important;
+  }
 }
 .CC-login-Holder{
     width: 536px;
     height: 641px;
+ 
+    @media screen and(max-width:746px) {
+      width: 394px;
+      padding-right: 0 !important ;
+      padding-left: 0 !important;
+    }
+    @media screen and(max-width:395px) {
+      width: 360px;
+      height: 588px;
+      padding-right: 0 !important ;
+      padding-left: 0 !important;
+    }
 }
 .CC-login-Hover:hover{
   color: #363537 !important;
@@ -23,5 +41,7 @@ video {
 }
 .CC-Blur-Layer{
   // background-color: #fff;
-  backdrop-filter: blur(17px) brightness(0.45) opacity(0.2);
+  background: rgba(255, 255, 255, 0.2); 
+  // backdrop-filter: blur(17px) brightness(0.45) opacity(0.2);
+  backdrop-filter: blur(17px); 
 }

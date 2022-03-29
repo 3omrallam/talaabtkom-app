@@ -1,62 +1,122 @@
-<div class="container-fluid cCC-bg-lightblue d-flex flex-column align-items-between px-0 h-100">
-  <!-- haeders -->
-  <header>
-      <nav class="container-fluid p-0 position-fixed uCC-shadow-f-black-12 cCC-bg-white top-0" style="z-index: 1;">
-        <div style="z-index: 999;">
-        <app-navbar-layout></app-navbar-layout>
-      </div>
-    </nav>
-    <div class="container-fluid p-0" style="margin-top: 70px;">
-      <app-header-layout></app-header-layout>
+<!-- Nav SideMenu -->
+<div class="cCC-bg-main CC-aside-menu-holder" *ngIf="_NavbarService.sideMenuToggle"
+  [ngStyle]="{'overflow-y': _NavbarService.sideMenuToggle ? 'hidden' : ''}">
+  <div class=" px-3 py-4 cCC-bg-main CC-aside-menu-holder uCC-shadow-r-10 uCC-t-4 "
+    [ngStyle]="{'width': _NavbarService.cartMenuToggle ? '260px' : '0' }">
+    <!-- User Icon and Name -->
+    <div class="d-flex align-items-center mb-5" *ngIf="_AccountService.userValue?.success">
+      <app-user-profile-block *ngIf="_AccountService.userValue?.success"></app-user-profile-block>
     </div>
-    <!-- Side Cart -->
-    <aside>
-      <!-- Search Layer -->
-      <div *ngIf="!_NavbarService.cartMenuToggle" class="position-fixed end-0 start-0 bottom-0 bg-transparent"
-        style="z-index: 1;top: 71px;" 
-        [ngStyle]="{'opacity': _NavbarService.cartMenuToggle ? '0' : '1'}" (click)='_NavbarService.animateCart()'>
-      </div>
-      <div *ngIf="!_NavbarService.cartMenuToggle"
-      class="py-4 cCC-bg-white CC-aside-cart-holder uCC-shadow-r-10 uCC-t-4 "
-      [ngStyle]="{'left': _NavbarService.cartMenuToggle ? '-410px' : '0px' }" [@animateCart] style="z-index: 2;">
-      <app-cart-popup-shared></app-cart-popup-shared>
+    <!-- SignIn Button Block -->
+    <div *ngIf="!_AccountService.userValue?.success" class="cCC-bg-main mb-5 uCC-f-radius-sA py-2 px-4 uCC-Click"
+      (click)='animateLogin() ; _NavbarService.animateSideNav()'>
+      <app-signin-button-block></app-signin-button-block>
     </div>
-  </aside>
-  </header>
-  <!-- main -->
-  <section *ngIf="_AccountService?.getUserAddress?.data.length != 0"
-    class="{{this.activeRouter.url !== '/' ? 'container uCC-gap-24' : 'container-fluid'}} CC-mediaquerie-holder p-0 row justify-content-center align-items-start~ mx-auto m-0 ">
-    <aside
-      *ngIf='this.activeRouter.url !== "/" && this.activeRouter.url !== "/contact-us" && this.activeRouter.url !== "/check-out" && this.activeRouter.url !== "/track-order"'
-      class="container-fluid p-0 col-3 d-lg-block d-none {{this.activeRouter.url !== '/resturants' ? 'position-sticky' : ''}}"
-      style="top: 200px;">
-      <app-side-menu-layout></app-side-menu-layout>
-    </aside>
-    <main class="container-fluid col p-0 p-md-0 p-3~ cCC-bg-lightblue">
-      <app-master-container-layout></app-master-container-layout>
-    </main>
-    <section class="container-fluid p-0">
-      <div class="position-fixed top-0 end-0 start-0 bottom-0 cCC-bg-dark" [@animateLayer] style="z-index: 9;"
-        *ngIf="!_AccountService.userValue?.success && !_NavbarService.loginToggle" (click)='animateLogin()'
-        [ngStyle]="{'opacity': !_NavbarService.loginToggle ? '0.2' : '0'}">
+    <div class="h-75 d-flex flex-column justify-content-between align-items-start pt-5">
+      <div>
+        <ul style="z-index: 9; list-style-type: none;">
+          <li (click)='_NavbarService.animateSideNav()' routerLink='/' class="uCC-Click mb-4">
+            <app-icon iconName="iCC-HomePageIcon iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{'الرئيسية' | translate}}"
+              textClass="fCC-reg-sD cCC-text-lightblue"></app-icon>
+          </li>
+          <li (click)='_NavbarService.animateSideNav()' routerLink='resturants' class="uCC-Click mb-4">
+            <app-icon iconName="iCC-HomePageIcon iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{'عروض المطاعم' | translate}}"
+              textClass="fCC-reg-sD cCC-text-lightblue"></app-icon>
+          </li>
+          <li class="mb-4 uCC-Click" (click)='_NavbarService.animateSideNav()' routerLink='privacy-policy'>
+            <app-icon iconName="iCC-PrivacyPolicyPage iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}"
+              textContent="{{'الشروط والأحكام' | translate}}" textClass="fCC-reg-sD cCC-text-lightblue"></app-icon>
+          </li>
+          <li (click)='_NavbarService.animateSideNav()' routerLink='contact-us' class="uCC-Click mb-4">
+            <app-icon iconName="iCC-ContactUsPage iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{'تواصل معنا' | translate}}"
+              textClass="fCC-reg-sD cCC-text-lightblue"></app-icon>
+          </li>
+          <li (click)='_NavbarService.animateSideNav()' routerLink='about' class="uCC-Click">
+            <app-icon iconName="iCC-ContactUsPage iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{'من نحن' | translate}}"
+              textClass="fCC-reg-sD cCC-text-lightblue"></app-icon>
+          </li>
+        </ul>
       </div>
-      <div *ngIf="!_AccountService.userValue?.success && !_NavbarService.loginToggle" [@animateLogin]
-        class="uCC-t-4 CC-Popup-Holder position-fixed" style="transform: translate(50% , -50%);right: 50%;z-index: 10;"
-        [ngStyle]="{'top': _NavbarService.loginToggle ? '-718px' : '50%'}">
-        <app-login-popup-shared></app-login-popup-shared>
-        <div class=" position-absolute top-0 start-0 ms-4 mt-4 uCC-Click"
-          *ngIf="!_AccountService.userValue && !_NavbarService.loginToggle" (click)='animateLogin()'>
-          <app-icon [iconName]='"iCC-Closebutton imCC-Background-Contain iCC-sB"'></app-icon>
+      <div class="d-flex align-items-center">
+        <app-icon (click)='_NavbarService.animateSideNav()' routerLink="/userProfile/settings" routerLinkActive="router-link-active"  iconName="iCC-Setting iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{'الإعدادات' | translate}}"
+          textClass="fCC-reg-sC cCC-text-lightblue uCC-Click"></app-icon>
+        <p class="m-0 fCC-reg-sD cCC-text-lightblue mx-4">|</p>
+        <p (click)='_NavbarService.animateSideNav();_AccountService.logout()' class="m-0 fCC-reg-sC cCC-text-lightblue uCC-Click">{{'تسجيل الخروج' | translate}}</p>
+      </div>
+    </div>
+    <div class=" d-flex justify-content-center mt-5">
+      <i class="iCC-LogoImage iCC-sG imCC-Background-Contain d-flex"></i>
+    </div>
+  </div>
+</div>
+<div style="z-index: 1;" class="d-flex flex-column align-items-between px-0 h-100"
+  [ngStyle]="{'overflow': _NavbarService.sideMenuToggle ? 'hidden' : '' ,'position': _NavbarService.sideMenuToggle ? 'fixed' : '', 'right': _NavbarService.sideMenuToggle ? '260px' : '0'}">
+
+  <div class="container-fluid cCC-bg-lightblue uCC-t-4 d-flex flex-column align-items-between px-0 h-100">
+    <!-- haeders -->
+    <header>
+      <nav 
+      class="container-fluid p-0 position-fixed uCC-shadow-f-black-12 cCC-bg-white top-0" style="z-index: 1;">
+        <div>
+          <app-navbar-layout></app-navbar-layout>
         </div>
+      </nav>
+      <div class="container-fluid p-0" style="margin-top: 70px;">
+        <app-header-layout></app-header-layout>
       </div>
+      <!-- Side Cart -->
+      <aside>
+        <!-- Search Layer -->
+        <div *ngIf="!_NavbarService.cartMenuToggle" class="position-fixed end-0 start-0 bottom-0 bg-transparent"
+          style="z-index: 1;top: 71px;" [ngStyle]="{'opacity': _NavbarService.cartMenuToggle ? '0' : '1'}"
+          (click)='_NavbarService.animateCart()'>
+        </div>
+        <div *ngIf="!_NavbarService.cartMenuToggle"
+          class="cCC-bg-lightblue CC-aside-cart-holder uCC-shadow-r-10 uCC-t-4"
+          [ngStyle]="{'left': _NavbarService.cartMenuToggle ? '-410px' : '0px' }" [@animateCart] style="z-index: 2;">
+          <app-cart-popup-shared></app-cart-popup-shared>
+        </div>
+      </aside>
+    </header>
+    <!-- main -->
+    <!-- TODO condition makes master conatiner not display -->
+    <!-- <section *ngIf="_AccountService?.getUserAddress?.data.length == 0" -->
+    <section
+      [ngStyle]="{'overflow-y': _NavbarService.sideMenuToggle ? 'hidden' : '' , 'height': _NavbarService.sideMenuToggle ? '100vh' : '' }"
+      class="{{this.activeRouter.url !== '/' ? 'container uCC-gap-24' : 'container-fluid'}} CC-mediaquerie-holder p-0 row justify-content-center align-items-start~ mx-auto m-0 ">
+      <aside
+        *ngIf='this.activeRouter.url !== "/" && this.activeRouter.url !== "/privacy-policy" && this.activeRouter.url !== "/cart" && this.activeRouter.url !== "/about" && this.activeRouter.url !== "/contact-us" && this.activeRouter.url !== "/check-out" && !activeRouter.url.includes("/track-order") '
+        class="container-fluid p-0 col-3 d-lg-block d-none {{this.activeRouter.url !== '/resturants' ? 'position-sticky' : ''}}"
+        style="top: 200px;">
+        <app-side-menu-layout></app-side-menu-layout>
+      </aside>
+      <main [ngStyle]="{'height': _NavbarService.sideMenuToggle ? '100vh' : ''}"
+        class="container-fluid col p-0 p-md-0 cCC-bg-lightblue">
+        <app-master-container-layout></app-master-container-layout>
+      </main>
+      <section class="container-fluid p-0">
+        <div class="position-fixed top-0 end-0 start-0 bottom-0 cCC-bg-dark" [@animateLayer] style="z-index: 9;"
+          *ngIf="!_AccountService.userValue?.success && !_NavbarService.loginToggle" (click)='animateLogin()'
+          [ngStyle]="{'opacity': !_NavbarService.loginToggle ? '0.2' : '0'}">
+        </div>
+        <div *ngIf="!_AccountService.userValue?.success && !_NavbarService.loginToggle" [@animateLogin]
+          class="uCC-t-4 CC-Popup-Holder position-fixed"
+          style="transform: translate(50% , -50%);right: 50%;z-index: 10;"
+          [ngStyle]="{'top': _NavbarService.loginToggle ? '-718px' : '50%'}">
+          <app-login-popup-shared></app-login-popup-shared>
+          <div class=" position-absolute top-0 {{'start-0' | translate}} {{'ms-4' | translate}} mt-4 uCC-Click"
+            *ngIf="!_AccountService.userValue?.data?.token && !_NavbarService.loginToggle" (click)='animateLogin()'>
+            <app-icon [iconName]='"iCC-Closebutton imCC-Background-Contain iCC-sB"'></app-icon>
+          </div>
+        </div>
+      </section>
     </section>
-  </section>
-  <section *ngIf="_AccountService?.getUserAddress?.data.length == 0" class="d-flex justify-content-center mt-5">
-  <!-- <section *ngIf="true" class="d-flex justify-content-center mt-5"> -->
-    <app-address-map-popup-shared></app-address-map-popup-shared>
-  </section>
-  <!-- Footer -->
-  <footer class="cCC-bg-white m-0 pt-2 pb-3 mt-auto " >
-    <app-footer-layout></app-footer-layout>
-  </footer>
+    <section *ngIf="_AccountService.userValue?.data?.token && reactivePopup" class="d-flex justify-content-center mt-lg-5 mt-0">
+      <app-address-map-popup-shared></app-address-map-popup-shared>
+    </section>
+    <!-- Footer -->
+    <footer class="cCC-bg-white m-0 pt-2 pb-3 px-md-0 px-4 mt-auto ">
+      <app-footer-layout></app-footer-layout>
+    </footer>
+  </div>
 </div>

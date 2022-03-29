@@ -1,3 +1,28 @@
 .CC-coverresturants-size{
     height: 214px;
 }
+.offcanvas-bottom {
+    height: 93vh !important;
+}
+.CC-resturantimg-Holder{
+    height: 56px;
+    width: 56px;
+}
+.CC-resturantsimgs-Holder{
+    height: 80px;
+    width: 80px;   
+}
+.CC-Grid-Holder{
+    gap: 16px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    .CC-image-Holder{
+        grid-column: 1/2;
+    }
+    .CC-text-Holder{
+        grid-column: 2/3;
+    }
+    .CC-menu-Holder {
+        grid-column: 3/4;
+    }
+}

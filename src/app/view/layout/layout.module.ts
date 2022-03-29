@@ -12,6 +12,8 @@ import { SharedModule } from '../shared/shared.module';
 import { NavbarService } from './services/navbar.service';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { SideNavMobileResponsiveLayoutComponent } from './side-nav-mobile-responsive-layout/side-nav-mobile-responsive-layout.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { CommonModule } from '@angular/common';
     FooterLayoutComponent,
     MasterContainerLayoutComponent,
     SideMenuLayoutComponent,
-    NavbarLayoutComponent
+    NavbarLayoutComponent,
+    SideNavMobileResponsiveLayoutComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +31,8 @@ import { CommonModule } from '@angular/common';
     PagesModule,
     RouterModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TranslateModule
     
   ],
   exports:[
@@ -37,7 +41,8 @@ import { CommonModule } from '@angular/common';
     FooterLayoutComponent,
     MasterContainerLayoutComponent,
     SideMenuLayoutComponent,
-    NavbarLayoutComponent
+    NavbarLayoutComponent,
+    SideNavMobileResponsiveLayoutComponent
   ],
   providers: [
     NavbarService

@@ -1,0 +1,12 @@
+<svg id="Add_Quntity" data-name="Add Quntity" xmlns="http://www.w3.org/2000/svg" width="30.667" height="32" viewBox="0 0 30.667 32">
+  <g id="Group_8991" data-name="Group 8991" transform="translate(-300.667 -409)">
+    <g id="Group_8991-2" data-name="Group 8991" transform="translate(300 409)">
+      <g id="Layer_2" data-name="Layer 2" transform="translate(0.667)">
+        <g id="_01.Add" data-name="01.Add">
+          <rect id="Rectangle_156" data-name="Rectangle 156" width="30.667" height="32" rx="5.296" fill="#ededf4"/>
+          <path id="_Path_" d="M21.083,13.714a1.4,1.4,0,0,1-1.37,1.429H15.059a.265.265,0,0,0-.193.083.289.289,0,0,0-.079.2v4.863a1.371,1.371,0,1,1-2.74,0V15.427a.289.289,0,0,0-.079-.2.265.265,0,0,0-.193-.083H7.12a1.431,1.431,0,0,1,0-2.859h4.654a.265.265,0,0,0,.193-.083.289.289,0,0,0,.079-.2V7.143a1.371,1.371,0,1,1,2.74,0V12a.289.289,0,0,0,.077.206.265.265,0,0,0,.2.085h4.654a1.4,1.4,0,0,1,1.37,1.423Z" transform="translate(1.917 2.236)" fill="#f5504c"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

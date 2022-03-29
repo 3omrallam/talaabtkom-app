@@ -109,10 +109,21 @@
     font-family: Cairo-Bold;
     }
     // reg
+    .fCC-reg-sC {
+        font-size: 10px !important;
+        font-family: Cairo-Regular;
+    }
+    // 16 => 14
+    .fCC-reg-sD {
+    font-size: 14px !important;
+    font-family: Cairo-Regular;
+    }
+    
+}
+@media screen and (max-width:395px){
     // 16 => 12
     .fCC-reg-sD {
     font-size: 12px !important;
     font-family: Cairo-Regular;
     }
-    
 }

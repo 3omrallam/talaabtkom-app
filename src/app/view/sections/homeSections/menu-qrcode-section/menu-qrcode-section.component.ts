@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { AnimationOptions } from 'ngx-lottie';
 import { AnimationItem } from 'ngx-lottie/lib/symbols';
 
@@ -13,12 +14,11 @@ export class MenuQrcodeSectionComponent implements OnInit {
     path: '../../../../../assets/animations/40888-yellow-qr-code-menu.json',
   };
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit(): void {
   }
   animationCreated(animationItem: AnimationItem): void {
-    // console.log(animationItem);
   }
 
 }

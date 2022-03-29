@@ -1,22 +1,37 @@
-<div class="d-flex justify-content-between align-items-center mx-4">
-    <div class="d-flex">
-        <div>
-            <i class="{{item?.product?.media[0]?.url}} imCC-Background-Contain d-flex CC-menu-img-holder" [ngStyle]="{'background-image': 'url('+ item?.product?.media[0]?.url + ')'}"></i>
+<div class="d-flex justify-content-between cCC-bg-white uCC-f-radius-sB mx-3">
+    <div class="CC-resturant-holder-grid {{this.activeRouter.url == '/cart' ? '' : 'p-3'}}">
+        <!-- Resturant Image -->
+        <div class="CC-resturant-image">
+            <i [ngStyle]="{'background-image': 'url('+ item?.product?.media[0]?.url + ')'}"
+                class="CC-menu-img-holder  d-flex imCC-Background-Contain uCC-Click"></i>
         </div>
-        <!-- divider -->
-        <div class="mx-2"></div>
-        <div>
-            <p class="fCC-bold-sC cCC-text-support2 m-0">{{item?.product?.name}}</p>
-            <p class="fCC-bold-sA cCC-text-main">{{item?.product?.price}} ر.س</p>
+        <div class="CC-resturant-title">
+            <!-- Resturant-title -->
+            <div>
+                <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{item?.product?.name}}</p>
+            </div>
+            <!-- Resturant Description -->
+            <p class="fCC-reg-sC cCC-text-support2 m-0 uCC-Click" style="text-overflow: ellipsis;width: 130px; white-space: nowrap; overflow: hidden;"
+            [innerHTML]="item?.product?.description"></p>
+            <div class="d-flex align-items-center uCC-gap-8">
+                <!-- Icon -->
+                <i class="d-flex iCC-Calories iCC-sD"></i>
+                <p class="m-0 cCC-text-dark fCC-reg-sC">{{item?.product?.Calories}}<span
+                        class="fCC-reg-sC cCC-text-support2 {{'me-1' | translate}}">{{'سعره حرارية' | translate}}</span></p>
+            </div>
         </div>
-    </div>
-    <div class="d-flex flex-column align-items-end justify-content-end">
-        <app-icon iconName="iCC-Trash iCC-sB imCC-Background-Contain d-flex uCC-Click" (click)="deleteItem()"></app-icon>
-        <div class="d-flex justify-content-center align-items-center mt-3">
-            <i class="d-flex iCC-Plusblack iCC-sB imCC-Background-Contain uCC-Click" (click)="Plus()"></i>
-            <p class="fCC-reg-sD cCC-text-grey2 mx-3 my-0">{{this._OrderProccessService.quantityOrder}}</p>
-            <i class="d-flex iCC-Minusgrey iCC-sB imCC-Background-Contain uCC-Click" (click)="minus()"></i>
+        <!-- Icons -->
+        <div class="CC-resturant-salary">
+            <!-- Icons -->
+            <p class="cCC-text-main fCC-bold-sB m-0">{{item?.product?.price * item.quantity}} {{'ر.س' | translate}}</p>
+        </div>
+        <div class="CC-resturant-likeAndPlus d-flex flex-column align-items-end justify-content-end">
+            <app-icon iconName="iCC-Trash iCC-sB imCC-Background-Contain d-flex uCC-Click" (click)="deleteItem()"></app-icon>
+            <div class="d-flex justify-content-center align-items-center mt-3 cCC-bg-support1 p-1 uCC-f-radius-s5">
+                <i class="d-flex iCC-Redplus iCC-sB imCC-Background-Contain uCC-Click" (click)="Plus()"></i>
+                <p class="fCC-reg-sD cCC-text-main mx-3 my-0">{{item.quantity}}</p>
+                <i class="d-flex iCC-Greyminus iCC-sB imCC-Background-Contain uCC-Click" (click)="minus()"></i>
+            </div>
         </div>
     </div>
 </div>
-<p class="fCC-reg-sB cCC-text-support2 col-9 me-4">{{item?.product?.description}}</p>

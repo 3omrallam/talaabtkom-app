@@ -1,4 +1,26 @@
 .CC-mobile-Holder{
     width: 648px;
     height: 431px;
+    @media screen and (max-width:1195px) {
+        width: 555px;
+    }
+    @media screen and (max-width:992px) {
+        width:382px;
+        height: 260px   
+    }
+    @media screen and (max-width:400px) {
+        width:285px;
+        height: 260px   
+    }
+}
+.CC-Lottie{
+    width:72px;
+    @media screen and (max-width:992px){
+        width:55px;
+        height : 55px
+    }
+    @media screen and (max-width:400px){
+        width:48px;
+        height : 48px
+    }
 }

@@ -20,3 +20,60 @@ button:focus{
   background-color: #f5504c !important;
   border:0 !important; 
 }
+.modal-header {
+  border-bottom: none;
+}
+.modal-content{
+  border: 0 !important;
+}
+.modal-footer{
+  border-top: none;
+}
+.modal-footer{
+  padding-top: 0 !important;
+}
+input{
+   appearance: none;
+   border: 1px solid rgb(118, 118, 118);
+   width: 16px;
+   height: 16px;
+   content: none;
+   outline: none;
+   margin: 0;
+   border-radius: 2px;
+  //  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+input:checked {
+  appearance: none;
+  outline: none;
+  padding: 0;
+  content: none;
+  width: 16px;
+   height: 16px;
+  border: none;
+}
+
+input:checked::before{
+  position: absolute;
+  color: white !important;
+  width: 16px;
+   height: 16px;
+  background-color: #F5504C;
+  content: "\00A0\2713\00A0" !important;
+  font-weight: bolder;
+  font-size: 12px;
+}
+::ng-deep .test {
+  border: 1px solid #F5504C;
+  background: rgba(245 , 80 ,76 , 0.2);
+  color: black;
+  border-radius: 20%;
+  font-size: 20px !important;
+  font-family: Cairo-Bold !important;
+  direction: rtl;
+}
+::ng-deep .mat-simple-snackbar{
+  font-size: 14px !important;
+  font-family: Cairo-Bold !important;
+}

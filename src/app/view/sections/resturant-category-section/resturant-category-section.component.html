@@ -1,18 +1,47 @@
-<div class="my-4">
-    <app-search-bar-block></app-search-bar-block>
+<div class="my-4 d-lg-block d-none">
+    <app-search-bar-block (searchInputVal)="getProductsBySearch($event)" searchPlaceHolder ="{{'أبحث عن أكلتك المفضلة' | translate}}"></app-search-bar-block>
 </div>
 <!-- Resturant Menu Section -->
-<section class="CC-scroll~">
+<section *ngIf="!_ResturantCardService.searchCategoryInputVal"  class="overflow-auto" style="height: 70vh;">
     <!-- Resturant Menu List -->
-    <div class="mb-5">
+    <div class="mb-5 overflow-auto">
+        <!-- Product Category -->
         <ng-container *ngFor='let resturantMenuState of _ResturantCardService?.singleResturantCategories ; let last = last'>
             <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click mb-2" id="products{{resturantMenuState?.id}}">
                 {{resturantMenuState?.name}}</p>
+            <!-- Products -->
             <ng-container *ngFor="let item of resturantMenuState?.products; let last = last">
-                <app-menu-list-block [blockMenu]="item"></app-menu-list-block>
+                <app-menu-list-block (click)="getProductDetails(item)" [blockMenu]="item"></app-menu-list-block>
                 <div class="my-4" *ngIf="!last"></div>
             </ng-container>
             <div class="my-4" *ngIf="!last"></div>
         </ng-container>
+        <!-- Product details Popup -->
+        <app-menu-list-modal [productDetails]="this._ResturantCardService.getProductDetails"></app-menu-list-modal>
     </div>
 </section>
+<!-- Search View -->
+<section *ngIf="_ResturantCardService.searchCategoryInputVal">
+    <!-- Resturant Menu List -->
+    <div class="mb-5">
+        <!-- Product Category -->
+            <!-- Products -->
+            <ng-container *ngFor="let item of checkValInInput; let last = last">
+                <app-menu-list-block (click)="getProductDetails(item)" [blockMenu]="item"></app-menu-list-block>
+                <div class="my-4" *ngIf="!last"></div>
+            </ng-container>
+        <!-- Product details Popup -->
+        <app-menu-list-modal [productDetails]="this._ResturantCardService.getProductDetails"></app-menu-list-modal>
+    </div>
+</section>
+<!-- Responsive cart -->
+<button routerLink="/cart" 
+    class=" mt-5 bottom-display justify-content-between align-items-center CC-Btn1 text-center form-control border-0 cCC-bg-main uCC-f-radius-sA cCC-text-white py-2 px-4 ms-4 mt-2"
+     style="position: fixed; bottom: 0;right: 0;left: 0;">
+    <div class="d-flex align-items-center gap-3">
+        <i class="iCC-CartIconResponsive iCC-sD imCC-Background-Contain d-flex"></i>
+        <p class="fCC-bold-sB m-0">{{'طلباتي' | translate}}</p>
+    </div>
+    <p class="m-0">{{_OrderProccessService?.getUserCartCount ?
+    +_OrderProccessService?.getUserCartCount : 0}}</p>
+</button>

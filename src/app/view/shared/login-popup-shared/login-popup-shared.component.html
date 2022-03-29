@@ -1,29 +1,29 @@
-<div class="container-fluid cCC-bg-white uCC-f-radius-sB px-0 d-flex align-items-center justify-content-center" style="border-radius: 20px;">
-    <div class="container uCC-f-radius-sB CC-Blur-Layer~ p-0 d-flex justify-content-center align-items-center">
+<div class="container-fluid uCC-f-radius-sB CC-Blur-Layer px-0 d-flex align-items-center justify-content-center" style="border-radius: 20px;">
+    <div class="container uCC-f-radius-sB  p-0 d-flex justify-content-center align-items-center">
         <!-- Login Video -->
-        <video class="uCC-l-radius-sG" width="536px" height="641px" autoplay loop>
+        <video class="{{'uCC-l-radius-sG ' | translate}} d-lg-block d-none CC-video-holder" height="641px" autoplay loop>
             <source src="../../../../assets/videos/Loginvideo.mp4" type="video/mp4">
         </video>
         <!-- Login [Holder] -->
         <div
-        class="cCC-bg-white~ CC-login-Holder uCC-l-radius-sH position-relative d-flex flex-column align-items-center justify-content-center gap-4 px-4">
+        class="cCC-bg-white~ CC-login-Holder {{'uCC-l-radius-sH' | translate}} position-relative d-flex flex-column align-items-center justify-content-center gap-3 px-4">
         <!-- Logo -->
         <div class="mb-3">
-            <p class="m-0 fCC-reg-sF cCC-text-dark me-5">اهلا بك</p>
+            <p class="m-0 fCC-reg-sF cCC-text-dark {{'me-5' | translate}}">{{'اهلا بك' | translate}}</p>
             <app-sticker-block></app-sticker-block>
         </div>
         <!-- Login Header -->
-        <div class="d-flex mb-3">
+        <div class="d-flex mb-2">
             <button
             class="CC-login-Hover fCC-reg-sF {{_AuthService.authToggleBTN === true ? 'cCC-text-dark CC-underline' : ' cCC-text-opacity-dark-50'}} m-0 uCC-Click btn"
-                (click)='toggleAuthBTN("login")'>تسجيل الدخول</button>
+                (click)='toggleAuthBTN("login")'>{{'تسجيل الدخول' | translate}}</button>
                 <div class="mx-4"></div>
                 <!-- Create New Account Header-->
                 <button
                 class="CC-login-Hover fCC-reg-sF {{_AuthService.authToggleBTN === false ? 'cCC-text-dark CC-underline' : 'cCC-text-opacity-dark-50'}} m-0 uCC-Click btn"
-                (click)='toggleAuthBTN("register")'>حساب جديد</button>
+                (click)='toggleAuthBTN("register")'>{{'حساب جديد' | translate}}</button>
             </div>
-            <div class="col-8">
+            <div class="col-9">
                 <!-- Login Section -->
             <div *ngIf="_AuthService.authToggleBTN === true">
                 <app-login-section></app-login-section>

@@ -1,22 +1,22 @@
 <!-- search bar section Holder -->
-<div class="col-1"></div>
+<div class="col-md-1 col-0"></div>
 <div class="container pt-sm-0 pt-xs-4 pt-4 col-md-11 col-12">
-  <div class="col-1"></div>
+  <div class="col-md-1 col-0"></div>
   <!-- main text -->
   <p class="fCC-bold-sG p-xs-0 pt-5 uCC-line-Hight-B col-lg-6 col-md-8 col-sm-12 mb-0 px-1">
-    دلوقتي تقدر تحجز مكانك
-    و تطلب كمان اللي نفسك فيه
-    قبل ما توصل معا
-    <span class="cCC-text-main">طلباتكم</span>
+   {{'دلوقتي تقدر تحجز مكانك و تطلب كمان اللي نفسك فيه قبل ما توصل معا' | translate}}
+    <span class="cCC-text-main">{{'طلباتكم'| translate}}</span>
   </p>
   <!-- Search Bar block -->
   <section class="my-3">
-    <app-search-block></app-search-block>
+    <app-search-block [userAddressList]="this._MapViewService.userLocation"></app-search-block>
   </section>
   <!-- small text -->
-  <p class="text-center fCC-bold-sD m-0 pt-xs-0 pt-4">طلبك ديماً منتظرك .. مع تطبيق
-    <span class="cCC-text-main">طلباتكم</span>
+  <p class="text-center fCC-bold-sD m-0 pt-xs-0 pt-4">{{'طلبك ديماً منتظرك .. مع تطبيق' | translate}}
+    <span class="cCC-text-main">{{'طلباتكم'| translate}}</span>
   </p>
-  <div class="col-6"></div>
+  <div class="col-md-6 col-0"></div>
 </div>
-<div class="col-1"></div>
+<div class="col-md-1 col-0"></div>
+<!-- Address map popup when click icon -->
+<app-address-map-popup></app-address-map-popup>

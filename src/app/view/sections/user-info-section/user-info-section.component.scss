@@ -1,3 +1,29 @@
 .btn:hover{
     color: #fff !important;   
 }
+.CC-Userprofile-Holder{
+    height: 108px;
+    width: 108px;
+    position: relative;
+}
+// .CC-Userimgs-Poition{
+//     margin: -55px 0 0 0;
+// }
+.CC-Camera-Holder{
+    margin: -26px 0 0 86px;
+    z-index: 9;
+}
+.avatar-upload .avatar-preview {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 12px solid #fff;
+    -webkit-box-shadow: 0 0 45px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0 0 45px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 45px rgb(0 0 0 / 20%);
+}
+.image-upload>input {
+  display: none;
+}

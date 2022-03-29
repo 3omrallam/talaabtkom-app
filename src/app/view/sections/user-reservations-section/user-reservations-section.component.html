@@ -1,17 +1,19 @@
 <!--Reservation Filter Section -->
-<section class="d-flex me-5 mt-4 mb-5">
-    <a (click)='allFilter()' [ngClass]="btn" class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">الجميع</a>
+<section class="d-flex {{'me-5' | translate}} mt-4 mb-5 uCC-gap-16">
+    <a (click)='this.getAllOrders(); defaultStyle()' [ngClass]="btn" class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">{{'الجميع' | translate}}</a>
     <!-- divider -->
-    <div class="mx-3"></div>
-    <a (click)='Filter("تحت التنفيذ");div1Function()' [ngClass]="btn1" class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">الحالية</a>
+    <!-- <div class="mx-3"></div> -->
+    <a (click)='this.Filter(1 || 2 || 3 || 4)  ;div1Function()' [ngClass]="btn1" class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">{{'الحالية' | translate}}</a>
     <!-- divider -->
-    <div class="mx-3"></div>
-    <a (click)='Filter("مكتمل") ;div2Function()' [ngClass]="btn2" class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">الكاملة</a>
+    <!-- <div class="mx-3"></div> -->
+    <a (click)='this.Filter(5); div2Function()' [ngClass]="btn2" class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">{{'الكاملة' | translate}}</a>
     <!-- divider -->
-    <div class="mx-3"></div>
-    <a (click)='Filter("ملغي");div3Function()' [ngClass]="btn3" class="fCC-reg-sD cCC-text-dark px-3 py-1 m-0 uCC-Click">الملغية</a>
+    <!-- <div class="mx-3"></div> -->
+    <a (click)='this.Filter(6) ;div3Function()' [ngClass]="btn3" class="fCC-reg-sD cCC-text-dark px-3~ py-1 m-0 uCC-Click">الملغية</a>
 </section>
 <!-- Reservation Filters section -->
-<section>
-    <app-all-reservations-block [reservationList]='reservationsList'></app-all-reservations-block>
+<section class="px-md-0 px-3">
+    <div *ngFor="let order of this._OrderProccessService.allOrdersDetails">
+        <app-all-reservations-block [reservationList]='order'></app-all-reservations-block>
+    </div>
 </section>

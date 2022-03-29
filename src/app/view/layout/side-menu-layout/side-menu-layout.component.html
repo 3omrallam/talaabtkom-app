@@ -1,10 +1,10 @@
-<div class="position-sticky d-flex flex-column justify-content-start ps-2 mb-4" style="top:200px" >
+<div class="d-flex flex-column justify-content-start ps-2 mb-4">
     <!-- Filteration SideMenu -->
     <div class="" *ngIf='activeRouter.url.includes("/resturants")'>
         <app-filter-page></app-filter-page>
     </div>
     <!-- Resturant Page Aside -->
-    <div  *ngIf='!activeRouter.url.includes("/resturants") && activeRouter.url !== "/contact-us" && activeRouter.url !== "/check-out" && !activeRouter.url.includes("/userProfile")' >
+    <div  *ngIf='!activeRouter.url.includes("/resturants") && this.activeRouter.url !== "/privacy-policy" && activeRouter.url !== "/contact-us" && activeRouter.url !== "/check-out" && !activeRouter.url.includes("/userProfile") && !activeRouter.url.includes("/track-order")' >
         <app-resturant-aside-page></app-resturant-aside-page>
     </div>
     <!-- User Profile Aside -->

@@ -1,0 +1,60 @@
+<!-- Recieve Method Block -->
+<div class="d-flex flex-column uCC-gap-16 mb-2 mx-md-0 mx-4">
+    <div class="d-flex  justify-content-between align-items-center">
+        <div  class="d-flex align-items-center uCC-gap-16">
+            <i class="iCC-HandIcon iCC-sD imCC-Background-Contain d-flex"></i>
+            <p class="m-0 fCC-reg-sF cCC-text-dark">{{'من فضلك إختر طريقة الإستلام' | translate}}</p>
+        </div>
+        <div>
+            <i class="iCC-downArrow iCC-sB imCC-Background-Contain d-flex"></i>
+        </div>
+    </div>
+    <div class="d-flex flex-md-row flex-column uCC-gap-16 align-items-center">
+        <div class="d-flex justify-content-between align-items-center w-100 cCC-bg-white uCC-f-radius-sA px-3 py-2 mb-sm-0 mb-3">
+            <app-icon iconName="iCC-Fromresturant iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{'استلام عبر المطعم' | translate}}" textClass="fCC-reg-sD cCC-text-dark"> </app-icon>
+            <input type="radio" name="togglex" [checked]="!check" class="uCC-Click" style="border-color: red;" (change)="radioValue($event, 0)">
+        </div>
+        <div class="d-flex w-100 justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2">
+            <app-icon iconName="iCC-Fromdelivery iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{'استلام في  المنزل' | translate}}" textClass="fCC-reg-sD cCC-text-dark"></app-icon>
+            <input type="radio" name="togglex" [checked]="check" class="uCC-Click" style="border-color: red;" (change)="radioValue($event, 1)">
+        </div>
+    </div>
+</div>
+<!-- Language Block -->
+<div class="d-flex flex-column uCC-gap-16 mt-4 mb-2 mx-md-0 mx-4">
+    <div class="d-flex justify-content-between align-items-center">
+        <app-icon iconName="iCC-languageIcon iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{'اللغة' | translate}}"
+                        textClass="fCC-reg-sF cCC-text-dark">
+        </app-icon>
+        <div>
+            <i class="iCC-downArrow iCC-sB imCC-Background-Contain d-flex"></i>
+        </div>
+    </div>
+    <div class="d-flex flex-md-row flex-column uCC-gap-16 align-items-center ">
+        <div class="d-flex w-100 justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2 uCC-Click" (click)="changeCurrentLang('ar')">
+            <app-icon iconName="iCC-languageIcon iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{'العربية' | translate}}" textClass="fCC-reg-sD cCC-text-dark"></app-icon>
+            <!-- <input type="radio" name="togglex1" [checked]="checkLanguage" class="uCC-Click" style="border-color: red;"
+                            (change)="changeCurrentLang($event, 'ar')"> -->
+
+        </div>
+        <div class="d-flex w-100 justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2 uCC-Click" (click)="changeCurrentLang('en')">
+            <app-icon iconName="iCC-languageIcon iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{'الانجليزية' | translate}}" textClass="fCC-reg-sD cCC-text-dark"></app-icon>
+            <!-- <input type="radio" name="togglex1" [checked]="!checkLanguage" class="uCC-Click" style="border-color: red;"
+                (change)="changeCurrentLang($event, 'en')"> -->
+        </div>
+    </div>
+</div>
+<div class="d-flex flex-column uCC-gap-16 mt-4 mb-2 mx-md-0 mx-4">
+    <div class="d-flex justify-content-between align-items-center ">
+        <app-icon iconName="iCC-payment iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{'طريقة الدفع' | translate}}"
+                        textClass="fCC-reg-sF cCC-text-dark">
+        </app-icon>
+        <div>
+            <i class="iCC-downArrow iCC-sB imCC-Background-Contain d-flex"></i>
+        </div>
+    </div>
+    <div class="d-flex w-100 justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2">
+        <app-icon iconName="imCC-Telr iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{'تيلر' | translate}}" textClass="fCC-reg-sD cCC-text-dark"></app-icon>
+        <!-- <input type="radio" name="togglex" class="uCC-Click"> -->
+    </div>
+</div>

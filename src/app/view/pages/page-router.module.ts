@@ -1,3 +1,4 @@
+import { SettingsSectionComponent } from './../sections/settings-section/settings-section.component';
 import { Routes } from '@angular/router';
 import { ChangePasswordSectionComponent } from '../sections/change-password-section/change-password-section.component';
 import { MyReviewsSectionComponent } from '../sections/my-reviews-section/my-reviews-section.component';
@@ -26,8 +27,8 @@ export const userProfileRouter: Routes = [
     { path: '', component: UserInfoSectionComponent},
     { path: 'favourite', component: UserFavouriteItemsSectionComponent},
     { path: 'reservation', component: UserReservationsSectionComponent},
-    { path: 'privacy-policy', component: PrivacyPolicySectionComponent},
-    { path: 'recover-phone', component: RecoverPhoneSectionComponent},
+    { path: 'settings', component: SettingsSectionComponent},
+    // { path: 'recover-phone', component: RecoverPhoneSectionComponent},
     { path: 'change-password', component: ChangePasswordSectionComponent},
     { path: 'my-reviews', component: MyReviewsSectionComponent},
     { path: 'notifications', component: NotificationsSectionComponent},

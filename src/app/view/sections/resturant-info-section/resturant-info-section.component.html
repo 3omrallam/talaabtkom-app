@@ -1,16 +1,16 @@
-<app-icon iconName="iCC-Location1 iCC-sD imCC-Background-Contain d-flex ms-1 cCC-text-dark"
+<app-icon iconName="iCC-Location1 iCC-sD imCC-Background-Contain d-flex {{'ms-1' | translate }}cCC-text-dark"
 textContent="{{_ResturantCardService.singleResturantInfo?.address}}" textClass="fCC-reg-sC cCC-text-darkgray"></app-icon>
 <!-- Divider -->
 <div class="my-4"></div>
 <!-- Time and Tables and Rate of the Resturant -->
 <div class="d-flex justify-content-between uCC-gap-32">
     <!-- Clock Icon -->
-  <app-icon iconName="iCC-Newclock iCC-sD imCC-Background-Contain d-flex ms-2" textContent="{{_ResturantCardService.singleResturantInfo?.delivery_range}} دقيقة"
+  <app-icon iconName="iCC-Newclock iCC-sD imCC-Background-Contain d-flex {{'ms-2' | translate}}" textContent="{{_ResturantCardService.singleResturantInfo?.avg_delivery_time}} {{'دقيقة' | translate}}"
       textClass="fCC-reg-sC cCC-text-support2"></app-icon>
       <!-- Tables Icon -->
-  <app-icon iconName="iCC-Newtables iCC-sD imCC-Background-Contain d-flex ms-2" textContent="{{_ResturantCardService.singleResturantInfo?.num_table}}"
-      textClass="fCC-reg-sC cCC-text-support2"></app-icon>
-      <!-- Stars Icon -->
-  <app-icon iconName="iCC-Newstars iCC-sD imCC-Background-Contain d-flex ms-2" textContent="{{+_ResturantCardService.singleResturantInfo?.rate}}"
+  <!-- <app-icon iconName="iCC-Newtables iCC-sD imCC-Background-Contain d-flex {{'ms-2' | translate}}" textContent="{{_ResturantCardService.singleResturantInfo?.num_table}}"
+      textClass="fCC-reg-sC cCC-text-support2"></app-icon> -->
+      <!-- Rate Icon -->
+  <app-icon iconName="iCC-Newstars iCC-sD imCC-Background-Contain d-flex {{'ms-2' | translate}}" textContent="{{+_ResturantCardService.singleResturantInfo?.rate}}"
       textClass="fCC-reg-sC cCC-text-support2"></app-icon>
 </div>

@@ -2,39 +2,63 @@
     <div class="row m-0 h-100">
         <!-- Header -->
         <div class="col-lg-6 p-0 col-12 my-lg-5 my-0 py-lg-3 CC-Image-Holder">
-            <p class="m-0 fCC-bold-sD cCC-text-support2 mb-5 me-5 pe-5 d-lg-block d-none">تواصل معنا</p>
+            <p class="m-0 fCC-bold-sD cCC-text-support2 mb-5 me-5 pe-5 d-lg-block d-none">{{'تواصل معنا' | translate}}
+            </p>
             <!-- Contact Us Photo -->
-            <div class="d-flex me-lg-auto">    
-                <ng-lottie width="600px" [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+            <div class="d-flex me-lg-auto">
+                <ng-lottie class="CC-Contactimg-Holder" [options]="options"
+                    (animationCreated)="animationCreated($event)"></ng-lottie>
             </div>
-            <!-- <i class="imCC-ContactUsImage CC-Contactimg-Holder iCC-sK imCC-Background-Cover d-flex me-lg-auto m-auto~"></i> -->
         </div>
         <div class="col-lg-6 col-12 p-0 m-0 py-lg-5 py-0 my-lg-2">
-            <div class="uCC-f-radius-sB uCC-Border-white uCC-shadow-f-white-10 p-3">
+            <div class="uCC-f-radius-sB uCC-Border-white uCC-shadow-f-white-10 p-3 mb-md-0 mb-4">
                 <!-- Contact Us Form -->
-                <form class="d-flex flex-column uCC-gap-24">
-                    <!-- UserName -->
-                    <div>
-                        <label class="fCC-reg-sC cCC-text-support2 mb-2" for="userName">اسم المستخدم</label>
-                        <input id="userName" type="text" placeholder="أدم" class="w-100 uCC-f-radius-sA py-2 px-3 border-0 fCC-reg-sC cCC-text-support2 m-0">
-                    </div>
+                <form class="d-flex flex-column uCC-gap-24 " #contactUs='ngForm' (ngSubmit)="ngSubmit(contactUs.value)">
                     <!-- Mobile Number -->
-                    <div>
-                        <label class="fCC-reg-sC cCC-text-support2 mb-2" for="userName">رقم الهاتف</label>
-                        <input id="userName" type="text" placeholder="+96625463872" class="w-100 uCC-f-radius-sA py-2 px-3 border-0 fCC-reg-sC cCC-text-support2 m-0">
+                    <label class="fCC-reg-sC cCC-text-support2" for="phone">{{'رقم الهاتف' | translate}}</label>
+                    <div dir="rtl">
+                        <div [ngClass]="{'has-danger': phone.invalid &&(phone.dirty),
+                        'has-success':phone.valid && (phone.dirty) }"
+                            class=" d-flex uCC-shadow-f-white-10 px-3 form-input align-items-center uCC-f-radius-sA cCC-bg-white mb-2">
+                            <!-- Mobile icon -->
+                            <!-- Mobile Input-->
+                            <input pattern="^(5)([0-9]{8})$" placeholder="5*******" #phone="ngModel" type="text" autocomplete="off" ngModel 
+                            (keypress)="this._AuthService.numberOnly($event)" dir="ltr"
+                            class="form-control border-0 fCC-reg-sB py-3 cCC-text-support2 m-0 p-0" name="phone"
+                            required minlength="9" maxlength="9">
+                            <p class="m-0 fCC-reg-sB py-3 pe-1 cCC-text-support2" readonly dir="ltr">+966</p>
+                            <app-icon iconName="iCC-Mobilelogin d-flex iCC-sB me-2"></app-icon>
+                        </div>
                     </div>
-                    
+                    <!-- Errors Div -->
+                    <div *ngIf="phone.errors && (phone.dirty)" class="mb-2 me-2">
+                        <p *ngIf="phone.errors?.required" class="CC-alert fCC-bold-sA">{{'يجب إدخال رقم الهاتف' | translate}}</p>
+                        <!-- <p *ngIf="phone.errors?.minlength" class="CC-alert fCC-bold-sA">{{'رقم الهاتف غير صحيح' | translate}}</p> -->
+                        <p *ngIf="phone.errors?.pattern" class="CC-alert fCC-bold-sA">{{'رقم الهاتف يجب أن يبدأ برقم 5 ولا يتجاوز 9 ارقام' |translate}}</p>
+                    </div>
+                    <!-- title -->
+                    <div>
+                        <label class="fCC-reg-sC cCC-text-support2 mb-2" for="title">{{'موضوع الرسالة' | translate}}</label>
+                        <input required id="title" type="text" #title="ngModel" autocomplete="off" ngModel name="title"
+                            class="w-100 uCC-f-radius-sA py-2 px-3 border-0 fCC-reg-sC cCC-text-support2 m-0">
+                    </div>
                     <div>
                         <!-- Message Number -->
-                        <label class="fCC-reg-sC cCC-text-support2 mb-2" for="userName">الرسالة</label>
-                        <textarea name="message" draggable="false"
-                            class="border-0 form-control uCC-f-radius-sA fCC-reg-sC cCC-text-support2" rows="9" cols="30"></textarea>
+                        <label class="fCC-reg-sC cCC-text-support2 mb-2" for="userName">{{'الرسالة' | translate}}</label>
+                        <textarea required name="message" draggable="false" #description="ngModel" autocomplete="off"
+                            ngModel name="description"
+                            class="border-0 form-control uCC-f-radius-sA fCC-reg-sC cCC-text-support2" rows="9"
+                            cols="30"></textarea>
                     </div>
                     <!-- Send Button -->
-                    <div class="me-auto CC-Width-Holder">
-                        <button class="CC-Width-Holder btn px-5 py-2 h-100 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA"
+                    <div class="me-2 mb-4">
+                        <p class="fCC-bold-sA" style="color:green">{{message}}</p>
+                    </div>
+                    <div class="{{'me-auto' | translate}} CC-Width-Holder">
+                        <button type="submit" [disabled]="contactUs.invalid"
+                            class="CC-Btn CC-Width-Holder btn px-5 py-2 h-100 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA"
                             aria-label="sned">
-                            <span class="mx-3">إرسال</span>
+                            <span class="mx-3">{{'إرسال' | translate}}</span>
                         </button>
                     </div>
                 </form>

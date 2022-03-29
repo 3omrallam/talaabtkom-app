@@ -1,0 +1,19 @@
+<section class="mx-4">
+    <!-- about Holder -->
+    <div class="d-flex flex-lg-row flex-column-reverse gap-3 align-items-lg-start align-items-center justify-content-between">
+        <!-- about List -->
+        <div class="d-flex flex-column">
+            <p class="m-0 fCC-bold-sE cCC-text-support2"></p>
+            <app-icon iconName="iCC-Logo iCC-sH imCC-Background-Contain ms-2 mt-2 mb-3" textContent="{{'من نحن' | translate}}"
+                textClass="fCC-bold-sE cCC-text-support2">
+            </app-icon>
+            <p class="m-0 fCC-reg-sD cCC-text-support2" [innerHTML]="this._PagesService.aboutDescription">
+            </p>
+        </div>
+        <!-- about Image -->
+        <div>
+            <i class="d-flex imCC-Aboutus CC-about-Holder imCC-Background-Contain"></i>
+        </div>
+    </div>
+
+</section>

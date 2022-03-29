@@ -16,18 +16,15 @@ export class VerifyBlockComponent {
     disableAutoFocus: true,
     placeholder: '0',
     inputStyles: {
-      'width': '56px',
-      'height': '56px',
+      'width': '70px',
+      'height': '70px',
       'border' : '0',
       'border-radius' : '10px',
       'box-shadow': '0 .5rem 1rem rgba(0,0,0,.15)'
     }
   };
 
-  constructor(private _AccountService : AccountService){
-
-  }
-
+  constructor(private _AccountService : AccountService){}
   onOtpChange(otp : any) {
     this._AccountService.phoneProccess = {
       ...this._AccountService.phoneProccess,
@@ -39,13 +36,11 @@ export class VerifyBlockComponent {
         if (res.success){
           this._AccountService.verificationChecked = 2
         } 
-        console.log(res.success);
         
         this.toggleDisable()
       })
     }
   }
- 
   toggleDisable(){
     if(this.ngOtpInput.otpForm){
       if(this.ngOtpInput.otpForm.disabled){

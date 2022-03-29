@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { SingleCard } from 'src/app/core/models/resturantCard';
 Input
 @Component({
@@ -10,7 +11,7 @@ export class ResturantGridCardBlockComponent implements OnInit {
 
   @Input() blockState!: SingleCard;
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit(): void {
   }

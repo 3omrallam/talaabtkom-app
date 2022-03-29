@@ -1,5 +1,15 @@
-<section class="uCC-gap-16 CC-Grid-Holder">
-    <div *ngFor='let resturantCardstate of _ResturantCardService?.resturantCards?.data' class="p-0">
+<div class="mb-3">
+    <app-search-bar-block searchPlaceHolder="{{'ابحث عن مكانك المفضل' | translate}}" (searchInputVal)="getResturantBySearch($event)"></app-search-bar-block>
+</div>
+<section class="uCC-gap-16 CC-Grid-Holder px-md-0 px-4">
+    <!-- <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click" *ngIf="this._ResturantCardService.placeholder">لا يوجد مطاعم</p> -->
+    <div class="d-flex gap-5 justify-content-center" *ngIf="this._ResturantCardService.placeholder">
+        <div class="spinner-grow" role="status"></div>
+        <div class="spinner-grow" role="status"></div>
+        <div class="spinner-grow" role="status"></div>
+        <div class="spinner-grow" role="status"></div>
+    </div>
+    <div *ngFor='let resturantCardstate of _ResturantCardService?.resturantCards?.data' class="p-0 uCC-Click">
         <app-resturant-grid-card-block [blockState]="resturantCardstate"></app-resturant-grid-card-block>
     </div>
 </section>

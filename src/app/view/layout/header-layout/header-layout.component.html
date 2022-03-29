@@ -1,22 +1,159 @@
+<!-- UserProfile SideMenu Header -->
+<div *ngIf='activeRouter.url.includes("/userProfile")'
+  class="container-fluid px-4 overflow-hidden p-0 uCC-Border-sA-Support1 d-lg-none d-flex align-items-center justify-content-center cCC-bg-white uCC-f-radius-sA pt-3">
+  <div class="overflow-auto pb-3 d-flex">
+    <div class="container p-0  d-flex align-items-center"
+      *ngFor="let item of _UserProfileAsidePageService.userProfileNavigator; let last= last">
+      <div class="d-flex align-items-center cCC-bg-white cCC-text-dark py-2 uCC-Click"
+        routerLink="userProfile/{{item.routerName}}">
+        <i class="d-flex {{item.icon}} iCC-sD imCC-Background-Contain mx-2 uCC-Click"></i>
+        <p class="m-0 text-nowrap fCC-bold-sB uCC-Click">{{item.header | translate}}</p>
+      </div>
+      <div class="cCC-bg-support1 mx-5 uCC-Click" style="height:26px; width:2px" *ngIf="!last"></div>
+    </div>
+  </div>
+</div>
+<!-- About Us Header -->
+<div *ngIf='activeRouter.url.includes("/about")' class="container-fluid p-0 cCC-opacity-support1-20 py-4 mb-3">
+  <div class="container">
+    <app-icon textContent="{{'من نحن' | translate}}" textClass="fCC-reg-sF cCC-text-support2"
+      [iconName]='"iCC-AboutUs iCC-sD imCC-Background-Contain mx-2"'></app-icon>
+  </div>
+</div>
 <!-- Resturants Available In Your Zone -->
-<div class="fCC-reg-sF cCC-text-support2 d-lg-block d-none position-relative"
-  *ngIf='activeRouter.url.includes("/resturants") || this.activeRouter.url == "/track-order"'>
-  <!-- Header Resturant Image -->
-  <!-- <app-cover-header-block headerImage="imCC-Resturantsheader" headerHeight="CC-coverresturants-size"></app-cover-header-block> -->
+<div class="fCC-reg-sF cCC-text-support2 d-lg-block d-none  position-relative"
+  *ngIf='activeRouter.url.includes("/resturants") || this.activeRouter.url.includes("/track-order")'>
   <div
     class="container-fluid p-0 imCC-Background-Cover imCC-Resturantsheader CC-coverresturants-size d-flex align-items-center justify-content-center">
   </div>
   <!-- Header Location Text and ICON -->
   <div *ngIf='activeRouter.url.includes("/resturants")'>
-    <app-resturants-header-block headerTitle='المطاعم المتاحة ب{{this._OrderProccessService.userAddress}}' headerIcon='iCC-Home '></app-resturants-header-block>
+    <app-resturants-header-block headerTitle="{{'المطاعم المتاحة ب' | translate}} {{this._OrderProccessService.UserArea}}"
+      headerIcon='iCC-Home '></app-resturants-header-block>
   </div>
-  <div *ngIf='this.activeRouter.url == "/track-order"'>
-    <app-resturants-header-block headerTitle='توصيل دليفيري' headerIcon='iCC-Fromdelivery'></app-resturants-header-block>
+  <div *ngIf='this.activeRouter.url.includes("/track-order")'>
+    <div *ngIf="recieveMethod?.is_default === 1">
+      <app-resturants-header-block  headerTitle="{{'توصيل دليفيري' | translate}}" headerIcon='iCC-Fromdelivery'></app-resturants-header-block>
+    </div>
+    <div *ngIf="recieveMethod?.is_default === 0">
+      <app-resturants-header-block  headerTitle="{{'استلام عبر المطعم' | translate}}" headerIcon='iCC-Fromresturant'></app-resturants-header-block>
+    </div>
+  </div>
+</div>
+<!-- Responsive Filter Menu -->
+<div
+  class="uCC-Border-sA-Support1 d-lg-none d-flex align-items-center justify-content-center cCC-bg-white uCC-f-radius-sA py-3"
+  *ngIf='activeRouter.url.includes("/resturants")'>
+  <div class="cCC-bg-white cCC-text-dark py-2 uCC-Click" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom1"
+    aria-controls="offcanvasBottom">
+    <app-icon textContent="{{'نوع المطبخ' | translate}}" textClass="fCC-bold-sB"
+      [iconName]='"iCC-TypesBlack iCC-sD imCC-Background-Contain mx-2"'></app-icon>
+  </div>
+  <div class="cCC-bg-support1 mx-5 uCC-Click" style="height:26px; width:2px"></div>
+  <div class="cCC-bg-white cCC-text-dark py-2 uCC-Click" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom2"
+    aria-controls="offcanvasBottom">
+    <app-icon textContent="{{'حدد البحث' | translate }}" textClass="fCC-bold-sB"
+      [iconName]='"iCC-FiltersBlack iCC-sD imCC-Background-Contain mx-2"'></app-icon>
+  </div>
+</div>
+<!-- Modal Search By Type -->
+<div class="offcanvas offcanvas-bottom uCC-Border-white uCC-l-radius-sJ" tabindex="-1" id="offcanvasBottom1"
+  aria-labelledby="offcanvasBottomLabel2">
+  <div class="offcanvas-header uCC-l-radius-sJ cCC-bg-support1">
+    <button type="button" class="iCC-CloseFilter uCC-f-radius-s50 imCC-Background-Contain border-0 iCC-sD text-reset"
+      data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas-title" id="offcanvasBottomLabel2">
+      <app-icon textContent="{{'نوع المطبخ' | translate}}" textClass="fCC-bold-sB"
+        [iconName]='"iCC-TypesBlack iCC-sD imCC-Background-Contain mx-2"'></app-icon>
+    </div>
+    <p class="m-0 fCC-reg-sD cCC-text-main">{{'مسح الجميع' | translate}}</p>
+  </div>
+  <div class="offcanvas-body small">
+    <!-- FIRST FILTER -->
+    <div class="uCC-f-radius-sB cCC-bg-white CC-aside-holder h-100 px-2 d-flex flex-column">
+      <label for="all" class="fCC-reg-sC cCC-text-support2 d-flex gap-2">
+        <input id="all" type="checkbox" name="" class="iCC-sB cCC-text-support2 uCC-Click" value="الكل">
+        <span>{{'الكل'  |translate}}</span>
+      </label>
+      <div class="uCC-Border-dashed-black my-3" style="height: 1px;"></div>
+      <!-- FILTERS NAME-->
+      <div *ngFor='let filter of this._MarketService.filtersName'>
+        <app-filter-selection-block [items]='filter'></app-filter-selection-block>
+        <div class="uCC-Border-dashed-black my-3" style="height: 1px;"></div>
+      </div>
+      <button type="button" class="uCC-f-radius-sA mt-auto cCC-bg-main py-2 border-0 w-100" data-bs-dismiss="offcanvas"
+        aria-label="Close">
+        <span class="fCC-bold-sD cCC-text-support1">{{'تأكيد' | translate}}</span>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Modal Search By Filter -->
+<div class="offcanvas offcanvas-bottom uCC-Border-white uCC-l-radius-sJ" tabindex="-1" id="offcanvasBottom2"
+  aria-labelledby="offcanvasBottomLabel1">
+  <div class="offcanvas-header uCC-l-radius-sJ cCC-bg-support1 uCC-Click">
+    <button type="button" class="iCC-CloseFilter uCC-f-radius-s50 imCC-Background-Contain border-0 iCC-sD text-reset"
+      data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas-title" id="offcanvasBottomLabel1">
+      <app-icon textContent="{{'حدد البحث' | translate}}" textClass="fCC-bold-sB uCC-Click"
+        [iconName]='"iCC-TypesBlack iCC-sD imCC-Background-Contain mx-2"'></app-icon>
+    </div>
+    <p class="m-0 fCC-reg-sD cCC-text-main">{{'مسح الجميع' | translate}}</p>
+  </div>
+  <div class="offcanvas-body small">
+    <!-- FIRST FILTER -->
+    <div class="uCC-f-radius-sB cCC-bg-white CC-aside-holder h-100 px-2 d-flex flex-column">
+      <!-- <div
+        class="d-flex w-100 align-items-center cCC-text-opacity-dark-50 mb-3 uCC-f-radius-sA cCC-bg-support1 px-3 py-2">
+        <app-icon iconName="iCC-SearchSideNav d-flex iCC-sB cCC-text-support1 imCC-Background-Contain"></app-icon>
+        <input type="search" placeholder="ابحث بنوع المطعم " name="searchsidenav"
+          class="py-1 border-0 fCC-reg-sD cCC-bg-support1 w-100 me-1 m-0">
+      </div> -->
+      <!-- FILTERS NAME-->
+      <div *ngFor='let filter of _FilterService.optionsTwo'>
+        <app-filter-selection-block [items]='filter'></app-filter-selection-block>
+        <div class="uCC-Border-dashed-black my-3" style="height: 1px;"></div>
+      </div>
+      <button type="button" class="uCC-f-radius-sA mt-auto cCC-bg-main py-2 border-0 w-100" data-bs-dismiss="offcanvas"
+        aria-label="Close">
+        <span class="fCC-bold-sD cCC-text-support1">{{'تأكيد' | translate}}</span>
+      </button>
+    </div>
   </div>
 </div>
 <!-- Cover Section -->
 <div
-  *ngIf='!activeRouter.url.includes("/resturants") && this.activeRouter.url !== "/contact-us" && this.activeRouter.url !== "/track-order" && this.activeRouter.url !== "/check-out" && this.activeRouter.url !== "/" && !activeRouter.url.includes("/userProfile")'>
-  <app-cover-header-block [headerImage]='_ResturantCardService?.singleResturantInfo' headerHeight="CC-coverresturantprofile-size">
-  </app-cover-header-block>
+  *ngIf='!activeRouter.url.includes("/resturants") && this.activeRouter.url !== "/cart" && 
+  this.activeRouter.url !== "/about" && this.activeRouter.url !== "/contact-us" && this.activeRouter.url !== "/privacy-policy" 
+  && !this.activeRouter.url.includes("/track-order") && this.activeRouter.url !== "/check-out" && this.activeRouter.url !== "/" 
+  && !activeRouter.url.includes("/userProfile")'>
+  <app-cover-header-block [headerImage]='_ResturantCardService?.singleResturantInfo'
+    headerHeight="CC-coverresturantprofile-size"></app-cover-header-block>
+    <!-- Responsive design for resturant card name and image -->
+  <div [routerLink]="'resturant-profile/'+ _ResturantCardService?.singleResturantInfo?.id +'/info'"
+    class="uCC-Click d-flex justify-content-between align-items-center cCC-bg-lightblue w-100 uCC-f-radius-sB p-3 d-lg-none d-flex "
+    style="position: absolute;top: 200px;">
+    <!-- Resturant Inforamation Profile -->
+    <!-- Image Holder -->
+    <div class="d-flex gap-3 ">
+      <img src="{{_ResturantCardService?.singleResturantInfo?.media[0]?.url}}" class="{{!_ResturantCardService?.singleResturantInfo?.media[0]?.url 
+            && 'imCC-Resturantimg3'}} uCC-f-radius-sA d-flex imCC-Background-Cover CC-resturantsimgs-Holder uCC-"
+        alt="">
+      <div class="CC-text-Holder">
+        <p class="m-0 fCC-bold-sB cCC-text-dark mb-2">{{_ResturantCardService?.singleResturantInfo?.name}}</p>
+        <div class="d-flex uCC-gap-8 mt-2">
+          <ng-container *ngFor="let tag of _ResturantCardService?.singleResturantInfo?.tags">
+            <button class="border-0 fCC-reg-sA cCC-text-dark py-1 px-3 cCC-bg-support1 uCC-f-radius-s5"
+              aria-label="type1">{{tag.name}}</button>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <!-- Text Holder -->
+    <div
+      class="cCC-bg-support1 uCC-f-radius-sA uCC-shadow-f-white-10 uCC-innershadow-f-black-16 d-flex align-items-center justify-content-center"
+      style="width:48px ; height:48px">
+      <i class="iCC-Menunotification iCC-sD imCC-Background-Contain d-flex"></i>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,53 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Database\Seeders;
+
+use App\Models\Course;
+use App\Models\Courses\GroupCourse;
+use App\Models\User;
+use Carbon\Carbon;
+use Illuminate\Database\Seeder;
+
+class CourseSeeder extends Seeder
+{
+    public function run()
+    {
+
+        if (config('app.debug')) {
+
+            GroupCourse::firstOrCreate(
+                [
+                    'start_time' => new Carbon('2022-03-12 15:00'),
+                    'teacher_id' => User::whereEmail('teacher@goenglish.test')->first()->id
+                ],
+                [
+                    'lesson_id' => 1,
+
+                    'duration' => 45,
+                    'comment' => 'c1',
+                ]
+            );
+
+            GroupCourse::firstOrCreate([
+                'start_time' => new Carbon('2022-03-12 13:00'),
+                'teacher_id' => User::whereEmail('teacher@goenglish.test')->first()->id,
+            ], [
+                'lesson_id' => 1,
+
+                'duration' => 45,
+                'comment' => 'c2',
+            ]);
+
+            GroupCourse::firstOrCreate([
+                'start_time' => new Carbon('2022-03-12 16:00'),
+                'teacher_id' => User::whereEmail('teacher2@goenglish.test')->first()->id,
+            ], [
+                'lesson_id' => 1,
+                'duration' => 45,
+                'comment' => 'c3',
+            ]);
+        }
+    }
+}

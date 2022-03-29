@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-delivery-info-block',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delivery-info-block.component.scss']
 })
 export class DeliveryInfoBlockComponent implements OnInit {
-
+  @Input() delievryDetails! :any
   constructor() { }
 
   ngOnInit(): void {

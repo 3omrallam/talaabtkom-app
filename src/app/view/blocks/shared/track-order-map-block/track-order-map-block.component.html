@@ -1,0 +1,6 @@
+<google-map #markerElem height="400px" width="100%" [options]="options">
+    <map-marker *ngFor="let markerPosition of markerPositions" [position]="markerPosition" >
+    </map-marker>
+    <!-- <map-marker *ngFor="let markerPosition of markers" [position]="markerPosition?.position" [options]="markerOptions">
+    </map-marker> -->
+</google-map>

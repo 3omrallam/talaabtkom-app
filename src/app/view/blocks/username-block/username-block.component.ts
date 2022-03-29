@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { AccountService } from 'src/app/core/services/user/account.service';
 
@@ -8,13 +9,17 @@ import { AccountService } from 'src/app/core/services/user/account.service';
   styleUrls: ['./username-block.component.scss']
 })
 export class UsernameBlockComponent implements OnInit {
+  model: any = [];
 
-  constructor(private _AccountService : AccountService , public _AuthService : AuthService) { }
+  constructor(private _AccountService: AccountService, public _AuthService: AuthService, public router: Router) { }
 
   ngOnInit(): void {
+    
   }
   ngSubmit(formValue : any){
-    console.log(formValue);
+    
+    (formValue);
+    console.log(this.model)
     this._AccountService.registerProccess = {
       ...this._AccountService.registerProccess,
       ...formValue
@@ -26,5 +31,7 @@ export class UsernameBlockComponent implements OnInit {
     })
     
   }
+
+  
 
 }

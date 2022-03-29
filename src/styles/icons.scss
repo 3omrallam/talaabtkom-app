@@ -11,17 +11,11 @@
 .iCC-Location{
   background-image: url(../assets/icons/Location.svg)
 }
-.iCC-Manclock{
-  background-image: url(../assets/icons/Man&clock.svg)
-}
 .iCC-Hand{
   background-image: url(../assets/icons/Hand.svg)
 }
 .iCC-Clockgreen{
   background-image: url(../assets/icons/Clockgreen.svg)
-}
-.iCC-Clockblue{
-  background-image: url(../assets/icons/Clockblue.svg)
 }
 .iCC-Wireless{
   background-image: url(../assets/icons/Wireless.svg)
@@ -41,17 +35,8 @@
 .iCC-Lunlogo{
   background-image: url(../assets/icons/Lunlogo.svg)
 }
-.iCC-Table{
-  background-image: url(../assets/icons/Table.svg)
-}
-.iCC-Star{
-  background-image: url(../assets/icons/Star.svg)
-}
 .iCC-message{
   background-image: url(../assets/icons/Message.svg)
-}
-.iCC-Send{
-  background-image: url(../assets/icons/Send.svg)
 }
 .iCC-SearchSideNav{
   background-image: url(../assets/icons/Searchsidenav.svg)
@@ -68,11 +53,11 @@
 .iCC-Location1{
   background-image: url(../assets/icons/location1.svg)
 }
-.iCC-Phone-green{
-  background-image: url(../assets/icons/Phonegreen.svg)
-}
 .iCC-Plus{
   background-image: url(../assets/icons/Plus.svg)
+}
+.iCC-Plusgrey{
+  background-image: url(../assets/icons/Plusgrey.svg)
 }
 .iCC-Booksquare{
   background-image: url(../assets/icons/Booksquare.svg)
@@ -112,6 +97,9 @@
 }
 .iCC-Visa{
   background-image: url(../assets/icons/Visa.svg)
+}
+.iCC-Visablue{
+  background-image: url(../assets/icons/VisaBlue.svg)
 }
 .iCC-Messagetext{
   background-image: url(../assets/icons/Messagetext.svg)
@@ -170,17 +158,17 @@
 .iCC-Apple{
   background-image: url(../assets/icons/Apple.svg)
 }
-.iCC-Store{
-  background-image: url(../assets/icons/Store.svg)
-}
 .iCC-Logo{
   background-image: url(../assets/icons/Logo.png)
 }
 .iCC-Dot{
   background-image: url(../assets/icons/Dot.svg)
 }
+.iCC-Newdislike{
+  background-image: url(../assets/icons/disLike.svg)
+}
 .iCC-Newlike{
-  background-image: url(../assets/icons/Newlike.svg)
+  background-image: url(../assets/icons/Like.svg)
 }
 .iCC-Newclock{
   background-image: url(../assets/icons/Newclock.svg)
@@ -194,20 +182,11 @@
 .iCC-Newqrcode{
   background-image: url(../assets/icons/Newqrcode.svg)
 }
-.iCC-resturant-icon{
-  background-image: url(../assets/icons/ResturantIcon.png)
-}
 .iCC-Newplus{
   background-image: url(../assets/icons/Newplus.svg)
 }
 .iCC-Calories{
   background-image: url(../assets/icons/Calories.svg)
-}
-.iCC-Staryellow{
-  background-image: url(../assets/icons/Staryellow.svg)
-}
-.iCC-Flag{
-  background-image: url(../assets/icons/Flag.svg)
 }
 .iCC-Redlocation{
   background-image: url(../assets/icons/Redlocation.svg)
@@ -251,8 +230,8 @@
 .iCC-Cook{
   background-image: url(../assets/icons/CookIcon.svg)
 }
-.iCC-FoodPrepared{
-  background-image: url(../assets/icons/FoodPrepared.svg)
+.iCC-star{
+  background-image: url(../assets/icons/star.svg)
 }
 .iCC-Stargrey{
   background-image: url(../assets/icons/Greystar.svg)
@@ -274,6 +253,82 @@
 }
 .iCC-NavbarIcon{
   background-image: url(../assets/icons/NavbarIcon.svg)
+}
+.iCC-LogoImage{
+  background-image: url(../assets/icons/LogoImg.svg)
+}
+.iCC-HandIcon{
+  background-image: url(../assets/icons/HandHome.svg)
+}
+.iCC-TypesBlack{
+  background-image: url(../assets/icons/TypesBlack.svg)
+}
+.iCC-FiltersBlack{
+  background-image: url(../assets/icons/FiltersBlack.svg)
+}
+.iCC-CloseFilter{
+  background-image: url(../assets/icons/CloseFilter.svg)
+}
+.iCC-Fire{
+  background-image: url(../assets/icons/fire.svg)
+}
+.iCC-CtegoriesBlack{
+  background-image: url(../assets/icons/CategoriesBlack.svg)
+}
+.iCC-CartIconResponsive{
+  background-image: url(../assets/icons/CartIconMobile.svg)
+}
+.iCC-MyItemsIcon{
+  background-image: url(../assets/icons/MyItemsIcon.svg)
+}
+.iCC-Send{
+    background-image: url(../assets/icons/sendIcon.svg)
+}
+.iCC-NotesIcon{
+    background-image: url(../assets/icons/NotesIcon.svg)
+}
+.iCC-AboutUs{
+    background-image: url(../assets/icons/AboutUsIcon.svg)
+}
+.iCC-appReview{
+  background-image: url(../assets/icons/appReview.svg)
+}
+.iCC-resturantReview{
+  background-image: url(../assets/icons/resturantReview.svg)
+}
+.iCC-deliveryReview{
+  background-image: url(../assets/icons/DeliveryReview.svg)
+}
+.iCC-reviewPdf{
+  background-image: url(../assets/icons/Reviewpdf.svg)
+}
+.iCC-pdfIcon{
+  background-image: url(../assets/icons/pdfIcon.svg)
+}
+.iCC-settingBlack{
+  background-image: url(../assets/icons/settingsBlack.svg)
+}
+// SideMenu Icons
+.iCC-HomePageIcon{
+  background-image: url(../assets/icons/HomePage.svg)
+}
+.iCC-PrivacyPolicyPage{
+  background-image: url(../assets/icons/PrivacyPolicyPage.svg)
+}
+.iCC-ContactUsPage{
+  background-image: url(../assets/icons/ContactUsPage.svg)
+}
+.iCC-Setting{
+  background-image: url(../assets/icons/SettingsPage.svg)
+}
+.iCC-downArrow{
+  background-image: url(../assets/icons/downArrow.svg)
+}
+.iCC-languageIcon{
+  background-image: url(../assets/icons/languageIcon.svg)
+}
+.iCC-payment{
+  background-image: url(../assets/icons/payment.svg)
 }
 // END === Icons
 
@@ -315,10 +370,7 @@
   width: 72px;
   height: 72px;
 }
-.iCC-sJ{
-  width: 152px;
-  height: 168px;
-}
+
 .iCC-sK{
   width: 8px;
   height: 8px;

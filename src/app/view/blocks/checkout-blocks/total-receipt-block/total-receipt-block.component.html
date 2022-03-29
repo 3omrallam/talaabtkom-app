@@ -1,7 +1,7 @@
 <div class="cCC-bg-white uCC-f-radius-sA pt-2 pb-3">
     <!-- Header -->
     <div class="CC-Header-Holder d-flex justify-content-center">
-        <app-icon iconName="iCC-Sheet iCC-sD imCC-Background-Contain d-flex ms-2" textContent="ملخص الدفع"
+        <app-icon iconName="iCC-Sheet iCC-sD imCC-Background-Contain d-flex {{'ms-2' | translate}}" textContent="{{'ملخص الدفع' | translate}}"
             textClass="fCC-bold-sB cCC-text-dark">
         </app-icon>
     </div>
@@ -12,18 +12,19 @@
     <div class="d-flex justify-content-between mx-4">
         <!-- Receipt Info -->
         <div class="d-flex flex-column uCC-gap-8 me-2">
-            <p class="m-0 fCC-reg-sC cCC-text-dark">إجمالي الطلبات</p>
-            <p class="m-0 fCC-reg-sC cCC-text-dark">رسوم التوصيل</p>
+            <p class="m-0 fCC-reg-sC cCC-text-dark">{{'إجمالي الطلبات' | translate}}</p>
+            <p class="m-0 fCC-reg-sC cCC-text-dark" *ngIf="recieveMethod?.is_default === 1">{{'رسوم التوصيل' | translate}}</p>
         </div>
-        <div class="d-flex flex-column uCC-gap-8 ms-2">
-            <p class="m-0 fCC-reg-sC cCC-text-dark">{{receiptDetails?.data?.sub_total}} RS</p>
-            <p class="m-0 fCC-reg-sC cCC-text-dark">{{receiptDetails?.data?.delivery_fee}} RS</p>
+        <div class="d-flex flex-column uCC-gap-8 {{'ms-2' | translate}}">
+            <p class="m-0 fCC-reg-sC cCC-text-dark">{{receiptDetails?.data?.sub_total}} {{'ر.س' | translate}}</p>
+            <p class="m-0 fCC-reg-sC cCC-text-dark" *ngIf="recieveMethod?.is_default === 1">{{receiptDetails?.data?.delivery_fee}} {{'ر.س' | translate}}</p>
         </div>
     </div>
     <!-- Total -->
     <div class="CC-horizontal-divider cCC-bg-dark mx-auto my-2"></div>
     <div class="d-flex justify-content-between mx-4">
-        <p class="m-0 fCC-bold-sB cCC-text-dark me-2">الأجمالي</p>
-        <p class="m-0 fCC-bold-sB cCC-text-dark ms-2">{{receiptDetails?.data?.total}} RS</p>
+        <p class="m-0 fCC-bold-sB cCC-text-dark me-2">{{'الأجمالي' | translate}}</p>
+        <p class="m-0 fCC-bold-sB cCC-text-dark {{'ms-2' | translate}}" *ngIf="recieveMethod?.is_default === 1">{{receiptDetails?.data?.total}} {{'ر.س' | translate}}</p>
+        <p class="m-0 fCC-bold-sB cCC-text-dark {{'ms-2' | translate}}" *ngIf="recieveMethod?.is_default === 0">{{receiptDetails?.data?.sub_total}} {{'ر.س' | translate}}</p>
     </div>
 </div>

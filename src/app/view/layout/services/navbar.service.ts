@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class NavbarService {
   cartMenuToggle : Boolean = true;
+  sideMenuToggle:Boolean = false;
   searchMenuToggle: Boolean = true;
   loginToggle:boolean = true;
   getUserCartCount! : any
@@ -13,8 +14,9 @@ export class NavbarService {
   animateCart() {
     this.cartMenuToggle = !this.cartMenuToggle
   }
-
-  getCartCount(apiToken: String){
-    return this.http.get(`${environment.apiUrl}/api/carts/count?api_token=${apiToken}`)
+  animateSideNav() {
+    this.sideMenuToggle = !this.sideMenuToggle
   }
+
+  
 }

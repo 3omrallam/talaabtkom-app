@@ -1,35 +1,38 @@
 <!-- FIRST FILTER -->
 <div class="uCC-f-radius-sB cCC-bg-white CC-aside-holder h-100 px-2 py-4 mt-4">
-  <div class="d-flex w-100 align-items-center cCC-text-opacity-dark-50 mb-3 uCC-f-radius-sA cCC-bg-support1 px-3 py-2">
-    <!-- Icon Send and text Inside Button -->
+  <!-- <div class="d-flex w-100 align-items-center cCC-text-opacity-dark-50 mb-3 uCC-f-radius-sA cCC-bg-support1 px-3 py-2">
     <app-icon iconName="iCC-SearchSideNav d-flex iCC-sB cCC-text-support1 imCC-Background-Contain"></app-icon>
-    <!--  Search Input -->
     <input type="search" placeholder="ابحث بنوع المطعم او التصنيف" name="searchsidenav"
       class="py-1 border-0 fCC-reg-sD cCC-bg-support1 w-100 me-1 m-0">
-  </div>
+  </div> -->
     <!-- Type Of Resturant Section ( 1 ) -->
-    <div>
+    <form #fieldsForm="ngForm">
       <!-- FILTERS HEADER & ICON -->
       <div class="cCC-bg-main cCC-text-white uCC-f-radius-sA py-2 mb-2">
-        <app-icon [textContent]='"نوع المطبخ"' textClass="fCC-bold-sA"
+        <app-icon textContent= "{{'نوع المطبخ' | translate}}" textClass="fCC-bold-sA"
           [iconName]='"iCC-Types iCC-sD imCC-Background-Contain mx-2"'></app-icon>
       </div>
       <!-- FILTERS NAME-->
-      <div *ngFor='let filter of _FilterService.options'>
-        <app-filter-selection-block [items]='filter'></app-filter-selection-block>
-        <div class="cCC-bg-support1 my-2" style="height: 1px;"></div>
+      <label for="all" class="fCC-reg-sC cCC-text-support2 d-flex gap-2">
+        <input id="all" type="checkbox"  name="" class="iCC-sB cCC-text-support2 uCC-Click" value="all" (change)="AllFilters($event)">
+        <span>{{'الكل' | translate}}</span>
+      </label>
+      <div class="cCC-bg-support1 my-2" style="height: 1px;"></div>
+      <div *ngFor='let filter of this._MarketService.filtersName ;let last=last'>
+        <app-filter-selection-block [items]='filter' (change)="listFields($event)" [checked]="this._ResturantCardService.isChecked"></app-filter-selection-block>
+        <div class="cCC-bg-support1 my-2" style="height: 1px;" *ngIf="!last"></div>
       </div>
-    </div>
+    </form>
     <!-- Spacific Search Section ( 2 ) -->
     <div>
       <div class="cCC-bg-main cCC-text-white uCC-f-radius-sA py-2 mb-2 mt-4">
-        <app-icon [textContent]='"حدد البحث"' textClass="fCC-bold-sA"
+        <app-icon textContent = "{{'حدد البحث' | translate}}" textClass="fCC-bold-sA"
           [iconName]='"iCC-Filter iCC-sD imCC-Background-Contain mx-2"'></app-icon>
       </div>
       <!-- FILTERS NAME-->
-      <div *ngFor='let filter of _FilterService.optionsTwo'>
-        <app-filter-selection-block [items]='filter'></app-filter-selection-block>
-          <div class="cCC-bg-support1 my-2" style="height: 1px;"></div>
+      <div *ngFor='let filter of _FilterService.optionsTwo ; let last = last'>
+        <app-filter-selection-block [items]='filter' (change)="searchType($event)"></app-filter-selection-block>
+          <div class="cCC-bg-support1 my-2" style="height: 1px;" *ngIf="!last"></div>
       </div>
     </div>
 </div>

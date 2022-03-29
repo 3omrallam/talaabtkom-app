@@ -1,1 +1,38 @@
-<p>user-favourite-items-section works!</p>
+<div class="d-flex justify-content-between cCC-bg-white uCC-f-radius-sB mx-md-0 mx-3 mb-4" *ngFor="let likeItem of this.favouriteItems">
+    <div class="CC-resturant-holder-grid">
+        <!-- Resturant Image -->
+        <div class="CC-resturant-image" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="{{likeItem.product.has_media ? likeItem.product.media[0].url : '../../../../../assets/images/placeholder.png'}}" alt=""
+                class="CC-resturantimg-Holder d-flex imCC-Background-Contain uCC-Click">
+        </div>
+        <div class="CC-resturant-title" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <!-- Resturant-title -->
+            <div>
+                <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{likeItem?.product.name}}</p>
+            </div>
+            <!-- Resturant Description -->
+            <div class="fCC-reg-sC cCC-text-support2 m-0 uCC-Click col-lg-8 col-0" [innerHTML]="likeItem?.product.description">
+            </div>
+            <div class="d-flex align-items-center uCC-gap-8 mt-2">
+                <!-- Icon -->
+                <i class="d-flex iCC-Calories iCC-sD"></i>
+                <p class="m-0 cCC-text-dark fCC-reg-sC">{{likeItem?.product.Calories}}<span
+                        class="fCC-reg-sC cCC-text-support2 {{'me-1' | translate}}">{{'سعره حرارية' | translate}}</span></p>
+            </div>
+        </div>
+        <!-- Icons -->
+        <div class="CC-resturant-salary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <!-- Icons -->
+            <p class="cCC-text-main fCC-bold-sB m-0">{{likeItem?.product.price}} {{'ر.س' | translate}}</p>
+        </div>
+        <!-- Heart Icon -->
+        <div class="CC-resturant-likeAndPlus ">
+            <div class="CC-resturant-like cCC-bg-support1 uCC-f-radius-sA p-2 uCC-Click" (click)="addFavouite(likeItem?.product.id)">
+                <i class="d-flex {{likeIcon}} w-100 iCC-sD imCC-Background-Contain"></i>
+            </div>
+            <!-- Plus Icon -->
+            <i class="imCC-Background-Contain CC-resturant-plus uCC-f-radius-sA iCC-Plusgrey iCC-sF p-2 uCC-Click"
+                data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+        </div>
+    </div>
+</div>

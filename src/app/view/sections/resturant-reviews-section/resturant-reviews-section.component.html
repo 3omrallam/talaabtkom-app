@@ -1,20 +1,17 @@
-<section>
+<section class="d-flex flex-column justify-content-center align-items-md-start align-items-center">
     <!-- Header -->
-    <app-icon iconName="iCC-Staryellow iCC-sB imCC-Background-Contain d-flex ms-2" textContent="تقييم العملاء"
+    <app-icon iconName="iCC-star iCC-sB imCC-Background-Contain d-flex {{'ms-2' | translate}}" textContent="{{'تقييم العملاء' | translate}}"
         textClass="fCC-bold-sB cCC-text-dark">
     </app-icon>
     <!-- Total Reviews -->
-    <div class="d-flex align-items-center uCC-gap-8 me-md-4 me-0 mt-2">
-        <p class="m-0 fCC-bold-sB cCC-text-dark">4.8</p>
-        <i class="iCC-Staryellow iCC-sB imCC-Background-Contain d-flex"></i>
-        <i class="iCC-Staryellow iCC-sB imCC-Background-Contain d-flex"></i>
-        <i class="iCC-Staryellow iCC-sB imCC-Background-Contain d-flex"></i>
-        <i class="iCC-Staryellow iCC-sB imCC-Background-Contain d-flex"></i>
-        <i class="iCC-Staryellow iCC-sB imCC-Background-Contain d-flex"></i>
-        <p class="m-0 fCC-reg-sC cCC-text-opacity-dark-50">(بناء علي 365 عميل)</p>
+    <div class="d-flex flex-md-row felx-column align-items-center uCC-gap-8  mt-2">
+        <p class="m-0 fCC-bold-sB cCC-text-dark">({{this.resturantRate?.rate}})</p>
+        <ngx-star-rating [(ngModel)]="rating3" [id]="'rating3'" [disabled] ="true"></ngx-star-rating>
+        
     </div>
+    <p class="my-0 fCC-bold-sB cCC-text-opacity-dark-50">({{'بناء علي' | translate}} {{this.resturantRate?.count_rate}} {{'عميل' | translate}})</p>
     <!-- Card Review Block -->
-    <div class="mb-3" *ngFor="let reviewCard of _ReviewsListService.reviewsList">
+    <!-- <div class="mb-3" *ngFor="let reviewCard of _ReviewsListService.reviewsList">
         <app-card-review-block [review] = "reviewCard"></app-card-review-block>
-    </div>
+    </div> -->
 </section>

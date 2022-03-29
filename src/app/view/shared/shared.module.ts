@@ -7,9 +7,13 @@ import { NavSearchSharedComponent } from './nav-search-shared/nav-search-shared.
 import { LoginPopupSharedComponent } from './login-popup-shared/login-popup-shared.component';
 import { SectionsModule } from '../sections/sections.module';
 import { AddToCartPopupComponent } from './add-to-cart-popup/add-to-cart-popup.component';
+import { LottieModule } from 'ngx-lottie';
+import { TranslateModule } from '@ngx-translate/core';
 
 
-
+export function playerFactory() {
+  return import(/* webpackChunkName: 'lottie-web' */ 'lottie-web');
+} 
 @NgModule({
   declarations: [
     CartPopupSharedComponent,
@@ -21,7 +25,9 @@ import { AddToCartPopupComponent } from './add-to-cart-popup/add-to-cart-popup.c
     CommonModule,
     BlocksModule,
     SectionsModule,
-    RouterModule
+    RouterModule,
+    LottieModule.forRoot({ player: playerFactory }),
+    TranslateModule
     
   ],
   exports: [

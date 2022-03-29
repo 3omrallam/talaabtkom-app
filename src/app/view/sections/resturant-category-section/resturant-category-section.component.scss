@@ -9,3 +9,43 @@
 .CC-scroll::-webkit-scrollbar {
     display: none;
 }
+.CC-Btn1:hover{
+    background-color:#f5504c !important;
+    color: white !important;
+}
+.CC-Btn1:focus{
+    color:#f5504c !important;
+}
+.CC-Btn1:focus-visible{
+    background-color:#f5504c !important;
+    color:white !important;
+}
+.offcanvas-bottom {
+    height: 93vh !important;
+}
+.CC-horizontal-divider{
+  height: 2px;
+  background-color: #EDEDF4;
+}
+.bottom-display{
+    display: none;
+    @media screen and (max-width:992px) {
+        display: flex;
+        
+    }
+}
+// scrollbar [Block] ==> Start
+::-webkit-scrollbar{
+    width: 0px;
+    height: 1.5px;
+}
+::-webkit-scrollbar-track{
+    background: #9e7434;
+    // border-radius: 1px;
+    //  border: 7px solid #9e7434;
+}
+::-webkit-scrollbar-thumb{
+    background: #9e7434;
+    border: 10px solid #9e7434;
+    border-radius: 1px;
+}

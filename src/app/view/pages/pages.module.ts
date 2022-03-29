@@ -1,6 +1,6 @@
 import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 import { SectionsModule } from './../sections/sections.module';
-import { NgModule } from '@angular/core';
+import { Directive, Input, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PagesComponent } from './pages.component';
 import { BlocksModule } from '../blocks/blocks.module';
@@ -19,8 +19,28 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { ContactusPageComponent } from './contactus-page/contactus-page.component';
 import { TrackOrderPageComponent } from './track-order-page/track-order-page.component';
 import { RouterModule } from '@angular/router';
+import { PrivacyPolicyPageComponent } from './privacy-policy-page/privacy-policy-page.component';
+import { CartMobileResponsivePageComponent } from './cart-mobile-responsive-page/cart-mobile-responsive-page.component';
+import { AboutPageComponent } from './about-page/about-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgOtpInputModule } from 'ng-otp-input';
+import { TranslateModule } from '@ngx-translate/core';
+import { MatCheckboxModule } from '@angular/Material/checkbox'
+import { GoogleMapsModule } from '@angular/google-maps';
 
+// import { StarRatingModule } from 'angular-star-rating';
 
+@Directive({
+  selector: "[color]"
+})
+export class ColorDirective {
+  @Input('color')
+  color!: string;
+  
+  ngOnInit() {
+    console.log(this.color);
+  }
+}
 @NgModule({
   declarations: [
     PagesComponent,
@@ -35,7 +55,12 @@ import { RouterModule } from '@angular/router';
     ResturantProfilePageComponent,
     ContactusPageComponent,
     CheckoutPageComponent,
-    TrackOrderPageComponent
+    TrackOrderPageComponent,
+    PrivacyPolicyPageComponent,
+    CartMobileResponsivePageComponent,
+    AboutPageComponent,
+    ColorDirective,
+    
 
   ],
   imports: [
@@ -44,8 +69,17 @@ import { RouterModule } from '@angular/router';
     SectionsModule,
     RouterModule,
     CoreModule,
+    ReactiveFormsModule,
+    FormsModule,
+    NgOtpInputModule,
     SharedModule,
-    MatTooltipModule
+    MatTooltipModule,
+    TranslateModule,
+    MatCheckboxModule,
+    GoogleMapsModule,
+    
+    // StarRatingModule 
+    
   ],
   exports: [
     PagesComponent,
@@ -60,7 +94,10 @@ import { RouterModule } from '@angular/router';
     ResturantProfilePageComponent,
     ContactusPageComponent,
     CheckoutPageComponent,
-    TrackOrderPageComponent
+    TrackOrderPageComponent,
+    PrivacyPolicyPageComponent,
+    CartMobileResponsivePageComponent,
+     AboutPageComponent
 
   ]
 })

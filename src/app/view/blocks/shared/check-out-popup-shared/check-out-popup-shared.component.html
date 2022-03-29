@@ -1,0 +1,92 @@
+<!-- Secound Model -->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content cCC-bg-lightblue uCC-Border-white">
+            <!-- Header Section -->
+            <div class="modal-header~ mx-auto mt-4 mb-2">
+                <h5 class="modal-title cCC-text-dark fCC-bold-sD" id="exampleModalToggleLabel2">{{'إضافة عنوان جديد' | translate}}</h5>
+                <!-- <button type="button" class="btn-close me-auto" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+            <!-- Main Section -->
+            <div class="modal-body px-3">
+                <app-map-view-block></app-map-view-block>
+            </div>
+            <!-- Footer Section -->
+            <div class="modal-footer">
+                <p class="m-0 cCC-text-dark fCC-reg-sC">Address : {{this._MapViewService.country + '-' + this._MapViewService.city}}</p>
+                <button class="btn cCC-bg-main w-100 uCC-f-radius-sA" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+                    <span class="fCC-bold-sB cCC-text-lightblue">{{'تأكيد العنوان' | translate}}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Third Model -->
+<div class="modal fade " id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content cCC-bg-lightblue uCC-Border-white">
+            <div class="modal-body">
+                <form #addressForm="ngForm" (ngSubmit)="ngSubmitAddressDetails(addressForm?.value)">
+                    <label class="cCC-text-support2 fCC-reg-sB mb-2">{{'منطقة التوصيل' | translate}}</label>
+                    <div class="mb-4 ">
+                        <!-- area name Input-->
+                        <input type="text" [(ngModel)] ="this._MapViewService.city" name="area" required autocomplete="off"  value="{{this._MapViewService.city}}"
+                            class="w-100 border-0 p-3 cCC-bg-white uCC-f-radius-sA fCC-reg-sB cCC-text-support2 m-0">
+                    </div>
+                    <label class="cCC-text-support2 fCC-reg-sB mb-2">{{'اسم الشارع' | translate}}</label>
+                    <div class="mb-4 ">
+                        <!-- Street Name Input-->
+                        <input type="text" [(ngModel)] ="this._MapViewService.country" name="street" required autocomplete="off" value="{{this._MapViewService.country}}"
+                            class="w-100 border-0 p-3 cCC-bg-white uCC-f-radius-sA fCC-reg-sB cCC-text-support2 m-0">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between align-items-center uCC-gap-24">
+                        <div class="w-100">
+                            <label class="cCC-text-support2 fCC-reg-sB mb-2">{{'رقم العمارة' | translate}}</label>
+                            <div class="mb-4~ ">
+                                <!-- Apartment Number Input-->
+                                <input type="text" ngModel name="building_num" required #buildingNum="ngModel" 
+                                    autocomplete="off"
+                                    class="w-100 border-0 p-3 cCC-bg-white uCC-f-radius-sA fCC-reg-sB cCC-text-support2 m-0">
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <label class="cCC-text-support2 fCC-reg-sB mb-2">{{'رقم الشقة' | translate}}</label>
+                            <div class="">
+                                <input autocomplete="off" type="text" ngModel name="flat_num" required
+                                    (keypress)="this._AuthService.numberOnly($event)"
+                                    class="w-100 border-0 p-3 cCC-bg-white uCC-f-radius-sA fCC-reg-sB cCC-text-support2 m-0">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Special marque -->
+                    <label class="cCC-text-support2 fCC-reg-sB mb-2">{{'علامة مميزة' | translate}}</label>
+                    <div class="mb-4 ">
+                        <input autocomplete="off" type="text" ngModel name="landmark" required
+                            class="w-100 border-0 p-3 cCC-bg-white uCC-f-radius-sA fCC-reg-sB cCC-text-support2 m-0">
+                    </div>
+                    <!-- Address Type  -->
+                    <label class="cCC-text-support2 fCC-reg-sB mb-2">{{'نوع العنوان' | translate}}</label>
+                    <div class="mb-4 ">
+                        <input autocomplete="off" type="text" ngModel name="type" required
+                            class="w-100 border-0 p-3 cCC-bg-white uCC-f-radius-sA fCC-reg-sB cCC-text-support2 m-0">
+                    </div>
+                    <!-- Footer Section -->
+                    <div class="modal-footer">
+                        <button [disabled]="addressForm.invalid" class="btn cCC-bg-main w-100 uCC-f-radius-sA" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+                            <span class="fCC-bold-sB cCC-text-lightblue">{{'تأكيد العنوان' | translate}}</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a> -->
+<button class="border-0 cCC-bg-main uCC-f-radius-sA py-1 px-4 ms-2 me-auto" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+    <app-icon iconName="iCC-Greylocation iCC-sD imCC-Background-Contain d-flex {{'ms-2' | translate}}" textContent="{{'تغيير العنوان' | translate}}"
+        textClass="fCC-bold-sB cCC-text-lightblue">
+    </app-icon>
+</button>

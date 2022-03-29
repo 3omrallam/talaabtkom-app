@@ -30,6 +30,15 @@ import { UserFavouriteItemsSectionComponent } from './user-favourite-items-secti
 import { MyReviewsSectionComponent } from './my-reviews-section/my-reviews-section.component';
 import { NotificationsSectionComponent } from './notifications-section/notifications-section.component';
 import { RouterModule } from '@angular/router';
+import { ForgetPasswordSectionComponent } from './forget-password-section/forget-password-section.component';
+import { CartMobileResponsiveSectionComponent } from './cart-mobile-responsive-section/cart-mobile-responsive-section.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SettingsSectionComponent } from './settings-section/settings-section.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { MatCheckboxModule } from '@angular/Material/checkbox'
+import { SharedModule } from '../shared/shared.module';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { NgxStarRatingModule } from 'ngx-star-rating';
 
 export function playerFactory() {
   return import(/* webpackChunkName: 'lottie-web' */ 'lottie-web');
@@ -65,13 +74,22 @@ export function playerFactory() {
     UserFavouriteItemsSectionComponent,
     MyReviewsSectionComponent,
     NotificationsSectionComponent,
+    ForgetPasswordSectionComponent,
+    CartMobileResponsiveSectionComponent,
+    SettingsSectionComponent,
     
   ],
   imports: [
     CommonModule,
     BlocksModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule,
-    LottieModule.forRoot({ player: playerFactory })
+    LottieModule.forRoot({ player: playerFactory }),
+    TranslateModule,
+    MatCheckboxModule,
+    GoogleMapsModule,
+    NgxStarRatingModule 
   ],
   exports:[
     SectionsComponent,
@@ -100,7 +118,10 @@ export function playerFactory() {
     TrackOrderSectionComponent,
     UserFavouriteItemsSectionComponent,
     MyReviewsSectionComponent,
-    NotificationsSectionComponent
+    NotificationsSectionComponent,
+    ForgetPasswordSectionComponent,
+    CartMobileResponsiveSectionComponent,
+    SettingsSectionComponent,
   ]
 })
 export class SectionsModule { }

@@ -2,7 +2,7 @@
     <div class="CC-resturant-holder-grid">
         <!-- Resturant Image -->
         <div class="CC-resturant-image"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <img src="{{blockMenu.has_media ? blockMenu.media[0].url : '../../../../../assets/images/placeholder.png'}}" class="CC-resturantimg-Holder d-flex imCC-Background-Contain uCC-Click">
+            <img alt="" src="{{blockMenu.has_media ? blockMenu.media[0].url : '../../../../../assets/images/placeholder.png'}}" class="CC-resturantimg-Holder d-flex imCC-Background-Contain uCC-Click">
         </div>
         <div class="CC-resturant-title" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <!-- Resturant-title -->
@@ -10,29 +10,26 @@
                 <p class="fCC-bold-sD cCC-text-dark m-0 uCC-Click">{{blockMenu?.name}}</p>
             </div>
             <!-- Resturant Description -->
-            <p class="fCC-reg-sC cCC-text-support2 m-0 uCC-Click col-lg-8 col-0">{{blockMenu?.description}}</p>
+            <div class="fCC-reg-sC cCC-text-support2 m-0 uCC-Click col-lg-8 col-0" [innerHTML]="blockMenu?.description"></div>
             <div class="d-flex align-items-center uCC-gap-8 mt-2">
                 <!-- Icon -->
                 <i class="d-flex iCC-Calories iCC-sD"></i>
-                <p class="m-0 cCC-text-dark fCC-reg-sC">{{blockMenu?.Calories}}<span class="fCC-reg-sC cCC-text-support2 me-1">سعره حرارية</span></p>
+                <p class="m-0 cCC-text-dark fCC-reg-sC">{{blockMenu?.Calories}}<span class="fCC-reg-sC cCC-text-support2 {{'me-1' | translate}}">{{'سعره حرارية' | translate}}</span></p>
             </div>
         </div>
         <!-- Icons -->
-        <div class="CC-resturant-salary"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div class="CC-resturant-salary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <!-- Icons -->
-            <p class="cCC-text-main fCC-bold-sB m-0">{{blockMenu?.price}} ر.س</p>
+            <p class="cCC-text-main fCC-bold-sB m-0">{{blockMenu?.price}} {{'ر.س' | translate}}</p>
         </div>
         <!-- Heart Icon -->
         <div class="CC-resturant-likeAndPlus ">
             <div class="CC-resturant-like cCC-bg-support1 uCC-f-radius-sA p-2 uCC-Click">
-                <i class="d-flex iCC-Newlike w-100 iCC-sD imCC-Background-Contain"></i>
+                <i class="d-flex {{likeIcon}} w-100 iCC-sD imCC-Background-Contain" (click)="addFavouite()"></i>
             </div>
-            <!-- QrCode Block -->
-            <button [ngClass]="statusClass" class="CC-resturant-plus x border-0 cCC-bg-support1~ uCC-f-radius-sA p-2 uCC-Click" (click)="handleAddToCard(); setActiveClass()">
-                <i class="d-flex w-100 iCC-Newplus iCC-sC imCC-Background-Contain"></i>
-            </button>
+            <!-- Plus Icon -->
+            <i class="imCC-Background-Contain CC-resturant-plus uCC-f-radius-sA iCC-Plusgrey iCC-sF p-2 uCC-Click" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
         </div>
     </div>
 </div>
-<!-------------------- Modal ---------------------------->
-<app-menu-list-modal></app-menu-list-modal>
+

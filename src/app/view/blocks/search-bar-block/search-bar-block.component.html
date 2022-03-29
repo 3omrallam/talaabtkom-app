@@ -1,10 +1,13 @@
-<section class="d-flex align-items-center justify-content-center uCC-f-radius-sA overflow-hidden cCC-bg-support1 position-sticky top-0">
+<form #searchForm='ngForm' (ngSubmit)="ngSubmit(searchForm.value)" class="d-flex align-items-center justify-content-center uCC-f-radius-sA overflow-hidden cCC-bg-support1 position-sticky top-0">
     <!--  Search Input -->
-    <input type="" placeholder="أبحث عن أكلتك المفضلة" name="search"
-        class="py-2 border-0 fCC-reg-sD cCC-bg-Inherit w-100 px-4">
+    <!-- <form #searchForm='ngForm' (ngSubmit)="ngSubmit(searchForm.value)"> -->
+    <input type="" placeholder="{{searchPlaceHolder}}" name="search"
+        class="py-2 border-0 fCC-reg-sD cCC-bg-Inherit w-100 px-4" (keyup)="getInputValue($event)" [(ngModel)]='_ResturantCardService.searchCategoryInputVal'>
     <!-- Button Send -->
-    <button class="uCC-shadow-f-20 btn p-2 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA d-flex " aria-label="search">
+    <button type="submit" class="uCC-shadow-f-20 btn p-2 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA d-flex " aria-label="search">
         <!-- Icon Send and text Inside Button -->
         <app-icon iconName="iCC-Searchwhite d-flex iCC-sD cCC-text-support1 imCC-Background-Contain"></app-icon>
     </button>
-</section>
+    <button #resetBTN type="reset" hidden></button>
+    <!-- </form> -->
+</form>

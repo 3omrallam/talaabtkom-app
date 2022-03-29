@@ -1,36 +1,62 @@
-<div class="container col-6 uCC-f-radius-sB uCC-Border-white uCC-shadow-f-white-10 py-4">
-    <!-- FirstName Information -->
-    <div>
-        <label for="firstname" class="fCC-reg-sC cCC-text-support2 mb-2">الاسم الاول</label>
-        <div class="d-flex p-1 align-items-center uCC-f-radius-sA cCC-bg-white">
-            <!-- Profile icon -->
-            <app-icon iconName="iCC-Profile d-flex iCC-sB me-2 ms-1"></app-icon>
-            <!-- FirstName -->
-            <input type="text" placeholder="{{_AccountService.userName}}" class="py-2 border-0 fCC-reg-sC cCC-text-support2 m-0">
+<div class="position-relative">
+    <!-- Image For [Responsive View] -->
+    <form class="d-flex flex-column align-items-center position-relative d-lg-none d-block">
+        <!-- Image Holder -->
+        <div class="imCC-Userimage CC-Userprofile-Holder uCC-Border-lightBlue uCC-shadow-f-black-16 uCC-f-radius-sA 
+                uCC-Click CC-Userimgs-Poition imCC-Background-Contain position-absolute top-0">
+            <img class=" CC-Userprofile-Holder uCC-f-radius-sA imCC-Background-Contain" alt="" srcset=""
+                [src]="this._UserSettingsService.userEditProfile">
         </div>
-    </div>
-    <!-- Email Adress Information -->
-    <div class="my-4">
-        <label for="Email" class="fCC-reg-sC cCC-text-support2 mb-2">البريد الألكتروني</label>
-        <div class="d-flex w-100 p-1 align-items-center uCC-f-radius-sA cCC-bg-white">
-            <!-- Email icon -->
-            <app-icon iconName="iCC-Email d-flex iCC-sB me-2 ms-1"></app-icon>
-            <!-- Email-->
-            <input type="email" placeholder="username @gmail.com" class="py-2 border-0 w-100 fCC-reg-sC cCC-text-support2 m-0">
+        <div class="image-upload cCC-bg-support1 uCC-Border-sB-Main uCC-f-radius-sC px-1 pt-1 position-absolute"
+            style="z-index: 9;bottom: -115px;">
+            <label for="imageUpload">
+                <i class="iCC-Photocamera d-flex imCC-Background-Contain uCC-Click iCC-sB"></i>
+            </label>
+            <input id="file-input" type="file" name="avatar" id="imageUpload" accept=".png, .jpg, .jpeg" #fileInput
+                (change)="onSelectFile(fileInput.files)">
         </div>
-    </div>
-    <!-- Birthdate Information -->
-    <div class="mt-4 mb-5">
-        <label for="firstname" class="fCC-reg-sC cCC-text-support2 mb-2">تاريخ الميلاد</label>
+    </form>
+
+    <!-- Form Name and Mobile Number -->
+    <form #updateForm='ngForm' (ngSubmit)="ngSubmit(updateForm.value)" style="margin-top: 85px;">
+        <div class="container col-md-6 col-10 uCC-f-radius-sB uCC-Border-white uCC-shadow-f-white-10 py-4">
+            <!-- FirstName Information -->
+            <div>
+                <label for="firstname" class="fCC-reg-sC cCC-text-support2 mb-2">{{'الاسم' | translate}}</label>
+                <div class="d-flex p-1 align-items-center uCC-f-radius-sA cCC-bg-white">
+                    <!-- Profile icon -->
+                    <app-icon iconName="iCC-Profile d-flex iCC-sB {{'me-2' | translate}} {{'ms-1' | translate}}">
+                    </app-icon>
+                    <!-- FirstName -->
+                    <input type="text" placeholder="{{this._UserSettingsService.userName}}" ngModel required name="name"
+                        class="py-2 border-0 fCC-reg-sC cCC-text-support2 m-0">
+                </div>
+            </div>
+            <!-- Email Adress Information -->
+            <div class="my-4">
+                <label for="Email" class="fCC-reg-sC cCC-text-support2 mb-2">{{'رقم الهاتف' | translate}}</label>
+                <div class="d-flex w-100 p-1 align-items-center uCC-f-radius-sA cCC-bg-white" dir="ltr">
+                    <app-icon iconName="iCC-Email d-flex iCC-sB {{'me-2' | translate}} {{'ms-1' | translate}}">
+                    </app-icon>
+                    <input disabled type="email" placeholder="{{this._AccountService.mobileNumber}}"
+                        class="py-2 border-0 w-100 fCC-reg-sC cCC-text-support2 m-0">
+                </div>
+            </div>
+            <!-- ! Added In Enhancement Birthdate Information-->
+            <!-- Birthdate Information -->
+            <!-- <div class="mt-4 mb-5">
+            <label for="firstname" class="fCC-reg-sC cCC-text-support2 mb-2">تاريخ الميلاد</label>
         <div class="d-flex w-100 p-1 align-items-center uCC-f-radius-sA cCC-bg-white">
-            <!-- Clender icon-->
-            <app-icon iconName="iCC-Calender d-flex iCC-sB me-2 ms-1"></app-icon>
-            <!-- Birthdate -->
+            <app-icon iconName="iCC-Calender d-flex iCC-sB {{'me-2' | translate}} ms-1"></app-icon>
             <input type="text" placeholder="25/7/1999" class="py-2 border-0 w-100 fCC-reg-sC cCC-text-support2 m-0">
+            </div>
+       </div> -->
+            <div>
+                <!-- Update Button-->
+                <button [disabled]="updateForm.invalid" type="submit"
+                    class="btn w-100 py-2 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA">{{'تحديث' |translate}}
+                </button>
+            </div>
         </div>
-    </div>
-    <div>
-        <!-- Update Button-->
-        <button class="btn w-100 py-2 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA">تحديث</button>
-    </div>
+    </form>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/core/auth/auth.service';
 
 @Component({
   selector: 'app-login-section',
@@ -7,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _AuthService: AuthService) { }
 
   ngOnInit(): void {
   }
+  
+
  
 
 }

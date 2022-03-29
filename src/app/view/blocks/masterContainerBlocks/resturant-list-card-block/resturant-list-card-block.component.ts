@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ResturantCard, SingleCard } from 'src/app/core/models/resturantCard';
 @Component({
   selector: 'app-resturant-list-card-block',
@@ -10,20 +11,12 @@ export class ResturantListCardBlockComponent implements OnInit {
   @Input() listState!: SingleCard;
   imageUrl ='';
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit(): void {
-    console.log('nada' , this.listState)
-    this.mediaCheck()
+    // console.log(this.listState);
+    
   }
-  // Check Media
-  mediaCheck(){
-    if (this.listState?.has_media == false){
-      this.imageUrl = '../assets/images/Newresturant-1.png'
-    }
-    else if (this.listState?.has_media == true){
-      this.imageUrl = '{{listState.media[0]?.thumb}}'
-    }
-  }
+ 
 
 }

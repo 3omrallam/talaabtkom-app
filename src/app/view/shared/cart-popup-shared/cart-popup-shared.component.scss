@@ -34,3 +34,26 @@
   outline: 0;
   box-shadow: none;
 }
+.CC-Half-circle {
+    width:24px;
+    height: 24px;
+    border-radius: 50%;
+    top: 37px;
+}
+.CC-dashed-line {
+    height:1px;
+    background:repeating-linear-gradient(to right, rgba(54, 53, 55, 0.2) 0, rgba(54, 53, 55, 0.2) 10px, transparent 10px, transparent 16px)
+}
+::ng-deep .test {
+  border: 1px solid #F5504C;
+  background: rgba(245 , 80 ,76 , 0.2);
+  color: black;
+  border-radius: 20%;
+  font-size: 20px !important;
+  font-family: Cairo-Bold !important;
+  direction: rtl;
+}
+::ng-deep .mat-simple-snackbar{
+  font-size: 14px !important;
+  font-family: Cairo-Bold !important;
+}

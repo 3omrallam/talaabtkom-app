@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from 'src/app/core/auth/auth.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { AuthService } from 'src/app/core/auth/auth.service';
 })
 export class LoginPopupSharedComponent implements OnInit {
 
-  constructor(public _AuthService: AuthService) { }
+  constructor(public _AuthService: AuthService, public translate: TranslateService) { }
 
   ngOnInit(): void {
   }
@@ -16,10 +17,10 @@ export class LoginPopupSharedComponent implements OnInit {
     switch (route) {
       case 'login':
         this._AuthService.authToggleBTN = true
-        break;
+      break;
       case 'register':
         this._AuthService.authToggleBTN = false
-        break;
+      break;
     }
   }
 

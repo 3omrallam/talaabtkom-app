@@ -1,15 +1,22 @@
 <div class="d-flex uCC-gap-24">
-  <!-- userPicture and userName -->
-  <div class="d-flex align-items-center gap-3" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    <!-- user name -->
-    <span class="fCC-reg-sD cCC-text-dark text-nowrap">{{this._AccountService.userName}}</span>
-   
+  <!-- responsive screen -->
+  <div class="d-flex align-items-center gap-3"  *ngIf="_NavbarService.sideMenuToggle" routerLink="/userProfile" (click)='_NavbarService.animateSideNav()'>   
     <!-- user picture -->
-    <i class="imCC-Userimage CC-Userprofile-Holder uCC-Border-sA-Main uCC-f-radius-sA uCC-Click"></i>
+    <img class="imCC-Userimage CC-Userprofile-Holder uCC-Border-sA-Main uCC-f-radius-sA uCC-Click" 
+    src="{{this._AccountService.userImage? _AccountService.userImage.thumb :'../../../../../../../assets/images/userplaceholder.png'}}">
+    <span class="fCC-reg-sD cCC-text-lightblue text-nowrap"  *ngIf="_NavbarService.sideMenuToggle">{{this.userName}}</span>
+  </div>
+  <!-- web screen -->
+  <div class="d-flex align-items-center gap-3"  *ngIf="!_NavbarService.sideMenuToggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    <!-- user picture -->
+    <img class="imCC-Userimage CC-Userprofile-Holder uCC-Border-sA-Main uCC-f-radius-sA uCC-Click" 
+    src="{{this._AccountService.userImage? _AccountService.userImage.thumb :'../../../../../../../assets/images/userplaceholder.png'}}">
+    <!-- user name -->
+    <span class="fCC-reg-sD cCC-text-dark text-nowrap"  *ngIf="!_NavbarService.sideMenuToggle">{{this.userName}}</span>
   </div>
   <!-- Dropdown Menu List -->
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="border-color: #E99167;">
-    <li><a class="dropdown-item uCC-Click fCC-bold-sA cCC-text-darkgray" routerLink="userProfile">الملف الشخصي</a></li>
-    <li><a class="dropdown-item uCC-Click fCC-bold-sA cCC-text-darkgray" (click)="_AccountService.logout()">تسجيل الخروج</a></li>
+    <li><a class="dropdown-item uCC-Click fCC-bold-sA cCC-text-darkgray" routerLink="/userProfile">{{'الملف الشخصي' | translate}}</a></li>
+    <li><a class="dropdown-item uCC-Click fCC-bold-sA cCC-text-darkgray" (click)="_AccountService.logout()">{{'تسجيل الخروج' | translate}}</a></li>
   </ul>
 </div>

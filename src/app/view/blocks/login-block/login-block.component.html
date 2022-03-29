@@ -1,46 +1,61 @@
 <form #loginForm='ngForm' (ngSubmit)="ngSubmit(loginForm.value)">
     <!-- Mobile Number -->
-    <label for="phone" class="cCC-text-support2 fCC-reg-sB mb-2">رقم الهاتف</label>
-    <div class="mb-4 d-flex uCC-shadow-f-white-10 px-3 align-items-center uCC-f-radius-sA cCC-bg-white">
-        <!-- Mobile icon -->
-        <app-icon iconName="iCC-Mobilelogin d-flex iCC-sB ms-2"></app-icon>
+    <label for="phone" class="cCC-text-support2 fCC-reg-sB mb-2">{{'رقم الهاتف' | translate}}</label>
+    <div dir="rtl"  [ngClass]="{'has-danger': phone.invalid &&(phone.dirty), 
+        'has-success':phone.valid && (phone.dirty) }" class="d-flex uCC-shadow-f-white-10 px-3 align-items-center uCC-f-radius-sA cCC-bg-white" >
         <!-- Mobile Input-->
-        <input type="text" placeholder="رقم الهاتق" name="phone" ngModel
-            class="w-100 border-0 py-3 fCC-reg-sB cCC-text-support2 m-0">
+        <input  #phone="ngModel" placeholder="5*******" type="text" ngModel name="phone" dir="ltr"  required minlength="9" autocomplete="off" (keypress)="this._AuthService.numberOnly($event)"
+        maxlength="9" class="w-100 border-0 py-3 fCC-reg-sB cCC-text-support2 m-0">
+        <p class="m-0 fCC-reg-sB py-3 pe-1 cCC-text-support2" dir="ltr"  readonly>+966</p>
+        <!-- Mobile icon -->
+        <app-icon iconName="iCC-Mobilelogin d-flex iCC-sB {{'ms-2' | translate}}"></app-icon>
+    </div>
+    <div *ngIf="phone.errors && (phone.dirty)" class="mb-4 mt-1 {{'me-2' | translate}}">
+        <p *ngIf="phone.errors?.required" class="CC-alert fCC-bold-sA">{{'يجب إدخال رقم الهاتف' | translate}}</p>
+        <p *ngIf="phone.errors?.maxlength" class="CC-alert fCC-bold-sA">{{'رقم الهاتف غير صحيح' | translate}}</p>
+        <!-- <p *ngIf="phone.errors?.pattern" class="CC-alert fCC-bold-sA">{{'رقم الهاتف يجب أن يبدأ برقم 5 ولا يتجاوز 9 ارقام' | translate}}</p> -->
     </div>
     <!-- Password -->
-    <label for="phone" class="cCC-text-support2 fCC-reg-sB mb-2">كلمة المرور</label>
-    <div
+    <label for="phone" class="cCC-text-support2 fCC-reg-sB my-2">{{'كلمة المرور' | translate}}</label>
+    <div [ngClass]="{'has-danger': password.invalid &&(password.dirty),
+    'has-success':password.valid && (password.dirty) }"
         class="mb-4 d-flex justify-content-between uCC-shadow-f-white-10 px-3 align-items-center uCC-f-radius-sA cCC-bg-white">
         <div class="d-flex align-items-center w-100">
             <!-- Password icon -->
-            <app-icon iconName="iCC-Lockpassword d-flex align-items-center iCC-sB ms-2"></app-icon>
+            <app-icon iconName="iCC-Lockpassword d-flex align-items-center iCC-sB {{'ms-2' | translate}}"></app-icon>
             <!-- Password Input-->
-            <input [type]="this._AuthService.showPassword ? 'text' : 'password'" placeholder="كلمة المرور"
+            <input autocomplete="off"  minlength="6" maxlength="8" required [type]="this._AuthService.showPassword ? 'text' : 'password'" placeholder="{{'كلمة المرور' | translate}}" #password="ngModel"
                 name='password' ngModel class="w-100 py-3 border-0 fCC-reg-sB cCC-text-support2 m-0">
         </div>
         <div>
             <!-- See Password Icon -->
-            <app-icon iconName="{{this._AuthService.passwordIcon}} imCC-Background-Contain d-flex iCC-sB ms-2 uCC-Click"
+            <app-icon iconName="{{this._AuthService.passwordIcon}} imCC-Background-Contain d-flex iCC-sB {{'ms-2' | translate}} uCC-Click"
                 (click)="this._AuthService.hidePassword()" [class.hide]="this._AuthService.showPassword"></app-icon>
         </div>
     </div>
+    <!-- Errors Div -->
+    <div *ngIf="password.errors && (password.dirty)" class="{{'me-2' | translate}}">
+        <p *ngIf="password.errors?.required" class="CC-alert fCC-bold-sA">{{'يجب إدخال كلمة المرور' | translate}}</p>
+        <p *ngIf="password.errors?.minlength" class="CC-alert fCC-bold-sA">{{'كلمة المرور غير صحيحه' | translate}}</p>
+    </div>
+    <p *ngIf="this._AccountService.errors" class="CC-alert fCC-bold-sA">{{this._AccountService.errors}}</p>
+
     <!-- checkBoxes -->
     <div class="d-flex align-items-center mt-4">
         <input id="remember" type="checkbox" name="" class="iCC-sB cCC-text-support2 uCC-Click" value="value1">
-        <label for="remember" class="fCC-reg-sB cCC-text-support2 d-flex me-2"><span>تذكرني</span></label>
+        <label for="remember" class="fCC-reg-sB cCC-text-support2 d-flex {{'me-2' | translate}}"><span>{{'تذكرني' | translate}}</span></label>
     </div>
     <!-- Buttons-->
     <div class="mt-4">
         <!-- Forget Password Button -->
         <button type="button"
-            class="CC-Btn2 d-flex justify-content-center border-0 align-items-center form-control cCC-text-main uCC-f-radius-sA p-2 ms-4">
-            <span class="fCC-bold-sA">استرجاع كلمة المرور؟</span>
+            class="CC-Btn2 d-flex justify-content-center border-0 align-items-center form-control cCC-text-main uCC-f-radius-sA p-2 {{'ms-4' | translate}}">
+            <span class="fCC-bold-sA" (click)='toggleForgetPassword("forgetPassword")'>{{'استرجاع كلمة المرور؟' | translate}}</span>
         </button>
         <!-- LOGIN Button -->
-        <button type="submit"
-            class="CC-Btn1 text-center form-control border-0 cCC-bg-main uCC-f-radius-sA cCC-text-white p-2 ms-4 mt-2">
-            <span class="fCC-bold-sB">تسجيل الدخول</span>
+        <button [disabled]="loginForm.invalid" type="submit"
+            class="CC-Btn1 text-center form-control border-0 cCC-bg-main uCC-f-radius-sA cCC-text-white p-2 {{'ms-4' | translate}} mt-2">
+            <span class="fCC-bold-sB">{{'تسجيل الدخول' | translate}}</span>
         </button>
     </div>
 </form>

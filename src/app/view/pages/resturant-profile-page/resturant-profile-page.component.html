@@ -1,32 +1,77 @@
-<div class="d-flex justify-content-between mt-4">
-    <section>
+<div class="d-flex justify-content-between mt-4 d-lg-flex d-none">
+    <section class="px-lg-0 px-4 d-lg-block d-none">
         <!-- Location and Information About Resturant -->
         <app-resturant-info-section></app-resturant-info-section>
     </section>
     <div>
         <!-- {{getResturantData$ | async | json}} -->
     </div>
-    <section class="d-flex align-items-start">
+    <section class="d-flex align-items-start px-md-0 px-3 d-lg-flex d-none">
         <!-- Heart Icon -->
         <div class="d-flex flex-column align-items-center flex-fill h-100 justify-content-between">
-            <div class="cCC-opacity-support1-100 uCC-f-radius-sA p-2 uCC-Click">
+            <!-- <div class="cCC-opacity-support1-100 uCC-f-radius-sA p-2 uCC-Click">
                 <i class="d-flex iCC-Newlike iCC-sD imCC-Background-Contain"></i>
-            </div>
+            </div> -->
             <div class="my-3"></div>
             <!-- Phone call Icon [ToolTip] -->
-            <button aria-label="call" mat-raised-button
+            <!-- <button aria-label="call" mat-raised-button
                 matTooltip="{{_ResturantCardService.singleResturantInfo?.mobile}} - {{_ResturantCardService.singleResturantInfo?.phone}}"
                 matTooltipPosition="after" class="btn cCC-opacity-support1-100 uCC-f-radius-sA p-2 uCC-Click">
                 <i class="d-flex iCC-Phone-green iCC-sC imCC-Background-Contain"></i>
-            </button>
+            </button> -->
         </div>
         <!-- divider -->
-        <div class="mx-2"></div>
+        <div class="mx-md-2 mx-0"></div>
         <!-- Qr Code Block -->
-        <app-qrcode-block></app-qrcode-block>
+        <div class="d-lg-block d-none">
+            <app-qrcode-block></app-qrcode-block>
+        </div>
     </section>
 </div>
+<!-- Responisve Resturant Information section -->
+<div class="d-lg-none d-flex justify-content-center mt-5 uCC-gap-16 mb-4">
+    <div class="uCC-Click d-flex flex-column align-items-center uCC-f-radius-sA cCC-opacity-main-10 px-2 py-2"
+        [routerLink]="'/resturant-profile/'+ _ResturantCardService?.singleResturantInfo?.id +'/categories'">
+        <i class="iCC-Fire iCC-sD imCC-Background-Contain d-flex {{'ms-2' | translate}}"></i>
+        <p class="m-0 fCC-reg-sC cCC-text-dark">{{'أقوي العروض' | translate}}</p>
+    </div>
+    <div [routerLink]="'/resturant-profile/'+ _ResturantCardService?.singleResturantInfo?.id +'/reviews'" 
+    class="uCC-Click d-flex flex-column align-items-center uCC-f-radius-sA cCC-bg-white px-3 py-2">
+        <!-- [routerLink]="'/resturant-profile/'+ _ResturantCardService?.singleResturantInfo?.id +'/reviews'"> -->
+        <i class="iCC-Newstars iCC-sD imCC-Background-Contain d-flex {{'ms-2' | translate}}"></i>
+        <p class="m-0 fCC-reg-sC cCC-text-dark">{{'تقييم المطعم' | translate}}</p>
+        <!-- <p class="m-0 fCC-reg-sB cCC-text-opacity-dark-50 cCC-text-dark">
+            {{+_ResturantCardService.singleResturantInfo?.rate}} {{'نجمة' | translate}}</p> -->
+    </div>
+    <div [routerLink]="'/resturant-profile/'+ _ResturantCardService?.singleResturantInfo?.id +'/info'"
+     class="uCC-Click d-flex flex-column align-items-center uCC-f-radius-sA cCC-bg-white px-3 py-2">
+        <i class="iCC-Newtables text-center iCC-sD imCC-Background-Contain d-flex {{'ms-2' | translate}}"></i>
+        <p class="m-0 fCC-reg-sC cCC-text-dark">{{'معلومات' | translate}}</p>
+        <!-- <p class="m-0 fCC-reg-sB cCC-text-opacity-dark-50 cCC-text-dark">
+            {{_ResturantCardService.singleResturantInfo?.num_table}} {{'طاولة' | translate}}</p> -->
+    </div>
+    <!-- <div class="uCC-Click d-flex flex-column align-items-center uCC-f-radius-sA cCC-bg-white px-3 py-2">
+        <i class="iCC-Newclock iCC-sD imCC-Background-Contain d-flex {{'ms-2' | translate}}"></i>
+        <p class="m-0 fCC-reg-sC cCC-text-dark">الوقت</p>
+        <p class="m-0 fCC-reg-sB cCC-text-opacity-dark-50 cCC-text-dark">
+            {{+_ResturantCardService.singleResturantInfo?.delivery_range}} {{'دقيقة' | translate}}</p>
+    </div> -->
+
+</div>
+<!-- Resturant categories [Responsive] -->
+<div class="d-flex d-lg-none align-items-center overflow-hidden mt-2 mb-4 mx-4">
+    <i class="d-flex iCC-CtegoriesBlack iCC-sD imCC-Background-Contain"></i>
+    <div class="d-flex align-items-center overflow-auto uCC-gap-24 uCC-Click">
+        <div *ngFor="let sublist of _ResturantCardService?.singleResturantCategories">
+            <a class="fCC-reg-sB {{'me-5' | translate}} uCC-Click text-nowrap" [ngClass]="'products'+sublist?.id" (click)="scrollTo('products'+sublist.id)">
+                {{sublist?.name}}
+            </a>
+            <!-- line divider -->
+            <div class="CC-horizontal-divider my-2"></div>
+        </div>
+    </div>
+</div>
 <!-- resturant Profile Page [SECTIONS]  -->
-<section>
+<section class="px-md-0 px-3 position-relative">
     <router-outlet></router-outlet>
 </section>

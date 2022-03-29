@@ -1,11 +1,11 @@
 <div *ngFor="let element of listElements; let first = first ; let last= last">
 	<div class="d-flex align-items-center fCC-reg-sC cCC-text-support2">
 		<!-- Icon and listmenu -->
-		<i class="{{element.icon}} iCC-sD imCC-Background-Contain d-flex mx-2 me-3"></i>
+		<i class="{{element.icon}} iCC-sD imCC-Background-Contain d-flex mx-2 {{'me-3' | translate}}"></i>
 		<div>
 			<a [routerLink]=" routerLink1 + element.routerName"
 				routerLinkActive="fCC-bold-sB cCC-text-main" [routerLinkActiveOptions]="{exact: true}">
-				<span class="uCC-Click">{{element.header}}</span>
+				<span class="uCC-Click">{{element.header | translate}}</span>
 			</a>
 		</div>
 	</div>
@@ -14,7 +14,7 @@
 	<!-- list Elements -->
 	<ng-container *ngIf="!isShow">
 		<div *ngFor="let sublist of element.subList">
-			<a class="fCC-reg-sB {{statusClass}} me-5 uCC-Click" [ngClass]="sublist.href"
+			<a class="fCC-reg-sB {{statusClass}} {{'me-5' | translate}} uCC-Click" [ngClass]="sublist.href"
 				(click)="scrollTo(sublist.href);">
 				{{sublist.title}}
 			</a>

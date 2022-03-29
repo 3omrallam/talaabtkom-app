@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserProfileAsidePageService {
 
-  userProfileNavigator: Object[] = [
+  userProfileNavigator: any[] = [
 
     {
       header: "المعلومات الشخصية",
@@ -17,11 +17,11 @@ export class UserProfileAsidePageService {
       routerName: '/favourite',
       icon: "iCC-Usertag",
     },
-    {
-      header: "إعادة توثيق الجوال",
-      routerName: '/recover-phone',
-      icon: "iCC-Mobile",
-    },
+    // {
+    //   header: "إعادة توثيق الجوال",
+    //   routerName: '/recover-phone',
+    //   icon: "iCC-Mobile",
+    // },
     {
       header: "تغير كلمة المرور",
       routerName: '/change-password',
@@ -33,14 +33,14 @@ export class UserProfileAsidePageService {
       icon: "iCC-Menu",
     },
     {
-      header: "أرائي",
-      routerName: '/my-reviews',
-      icon: "iCC-Myopinions",
-    },
-    {
       header: "الإشعارات",
       routerName: '/notifications',
       icon: "iCC-Messagetext",
+    },
+    {
+      header: "الإعدادات",
+      routerName: '/settings',
+      icon: "iCC-settingBlack",
     },
   ];
 

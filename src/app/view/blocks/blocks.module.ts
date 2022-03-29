@@ -1,5 +1,6 @@
+import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { SearchBlockComponent } from './masterContainerBlocks/search-block/search-block.component';
-import { NgModule } from '@angular/core';
+import { Directive, Input, NgModule } from '@angular/core';
 import { FilterSelectionBlockComponent } from './sideMenuBlocks/filter-selection/filter-selection-block.component';
 import { StickerBlockComponent } from './navbarBlocks/sticker-block/sticker-block.component';
 import { NavigatorBlockComponent } from './navbarBlocks/navigator-block/navigator-block.component';
@@ -40,8 +41,29 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { IconComponent } from './shared/icon/icon.component';
 import { FormAddressPopupBlockComponent } from './form-address-popup-block/form-address-popup-block.component';
-
-
+import { TrackOrderMapBlockComponent } from './shared/track-order-map-block/track-order-map-block.component';
+import { MobileNumberForgetpasswordBlockComponent } from './forget-password-blocks/mobile-number-forgetpassword-block/mobile-number-forgetpassword-block.component';
+import { SendOtpForgetpasswordBlockComponent } from './forget-password-blocks/send-otp-forgetpassword-block/send-otp-forgetpassword-block.component';
+import { ConfirmPasswordComponent } from './forget-password-blocks/confirm-password/confirm-password.component';
+import { CheckOutPopupSharedComponent } from './shared/check-out-popup-shared/check-out-popup-shared.component';
+import { RatingPopupSharedComponent } from './shared/rating-popup-shared/rating-popup-shared.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from "@angular/material/icon";
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { TranslateModule } from '@ngx-translate/core';
+import { AddressMapPopupComponent } from './shared/address-map-popup/address-map-popup.component';
+@Directive({
+  selector: "[color]"
+})
+export class ColorDirective {
+  @Input('color')
+  color!: string;
+  
+  ngOnInit() {
+    console.log(this.color);
+  }
+}
 @NgModule({
   declarations: [
     FilterSelectionBlockComponent,
@@ -80,7 +102,17 @@ import { FormAddressPopupBlockComponent } from './form-address-popup-block/form-
     NotificationCardBlockComponent,
     MapViewBlockComponent,
     AddressMapPopupSharedComponent,
-    FormAddressPopupBlockComponent
+    FormAddressPopupBlockComponent,
+    TrackOrderMapBlockComponent,
+    MobileNumberForgetpasswordBlockComponent,
+    SendOtpForgetpasswordBlockComponent,
+    ConfirmPasswordComponent,
+    CheckOutPopupSharedComponent,
+    RatingPopupSharedComponent,
+    ColorDirective,
+    AddressMapPopupComponent
+    
+    
   ],
   imports: [
     RouterModule,
@@ -88,7 +120,14 @@ import { FormAddressPopupBlockComponent } from './form-address-popup-block/form-
     ReactiveFormsModule,
     FormsModule,
     NgOtpInputModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatSnackBarModule,
+    TranslateModule
+   
   ],
   exports:[
     FilterSelectionBlockComponent,
@@ -126,7 +165,15 @@ import { FormAddressPopupBlockComponent } from './form-address-popup-block/form-
     NotificationCardBlockComponent,
     MapViewBlockComponent,
     AddressMapPopupSharedComponent,
-    FormAddressPopupBlockComponent
+    FormAddressPopupBlockComponent,
+    TrackOrderMapBlockComponent,
+    MenuListModalComponent,
+    MobileNumberForgetpasswordBlockComponent,
+    SendOtpForgetpasswordBlockComponent,
+    ConfirmPasswordComponent,
+    CheckOutPopupSharedComponent,
+    RatingPopupSharedComponent,
+    AddressMapPopupComponent
  
   ]
 })

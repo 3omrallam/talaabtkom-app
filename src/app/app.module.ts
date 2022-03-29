@@ -1,6 +1,6 @@
 import { ViewModule } from './view/view.module';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,8 @@ import { ErrorInterceptor } from './core/helpers/error.interceptor';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 
@@ -27,12 +29,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatTooltipModule,
     HttpClientModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    // Language Module
+    TranslateModule.forRoot({
+      defaultLanguage:'ar',
+      loader:{
+        provide:TranslateLoader,
+        useFactory:createTranslateLoader,
+        deps:[HttpClient]
+      }
+    })
   ],
   providers: [
+    TranslateService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// Language File
+export function createTranslateLoader(http:HttpClient){
+  return new TranslateHttpLoader(http , '../assets/language/' , '.json')
+}

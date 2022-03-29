@@ -1,1 +1,7 @@
-<app-notification-card-block></app-notification-card-block>
+<div class="px-md-0 px-4 overflow-auto" style="height: 70vh;">
+    <p class="fCC-bold-sD cCC-text-main m-0 uCC-Click" *ngIf="this._ResturantCardService.placeholder || _OrderProccessService.NotificationList==0">{{'لا يوجد إشعارات' | translate}}</p>
+    <div *ngFor="let notification of this._OrderProccessService.NotificationList">
+        <app-notification-card-block [notificationDetails]="notification"></app-notification-card-block>
+    </div>
+    
+</div>

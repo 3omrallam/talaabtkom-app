@@ -6,11 +6,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./total-receipt-block.component.scss']
 })
 export class TotalReceiptBlockComponent implements OnInit {
-  @Input() receiptDetails : any
+  @Input() receiptDetails : any;
+  recieveMethod:any;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.recieveMethod = JSON.parse(localStorage.getItem('nearbyMarkets')!);
   }
 
 }

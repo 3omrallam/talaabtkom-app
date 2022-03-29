@@ -1,28 +1,33 @@
-<div class="container d-flex justify-content-center align-items-end mt-5">
-    <div class="col-4 text-end">
-        <i class="imCC-Contactlogo d-flex uCC-Background-Cover CC-Contactlogo-Holder"></i>
+<div class="container d-lg-flex justify-content-center align-items-end mt-lg-5 mt-0">
+    <div class="col-lg-4 col-12 text-end">
+        <i class="imCC-Contactlogo mx-lg-0 mx-auto d-flex imCC-Background-Contain CC-Contactlogo-Holder"></i>
     </div>
     <div class="col-2"></div>
-    <div class="col-6 text-center mb-5">
-        <p class="fCC-bold-sF p-0">تواصل معنا عبر البريد الألكتروني
+    <div class="col-lg-6 col-12 text-center mb-lg-5 mb-0">
+        <p class="fCC-bold-sF p-0">{{'تواصل معنا عبر البريد الألكتروني' | translate}}
         </p>
-        <p class="fCC-reg-sD cCC-text-grey uCC-line-Hight-B m-0 mb-5">
-            لأستقبال أخر التحديثات لدي تطبيق طلباتكم
+        <p class="fCC-reg-sD cCC-text-grey uCC-line-Hight-A m-0 mb-5">
+            {{'لأستقبال أخر التحديثات لدي تطبيق طلباتكم' | translate}}
         </p>
         <div class="d-flex w-100 align-items-center uCC-f-radius-sB cCC-bg-support1">
             <!-- divider -->
             <div class="mx-2"></div>
             <!-- Message icon inside Email Input -->
-            <app-icon iconName="iCC-message d-flex iCC-sD imCC-Background-Contain ms-2"></app-icon>
+            <app-icon iconName="iCC-message d-flex iCC-sD imCC-Background-Contain {{'ms-2' | translate}}"></app-icon>
             <!--  Email Input -->
-            <input type="email" placeholder=" البريد الألكتروني..." name="email"
+            <input type="email" placeholder=" {{'البريد الألكتروني' | translate}}..." name="email"
                 class="py-2 border-0 w-75 fCC-reg-sD cCC-bg-support1">
             <!-- Button Send -->
-            <button class="btn px-5 py-3 uCC-shadow-f-20 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sB d-flex">
+            <button class="btn d-md-flex d-none px-5 py-3 uCC-shadow-f-20 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sB d-flex">
                 <!-- Icon Send and text Inside Button -->
-                <app-icon iconName="iCC-Send d-flex iCC-sD ms-2"></app-icon>
-                <span>إرسال</span>
+                <app-icon iconName="iCC-Send d-flex iCC-sD {{'ms-2' | translate}}"></app-icon>
+                <span>{{'إرسال' | translate}}</span>
             </button>
         </div>
+        <button class="d-md-none mt-3 mx-auto d-flex btn px-5 py-3 uCC-shadow-f-20 cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sB d-flex align-items-center">
+            <!-- Icon Send and text Inside Button -->
+            <app-icon iconName="iCC-Send d-flex iCC-sD {{'ms-2' | translate}}"></app-icon>
+            <span>{{'إرسال' | translate}}</span>
+        </button>
     </div>
 </div>

@@ -1,0 +1,15 @@
+// scrollbar [Block] ==> Start
+::-webkit-scrollbar{
+    width: 0px;
+    height: 1.5px;
+}
+::-webkit-scrollbar-track{
+    background: #9e7434;
+    // border-radius: 1px;
+    //  border: 7px solid #9e7434;
+}
+::-webkit-scrollbar-thumb{
+    background: #9e7434;
+    border: 10px solid #9e7434;
+    border-radius: 1px;
+}

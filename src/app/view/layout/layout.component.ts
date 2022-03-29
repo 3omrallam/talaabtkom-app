@@ -1,6 +1,7 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { AccountService } from 'src/app/core/services/user/account.service';
 import { NavbarService } from './services/navbar.service';
 @Component({
@@ -34,17 +35,34 @@ import { NavbarService } from './services/navbar.service';
       transition(':leave', [   
         animate(400, style({left:-410})) 
       ])
-    ])
+    ]),
   ]
 })
 export class LayoutComponent implements OnInit {
   
   displayOverLay: String = 'd-none';
-  constructor(public activeRouter: Router, public _NavbarService: NavbarService, public _AccountService : AccountService) { }
-  ngOnInit(): void {
+  reactivePopup: any 
+  positionDirection: any = localStorage.getItem('currentLang');
+  constructor(public activeRouter: Router, public _NavbarService: NavbarService, public _AccountService: AccountService, public translate: TranslateService) { }
 
+  ngOnInit(): void {
     this._AccountService?.userValue?.data?.token && this.getUserAddress()
-  } 
+    this.receivePpoupToggle();
+    this.changeLayoutDirection()
+  }
+
+  // Get UserName
+  getNearbyMarketsFromLocalStorage() {
+    return JSON.parse(localStorage.getItem('nearbyMarkets')!);
+  }
+
+  receivePpoupToggle(){
+    if (this.getNearbyMarketsFromLocalStorage()?.is_default != null && this.getNearbyMarketsFromLocalStorage()?.latitude && this.getNearbyMarketsFromLocalStorage()?.longitude) {
+      this.reactivePopup = false
+    }else{
+      this.reactivePopup = true
+    }
+  }
 
   animateLogin() {
     this._NavbarService.loginToggle = !this._NavbarService.loginToggle;
@@ -63,7 +81,14 @@ export class LayoutComponent implements OnInit {
   getUserAddress(){
     this._AccountService.getUserDeliveryAddress(this._AccountService?.userValue?.data?.token).subscribe(res => {
       this._AccountService.getUserAddress = res
-      console.log(this._AccountService.getUserAddress);
     })
   }
+  changeLayoutDirection(){
+    if (localStorage.getItem('currentLang') == 'en'){
+      this.positionDirection == 'left'    
+    }else{
+      this.positionDirection == 'right'    
+    }
+  }
+  
 }

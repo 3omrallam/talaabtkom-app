@@ -1,0 +1,75 @@
+<div *ngIf="_OrderProccessService.allProductsInCart?.data?.cart?.length == undefined ">
+    <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+</div>
+<div *ngIf="_OrderProccessService.allProductsInCart?.data?.cart?.length > 0" class="d-flex flex-column h-100 px-md-0 px-4">
+    <div>
+        <p class="fCC-bold-sD cCC-text-support2 text-center mb-3 m-0">{{'إستلام الطلب من' | translate}}</p>
+        <div class="d-flex justify-content-between align-items-center cCC-bg-white w-100 uCC-f-radius-sB p-3 d-lg-none d-flex ">
+            <!-- Image Holder -->
+            <div class="d-flex align-items-center gap-3">
+                <img src="{{_OrderProccessService.allProductsInCart?.data?.market?.media[0]?.url}}" class="imCC-Resturant imCC-Background-Contain d-flex CC-resturant-img-holder"
+                    alt="">
+                <div class="CC-text-Holder">
+                    <p class="m-0 fCC-bold-sB cCC-text-dark mb-2">{{_OrderProccessService.allProductsInCart?.data?.market?.name}}</p>
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+        <section style="overflow-y: auto; height: 525px;">
+            <!-- Cart Items Block -->
+            <div class="cCC-bg-white uCC-f-radius-sB py-3 my-4" *ngFor="let items of _OrderProccessService.allProductsInCart?.data?.cart ; let last=last">
+                <app-cart-items-block [item]="items"></app-cart-items-block>
+                <div class="CC-horizontal-divider mx-4 my-3"></div>
+            </div>
+            <!-- Note Block -->
+            <div class="mt-4">
+                <app-icon iconName="iCC-NotesIcon iCC-sD imCC-Background-Contain d-flex gap-3" textContent="{{'أضف ملحوظة' | translate}}"
+                    textClass="fCC-bold-sB cCC-text-dark {{'me-2' | translate}}"></app-icon>
+            </div>
+            <textarea name="message" draggable="false"
+                class="form-control cCC-bg-white border-0 uCC-f-radius-sA fCC-bold-sA p-2 cCC-text-opacity-dark-50 mb-4 mt-3"
+                rows="5" cols="30">{{'أكتب ملحوظة' | translate}}</textarea>
+            <!-- Reciept Block -->
+            <div class="cCC-bg-white uCC-f-radius-sA pt-2 pb-3 position-relative mb-3">
+                <!-- Header -->
+                <div class="CC-Header-Holder d-flex justify-content-center">
+                    <app-icon iconName="iCC-Sheet iCC-sD imCC-Background-Contain d-flex ms-2" textContent="{{'الفاتورة' | translate}}"
+                        textClass="fCC-bold-sB cCC-text-dark">
+                    </app-icon>
+                </div>
+                <!-- Dashed Line -->
+                <div class="CC-dashed-line my-3"></div>
+                <!-- <div class="CC-Half-circle cCC-bg-lightblue position-absolute" style="margin-right: -10px;"></div>
+                <div class="CC-Half-circle cCC-bg-lightblue position-absolut" style="left: -10px;"></div> -->
+                <div class="d-flex justify-content-between px-4">
+                    <!-- Receipt Info -->
+                    <div class="d-flex flex-column uCC-gap-8 {{'me-2' | translate}}">
+                        <p class="m-0 fCC-reg-sC cCC-text-dark">{{'إجمالي الطلبات' | translate}}</p>
+                        <p class="m-0 fCC-reg-sC cCC-text-dark">{{'رسوم التوصيل' | translate}}</p>
+                    </div>
+                    <div class="d-flex flex-column uCC-gap-8 ms-2">
+                        <p class="m-0 fCC-reg-sC cCC-text-dark">
+                            {{_OrderProccessService.allProductsInCart?.data?.sub_total}} RS</p>
+                        <p class="m-0 fCC-reg-sC cCC-text-dark">
+                            {{_OrderProccessService.allProductsInCart?.data?.delivery_fee}} RS</p>
+                    </div>
+                </div>
+                <!-- Total -->
+                <div class="CC-horizontal-divider cCC-bg-dark mx-auto my-2"></div>
+                <div class="d-flex justify-content-between px-4">
+                    <p class="m-0 fCC-bold-sB cCC-text-dark {{'me-2' | translate}}">{{'الأجمالي' | translate}}</p>
+                    <p class="m-0 fCC-bold-sB cCC-text-dark {{'ms-2' | translate}}">
+                        {{_OrderProccessService.allProductsInCart?.data?.total}} RS</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="mt-auto cCC-bg-white w-100">
+        <button type="button" routerLink="/check-out"
+            class="CC-Btn1 uCC-Click d-flex justify-content-center align-items-center form-control cCC-bg-main cCC-text-white uCC-f-radius-sA p-2">
+            <i class="iCC-Trickcircle iCC-sD d-flex {{'ms-2' | translate}}"></i>
+            <span class="fCC-bold-sB">{{'تأكيد الطلب' | translate}}</span>
+        </button>
+    </div>
+</div>

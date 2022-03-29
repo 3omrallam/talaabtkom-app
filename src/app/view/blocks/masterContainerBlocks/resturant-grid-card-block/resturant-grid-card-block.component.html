@@ -1,45 +1,47 @@
 <!-- Resturant Image -->
 <section class="position-relative cCC-bg-white uCC-f-radius-sB pb-2" routerLink="/resturant-profile/{{blockState?.id}}">
     <div class="position-relative">
-        <img class=" d-flex w-100 imCC-Background-Cover CC-resturants-Holder uCC-f-radius-sA"
-            src="{{blockState.has_media ? blockState.media[0].url : '../assets/images/Newresturant-1.png'}}">
+        <img class="d-flex w-100 imCC-Background-Cover CC-resturants-Holder uCC-f-radius-sA" alt=""
+            src="{{blockState.has_media ? blockState.media[0].url : '../../../../../../../assets/images/placeholder.png'}}" >
         <!-- Resturant Status -->
         <div
-            class="position-absolute {{blockState.closed === true ? 'd-flex': 'd-none'}} top-0 bottom-0 start-0 uCC-f-radius-sA end-0 cCC-opacity-grey-70 justify-content-center align-items-center">
-            <p class="m-0 fCC-reg-sD cCC-text-support1">مشغول</p>
+            class="position-absolute {{blockState.market_status === 1? 'd-flex': 'd-none'}} top-0 bottom-0 start-0 uCC-f-radius-sA end-0 cCC-opacity-grey-70 justify-content-center align-items-center">
+            <p class="m-0 fCC-reg-sD cCC-text-support1">{{'مغلق' | translate}}</p>
+        </div>
+        <div
+            class="position-absolute {{blockState.market_status === 2? 'd-flex': 'd-none'}} top-0 bottom-0 start-0 uCC-f-radius-sA end-0 cCC-opacity-grey-70 justify-content-center align-items-center">
+            <p class="m-0 fCC-reg-sD cCC-text-support1">{{'مشغول' | translate}}</p>
         </div>
     </div>
     <div class="d-flex align-items-center justify-content-between pt-3 pb-3 CC-horizontal-divider~ uCC-Click">
         <div class="d-flex w-100 align-items-center">
             <!-- Resturant Logo -->
-            <img class="d-flex me-2 CC-logo-Holder imCC-Background-Contain"
-                src="{{blockState.has_media ? blockState.media[0].icon : '../assets/images/Newresturant-1.png'}}">
+            <img class="d-flex {{'me-2' | translate}} CC-logo-Holder imCC-Background-Contain uCC-f-radius-sA" alt=""
+                src="{{blockState.has_media ? blockState.media[0].icon : '../../../../../../../assets/images/placeholder.png'}}">
             <div class="mx-3">
                 <!-- Resturant Name -->
-                <p class="mb-0 cCC-text-dark fCC-bold-sB">{{blockState.name}}</p>
+                <p class="mb-0 cCC-text-dark text-nowrap fCC-bold-sB">{{blockState.name}}</p>
                 <!-- Resturant Tags -->
-                <!-- ! Wait Name From API -->
-                <!-- <div class="d-flex uCC-gap-8 mt-1">
-                    <button class="border-0 fCC-reg-sA cCC-text-dark py-1 px-3 cCC-bg-support1 uCC-f-radius-s5"
-                    aria-label="type1">{{blockState.tags[0].name}}</button>
-                    <button class="border-0 fCC-reg-sA cCC-text-dark py-1 px-3 cCC-bg-support1 uCC-f-radius-s5"
-                    aria-label="type2">{{blockState.tags[1].name}}</button>
-                </div> -->
-                <!-- ! Wait Name From API -->
+                <div class="d-flex uCC-gap-8 mt-1">
+                    <ng-container *ngFor="let tag of blockState.tags">
+                        <button class="border-0 fCC-reg-sA cCC-text-dark py-1 px-3 cCC-bg-support1 uCC-f-radius-s5"
+                            aria-label="type1">{{tag.name}}</button>
+                    </ng-container>
+                </div>
             </div>
         </div>
         <!-- Icon Like -->
-        <div class="cCC-bg-support1 uCC-f-radius-sA p-2 position-absolute" style="top: 16px; left: 16px;">
+        <!-- <div class="cCC-bg-support1 uCC-f-radius-sA p-2 position-absolute" style="top: 16px; left: 16px;">
             <i class="d-flex iCC-Newlike iCC-sB imCC-Background-Contain"></i>
-        </div>
+        </div> -->
     </div>
     <!-- Icons -->
-    <div class="d-flex justify-content-between mb-3 px-2">
-        <app-icon iconName="iCC-Newclock iCC-sD imCC-Background-Contain d-flex ms-2"
-            textContent="{{blockState?.delivery_range}} دقيقة" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
-        <app-icon iconName="iCC-Newtables iCC-sD imCC-Background-Contain d-flex ms-2"
-            textContent="{{blockState.num_table}} طاولة" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
-        <app-icon iconName="iCC-Newstars iCC-sD imCC-Background-Contain d-flex ms-2" textContent="0"
+    <div class="d-flex justify-content-between~ gap-4 mb-3 px-2">
+        <app-icon iconName="iCC-Newclock iCC-sD imCC-Background-Contain d-flex {{'ms-2' | translate}}"
+            textContent="{{blockState?.avg_delivery_time}} {{'دقيقة' | translate}}" textClass="fCC-reg-sB cCC-text-support2"></app-icon>
+        <!-- <app-icon iconName="iCC-Newtables iCC-sD imCC-Background-Contain d-flex {{'ms-2' | translate}}"
+            textContent="{{blockState.num_table}} {{'طاولة' | translate}}" textClass="fCC-reg-sB cCC-text-support2"></app-icon> -->
+        <app-icon iconName="iCC-Newstars iCC-sD imCC-Background-Contain d-flex {{'ms-2' | translate}}" textContent="{{blockState?.rate}}"
             textClass="fCC-reg-sB cCC-text-support2"></app-icon>
     </div>
 </section>

@@ -1,58 +1,111 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
+        <div class="modal-content ">
+            <form #addonsForm="ngForm" (ngSubmit)="onSubmit(addonsForm?.value)">
+                <img src="{{productDetails?.data?.has_media?productDetails?.data?.media[0].url : '../../../../../../../assets/images/placeholder.png'}}"
+                    class="w-100 CC-Foodimg-Holder imCC-Background-Cover uCC-f-radius-s10">
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <p class="m-0 fCC-reg-sG cCC-text-grey2">{{productDetails?.data?.name}}</p>
+                        <P class="fCC-reg-sH cCC-text-main m-0">{{productDetails?.data?.price}} {{'ر.س' | translate}}</P>
+                    </div>
+                    <div class="d-flex align-items-center" *ngIf="productDetails?.data?.option_groups.length > 0">
+                        <p class="fCC-reg-sF cCC-text-grey2 px-1 m-0">{{'اضافات' | translate}}</p>
+                        <p class="fCC-reg-sC cCC-text-orange m-0">{{'اختياري' | translate}}</p>
+                    </div>
+                    <!-- adonis -->
+                    <ng-container *ngFor="let item of productDetails?.data?.option_groups; let last=last">
+                        <!-- [Options Group] Name -->
+                        <div class="{{'pe-1' | translate}} d-flex flex-column ">
+                            <div>
+                                <p class="m-0 fCC-bold-sB cCC-text-support2 mb-3"> {{'أختر ال' |translate}} {{item.name}}</p>
+                            </div>
+                            <!-- [Options] Name and Price -->
+                            <div *ngFor="let subItem of item.options ; let last= last ">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <!-- Option Name -->
+                                        <div *ngIf="productDetails" class="d-flex align-items-center">
+                                            <input #singleAddon *ngIf="item.multiple == 0 "
+                                                [attr.data_value]="subItem?.id" [attr.data_name]="item.name"
+                                                [value]="subItem?.id" type='radio' ngModel
+                                                required="{{item.required == 1}}" [name]="item.name"
+                                                class="iCC-sB cCC-text-support2 p-0 uCC-Click {{'ms-2' | translate}}"
+                                                (change)="totalPrice($event)">
+                                            <input *ngIf="item.multiple == 1 " [value]="subItem?.id" type='checkbox'
+                                                ngModel required="{{item.required == 1}}" [name]="item.name"
+                                                class="iCC-sB cCC-text-support2 p-0 uCC-Click {{'ms-2' | translate}}"
+                                                (change)="multipleAddons$($event) ; totalPrice($event)">
+                                            <label for="radio"
+                                                class="fCC-reg-sC cCC-text-support2">{{subItem.name}}</label>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <!-- Option Price -->
+                                        <p class="m-0 fCC-reg-sC cCC-text-main">{{'ر.س' | translate}} {{subItem.price}}</p>
+                                    </div>
+                                </div>
+                                <!-- Divider-Horizontal -->
+                                <div class="CC-horizontal-divider my-3"></div>
+                            </div>
+
+                        </div>
+                    </ng-container>
+                    <!-- Special Note TextArea -->
+                    <!-- <div class="d-flex align-items-center">
+                        <p class="fCC-reg-sF cCC-text-grey2 px-1">ملاحظات</p>
+                        <p class="fCC-reg-sC cCC-text-orange">اختياري</p>
+                    </div> -->
+                    <!-- <textarea name="message" draggable="false"
+                        class="form-control cCC-bg-opacity-white-40 border-0 uCC-shadow-f-support2-50 uCC-f-radius-sA fCC-reg-sC cCC-text-support2 mb-4" rows="5"
+                        cols="30">اود ان تكون درجة السواء متوسطة .. شكرا</textarea> -->
+                    <!-- counter -->
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="cCC-bg-support1 p-1 uCC-f-radius-s5 d-flex align-items-center">
+                            <i class="d-flex iCC-Redplus iCC-sC imCC-Background-Contain p-3 uCC-Click"
+                                (click)="this._OrderProccessService.Plus()"></i>
+                            <p class="fCC-bold-sB cCC-text-main mx-3 my-0">{{this._OrderProccessService.quantityOrder}}
+                            </p>
+                            <i class="d-flex iCC-Greyminus iCC-sC imCC-Background-Contain p-3 uCC-Click"
+                                (click)="this._OrderProccessService.minus()"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- add to cart -->
+                <div *ngIf="productDetails" class="px-3 mt-1 mb-4">
+                    <!-- <button  type="submit" class="form-control d-flex justify-content-between cCC-bg-main cCC-text-white fCC-reg-sF uCC-f-radius-sA py-2 px-4"
+                        data-bs-dismiss="modal"> -->
+                    <button [disabled]="addonsForm.invalid" value="Submit" type="submit" mat-raised-button 
+                        class="form-control warningClass d-flex justify-content-between cCC-bg-main cCC-text-white fCC-reg-sF uCC-f-radius-sA py-2 px-4"
+                        data-bs-dismiss="modal">
+                        <app-icon iconName="iCC-Cook iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}"
+                            textContent="{{'اضف الى السلة' | translate}}" textClass=" fCC-reg-sF cCC-text-white">
+                        </app-icon>
+                        <span>{{productDetails?.data?.price * this._OrderProccessService.quantityOrder}} {{'ر.س' | translate}}</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Popup Reset Order -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <i class="imCC-Foodimg bg- w-100 CC-Foodimg-Holder imCC-Background-Cover d-flex"></i>
-            <div class="modal-body">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <p class="m-0 fCC-reg-sG cCC-text-grey2">سندوتش كباب تركي</p>
-                    <P class="fCC-reg-sH cCC-text-main m-0">85 ر.س</P>
-                </div>
-                <div class="d-flex align-items-center">
-                    <p class="fCC-reg-sF cCC-text-grey2 px-1">اضافات</p>
-                    <p class="fCC-reg-sC cCC-text-orange">اختياري</p>
-                </div>
-                <ng-container *ngFor="let item of extraList">
-                    <div class="pe-1 d-flex justify-content-between">
-                        <div>
-                            <!-- checkBoxes -->
-                            <input type="checkbox" class="iCC-sB cCC-text-support2 p-0 checkbox uCC-Click" value="">
-                            <!-- divider -->
-                            <span class="px-2"></span>
-                            <!-- CheckBox Name -->
-                            <label for="" class="fCC-reg-sC cCC-text-support2">{{item.name}}</label>
-                        </div>
-                        <div>
-                            <!-- Cost -->
-                            <P class="fCC-reg-sC cCC-text-main m-0">{{item.cost}}</P>
-                        </div>
-                    </div>
-                    <!-- Divider-Horizontal -->
-                    <div class="CC-horizontal-divider my-3"></div>
-                </ng-container>
-                <div class="d-flex align-items-center">
-                    <p class="fCC-reg-sF cCC-text-grey2 px-1">ملاحظات</p>
-                    <p class="fCC-reg-sC cCC-text-orange">اختياري</p>
-                </div>
-                <textarea name="message" draggable="false"
-                    class="form-control cCC-bg-opacity-white-40 border-0 uCC-shadow-f-support2-50 uCC-f-radius-sA fCC-reg-sC cCC-text-support2 mb-4" rows="5"
-                    cols="30">اود ان تكون درجة السواء متوسطة .. شكرا</textarea>
-                <div class="d-flex justify-content-center align-items-center">
-                    <div class="cCC-bg-support1 p-1 uCC-f-radius-s5 d-flex align-items-center">
-                        <i class="d-flex iCC-Redplus iCC-sC imCC-Background-Contain p-3 uCC-Click"></i>
-                        <p class="fCC-bold-sB cCC-text-main mx-3 my-0">1</p>
-                        <i class="d-flex iCC-Greyminus iCC-sC imCC-Background-Contain p-3 uCC-Click"></i>
-                    </div>
-                </div>
+            <div class="modal-header">
+                <p class="m-0 fCC-bold-sB cCC-text-dark mx-auto">{{'هل تريد إزالة طلبك القديم من العربة وإضافة طلب جديد'  |translate}}</p>
+                <!-- <p class="m-0 fCC-bold-sB cCC-text-dark mx-auto" id="exampleModalLabel">{{ResturantName}}</p> -->
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
             </div>
-            <div class="px-3 mt-1 mb-4">
-                <button type="button" class="form-control d-flex justify-content-between cCC-bg-main cCC-text-white fCC-reg-sF uCC-f-radius-sA py-2 px-4"
-                    data-bs-dismiss="modal">
-                    <app-icon iconName="iCC-Cook iCC-sD imCC-Background-Contain d-flex ms-3" textContent="اضف الى السلة"
-                        textClass=" fCC-reg-sF cCC-text-white">
-                    </app-icon>
-                    <span>95 ر.س</span>
-                </button>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary fCC-bold-sB" data-bs-dismiss="modal">{{'لا' | translate}}</button>
+                <button type="button" class="btn cCC-bg-main cCC-text-white fCC-bold-sB" (click)="resetCart()"
+                    data-bs-dismiss="modal">{{'نعم مسح العربة' | translate}}</button>
             </div>
         </div>
     </div>
 </div>
+
+<a #myButton class="btn btn-primary" data-bs-toggle="modal" href="#exampleModal2" [hidden]="true" role="button">Open
+    Reset modal</a>

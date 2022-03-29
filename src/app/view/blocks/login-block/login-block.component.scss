@@ -1,6 +1,15 @@
 input {
     accent-color: #4ee143;
 }
+.has-danger{
+    border: 1px solid red;
+}
+.has-success{
+    border: 1px solid green;
+}
+.CC-alert{
+    color: red;
+}
 .CC-Btn{
     transition: 0.2s all;
 }
@@ -20,4 +29,15 @@ input {
 }
 .CC-Btn2:focus{
     color:#f5504c !important;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

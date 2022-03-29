@@ -2,18 +2,18 @@
     <!-- Resturant Info Card -->
     <div class="cCC-bg-white px-2 py-3" style="border-radius: 20px;">
         <div class="d-flex align-items-center">
-            <i class="imCC-Newlogo-1~ d-flex imCC-Background-Cover CC-resturants-Holder uCC-f-radius-sA ms-2" [ngStyle]="{'background-image': 'url(' + orderDetails?.data?.market?.media[0]?.thumb + ')'}"></i>
+            <i class="imCC-Newlogo-1~ d-flex imCC-Background-Cover CC-resturants-Holder uCC-f-radius-sA {{'ms-2' | translate}}" [ngStyle]="{'background-image': 'url(' + _OrderProccessService.allProductsInCart?.data?.market?.media[0]?.thumb + ')'}"></i>
             <!-- Resturant Description -->
             <div>
                 <!-- Resturant Name -->
-                <p class="mb-0 cCC-text-dark fCC-bold-sB">{{orderDetails?.data?.market?.name}}</p>
+                <p class="mb-0 cCC-text-dark fCC-bold-sB">{{_OrderProccessService.allProductsInCart?.data?.market?.name}}</p>
                 <!-- Resturant Categories -->
-                <div class="d-flex uCC-gap-8 mt-1">
+                <div class="d-flex uCC-gap-8 mt-1" *ngIf="+_OrderProccessService.allProductsInCart?.tags?.length">
                     <button class="border-0 fCC-reg-sA cCC-text-dark py-1 px-3 cCC-bg-support1 uCC-f-radius-s5"
-                        aria-label="type1">المشويات
+                        aria-label="type1">{{+_OrderProccessService.allProductsInCart?.tags?.length ? _OrderProccessService.allProductsInCart?.tags[0] : ''}}
                     </button>
                     <button class="border-0 fCC-reg-sA cCC-text-dark py-1 px-3 cCC-bg-support1 uCC-f-radius-s5"
-                        aria-label="type2">الشرقي
+                        aria-label="type2">{{+_OrderProccessService.allProductsInCart?.tags?.length ? _OrderProccessService.allProductsInCart?.tags[0] : ''}}
                     </button>
                 </div>
             </div>
@@ -21,54 +21,66 @@
     </div>
     <!-- Address Information Block -->
     <div>
-        <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">عنوان التوصيل</p>
-        <app-address-info-block [userAddress]='userAddress?.data[userAddress?.data?.length - 1]'></app-address-info-block>
+        <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">{{'عنوان التوصيل' | translate}}</p>
+        <app-address-info-block [userAddress]='this._OrderProccessService.userAddress[0]'></app-address-info-block>
     </div>
     <div class="row">
         <!-- Mobile Number -->
-        <div class="col-6">
-            <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">رقم الهاتف</p>
+        <div class="col-lg-6 col-12">
+            <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">{{'رقم الهاتف' | translate}}</p>
             <div class="cCC-bg-white uCC-f-radius-sA p-3">
-                <app-icon iconName="iCC-Mobile1 iCC-sD imCC-Background-Contain d-flex ms-3" textContent="(+966){{userdata?.data?.phone}}"
+                <app-icon iconName="iCC-Mobile1 iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{+userdata?.data?.phone}}+"
                     textClass="fCC-reg-sD cCC-text-dark">
                 </app-icon>
             </div>
         </div>
         <!-- Receive ways -->
-        <div class="col-6">
-            <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">إستلام عبر</p>
-            <div class="d-flex justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2 mb-3">
-                <app-icon iconName="iCC-Fromresturant iCC-sD imCC-Background-Contain d-flex ms-3" textContent="استلام عبر المطعم"
+        <div class="col-lg-6 col-12 mt-lg-0 mt-3">
+            <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">{{'إستلام عبر' | translate}}</p>
+            <div *ngIf="reciveMethodVal?.is_default === 0" class="d-flex justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2 mb-3">
+                <app-icon iconName="iCC-Fromresturant iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{'استلام عبر المطعم' | translate}}"
                     textClass="fCC-reg-sD cCC-text-dark">
                 </app-icon>
                 <!-- <input type="checkbox" name="way1" value="way1" class="uCC-Click" style="border-color: red;"> -->
             </div>
-            <!-- <div class="d-flex justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2">
-                <app-icon iconName="iCC-Fromdelivery iCC-sD imCC-Background-Contain d-flex ms-3" textContent="استلام في  المنزل"
+            <div *ngIf="reciveMethodVal?.is_default === 1" class="d-flex justify-content-between align-items-center cCC-bg-white uCC-f-radius-sA px-3 py-2">
+                <app-icon iconName="iCC-Fromdelivery iCC-sD imCC-Background-Contain d-flex {{'ms-3' | translate}}" textContent="{{'استلام في  المنزل' | translate}}"
                     textClass="fCC-reg-sD cCC-text-dark">
                 </app-icon>
-                <input type="checkbox" name="way2" value="way2" class="uCC-Click" style="border-color: red;">
-            </div> -->
+            </div>
         </div>
     </div>
+    <!-- <button class="bg-danger p-4" (click)="x()">Start</button>
+    <button class="bg-danger p-4" (click)="y()">again</button> -->
     <div class="row">
         <!-- Payment Method -->
-        <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">تفاصيل الدفع</p>
-        <div class="col-6">
+        <p class="m-0 fCC-bold-sD cCC-text-dark mb-4">{{'تفاصيل الدفع' | translate}}</p>
+        <div class="col-lg-6 col-12 ">
             <!-- Payment Methods Block -->
             <app-payment-methods-block [paymentMethod]='orderDetails?.data?.payment?.method'></app-payment-methods-block>
-            <p class="m-0 fCC-reg-sD cCC-text-support2">
-                بمجر موافقتك علي الطلب أنت توافق علي
-            </p>
-            <p class="m-0 fCC-reg-sD cCC-text-main uCC-Click CC-hover">
-                سياسة الخصوصية وشروط الاستخدام
-            </p>
+            <div class="d-md-block d-none">
+                <p class="m-0 fCC-reg-sD cCC-text-support2 mt-lg-0 mt-3">
+                   {{' بمجر موافقتك علي الطلب أنت توافق علي' | translate}}
+                </p>
+                <p routerLink="/privacy-policy" class="m-0 fCC-reg-sD cCC-text-main uCC-Click CC-hover mb-lg-0 mb-3">
+                    {{'سياسة الخصوصية وشروط الاستخدام' | translate}}
+                </p>
+            </div>
         </div>
-        <div class="col-6 position-relative">
+        <div class="col-lg-6 col-12 position-relative">
             <!-- Receipt Block -->
             <app-total-receipt-block [receiptDetails]='receipt'></app-total-receipt-block>
             <!-- [Confirm Order] Button -->
-            <button aria-label="done" routerLink="/track-order"  class="btn border-0 w-100 py-3 uCC-f-radius-sA mt-5 fCC-bold-sB cCC-bg-main cCC-text-lightblue">تنفيذ الطلب</button>
+            <button aria-label="done" (click)="addnewOrders()"  class="btn border-0 mb-lg-0 mb-3 w-100 py-3 uCC-f-radius-sA mt-5 fCC-bold-sB cCC-bg-main cCC-text-lightblue" >{{'تنفيذ الطلب' | translate}}</button>
+        </div>
+        <div class="d-md-none d-block">
+            <p class="m-0 fCC-reg-sD cCC-text-support2 mt-lg-0 mt-2">
+                {{' بمجر موافقتك علي الطلب أنت توافق علي' | translate}}
+            </p>
+            <p routerLink="/privacy-policy" class="m-0 fCC-reg-sD cCC-text-main uCC-Click CC-hover mb-lg-0 mb-3">
+                {{'سياسة الخصوصية وشروط الاستخدام' | translate}}
+            </p>
         </div>
     </div>
+    <!-- <iframe id=" telr " [attr.src]="paymetURL" allowfullscreen="" loading="lazy"></iframe> -->
 </section>

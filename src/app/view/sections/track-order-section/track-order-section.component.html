@@ -1,20 +1,170 @@
-<div class="row">
-    <div class="col-6">
+<div class="row d-md-flex flex-md-row flex-column-reverse flex-md-column~">
+    <div class="col-md-6 col-12 d-md-inline d-flex flex-column-reverse">
         <!-- Status Card -->
-        <div class="uCC-f-radius-sB cCC-bg-white position-relative mb-4">
-            <i class="iCC-FoodPrepared CC-Holder imCC-Background-Contain d-flex"></i>
-            <p class="m-0 mt-4 pb-4 cCC-text-dark fCC-reg-sE text-center">في انتظار موافقة المطعم</p>
-            <button aria-label="send"
+        <div class="uCC-f-radius-sB cCC-bg-white position-relative mb-md-4 mb-0 mt-md-0 mt-4">
+            <!-- Animation Qr Menu -->
+            <div *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 1 ">
+                <ng-lottie height="148px" [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+            </div>
+            <div *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 2 ">
+                <ng-lottie height="148px" [options]="clock" (animationCreated)="animationCreated($event)"></ng-lottie>
+            </div>
+            <div *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 3">
+                <ng-lottie height="148px" [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+            </div>
+            <div *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id ===  4">
+                <ng-lottie height="148px" [options]="onTheWay" (animationCreated)="animationCreated($event)"></ng-lottie>
+            </div>
+            <div *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id ===  5">
+                <ng-lottie height="148px" [options]="recieved" (animationCreated)="animationCreated($event)"></ng-lottie>
+            </div>
+            <div *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 2">
+                <p class="mb-0 text-black text-center">{{+_OrderProccessService.orderDeatilsCart?.data?.timing + '' + 'min'}}</p>
+            </div>
+            
+            <!-- <i class="iCC-FoodPrepared CC-Holder imCC-Background-Contain d-flex"></i> -->
+            <p *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 1" class="m-0 mt-4 pb-4 cCC-text-dark fCC-reg-sE text-center">{{'في انتظار موافقة المطعم' | translate}}</p>
+            <p *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 2" class="m-0 mt-4 pb-4 cCC-text-dark fCC-reg-sE text-center">{{'جاري التحضير' | translate}}</p>
+            <p *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 3" class="m-0 mt-4 pb-4 cCC-text-dark fCC-reg-sE text-center">{{'الاوردر جاهز' | translate}}</p>
+            <p *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 4" class="m-0 mt-4 pb-4 cCC-text-dark fCC-reg-sE text-center">{{'في الطريق' | translate}}</p>
+            <p *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 5" class="m-0 mt-4 pb-4 cCC-text-dark fCC-reg-sE text-center">{{'تم الاستلام' | translate}}</p>
+            <p *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 6" class="m-0 mt-4 pb-4 cCC-text-dark fCC-reg-sE text-center">تم رفض طلبك</p>
+            <div *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 1"
                 class="position-absolute uCC-Border-green cCC-bg-opacity-green-20 uCC-f-radius-sB py-1 px-4 cCC-text-darkGreen fCC-reg-sC"
                 style="top: 16px; left: 16px;">
-                <span>إرسال</span>
-            </button>
+                <span>{{'إرسال' | translate}}</span>
+            </div>
+            <div *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 2"
+                class="position-absolute uCC-Border-green cCC-bg-opacity-green-20 uCC-f-radius-sB py-1 px-4 cCC-text-darkGreen fCC-reg-sC"
+                style="top: 16px; left: 16px;">
+                <span>{{'يتم التجهيز' | translate}}</span>
+            </div>
+            <div *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 3"
+                class="position-absolute uCC-Border-green cCC-bg-opacity-green-20 uCC-f-radius-sB py-1 px-4 cCC-text-darkGreen fCC-reg-sC"
+                style="top: 16px; left: 16px;">
+                <span>{{'جاهز' | translate}}</span>
+            </div>
+            <div *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 4"
+                class="position-absolute uCC-Border-green cCC-bg-opacity-green-20 uCC-f-radius-sB py-1 px-4 cCC-text-darkGreen fCC-reg-sC"
+                style="top: 16px; left: 16px;">
+                <span>{{'الأوردر في طريقه إليك' | translate}}</span>
+            </div>
+            <div *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 5"
+                class="position-absolute uCC-Border-green cCC-bg-opacity-green-20 uCC-f-radius-sB py-1 px-4 cCC-text-darkGreen fCC-reg-sC"
+                style="top: 16px; left: 16px;">
+                <span>{{'تم الاستلام' | translate}}</span>
+            </div>
+            <div *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id === 6"
+                class="position-absolute uCC-Border-green cCC-bg-opacity-green-20 uCC-f-radius-sB py-1 px-4 cCC-text-darkGreen fCC-reg-sC"
+                style="top: 16px; left: 16px;">
+                <span>{{'ملغي' | translate}}</span>
+            </div>
         </div>
         <!-- Delivery Information Card -->
-        <app-delivery-info-block></app-delivery-info-block>
+        <div class="mt-4" *ngIf="recieveMethod?.is_default === 1">
+            <div *ngIf="_OrderProccessService.trackingOrderDetails?.data?.order_status_id == 4">
+                <app-delivery-info-block [delievryDetails]="_OrderProccessService.trackingOrderDetails?.data"></app-delivery-info-block>
+            </div>
+        </div>
+        <!-- Order Details Block -->
+        <div class="cCC-bg-white mt-4 uCC-f-radius-sB p-4">
+            <app-icon iconName="iCC-Sheet iCC-sD imCC-Background-Contain d-flex {{'ms-2' | translate}}" textContent="{{'تفاصيل الأوردر' | translate}}"
+                textClass="fCC-bold-sB cCC-text-dark">
+            </app-icon>
+            <div class="CC-dashed-line mt-3 mb-4 mx-auto"></div>
+            <div class="d-flex justify-content-between mx-4 mb-4" *ngFor="let product of this._OrderProccessService.orderDeatilsCart?.data?.product_orders">
+                <!-- Receipt Info -->
+                <div class="d-flex flex-column uCC-gap-16 me-2">
+                    <p class="m-0 fCC-reg-sC cCC-text-dark">{{product.name}} x {{product.quantity}}</p>
+                    <!-- <p class="m-0 fCC-reg-sC cCC-text-dark">رسوم التوصيل</p> -->
+                </div>
+                <div class="d-flex flex-column uCC-gap-16 {{'ms-2' | translate}}">
+                    <p class="m-0 fCC-reg-sC cCC-text-dark"> RS {{product.total}}</p>
+                    <!-- <p class="m-0 fCC-reg-sC cCC-text-dark"> RS</p> -->
+                </div>
+            </div>
+            <app-icon iconName="iCC-Sheet iCC-sD imCC-Background-Contain d-flex {{'ms-2' | translate}}" textContent="{{'تفاصيل الدفع' | translate}}"
+                textClass="fCC-bold-sB cCC-text-dark">
+            </app-icon>
+            <div class="CC-dashed-line mt-3 mb-4 mx-auto"></div>
+            <div class="d-flex justify-content-between mx-4 mb-4">
+                <!-- Subtotal Info -->
+                <div class="d-flex flex-column uCC-gap-16 me-2">
+                    <p class="m-0 fCC-reg-sC cCC-text-dark">Subtotal</p>
+                    <p class="m-0 fCC-reg-sC cCC-text-dark">{{'خدمة التوصيل' | translate}}</p>
+                </div>
+                <div class="d-flex flex-column uCC-gap-16 {{'ms-2' | translate}}">
+                    <p class="m-0 fCC-reg-sC cCC-text-dark"> {{this._OrderProccessService.orderDeatilsCart?.data?.payment.price - this._OrderProccessService.orderDeatilsCart?.data?.delivery_fee}} RS</p>
+                    <p class="m-0 fCC-reg-sC cCC-text-dark">{{this._OrderProccessService.orderDeatilsCart?.data?.delivery_fee}} RS</p>
+                </div>
+            </div>
+            <div class="cCC-opacity-dark-50 mt-3 mb-4 mx-auto" style="height:1px; width: 80%;"></div>
+            <div class="d-flex justify-content-between mx-4 mb-4">
+                <!-- Total Info -->
+                <div class="d-flex flex-column uCC-gap-16 me-2">
+                    <p class="m-0 fCC-bold-sB cCC-text-dark">{{'الأجمالي' | translate}}</p>
+                </div>
+                <div class="d-flex flex-column uCC-gap-16 {{'ms-2' | translate}}">
+                    <p class="m-0 fCC-bold-sB cCC-text-dark"> {{this._OrderProccessService.orderDeatilsCart?.data?.payment.price}} RS</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-6">
-        <!-- Map -->
-        <i class="imCC-Trackmap uCC-f-radius-sB CC-map-Holder imCC-Background-Contain d-flex"></i>
+    <!-- Map -->
+    <div class="col-md-6 col-12" *ngIf="recieveMethod?.is_default === 1">
+        <app-track-order-map-block></app-track-order-map-block>
     </div>
 </div>
+<!-- Reviews Popup -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+  <div>
+    <div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content cCC-text-lightblue uCC-f-radius-sB">
+                <div class="modal-header d-felx flex-column align-items-center">
+                    <p class="m-0 fCC-bold-sB cCC-text-dark mx-auto" id="exampleModalLabel">{{'كيف كان طعامك من' | translate}} </p>
+                    <p class="m-0 fCC-bold-sB cCC-text-dark mx-auto" id="exampleModalLabel">{{ResturantName}}</p>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between">
+                        <app-icon iconName="iCC-appReview iCC-sB imCC-Background-Contain d-flex {{'ms-2' | translate}}"
+                            textContent="{{'الخدمة' | translate}}" textClass="fCC-reg-sC cCC-text-dark"></app-icon>
+                        <app-rating-popup-shared [rating]="ratingApp" [starCount]="starCount" [color]="starColor"
+                            (ratingUpdated)="onRatingChanged($event)"></app-rating-popup-shared>
+                    </div>
+                    <div class="d-flex justify-content-between my-3">
+                        <app-icon iconName="iCC-resturantReview iCC-sB imCC-Background-Contain d-flex {{'ms-2' | translate}}"
+                            textContent="{{'المطعم' | translate}}" textClass="fCC-reg-sC cCC-text-dark"></app-icon>
+                        <app-rating-popup-shared [rating]="ratingService" [starCount]="starCount" [color]="starColor"
+                            (ratingUpdated)="onRatingseerviceChanged($event)"></app-rating-popup-shared>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <app-icon iconName="iCC-deliveryReview iCC-sB imCC-Background-Contain d-flex {{'ms-2' | translate}}"
+                            textContent="{{'مندوب التوصيل' | translate}}" textClass="fCC-reg-sC cCC-text-dark"></app-icon>
+                        <app-rating-popup-shared [rating]="ratingDriver" [starCount]="starCount" [color]="starColor"
+                            (ratingUpdated)="onRatingDriverChanged($event)"></app-rating-popup-shared>
+                    </div>
+                    <div class="d-flex align-items-end justify-content-center uCC-gap-16">
+                        <i class="iCC-reviewPdf CC-Pdf-Holder imCC-Background-Contain d-flex"></i>
+                        <div>
+                            <p class="m-0 fCC-bold-sB cCC-text-dark text-center">{{'لقد تلقيت فاتورة جديدة' | translate}} </p>
+                            <p class="fCC-reg-sC cCC-text-dark">{{'قم بالتنزيل للتحقق من أن العملية تمت بنجاح' | translate}} </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://dev.talabatcom.sa/Admin/public/{{_OrderProccessService.trackingOrderDetails?.data?.pdf}}" download class="w-100 border-0">        
+                        <button type="button" data-bs-dismiss="modal" (click)="submitReview()" 
+                        class="btn1 uCC-Click d-flex justify-content-center align-items-center form-control cCC-bg-main cCC-text-white uCC-f-radius-sA p-2 {{'ms-4' | translate}}">
+                        <i class="iCC-pdfIcon iCC-sD d-flex {{'ms-2' | translate}}"></i>
+                        <span class="fCC-bold-sB">{{'تحميل ملف الفاتورة' | translate}}</span>
+                    </button>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a #myButton class="btn btn-primary" data-bs-toggle="modal" href="#exampleModal" [hidden]="true" role="button">Open first modal</a>

@@ -15,7 +15,7 @@ export class FeedbackListService {
     },
     {
       id: 2,
-      image:'imCC-Userprofile3',
+      image:'imCC-Userprofile',
       name: 'بسنت احمد',
       date: '6/11/2021الأربعاء',
 

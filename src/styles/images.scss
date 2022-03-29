@@ -1,54 +1,21 @@
 // START === Images
-.imCC-LogoEN{
-  background-image: url(../assets/images/Logo.svg)
-}
 .imCC-LogoAR{
   background-image: url(../assets/images/Logoar.svg)
 }
-.imCC-Userimage{
-  background-image: url(../assets/images/Userimage.svg)
+.imCC-Telr{
+  background-image: url(../assets/images/Telr.png)
 }
-// .imCC-Homecover{
-//   background-image: url(../assets/images/Homecover.png)
-// }
+.imCC-LogoEN{
+  background-image: url(../assets/images/logoeng.svg)
+}
 .imCC-Homecover{
   background-image: url(../assets/images/Homecover.webp)
 }
-.imCC-QRcodemenu{
-  background-image: url(../assets/images/QRCodeMenu.svg)
-}
-.imCC-Resturant1{
-  background-image: url(../assets/images/Resturant1.svg)
-}
-.imCC-Resturant2{
-  background-image: url(../assets/images/Resturant2.svg)
-}
-.imCC-Resturant3{
-  background-image: url(../assets/images/Resturant3.svg)
-}
-.imCC-Resturant5{
-  background-image: url(../assets/images/Resturant5.svg)
-}
-.imCC-Resturantlogo1{
-  background-image: url(../assets/images/Resturantlogo1.svg)
-}
-.imCC-Resturantlogo2{
-  background-image: url(../assets/images/Resturantlogo2.svg)
-}
-.imCC-Resturantlogo3{
-  background-image: url(../assets/images/Resturantlogo3.svg)
-}
-.imCC-Userfeedbackimg1{
-  background-image: url(../assets/images/Userimgfeedback1.svg)
-}
-.imCC-Userfeedbackimg2{
-  background-image: url(../assets/images/Userimgfeedback2.svg)
-}
-.imCC-Userfeedbackimg3{
-  background-image: url(../assets/images/Userimgfeedback3.svg)
+.imCC-Resturantsheader{
+   background-image: url(../assets/images/Resturantsheader.webp)
 }
 .imCC-Mobile{
-  background-image: url(../assets/images/Mobileimg.png)
+  background-image: url(../assets/images/Mobileimg.webp)
 }
 .imCC-Logoappstore{
   background-image: url(../assets/images/Logoappstore.png)
@@ -59,74 +26,11 @@
 .imCC-Contactlogo{
   background-image: url(../assets/images/Contactlogo.png)
 }
-.imCC-Resturantimg2{
-  background-image: url(../assets/images/Resturantimg2.svg)
-}
-.imCC-Resturantimg3{
-  background-image: url(../assets/images/Resturantimg3.svg)
-}
-.imCC-Resturantimg4{
-  background-image: url(../assets/images/Resturantimg4.svg)
-}
-.imCC-Resturantimg5{
-  background-image: url(../assets/images/Resturantimg-5.svg)
-}
 .imCC-Qrcode{
   background-image: url(../assets/images/Qrcode.svg)
 }
-// .imCC-Coverresturant{
-//   background-image: url(../assets/images/Coverresturant.png)
-// }
-.imCC-Coverresturant{
-  background-image: url(../assets/images/Coverresturant.webp)
-}
-.imCC-Menuimg1{
-  background-image: url(../assets/images/Menuimg1.png)
-}
-.imCC-Menuimg2{
-  background-image: url(../assets/images/Menuimg2.png)
-}
-.imCC-Menuimg3{
-  background-image: url(../assets/images/Menuimg3.png)
-}
-.imCC-Foodimg{
-  background-image: url(../assets/images/Foodimg.png)
-}
-.imCC-Resturant{
-  background-image: url(../assets/images/Imagereturant1.svg)
-}
-.imCC-Privacypolicy{
-  background-image: url(../assets/images/Privacypolicy.png)
-}
-.imCC-Newresturant-1{
-  background-image: url(../assets/images/Newresturant-1.png)
-}
-.imCC-Newresturant-2{
-  background-image: url(../assets/images/Newresturant-2.png)
-}
-.imCC-Newresturant-3{
-  background-image: url(../assets/images/Newresturant-3.png)
-}
-.imCC-Newresturant-4{
-  background-image: url(../assets/images/Newresturant-4.png)
-}
-.imCC-Newlogo-1{
-  background-image: url(../assets/images/Newlogo-1.png)
-}
 .imCC-Userprofile{
   background-image: url(../assets/images/Userprofile.png)
-}
-.imCC-Userprofile2{
-  background-image: url(../assets/images/userProfile2.png)
-}
-.imCC-Userprofile3{
-  background-image: url(../assets/images/userProfile3.jpg)
-}
-.imCC-ContactUsImage{
-  background-image: url(../assets/images/ContactUs-Image.png)
-}
-.imCC-Resturantsheader{
-  background-image: url(../assets/images/Resturants-Header.png)
 }
 .imCC-Scancode {
   background-image: url(../assets/images/ScanCodeHolder.png)
@@ -134,11 +38,14 @@
 .imCC-DeliveryImage {
   background-image: url(../assets/images/DeliveryImage.png)
 }
-.imCC-Trackmap {
-  background-image: url(../assets/images/TrackMap.png)
-}
 .imCC-PlaceholderImg {
   background-image: url(../assets/images/placeholder.png)
+}
+.imCC-Privacypolicy{
+    background-image: url(../assets/images/PrivacyPolicy.png)
+}
+.imCC-Aboutus{
+    background-image: url(../assets/images/AboutUsPage.png)
 }
 // END === Images
 
@@ -158,6 +65,13 @@
 .imCC-sA{
   height: 39px;
   width: 130px;
+  @media screen and (max-width : 992px){
+    width : 90px;
+  }
+  @media screen and (max-width : 400px){
+    width : 65px;
+  }
+
 }
 .imCC-sB{
   height: 88px;

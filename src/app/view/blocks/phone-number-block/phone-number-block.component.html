@@ -1,31 +1,32 @@
 <form #phoneForm='ngForm' (ngSubmit)="ngSubmit(phoneForm.value)">
     <!-- Div Holder-->
-    <label for="phone" class="cCC-text-support2 fCC-reg-sB mb-2">رقم الهاتف</label>
-    <div [ngClass]="{'has-danger': phone.invalid &&(phone.dirty),
+    <label for="phone" class="cCC-text-support2 fCC-reg-sB mb-2">{{'رقم الهاتف' | translate}}</label>
+    <div dir="rtl" [ngClass]="{'has-danger': phone.invalid &&(phone.dirty),
         'has-success':phone.valid && (phone.dirty) }"
         class=" d-flex uCC-shadow-f-white-10 px-3 form-input align-items-center uCC-f-radius-sA cCC-bg-white mb-2">
-        <!-- Mobile icon -->
-        <app-icon iconName="iCC-Mobilelogin d-flex iCC-sB ms-2"></app-icon>
         <!-- Mobile Input-->
-        <input #phone="ngModel" type="text" placeholder="+966"
-            class="form-control border-0 fCC-reg-sB py-3 cCC-text-support2 m-0 p-0" name="phone" ngModel required minlength="13"
-            maxlength="13">
+        <input pattern="^(5)([0-9]{8})$" placeholder="5*******" #phone="ngModel" type="text" autocomplete="off" ngModel  dir="ltr"  (keypress)="this._AuthService.numberOnly($event)"
+        class="form-control border-0 fCC-reg-sB py-3 cCC-text-support2 m-0 p-0" name="phone" required minlength="9"
+        maxlength="9">
+        <p class="m-0 fCC-reg-sB py-3 pe-1 cCC-text-support2" readonly dir="ltr">+966</p>
+        <!-- Mobile icon -->
+        <app-icon iconName="iCC-Mobilelogin d-flex iCC-sB {{'ms-2' | translate}}"></app-icon>
     </div>
     <!-- Errors Div -->
     <div *ngIf="phone.errors && (phone.dirty)" class="mb-5 me-2">
-        <p *ngIf="phone.errors?.required" class="CC-alert fCC-bold-sA">يجب إدخال رقم الهاتف</p>
-        <p *ngIf="phone.errors?.minlength" class="CC-alert fCC-bold-sA">رقم الهاتف غير صحيح</p>
+        <p *ngIf="phone.errors?.required" class="CC-alert fCC-bold-sA">{{'يجب إدخال رقم الهاتف' | translate}}</p>
+        <!-- <p *ngIf="phone.errors?.minlength" class="CC-alert fCC-bold-sA">{{'رقم الهاتف غير صحيح' | translate}}</p> -->
+        <p *ngIf="phone.errors?.pattern" class="CC-alert fCC-bold-sA">{{'رقم الهاتف يجب أن يبدأ برقم 5 ولا يتجاوز 9 ارقام' | translate}}</p>
     </div>
     <!-- Text -->
     <div class="mb-5 pb-5">
-        <!-- <p class="fCC-bold-sD cCC-text-dark m-0 mb-2"> رمز التأكيد</p> -->
         <p class="m-0 fCC-reg-sC cCC-text-support2 col-6">
-            يسعدنا لأنك سوف تصبح فردا منا
+            {{'يسعدنا لأنك سوف تصبح فردا منا' | translate}}
         </p>
     </div>
     <!-- Send OTP Button -->
     <button [disabled]="phoneForm.invalid" type="submit"
         class="CC-Btn text-center form-control border-0 cCC-bg-main uCC-f-radius-sA cCC-text-white p-2 ms-4 mt-2">
-        <span class="fCC-bold-sB">إرسال رمز التأكيد</span>
+        <span class="fCC-bold-sB">{{'إرسال رمز التأكيد' | translate}}</span>
     </button>
 </form>

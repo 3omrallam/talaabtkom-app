@@ -1,63 +1,76 @@
-<div class="container-lg px-3 px-sm-4 px-lg-0 bg-white d-flex align-items-center justify-content-start py-2 position-relative"
+<div class="container-lg container-fluid px-3~ px-sm-4~ px-lg-0 bg-white d-flex align-items-center justify-content-between py-2 position-relative"
   style="z-index: '3'">
   <div class="LT-navbar-small">
-  <button *ngIf="isMobile === true" class="btn uCC-Border-sA-Support1 uCC-f-radius-sA p-2 p-sm-3  d-flex align-items-center">
-    <i class="iCC-NavbarIcon iCC-sD d-inline-block"></i>
-  </button>
+    <button (click)='_NavbarService.animateSideNav()' *ngIf="isMobile === true"
+      class="btn uCC-Border-sA-Support1 uCC-f-radius-sA p-2 p-sm-3 d-flex align-items-center">
+      <i class="iCC-NavbarIcon iCC-sD d-inline-block"></i>
+    </button>
     <!-- App Sticker Block Section -->
-    <div class="">
+    <div>
       <app-sticker-block></app-sticker-block>
     </div>
-    <div class="mx-4"></div>
+    <button class="btn position-relative" *ngIf="isMobile === true"  routerLink="/cart" 
+      aria-label="Cart">
+      <app-icon [iconName]='"iCC-Cartred imCC-Background-Contain iCC-sE"'></app-icon>
+      <div class="cCC-bg-support1 d-flex align-items-center justify-content-center position-absolute top-0 end-0"
+        style="width: 24px; height: 24px; border-radius: 50%;">
+        <span class="fCC-reg-sC cCC-text-main">{{_OrderProccessService?.getUserCartCount ?
+        +_OrderProccessService?.getUserCartCount : 0}}</span>
+      </div>
+    </button>
+    <!-- ! search icon in navbar -->
+    <!-- <div class="mx-xlg-5 mx-2"></div> -->
     <!-- Search Icon Block Section-->
-    <div
-      class="iCC-sF uCC-shadow-f-20  uCC-f-radius-sA cCC-bg-main d-flex align-items-center justify-content-center uCC-Click"
+    <!-- <div
+      class="iCC-sF uCC-shadow-f-20 uCC-f-radius-sA cCC-bg-main d-flex align-items-center justify-content-center uCC-Click ms-lg-5 ms-0"
       (click)="animateNavSearch()">
       <app-icon [iconName]='"iCC-Searchwhite imCC-Background-Contain iCC-sC"'></app-icon>
-    </div>
+    </div> -->
   </div>
   <div class="d-flex align-items-center justify-content-between w-100" *ngIf="isMobile === false">
-      <div class="d-flex align-items-center">
-          <!-- vertical divider -->
-          <div class="LT-vertical-divider mx-5"></div>
-          <!-- App Navigator Block Section -->
-          <div class="">
-            <app-navigator-block></app-navigator-block>
-          </div>
-          <!-- vertical divider -->
-          <div class="LT-vertical-divider" style="margin: 0px 48px 0px 100px;"></div>
+    <div class="d-flex align-items-center">
+      <!-- App Navigator Block Section -->
+      <div class="CC-navigators-holder">
+        <app-navigator-block></app-navigator-block>
       </div>
+    </div>
     <!-- App User Profile Block Section -->
-    <div class="d-flex align-items-center gap-4">
+    <div class="d-flex align-items-center gap-lg-5 gap-2">
       <div class="d-flex align-items-center">
         <app-user-profile-block *ngIf="_AccountService.userValue?.success"></app-user-profile-block>
       </div>
       <!-- SignIn Button Block -->
-      <div *ngIf="!_AccountService.userValue?.success" class="cCC-bg-main uCC-f-radius-sA py-2 px-4 uCC-Click"
-      (click)='animateLogin()'>
-      <app-signin-button-block></app-signin-button-block>
+      <div *ngIf="!_AccountService.userValue?.success" class="cCC-bg-main uCC-f-radius-sA py-2 px-lg-4 px-2 uCC-Click"
+        (click)='animateLogin()'>
+        <app-signin-button-block></app-signin-button-block>
+      </div>
+      <!-- Language  -->
+      <div class="ms-xlg-4 ms-0 uCC-Click " *ngIf="!lang" (click)="changeCurrentLang('en'); translation()">English</div>
+      <div class="ms-xlg-4 ms-0 uCC-Click fCC-reg-sD" *ngIf="lang" (click)="changeCurrentLang('ar'); translation()">العربية</div>
+      <!-- Cart Icon Block Section-->
+      <button class="btn position-relative" *ngIf="_AccountService.userValue?.success"
+        (click)='_NavbarService.animateCart()' aria-label="Cart">
+        <!-- Icon Grey when there is no items and red when there is item  -->
+        <app-icon iconName="{{+_OrderProccessService?.getUserCartCount > 0 ? 'iCC-Cartred' : 'iCC-Cartgrey'}} imCC-Background-Contain iCC-sE"></app-icon>
+        <!-- [Cart count] display none when there is no items and display block when there is item -->
+        <div class="cCC-bg-support1 d-flex align-items-center justify-content-center position-absolute top-0 end-0 {{+_OrderProccessService?.getUserCartCount > 0 ? 'd-block' : 'd-none'}}"
+           style="width: 24px; height: 24px; border-radius: 50%;">
+          <span class="fCC-reg-sC cCC-text-main">{{_OrderProccessService?.getUserCartCount ?
+            +_OrderProccessService?.getUserCartCount : 0}}</span>
+        </div>
+      </button>
     </div>
-    <!-- Language  -->
-    <div>English</div>
-    <!-- Cart Icon Block Section-->
-    <button class="btn position-relative" *ngIf="_AccountService.userValue?.success" (click)='_NavbarService.animateCart()' aria-label="Cart">
-      <app-icon [iconName]='"iCC-Cartred imCC-Background-Contain iCC-sE"'></app-icon>
-      <div class="cCC-bg-support1 d-flex align-items-center justify-content-center position-absolute top-0 end-0"
-      style="width: 24px; height: 24px; border-radius: 50%;">
-      <span class="fCC-reg-sC cCC-text-main">{{_NavbarService?.getUserCartCount?.data ? _NavbarService?.getUserCartCount?.data : 0}}</span>
-    </div>
-  </button>
-</div>
   </div>
 </div>
+<!-- ! Search in navbar -->
 <!-- SEARCH -->
 <!-- Search Layer -->
-<div *ngIf="!_NavbarService.searchMenuToggle" class="position-fixed end-0 start-0 bottom-0 bg-transparent"
+<!-- <div *ngIf="!_NavbarService.searchMenuToggle" class="position-fixed end-0 start-0 bottom-0 bg-transparent"
   style="z-index: 1;top: 71px;" (click)="animateNavSearch()"
   [ngStyle]="{'opacity': _NavbarService.searchMenuToggle ? '0' : '1'}">
-</div>
+</div> -->
 <!-- Search Block -->
-<div class="position-absolute uCC-t-4 p-0 w-100" [ngStyle]="{'top': _NavbarService.searchMenuToggle ? '-76px' : '76px'}"
+<!-- <div class="position-absolute uCC-t-4 p-0 w-100" [ngStyle]="{'top': _NavbarService.searchMenuToggle ? '-76px' : '76px'}"
   style="z-index: 2;">
   <app-nav-search-shared></app-nav-search-shared>
-</div>
+</div> -->

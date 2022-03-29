@@ -1,27 +1,39 @@
-<div class="d-sm-flex d-block align-items-center justify-content-end">
-  <div class="w-100 d-flex flex-column align-items-start">
+<div class="d-sm-flex d-block align-items-start justify-content-end">
+  <div class="w-100 d-flex flex-column align-items-start  position-relative">
     <div class="w-100 d-flex pe-3 ps-1 align-items-center uCC-f-radius-sA uCC-Border-sB-Main cCC-bg-white">
       <!-- location icon inside search bar -->
-      <app-icon iconName="iCC-Location d-flex iCC-sD ms-2"></app-icon>
+      <!-- <div data-bs-toggle="modal" href="#exampleModalToggle"  role="button">
+        <app-icon iconName="iCC-Location d-flex iCC-sD ms-2"></app-icon>
+      </div> -->
+      <a data-bs-toggle="modal" href="#exampleModalToggle" role="button" class="uCC-Click">
+        <!-- <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a> -->
+        <app-icon iconName="iCC-Location d-flex iCC-sD mx-2"></app-icon>
+      </a>
       <!-- search bar -->
-      <input type="text" placeholder="ابحث عن مكانك المفضل" name="search" class="w-100 border-0 w-100 m-0 fCC-reg-sD">
+      <!-- <input data-bs-toggle="modal" href="#exampleModalToggle"  #searchINP type="text" placeholder="ابحث عن مكانك المفضل" name="search" class="w-100 border-0 w-100 m-0 fCC-reg-sD"> -->
+      <input (click)="this.displayList = !this.displayList" autocomplete="off" value="{{selectedAddress}}"  #searchINP type="search" placeholder="{{this._OrderProccessService.UserArea}} -  {{this._OrderProccessService.userStreet}}" name="search" class="w-100 border-0 w-100 m-0 fCC-reg-sD">
       <!-- selection box inside search bar -->
-      <div class="d-flex cCC-bg-support1 align-items-center uCC-f-radius-sA ps-3 py-2 my-1">
+      <div class="d-flex cCC-bg-support1 align-items-center {{'uCC-l-radius-sA' | translate}} px-3 py-2 my-1">
         <!-- SelectBox -->
-        <select name="country"
-          class="cCC-text-support2 cCC-bg-support1 px-2 uCC-l-radius-sA fCC-reg-sC border-0 uCC-Click">
-          <ng-container *ngFor="let country of countries">
-            <!-- Countries -->
-            <option value="{{country.value}}">{{country.name}}</option>
-          </ng-container>
-        </select>
+        <p class="m-0 cCC-text-support2 text-nowrap cCC-bg-support1 px-2 text-center {{'uCC-l-radius-sA' | translate}} fCC-reg-sC border-0">{{'السعوديه' | translate}}</p>
+        <!-- <select [(ngModel)]="selectedOption" name="country" class="cCC-text-support2 cCC-bg-support1 px-2 uCC-l-radius-sA fCC-reg-sC border-0 uCC-Click">
+            <option *ngFor="let country of userAddressList" >{{country?.area != null ? country?.area : 'Empty Values !!'}}</option>
+        </select> -->
       </div>
+    </div>
+    <div class="bg-white w-100 uCC-l-radius-sE px-4 py-2 overflow-auto position-absolute" *ngIf="this.displayList" style="height: 200px; top: 47px;">
+      <div *ngFor="let address of this._OrderProccessService.userAddress ; let last=last" >
+        <p  class="m-0 CC-address-hover cCC-text-dark fCC-reg-sC uCC-Click py-2" (click)="AddressInformation(address)">{{address.area}} - {{address.street}}</p>
+        <div class="CC-horizontal-divider cCC-bg-dark mx-auto" *ngIf="!last"></div>
+      </div>
+
     </div>
   </div>
   <!-- divider -->
   <div class="px-2"></div>
   <!-- Search Button -->
-  <button class="uCC-shadow-f-20  btn px-5 py-2 h-100 d-md-block d-none cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA" aria-label="search">بحث</button>
+  <button routerLink="resturants"  class="uCC-shadow-f-20  btn px-5 py-2 h-100 d-md-block d-none cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA text-nowrap" aria-label="search">{{'اختر موقعك و ابحث'| translate}}</button>
 </div>
-<button class="uCC-shadow-f-20 btn px-5 py-2 mt-4 me-auto h-100 d-md-none d-block cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA"
-  aria-label="search">بحث</button>
+<button routerLink="resturants" class="uCC-shadow-f-20 btn px-5 py-2 mt-4 me-auto h-100 d-md-none d-block cCC-bg-main cCC-text-white fCC-reg-sD uCC-f-radius-sA"
+  aria-label="search" >{{'اختر موقعك و ابحث'| translate}}
+</button>

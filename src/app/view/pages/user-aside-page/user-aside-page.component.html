@@ -1,16 +1,21 @@
 <div class="cCC-bg-white uCC-f-radius-sB mt-5 pb-5">
-    <div class="d-flex flex-column align-items-center">
+    <form class="d-flex flex-column align-items-center">
         <!-- Image Holder -->
         <div class="imCC-Userimage CC-Userprofile-Holder uCC-Border-lightBlue uCC-shadow-f-black-16 uCC-f-radius-sA 
             uCC-Click CC-Userimgs-Poition imCC-Background-Contain position-relative">
-            <i class="imCC-Userimage CC-Userprofile-Holder uCC-f-radius-sA 
-            uCC-Click CC-Userimgs-Poition imCC-Background-Contain">
-           </i>
+            <img class=" CC-Userprofile-Holder uCC-f-radius-sA imCC-Background-Contain" alt="" srcset="" [src]="this._UserSettingsService.userEditProfile">
         </div>
-        <!-- Camera Holder -->
-        <div class="cCC-bg-support1 uCC-Border-sB-Main uCC-f-radius-sC p-1 CC-Camera-Holder mb-5">
-            <i class="iCC-Photocamera d-flex imCC-Background-Contain uCC-Click iCC-sB"></i>
+        <!-- Camera Icon Holder -->
+        <div class="image-upload cCC-bg-support1 uCC-Border-sB-Main uCC-f-radius-sC px-1 pt-1 CC-Camera-Holder mb-5">
+            <!-- Camera Icon -->
+            <label for="imageUpload">
+                <i class="iCC-Photocamera d-flex imCC-Background-Contain uCC-Click iCC-sB"></i>
+            </label>
+            <!-- Input For Upload Photo -->
+            <input id="file-input" type="file" name="avatar" id="imageUpload" accept=".png, .jpg, .jpeg" #fileInput
+                (change)="onSelectFile(fileInput.files)" >
         </div>
-    </div>
+    </form>
+    <!-- Side Menu Navigators -->
     <app-side-menu-navigators [listElements]="_UserProfileAsidePageService.userProfileNavigator" [routerLink1]="'userProfile/'"></app-side-menu-navigators>
-</div>
+</div>  

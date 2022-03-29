@@ -1,6 +1,10 @@
 .CC-Contactlogo-Holder{
     width: 351px;
     height: 403px;
+    @media screen and (max-width:450px) {
+        width: 196px;
+        height: 195px; 
+    }
 }
 input:focus-visible
 {

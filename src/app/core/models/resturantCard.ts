@@ -15,9 +15,11 @@ export interface SingleCard {
     rate : Number,
     closed:boolean,
     num_table:number,
+    avg_delivery_time:number,
     media: Array<mediaCard>
     has_media:boolean;
-    tags: Array<tagsCard>
+    tags: Array<tagsCard>,
+    market_status:any;
 }
 export interface ResturantCard {
     data : Array<SingleCard>,

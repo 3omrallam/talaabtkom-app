@@ -1,6 +1,7 @@
 // START === General
 .uCC-Click{
   cursor: pointer;
+  user-select: none;
 }
 .uCC-stopPropagation{
   pointer-events: none;  
@@ -50,6 +51,9 @@
 .uCC-Border-supprt2{
   border: 1px solid #707070;
 }
+.uCC-Border-white{
+  border: 2px solid #fff;
+}
 // END === Border
 // START === Border Radius
 .uCC-f-radius-sA{
@@ -82,11 +86,17 @@
 .uCC-l-radius-sI{
   border-radius: 10px 0px 10px 1px;
 }
+.uCC-l-radius-sJ{
+  border-radius: 20px 20px 0px 0px;
+}
 .uCC-f-radius-s5{
   border-radius: 5px;
 }
 .uCC-f-radius-s50{
   border-radius: 50%;
+}
+.uCC-f-radius-s10{
+  border-radius: 10px 10px 0 0;
 }
 
 // END === Border Radius
@@ -178,3 +188,9 @@
 
 
 
+  #telr {
+    width: 100%;
+    min-width: 600px;
+    height: 600px;
+    // frameborder: 0;
+  }

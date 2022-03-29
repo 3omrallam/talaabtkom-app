@@ -1,11 +1,40 @@
 .CC-Holder{
-    // width: 148px;
     height: 148px;
 }
 button:hover{
     color: #31EA5C !important;
 }
 .CC-map-Holder{
-    // width: 536px;
     height: 370px;
+}
+.CC-dashed-line {
+    height:1px;
+    width: 80%;
+    background:repeating-linear-gradient(to right, rgba(54, 53, 55, 0.2) 0, rgba(54, 53, 55, 0.2) 10px, transparent 10px, transparent 16px)
+}
+.modal-header {
+    border-bottom: none;
+  }
+  .modal-footer{
+      border-top: none;
+}
+.modal-footer{
+    padding-top: 0 !important;
+}
+.CC-Pdf-Holder{
+    width: 64px;
+    height: 64px;
+}
+.btn1:hover{
+    color: white !important;
+  }
+  .btn2:hover{
+    color: #707070 !important;
+  }
+  .btn1:focus {
+    color: #fff;
+    background-color: #f5504c;
+    border-color: #f5504c;
+    outline: 0;
+    box-shadow: none;
 }

@@ -1,8 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
-import { Observable } from 'rxjs/internal/Observable';
-import { SingleCard } from 'src/app/core/models/resturantCard';
 import { ResturantCardService } from 'src/app/core/services/resturant/resturant-card.service';
 import { AccountService } from 'src/app/core/services/user/account.service';
 
@@ -13,7 +12,7 @@ import { AccountService } from 'src/app/core/services/user/account.service';
 })
 export class ResturantProfilePageComponent implements OnInit, OnDestroy {
   getIDFromRoute! : Subscription;
-  constructor(public activeRouter: ActivatedRoute, public _ResturantCardService : ResturantCardService, public _AccountService: AccountService) { }
+  constructor(public activeRouter: ActivatedRoute, public _ResturantCardService: ResturantCardService, public _AccountService: AccountService, public translate: TranslateService) { }
 
   ngOnInit(): void {
     this.getResturantID()
@@ -24,7 +23,8 @@ export class ResturantProfilePageComponent implements OnInit, OnDestroy {
   getResturantInfoByID(){
       this._ResturantCardService?.getResturant(`/${+this._ResturantCardService.resturantID}`).subscribe(res => {
         this._ResturantCardService.singleResturantInfo = res?.data
-        console.log(this._ResturantCardService.singleResturantInfo);
+        localStorage.setItem('marketName', JSON.stringify(this._ResturantCardService.singleResturantInfo.name))
+        // console.log ('x' ,res)
       })
   }
 
@@ -33,13 +33,18 @@ export class ResturantProfilePageComponent implements OnInit, OnDestroy {
       this._ResturantCardService.resturantID = +route?.id
     })
   }
+  
   getResturantProducts(){
       this._ResturantCardService.getResturantProducts(+this._ResturantCardService.resturantID, this._AccountService.userValue?.data?.token).subscribe((res : any) => {
         this._ResturantCardService.singleResturantCategories = res?.data
-        console.log(this._ResturantCardService.singleResturantCategories);
       })
   }
-  
+  scrollTo(section: any) {
+    document.querySelector('#' + section)?.scrollIntoView();
+  }
+
+
+
   ngOnDestroy(): void {
     this.getIDFromRoute.unsubscribe()
   }

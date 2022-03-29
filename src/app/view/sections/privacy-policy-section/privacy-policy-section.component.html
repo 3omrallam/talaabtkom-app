@@ -1,44 +1,35 @@
 <section>
     <!-- Header Privacy Policy Section-->
-    <p class="fCC-bold-sG cCC-text-main mb-4">نتشرف بخدمتك دائماً والحفاظ علي معلوماتك الشخصية</p>
+    <p class="fCC-bold-sG cCC-text-main mb-4">{{'نتشرف بخدمتك دائماً والحفاظ علي معلوماتك الشخصية' | translate}}</p>
     <!-- Privacy Policy Holder -->
-    <div class="d-flex align-items-start justify-content-between">
+    <div class="d-flex flex-md-row flex-column-reverse gap-4 align-items-start justify-content-between">
         <!-- Privacy Policy List -->
-        <div>
-            <app-icon iconName="iCC-Logo iCC-sH imCC-Background-Contain ms-2 mt-2 mb-4" textContent="الشروط والأحكام"
+        <div class="d-flex flex-column justify-content-center">
+            <app-icon iconName="iCC-Logo iCC-sH imCC-Background-Contain ms-2 mt-2 mb-4" textContent="{{'الشروط والأحكام' | translate}}"
                 textClass="fCC-bold-sE cCC-text-support2">
             </app-icon>
-            <app-icon iconName="iCC-Dot iCC-sL imCC-Background-Contain ms-2 mb-3~"
-                textContent="الطلبات يمكن الغاءها في خلال 10 دقائق بدون أي رسوم"
-                textClass="fCC-reg-sE cCC-text-support2">
-            </app-icon>
-            <app-icon iconName="iCC-Dot iCC-sL imCC-Background-Contain ms-2 mb-3~"
-                textContent="يسمـــح التطبيـق بالاسترجـــــاع في حســـابك خــــلال 14 يـــــوم"
-                textClass="fCC-reg-sE cCC-text-support2">
-            </app-icon>
-            <app-icon iconName="iCC-Dot iCC-sL imCC-Background-Contain ms-2"
-                textContent="الطلبات التي لم يحضر صاحبها لستلامها من المطعم" textClass="fCC-reg-sE cCC-text-support2">
-            </app-icon>
-            <app-icon textContent="يتم خصمها مباشرة من أي عملية جديد" textClass="fCC-reg-sE me-3 cCC-text-support2">
-            </app-icon>
-            <app-icon iconName="iCC-Dot iCC-sL imCC-Background-Contain ms-2 mb-3~"
-                textContent="الطلبات يمكن الغاءها في خلال 10 دقائق بدون أي رسوم"
-                textClass="fCC-reg-sE cCC-text-support2">
-            </app-icon>
-            <app-icon iconName="iCC-Dot iCC-sL imCC-Background-Contain ms-2 mb-3~"
-                textContent="يسمـــح التطبيـق بالاسترجـــــاع في حســـابك خــــلال 14 يـــــوم"
-                textClass="fCC-reg-sE cCC-text-support2">
-            </app-icon>
-            <app-icon iconName="iCC-Dot iCC-sL imCC-Background-Contain ms-2"
-                textContent="الطلبات التي لم يحضر صاحبها لستلامها من المطعم" textClass="fCC-reg-sE cCC-text-support2">
-            </app-icon>
-            <app-icon textContent="يتم خصمها مباشرة من أي عملية جديد" textClass="fCC-reg-sE me-3 cCC-text-support2">
-            </app-icon>
+
+            <p class="m-0 fCC-reg-sE cCC-text-support2" [innerHTML]="this._PagesService.privacyPolicy"></p>
         </div>
         <!-- Privacy Policy Image -->
         <div>
             <i class="d-flex imCC-Privacypolicy CC-Privacypolicy-Holder imCC-Background-Contain mt-5"></i>
         </div>
     </div>
-
 </section>
+<!-- <h2>Menu Demo</h2> -->
+<!-- <form [formGroup]="menu">
+    <mat-checkbox formControlName="selectAll" [indeterminate]="partiallySelected | async" class="select-all">
+        Select All
+    </mat-checkbox>
+    <div formArrayName="options">
+        <div *ngFor="let option of menuOptions.controls; let i=index">
+            <mat-checkbox [formControl]="$any(option)">{{ optionLabels[i] }}</mat-checkbox>
+        </div>
+    </div>
+</form>
+
+<h3>Value (for demonstration purposes)</h3>
+<p>
+    {{ menu.valueChanges | async | json }}
+</p> -->
